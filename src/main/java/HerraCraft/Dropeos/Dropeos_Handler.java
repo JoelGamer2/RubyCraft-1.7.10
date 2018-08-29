@@ -1,5 +1,9 @@
 package HerraCraft.Dropeos;
 
+import java.util.Random;
+
+import com.sun.xml.internal.stream.Entity;
+
 import HerraCraft.herracraft;
 import HerraCraft.Entidades_Principal.Invisiteibol;
 import HerraCraft.Entidades_Principal.JoelGamer2;
@@ -140,11 +144,17 @@ public class Dropeos_Handler {
 	}
 
 	  if (event.entity instanceof EntitySkeleton) {
-     	  
-     	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, 8);
+   
+		  Random rand = null;
+		  int dropaleatorio = 0;
+		  dropaleatorio =  0 + rand.nextInt(2);
+		  
+		  if(!(dropaleatorio == 0)) {
+     	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, dropaleatorio);
      	  EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
        
        event.drops.add(drop);
+		  }
 }
 
 	
