@@ -12,7 +12,7 @@ public class TileEntitys_Principal {
 	private static void registerTileEntity() {
 		GameRegistry.registerTileEntity(TileEntityCofredeRuby.class, RubyCraft.modid + "CofredeRubyTileEntity");
 		GameRegistry.registerTileEntity(TileEntityMesa_de_Ruby.class, RubyCraft.modid + "Mesa de Ruby");
-		
+		GameRegistry.registerTileEntity(TileEntityMesa_de_Zafiro.class, RubyCraft.modid + "Mesa de Zafiro");
 	}
 	
 }

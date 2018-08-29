@@ -18,8 +18,8 @@ public class Render_Mesa_de_Ruby extends  TileEntitySpecialRenderer {
 
 	private Mesa_De_Ruby_Render_Model model;
 	
-	private ResourceLocation textura = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Mesa_De_Ruby/Mesa_De_Ruby.png");
-	private ResourceLocation texturaNavidad = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Mesa_De_Ruby/Mesa_De_Ruby_Navidad.png");
+	private ResourceLocation textura = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Mesas/Mesa_De_Ruby.png");
+	private ResourceLocation texturaNavidad = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Mesas/Mesa_De_Ruby_Navidad.png");
 	
 	 public Render_Mesa_de_Ruby() {
 		 model = new Mesa_De_Ruby_Render_Model();

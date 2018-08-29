@@ -48,11 +48,14 @@ import RubyCraft.Entidades.Mobs.ModelRender.PatxisRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.shulkerRenderModel;
 import RubyCraft.Integracion.Mods_Encantamientos;
 import RubyCraft.Maquinas.Renderizado.Render_Mesa_de_Ruby;
+import RubyCraft.Maquinas.Renderizado.Render_Mesa_de_Zafiro;
 import RubyCraft.TileEntity.TileEntityCofredeRuby;
 import RubyCraft.TileEntity.TileEntityMesa_de_Ruby;
+import RubyCraft.TileEntity.TileEntityMesa_de_Zafiro;
 import RubyCraft.TileEntity.Render.CofredeRubyRender;
 import RubyCraft.TileEntity.Render.ItemRenderCofredeRuby;
 import RubyCraft.TileEntity.Render.Mesa_de_Ruby_Item_Renderer;
+import RubyCraft.TileEntity.Render.Mesa_de_Zafiro_Item_Renderer;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -86,6 +89,9 @@ public class ClientProxy extends ServerProxy {
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMesa_de_Ruby.class, new Render_Mesa_de_Ruby());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.MesadeTrabajodeRuby), new Mesa_de_Ruby_Item_Renderer(new TileEntityMesa_de_Ruby(), new Render_Mesa_de_Ruby()));
+		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMesa_de_Zafiro.class, new Render_Mesa_de_Zafiro());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.MesadeTrabajodeZafiro), new Mesa_de_Zafiro_Item_Renderer(new TileEntityMesa_de_Zafiro(), new Render_Mesa_de_Zafiro()));
         //Variado
 		FMLCommonHandler.instance().bus().register(new Encantamiento_MineCraft_Objetos(Minecraft.getMinecraft()));
 		FMLCommonHandler.instance().bus().register(new Mods_Encantamientos(Minecraft.getMinecraft()));
