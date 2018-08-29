@@ -47,8 +47,8 @@ public class MesadeTrabajodeRuby extends BlockContainer{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons (IIconRegister iconRegister){
-		this.MesadeTrabajodeRubyArriba = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesa_De_Ruby/Particulas_MesadeRuby");
-		this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesa_De_Ruby/Particulas_MesadeRuby");
+		this.MesadeTrabajodeRubyArriba = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesas/Particulas_MesadeRuby");
+		this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesas/Particulas_MesadeRuby");
 		
 	}
 	

@@ -1,5 +1,6 @@
 package RubyCraft;
 
+import HerraCraft.herracraft;
 import RubyCraft.Bases.Cementos_Bases;
 import RubyCraft.Bases.Escalera_Base;
 import RubyCraft.Escaleras.Escalera_de_Andesita_Pulida;
@@ -97,7 +98,10 @@ public class Escaleras_Principal {
 	public static Block Escalera_Cemento_Endurecido_Gris;
 	public static Block Escalera_Cemento_Endurecido_Gris_Oscuro;
 	
-    
+	/**HerraCraft**/
+	public static Block Escalera_De_corazon_de_redstone;
+	public static Block Escalera_Invisible;
+	
 	public static void Iniciar(){
 	/**Escaleras**/
 		
@@ -155,6 +159,10 @@ public class Escaleras_Principal {
 		Escalera_de_trondo_de_madera_azul = new Escalera_Base(RubyCraft.tronco_Azul, 0).setBlockName("Escalera_de_trondo_de_madera_azul");
 
 		
+		
+		/**HerraCraft**/
+		Escalera_De_corazon_de_redstone = new Escalera_Base(herracraft.Corazon_de_Redstone, 0).setBlockName("Escalera_De_corazon_de_redstone");
+		Escalera_Invisible = new Escalera_Base(herracraft.Bloque_Invisible, 0).setBlockName("Escalera_Invisible");
 	}
 	
 	public static void Registrar(){
@@ -211,8 +219,12 @@ public class Escaleras_Principal {
 		RegitrarEscalera(Escalera_Cemento_Endurecido_Gris_Oscuro, 1.0F, 2.0F, 2);
 		RegitrarEscalera(Escalera_de_tronco_de_madera_verde, 1.0F, 0.5F, 1);
 		RegitrarEscalera(Escalera_de_trondo_de_madera_azul, 1.0F, 0.5F, 1);
-
+        
 		
+		/**HerraCraft**/
+		
+		RegitrarEscaleraHerra(Escalera_De_corazon_de_redstone, 5.0F, 5.0F, 3);
+		RegitrarEscaleraHerra(Escalera_Invisible, 0.7F, Float.MAX_VALUE, 0);
 	}
 	
 	public static void RegistrarCrafteos(){
@@ -269,11 +281,24 @@ public class Escaleras_Principal {
 		Crafteos(Escalera_de_tronco_de_madera_verde, RubyCraft.troncoverde);
 		Crafteos(Escalera_de_trondo_de_madera_azul, RubyCraft.tronco_Azul);
 		
+		
+		/**HerraCraft**/
+		
+		Crafteos(Escalera_De_corazon_de_redstone, herracraft.Corazon_de_Redstone);
+		Crafteos(Escalera_Invisible, herracraft.Bloque_Invisible);
 	}
 	
 	public static void RegitrarEscalera(Block Escalera, float TiempoenPicar, float Resistencia, int NiveldelPico){
 		
 		Escalera.setCreativeTab(RubyCraft.Rubycrafttab).setHardness(TiempoenPicar).setResistance(Resistencia).setHarvestLevel("pickaxe", NiveldelPico);
+		GameRegistry.registerBlock(Escalera, Escalera.getUnlocalizedName().substring(5));
+		
+	}
+	
+	
+public static void RegitrarEscaleraHerra(Block Escalera, float TiempoenPicar, float Resistencia, int NiveldelPico){
+		
+		Escalera.setCreativeTab(herracraft.Herra).setHardness(TiempoenPicar).setResistance(Resistencia).setHarvestLevel("pickaxe", NiveldelPico);
 		GameRegistry.registerBlock(Escalera, Escalera.getUnlocalizedName().substring(5));
 		
 	}
