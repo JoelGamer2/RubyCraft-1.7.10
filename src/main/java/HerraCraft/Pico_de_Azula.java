@@ -1,4 +1,4 @@
-package HerraCraft.item;
+package HerraCraft;
 
 import net.minecraft.item.ItemPickaxe;
 

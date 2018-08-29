@@ -4,11 +4,11 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.world.World;
 
-public class Prakxisredstoner extends EntityMob {
+public class DoctorNok extends EntityMob {
 
 	
 
-	public Prakxisredstoner(World world) {
+	public DoctorNok(World world) {
 		super(world);
 		     
 	 this.setSize(0.6F, 1.9F);

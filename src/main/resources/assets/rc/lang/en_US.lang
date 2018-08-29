@@ -345,7 +345,7 @@ entity.Invisiteibol.name=Invisiteibol
 entity.JoelGamer2.name=JoelGamer2
 entity.Wither_Storm.name=Wither Storm
 entity.Miguelperez.name=Miguelperez
-entity.Prakxisredstoner.name=Prakxisredstoner
+entity.DoctorNok.name=DoctorNok
 entity.Sans.name=Sans
 entity.Herobrine.name=Error 404
 entity.Entity_303.name=Entity 303
@@ -456,6 +456,7 @@ item.Espada_Reforzada.name=Espada Reforzada
 item.Espada_del_Eden.name=Espada del Eden
 item.Polimeros.name=Polimeros
 item.Manzana_D.name=Manzana D
+item.Mango_de_Antimateria.name=Mango de Antimateria
 
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico

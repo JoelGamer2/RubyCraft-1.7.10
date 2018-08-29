@@ -2,13 +2,12 @@ package HerraCraft;
 
 
 import HerraCraft.Dropeos.Dropeos_Handler;
-import HerraCraft.Entidades_Principal.Principal;
 import HerraCraft.Registrar.Eventos;
 import HerraCraft.Registrar.Mesas;
-import HerraCraft.item.Espada_de_Azula;
-import HerraCraft.item.Pico_de_Azula;
+import HerraCraft.Registrar.Regitrar_Entidades;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -21,7 +20,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-
 
 
 
@@ -59,7 +57,6 @@ public class herracraft{
     public static Block Bloque_de_Enderman;
     public static Block Bloque_de_Losa;
     public static Block Bloque_De_Estrella_Del_Wither;
-    public static Block Bloque_de_Adobe;
     
     public static final int guiIDMesadeAzula = 10;/**Cambia el puto numeroooooooooooo¡¡¡¡¡¡ cuando hagas otra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡**/
 	//Items declarados
@@ -123,9 +120,8 @@ public class herracraft{
     public static Item Manzana_D;
     public static Item Plata2;
     public static Item Polimeros;
-    public static Item Adobe;
-    public static Item Adobe_cocinado;
-    
+    public static Item Mango_de_Antimateria;
+    public static Item Filo_de_Antimateria;
     //Armaduras
     public static Item Casco_de_Azula;
     public static Item Pechera_de_Azula;
@@ -176,7 +172,7 @@ public class herracraft{
 
 	
 	public static final Item.ToolMaterial AzulaMaterial = EnumHelper.addToolMaterial("AzulaMaterial", 5, 10000, 10.0F, 16.0F, 45);
-	public static final Item.ToolMaterial Wither = EnumHelper.addToolMaterial("Wither", 5, 10000, 10.0F, 20.0F, 45);
+	public static final Item.ToolMaterial Wither = EnumHelper.addToolMaterial("Wither", 5, 10000, 10.0F, 21.0F, 45);
 	public static final Item.ToolMaterial Mierda = EnumHelper.addToolMaterial("Caca", 5, 1, 0.1F, 0, 45);
 	public static final Item.ToolMaterial Sable = EnumHelper.addToolMaterial("Sable", 5, 6000, 10.0F, 21.0F, 45);
 	public static final Item.ToolMaterial Galaxya = EnumHelper.addToolMaterial("Galaxya", 5, 12000, 75.0F, 71.0F, 45);
@@ -187,7 +183,7 @@ public class herracraft{
 	public static final Item.ToolMaterial Troll = EnumHelper.addToolMaterial("Troll", 5, 1, 1000, 0.1F, 45);
 	public static final Item.ToolMaterial Plata = EnumHelper.addToolMaterial("Plata", 5, 2000, 5.0F, 3.0F, 45);
 	public static final Item.ToolMaterial Sangre = EnumHelper.addToolMaterial("Sangre", 5, 1000, 10.0F, 4.0F, 45);
-	public static final Item.ToolMaterial Reforzado = EnumHelper.addToolMaterial("Reforzado", 5, 1000, 10.0F, 21.0F, 45);
+	public static final Item.ToolMaterial Reforzado = EnumHelper.addToolMaterial("Reforzado", 5, 1000, 10.0F, 20.0F, 45);
 	public static final Item.ToolMaterial Eden = EnumHelper.addToolMaterial("Eden", 5, 100000, 1000, 96, 45);
 	
 	public static final ItemArmor.ArmorMaterial AzulaArmorMaterial = EnumHelper.addArmorMaterial("AzulaArmorMaterial", 1000, new int[]{7,6,5,2}, 45);
@@ -207,7 +203,7 @@ public class herracraft{
     public static void preinit(){
     	//variado
 
-    	Principal.mainRegistry();
+    	Regitrar_Entidades.mainRegistry();
     	
 
     	
@@ -354,7 +350,7 @@ public class herracraft{
     GameRegistry.registerBlock(Bloque_de_comando, Bloque_de_comando.getUnlocalizedName().substring(5));
     Bloque_de_comando.setHarvestLevel("pickaxe", 0);
     
-    Corazon_de_Redstone = new Corazon_de_Redstone(Material.rock).setBlockName("Corazon_de_Redstone").setBlockTextureName("rc:Herra/Corazon_de_Redstone").setCreativeTab(Herra).setHardness(5.0F);
+    Corazon_de_Redstone = new Corazon_de_Redstone(MapColor.redColor).setBlockName("Corazon_de_Redstone").setBlockTextureName("rc:Herra/Corazon_de_Redstone").setCreativeTab(Herra).setHardness(5.0F);
     GameRegistry.registerBlock(Corazon_de_Redstone, Corazon_de_Redstone.getUnlocalizedName().substring(5));
     Corazon_de_Redstone.setHarvestLevel("pickaxe", 3);
     
@@ -565,8 +561,12 @@ public class herracraft{
     
     Plata2 = new Plata2().setUnlocalizedName("Plata2").setTextureName("rc:Herra/Plata2").setCreativeTab(Herra);
     GameRegistry.registerItem(Plata2, Plata2.getUnlocalizedName().substring(5));
-   
     
+    Mango_de_Antimateria = new  Mango_de_Antimateria().setUnlocalizedName("Mango_de_Antimateria").setTextureName("rc:Herra/Mango_de_Antimateria").setCreativeTab(Herra);
+    GameRegistry.registerItem(Mango_de_Antimateria, Mango_de_Antimateria.getUnlocalizedName().substring(5));
+   
+    Filo_de_Antimateria = new Filo_de_Antimateria().setUnlocalizedName("Filo_de_Antimateria").setTextureName("rc:Herra/Filo_de_Antimateria").setCreativeTab(Herra);
+    GameRegistry.registerItem(Filo_de_Antimateria, Filo_de_Antimateria.getUnlocalizedName().substring(5));
     
     }
 	
@@ -584,7 +584,7 @@ public class herracraft{
 		Mesas.addRecipeAzula(new ItemStack(Espada_de_Sangre, 1), new Object[]{"#####","##s##","##a##","##p##","#####",'s', Sangre_de_monstruo,'a', Alma_Roja,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Espada_de_Sangre, 1), new Object[]{"#####","##s##","##a##","##p##","#####",'s', Sangre_de_animal,'a', Alma_Roja,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Items.emerald, 1), new Object[]{"#####","#ppp#","#ppp#","#ppp#","#####",'p', Pepita_de_Esmeralda});
-		Mesas.addRecipeAzula(new ItemStack(Espada_de_Antimateria, 1), new Object[]{"##l##","##l##","##l##","##l##","##p##",'l', Lingote_de_Antimateria,'p', Items.stick});
+		Mesas.addRecipeAzula(new ItemStack(Espada_de_Antimateria, 1), new Object[]{"#####","##l##","##2##","##3##","#####",'l', Filo_de_Antimateria,'2', Lingote_de_Antimateria,'3', Mango_de_Antimateria});
 		Mesas.addRecipeAzula(new ItemStack(Pico_de_Antimateria, 1), new Object[]{"aaaaa","##p##","##p##","##p##","##p##",'a', Lingote_de_Antimateria,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Blocks.command_block, 1), new Object[]{"#####","#oro#","#ded#","#oro#","#####",'o', Blocks.obsidian,'r', Blocks.redstone_block,'e', Items.nether_star, 'd',Blocks.diamond_block});
 		Mesas.addRecipeAzula(new ItemStack(Items.nether_star, 1), new Object[]{"#ccc#","#sss#","##s##","#####",'s', Blocks.soul_sand,'c', new ItemStack(Items.skull,397,1)});
@@ -662,7 +662,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Cristal_de_ovni, 1), new Object[]{"ccc","cpc","ccc",'c', Blocks.glass,'p', Plutonio});
     GameRegistry.addRecipe(new ItemStack(Cuchillo, 1), new Object[]{"  h"," h ","p  ",'h', Items.iron_ingot,'p', Items.stick});
     GameRegistry.addRecipe(new ItemStack(Espada_de_Plata, 1), new Object[]{" p "," p "," s ",'p', Plata2,'s', Items.stick});
-    GameRegistry.addRecipe(new ItemStack(Espada_del_Eden, 1), new Object[]{" e ","prp"," s ",'e', Espada_de_Antimateria,'r', Espada_Reforzada,'p', Blocks.glowstone,'s', Hueso_de_Wither});
+    GameRegistry.addRecipe(new ItemStack(Espada_del_Eden, 1), new Object[]{" e ","prp"," s ",'e', Espada_de_Antimateria,'r', Espada_de_Wither,'p', Blocks.glowstone,'s', Hueso_de_Wither});
     GameRegistry.addRecipe(new ItemStack(Azula, 1), new Object[]{"ppp","ppp","ppp",'p', Pepita_de_Azula});
 
     

@@ -7,9 +7,10 @@ import com.sun.xml.internal.stream.Entity;
 import HerraCraft.herracraft;
 import HerraCraft.Entidades_Principal.Invisiteibol;
 import HerraCraft.Entidades_Principal.JoelGamer2;
-import HerraCraft.Entidades_Principal.Prakxisredstoner;
+import HerraCraft.Entidades_Principal.DoctorNok;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
+import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntitySkeleton;
@@ -86,13 +87,23 @@ public class Dropeos_Handler {
 	               
 	              }	            
    
-	              if (event.entity instanceof Prakxisredstoner) {
+	              if (event.entity instanceof DoctorNok) {
 	                  
-	            	  ItemStack stack = new ItemStack(Items.redstone, 5);
+	            	  ItemStack stack = new ItemStack(RubyCraft.fragmento_de_prismarina, 6);
 	            	  EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
 	            	  
-	            	event.drops.add(drop);
+	            	event.drops.add(drop);       	
+	            	
 	              }
+	              
+	              if (event.entity instanceof DoctorNok) {
+	               	 
+                      ItemStack stack = new ItemStack(RubyCraft.cristal_de_prismarina, 2);
+                      EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
+     
+                      event.drops.add(drop);
+
+                    }
 	              if (event.entity instanceof EntitySheep) {
 	            	  
 	            	  ItemStack stack = new ItemStack(herracraft.Carne_de_Oveja, 3);
@@ -166,6 +177,9 @@ public class Dropeos_Handler {
    	  EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
      
      event.drops.add(drop);
+     
+     
+     
 }
 }
 }
