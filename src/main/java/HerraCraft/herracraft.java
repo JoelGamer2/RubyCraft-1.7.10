@@ -664,7 +664,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Espada_del_Eden, 1), new Object[]{" e ","prp"," s ",'e', Espada_de_Antimateria,'r', Espada_de_Wither,'p', Blocks.glowstone,'s', Hueso_de_Wither});
     GameRegistry.addRecipe(new ItemStack(Azula, 1), new Object[]{"ppp","ppp","ppp",'p', Pepita_de_Azula});
     GameRegistry.addRecipe(new ItemStack(Bloque_De_Estrella_Del_Wither, 1), new Object[]{"eee","eee","eee",'e', Items.nether_star});
-    
+    GameRegistry.addRecipe(new ItemStack(Mango_de_Antimateria, 1), new Object[]{"plp","vlv","#a#", 'p', Plutonio, 'l', Lingote_de_Antimateria, 'v',Vapor_de_electrones, 'a',Palos_de_blaze});
     
     
     
