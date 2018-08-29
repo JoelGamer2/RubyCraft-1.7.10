@@ -582,6 +582,7 @@ public class herracraft{
 		Mesas.addRecipeAzula(new ItemStack(Espada_jedi, 1), new Object[]{"#####","##a##","##a##","##o##","#####",'a', Azula,'o', Blocks.obsidian});
 		Mesas.addRecipeAzula(new ItemStack(Espada_Siz, 1), new Object[]{"#####","##p##","##p##","##o##","#####",'p', Plutonio,'o', Blocks.obsidian});
 		Mesas.addRecipeAzula(new ItemStack(Espada_de_Sangre, 1), new Object[]{"#####","##s##","##a##","##p##","#####",'s', Sangre_de_monstruo,'a', Alma_Roja,'p', Items.stick});
+		Mesas.addRecipeAzula(new ItemStack(Espada_de_Sangre, 1), new Object[]{"#####","##s##","##a##","##p##","#####",'s', Sangre_de_animal,'a', Alma_Roja,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Items.emerald, 1), new Object[]{"#####","#ppp#","#ppp#","#ppp#","#####",'p', Pepita_de_Esmeralda});
 		Mesas.addRecipeAzula(new ItemStack(Espada_de_Antimateria, 1), new Object[]{"##l##","##l##","##l##","##l##","##p##",'l', Lingote_de_Antimateria,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Pico_de_Antimateria, 1), new Object[]{"aaaaa","##p##","##p##","##p##","##p##",'a', Lingote_de_Antimateria,'p', Items.stick});
@@ -661,7 +662,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Cristal_de_ovni, 1), new Object[]{"ccc","cpc","ccc",'c', Blocks.glass,'p', Plutonio});
     GameRegistry.addRecipe(new ItemStack(Cuchillo, 1), new Object[]{"  h"," h ","p  ",'h', Items.iron_ingot,'p', Items.stick});
     GameRegistry.addRecipe(new ItemStack(Espada_de_Plata, 1), new Object[]{" p "," p "," s ",'p', Plata2,'s', Items.stick});
-    GameRegistry.addRecipe(new ItemStack(Espada_del_Eden, 1), new Object[]{" e ","prp"," s ",'e', Espada_de_Antimateria,'r', Espada_Reforzada,'p', Blocks.glowstone,'s', Items.stick});
+    GameRegistry.addRecipe(new ItemStack(Espada_del_Eden, 1), new Object[]{" e ","prp"," s ",'e', Espada_de_Antimateria,'r', Espada_Reforzada,'p', Blocks.glowstone,'s', Hueso_de_Wither});
     GameRegistry.addRecipe(new ItemStack(Azula, 1), new Object[]{"ppp","ppp","ppp",'p', Pepita_de_Azula});
 
     

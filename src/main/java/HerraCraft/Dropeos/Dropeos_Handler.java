@@ -22,6 +22,8 @@ import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class Dropeos_Handler {
 
+	public Random rand;
+	
 	@SubscribeEvent
     public void DropeoDragon(LivingDropsEvent event){
     
@@ -145,23 +147,22 @@ public class Dropeos_Handler {
 
 	  if (event.entity instanceof EntitySkeleton) {
    
-		  Random rand = null;
-		  int dropaleatorio = 0;
-		  dropaleatorio =  0 + rand.nextInt(2);
+		  //int dropaleatorio = 0;
+		  //dropaleatorio =  1 + rand.nextInt(2);
 		  
-		  if(!(dropaleatorio == 0)) {
-     	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, dropaleatorio);
-     	  EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
+		  //if(!(dropaleatorio == 1)) {
+     	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, 1);
+     	   EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
        
        event.drops.add(drop);
-		  }
+		  //}
 }
 
 	
 
 	  if (event.entity instanceof Wither_Storm) {
    	  
-   	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, 8);
+   	  ItemStack stack = new ItemStack(herracraft.Hueso_de_Wither, 2);
    	  EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
      
      event.drops.add(drop);
