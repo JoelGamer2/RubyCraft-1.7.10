@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderIratxeMob extends RenderLiving {
 
-	private static final ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/entity/Iratxe/Iratxe.png");
+	private static final ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/entity/Jugadores/Iratxe.png");
 	
 	public RenderIratxeMob(ModelBase mod, float f) {
 		super(mod, f);
