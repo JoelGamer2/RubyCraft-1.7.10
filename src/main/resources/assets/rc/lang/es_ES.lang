@@ -460,7 +460,8 @@ item.Espada_Reforzada.name=Espada Reforzada
 item.Espada_del_Eden.name=Espada del Eden
 item.Polimeros.name=Polimeros
 item.Manzana_D.name=Manzana D
-
+item.Mango_de_Antimateria.name=Mango de Antimateria
+item.Filo_de_Antimateria.name=Filo de Antimateria
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
@@ -518,6 +519,9 @@ tile.Cemento_plateado.name=Cemento plateado
 tile.Cemento_naranja.name=Cemento naranja
 tile.Cemento_gris.name=Cemento gris
 tile.Magma_Acuatico.name=Magma Acuatico
-item.Mango_de_Antimateria.name=Mango de Antimateria
-item.Filo_de_Antimateria.name=Filo de Antimateria
 tile.Bloque_De_Estrella_Del_Wither.name=Bloque de Nether Star
+
+
+
+tile.Escalera_De_corazon_de_redstone.name=Escalera de corazon de redstone
+tile.Escalera_Invisible.name=Escalera Invisible
