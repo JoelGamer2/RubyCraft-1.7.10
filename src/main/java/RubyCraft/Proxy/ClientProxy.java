@@ -8,6 +8,7 @@ import HerraCraft.Entidades.Render.RenderHerobrineTexture;
 import HerraCraft.Entidades.Render.RenderInvisiteibolTexture;
 import HerraCraft.Entidades.Render.RenderJoelGamer2Texture;
 import HerraCraft.Entidades.Render.RenderMiguelperezTexture;
+import HerraCraft.Entidades.Render.RenderSlendermanTexture;
 import HerraCraft.Entidades.Render.RenderTankTexture;
 import HerraCraft.Entidades.Render.RenderWither_StormTexture;
 import HerraCraft.Entidades.Render.TankRender;
@@ -17,6 +18,7 @@ import HerraCraft.Entidades_Principal.Herobrine;
 import HerraCraft.Entidades_Principal.Invisiteibol;
 import HerraCraft.Entidades_Principal.JoelGamer2;
 import HerraCraft.Entidades_Principal.Miguelperez;
+import HerraCraft.Entidades_Principal.Slenderman;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
 import RubyCraft.RubyCraft;
@@ -61,6 +63,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.model.ModelVillager;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
@@ -107,7 +110,7 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(Wither_Storm.class, new RenderWither_StormTexture(new Wither_StormRender(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(DoctorNok.class, new RenderDoctorNokTexture(new ModelBiped(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(Herobrine.class, new RenderHerobrineTexture(new HerobrineRenderModel(), 0));
-	//	RenderingRegistry.registerEntityRenderingHandler(Slenderman.class, new RenderSlendermanTexture(new SlendermanRender(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(Slenderman.class, new RenderSlendermanTexture(new ModelEnderman(), 0));
 		
 		
 	}

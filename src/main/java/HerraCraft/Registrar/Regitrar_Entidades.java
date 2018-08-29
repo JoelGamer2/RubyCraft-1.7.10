@@ -17,6 +17,7 @@ import HerraCraft.Entidades_Principal.Herobrine;
 import HerraCraft.Entidades_Principal.Invisiteibol;
 import HerraCraft.Entidades_Principal.JoelGamer2;
 import HerraCraft.Entidades_Principal.Miguelperez;
+import HerraCraft.Entidades_Principal.Slenderman;
 import HerraCraft.Entidades_Principal.Spawn_Mobs;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
@@ -36,7 +37,7 @@ public class Regitrar_Entidades {
 	public static void RegistrarEntidad(){
 		
 		createEntity(Tank.class, "Tank", 0xFFFFFF, 0x000000);
-//		createEntity(Slenderman.class, "Slenderman", 0x000000, 0xFF0000);
+		createEntity(Slenderman.class, "Slenderman", 0x000000, 0xFF0000);
         createEntity(Invisiteibol.class, "Invisiteibol", 0x808080, 0xFFFFFF);
 		createEntity(JoelGamer2.class, "JoelGamer2", 0x0026FF, 0x00FFFF);
 		createEntity(Miguelperez.class, "Miguelperez", 0x00FF21, 0xFF0000);
