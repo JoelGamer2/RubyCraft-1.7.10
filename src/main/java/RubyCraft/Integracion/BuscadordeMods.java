@@ -5,22 +5,22 @@ import cpw.mods.fml.common.Loader;
 
 public class BuscadordeMods {
 	
-	public static String MigeCrafmoid = "mc";
+	//public static String NombreMod = "Modid";
 	
-	public static boolean isMigueCraftLoaded;
+	//public static boolean isModLoaded;
 	
 	public BuscadordeMods() {
 		
-		this.isMigueCraftLoaded = Loader.isModLoaded("mc");
+	//	this.isModLoaded = Loader.isModLoaded("Modid");
 		
 		
 	}
 	
 	public static void Mensaje(){
-		if(isMigueCraftLoaded){
-			RubyCraft.logger.info("MigueCraf a sido Cargado Correctamente");
-		}else{
-			RubyCraft.logger.info("MigueCraf No se Cargo No se inclullen cosas Extras");
-		}
+		//if(isModLoaded){
+			//RubyCraft.logger.info("MigueCraf a sido Cargado Correctamente");
+		//}else{
+			//RubyCraft.logger.info("MigueCraf No se Cargo No se inclullen cosas Extras");
+		//}
 	}
 }
