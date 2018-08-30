@@ -121,6 +121,7 @@ public class herracraft{
     public static Item Polimeros;
     public static Item Mango_de_Antimateria;
     public static Item Filo_de_Antimateria;
+    public static Item ElderWays;
     //Armaduras
     public static Item Casco_de_Azula;
     public static Item Pechera_de_Azula;
@@ -566,6 +567,9 @@ public class herracraft{
    
     Filo_de_Antimateria = new Filo_de_Antimateria().setUnlocalizedName("Filo_de_Antimateria").setTextureName("rc:Herra/Filo_de_Antimateria").setCreativeTab(Herra);
     GameRegistry.registerItem(Filo_de_Antimateria, Filo_de_Antimateria.getUnlocalizedName().substring(5));
+    
+    ElderWays = new ElderWays().setUnlocalizedName("ElderWays").setTextureName("rc:Herra/ElderWays").setCreativeTab(Herra);
+    GameRegistry.registerItem(ElderWays, ElderWays.getUnlocalizedName().substring(5));
     
     }
 	
