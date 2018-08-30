@@ -355,7 +355,7 @@ public class herracraft{
     
     Cristal_de_ovni = new Cristal_de_ovni(Material.glass).setBlockName("Cristal_de_ovni").setBlockTextureName("rc:Herra/Cristal_de_ovni").setCreativeTab(Herra).setHardness(0.5F).setResistance(5.0F);
     GameRegistry.registerBlock(Cristal_de_ovni, Cristal_de_ovni.getUnlocalizedName().substring(5));
-    Cristal_de_ovni.setHarvestLevel("pickaxe", 0);
+    Cristal_de_ovni.setHarvestLevel("pickaxe", 2);
     
     Bloque_de_metal = new Bloque_de_metal(Material.rock).setBlockName("Bloque_de_metal").setBlockTextureName("rc:Herra/Bloque_de_metal").setCreativeTab(Herra).setHardness(0.5F);
     GameRegistry.registerBlock(Bloque_de_metal, Bloque_de_metal.getUnlocalizedName().substring(5));
@@ -665,6 +665,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Azula, 1), new Object[]{"ppp","ppp","ppp",'p', Pepita_de_Azula});
     GameRegistry.addRecipe(new ItemStack(Bloque_De_Estrella_Del_Wither, 1), new Object[]{"eee","eee","eee",'e', Items.nether_star});
     GameRegistry.addRecipe(new ItemStack(Mango_de_Antimateria, 1), new Object[]{"plp","vlv","#a#", 'p', Plutonio, 'l', Lingote_de_Antimateria, 'v',Vapor_de_electrones, 'a',Palos_de_blaze});
+    GameRegistry.addRecipe(new ItemStack(Filo_de_Antimateria, 1), new Object[]{"plp","flf","vlv",'p', Plutonio, 'l', Lingote_de_Antimateria, 'f', Fluido_de_suspension, 'v', Vapor_de_electrones});
     
     
     
