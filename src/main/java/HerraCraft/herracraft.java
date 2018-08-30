@@ -397,7 +397,7 @@ public class herracraft{
     GameRegistry.registerBlock(Bloque_de_Losa, Bloque_de_Losa.getUnlocalizedName().substring(5));
     Bloque_de_Losa.setHarvestLevel("pickaxe", 0);
     
-    Bloque_De_Estrella_Del_Wither = new Bloque_De_Estrella_Del_Wither(Material.rock).setBlockName("Bloque_De_Estrella_Del_Wither").setBlockTextureName("rc:Herra/Bloque_De_Estrella_Del_Wither").setCreativeTab(Herra);
+    Bloque_De_Estrella_Del_Wither = new Bloque_De_Estrella_Del_Wither(Material.rock).setBlockName("Bloque_De_Estrella_Del_Wither").setBlockTextureName("rc:Herra/Bloque_De_Estrella_Del_Wither").setCreativeTab(Herra).setHardness(1.0F).setResistance(6.0F);
     GameRegistry.registerBlock(Bloque_De_Estrella_Del_Wither, Bloque_De_Estrella_Del_Wither.getUnlocalizedName().substring(5));
     
     Magma_Acuatico = new Magma_Acuatico(Material.rock).setBlockName("Magma_Acuatico").setBlockTextureName("rc:Herra/acuatico").setHardness(0.9F).setCreativeTab(Herra);
@@ -630,7 +630,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Pastilla_Z, 4), new Object[]{"ppp","ttt","ppp",'p', Items.paper,'t', Tabaco});
     GameRegistry.addRecipe(new ItemStack(Metanfetamina, 4), new Object[]{"ppp","hth","ppp",'p', Items.paper,'t', Tabaco,'h', Pastilla_Z});
     GameRegistry.addRecipe(new ItemStack(Metal, 1), new Object[]{"   ","hhh","   ",'h', Items.iron_ingot});
-    GameRegistry.addRecipe(new ItemStack(Espada_de_Wither, 1), new Object[]{" o "," e "," p ",'o', Blocks.obsidian,'e', Items.nether_star,'p', Items.stick});
+    GameRegistry.addRecipe(new ItemStack(Espada_de_Wither, 1), new Object[]{" o "," e "," p ",'o', Blocks.obsidian,'e', Items.nether_star,'p', Palos_de_blaze});
     GameRegistry.addRecipe(new ItemStack(Hacha_de_Azula, 1), new Object[]{"aa ","ap "," p ",'a', Azula,'p', Items.stick});
     GameRegistry.addRecipe(new ItemStack(Azada_de_Azula, 1), new Object[]{"aa "," p "," p ",'a', Azula,'p', Items.stick});
     GameRegistry.addRecipe(new ItemStack(Pildoras_analgesicas, 2), new Object[]{"ppp","ptp","ppp",'p', Items.paper,'t', Tabaco});
