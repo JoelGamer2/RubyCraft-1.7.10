@@ -14,7 +14,7 @@ import net.minecraft.item.ItemStack;
 public class Crafteos {
 	
 	public static void IniciarPrincipal(){
-		//
+		
 		MesaMineCraft();
 		IniciarCrafteosMesadeRuby();
 		IniciarCrafteosMesadeZafiro();

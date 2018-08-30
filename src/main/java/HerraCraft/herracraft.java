@@ -1,6 +1,7 @@
 package HerraCraft;
 
 
+import HerraCraft.ConectarWebs.Ver_Dias_de_salida_Elder_ways;
 import HerraCraft.Dropeos.Dropeos_Handler;
 import HerraCraft.Registrar.Eventos;
 import HerraCraft.Registrar.Mesas;
@@ -202,7 +203,7 @@ public class herracraft{
     
     public static void preinit(){
     	//variado
-
+        Ver_Dias_de_salida_Elder_ways.VerDias();
     	Regitrar_Entidades.mainRegistry();
     	
 
