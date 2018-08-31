@@ -331,8 +331,8 @@ tile.Mesa_de_trabajo_de_abeto.name=Mesa de Trabajo de Abeto
 tile.Mesa_de_trabajo_de_jungla.name=Mesa de Trabajo de Jungla
 tile.Bloque_de_Actualizaciones.name=Bloque de Actualizaciones
 tile.Bloque_Reforzado_Tier_1.name=Bloque Reforzado Tier I
-
-
+tile.Bloque_Reforzado_Tier_2.name=Bloque Reforzado Tier II
+tile.Bloque_Reforzado_Tier_3.name=Bloque Reforzado Tier III
 
 
 
@@ -465,6 +465,8 @@ item.Filo_de_Antimateria.name=Filo de Antimateria
 item.Pantalones_de_Caca.name=Pantalones de Caca
 item.Botas_de_Caca.name=Botas de Caca
 item.ElderWays.name=ElderWays
+item.Alabarda_de_Azula.name=Alabarda de Azula
+item.Alabarda_de_Antimateria.name=Alabarda de Antimateria
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera

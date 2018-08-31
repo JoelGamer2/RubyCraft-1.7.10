@@ -66,7 +66,6 @@ public class Crafteos {
     	GameRegistry.addRecipe(new ItemStack(RubyCraft.Palo_Morado, 4), new Object[]{"p","p","t",'p',Items.stick,'t',new ItemStack(Items.dye, 1, 5)});
 		GameRegistry.addRecipe(new ItemStack(RubyCraft.Tijera_de_ruby, 1), new Object[]{"o  "," o ",'o', RubyCraft.ruby});
 		GameRegistry.addRecipe(new ItemStack(RubyCraft.Tijeras_de_zafiro, 1), new Object[]{"o  "," o ",'o', RubyCraft.zafiro});
-		GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloque_Reforzado_Tier_1, 2), new Object[]{"pbz","bab","rbp",'p',RubyCraft.Bloque_de_Platino, 'b', Blocks.iron_bars, 'z', RubyCraft.zafiro, 'a', RubyCraft.Barras_de_Aluminio, 'r', RubyCraft.ruby});
 	    GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloque_de_Actualizaciones, 1), new Object[]{"oro","dcd","oro",'o', Items.gold_ingot,'r',Items.redstone,'d',Items.diamond,'c',Items.comparator});	
 	    
 		//Mesas de Trabajo Vanilla
@@ -89,7 +88,7 @@ public class Crafteos {
     	Crafteos_Bases.Bloques(Items.ender_pearl, RubyCraft.BloquedeEnderPearld);	
     	Crafteos_Bases.Bloques(RubyCraft.Platino, RubyCraft.Bloque_de_Platino);
     	Crafteos_Bases.Bloques(RubyCraft.Aluminio, RubyCraft.Bloque_de_Aluminio);
-    	Crafteos_Bases.Bloques(RubyCraft.Lingote_Galactico, RubyCraft.Bloque_Galactico);    	
+    	Crafteos_Bases.Bloques(RubyCraft.Lingote_Galactico, RubyCraft.Bloque_Galactico);   
     	//Crafteo Cemento
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Negro, 0);
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Rojo, 1);
@@ -110,6 +109,12 @@ public class Crafteos {
     	
     	Crafteos_Bases.Herramientas(RubyCraft.Cobre, RubyCraft.Palo_Morado, RubyCraft.Pico_de_cobre, RubyCraft.espada_de_cobre, RubyCraft.Hacha_de_cobre, RubyCraft.Pala_de_cobre, RubyCraft.Azada_de_cobre, RubyCraft.Tijeras_de_cobre);
     
+    	
+    	//Crafteo Bloque reforzado tiers
+    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_1, Blocks.stone);
+    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_2, Blocks.diamond_block);
+    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_3, RubyCraft.Bloquederuby);
+    	
         //Crafteos sin Formas Mesa(MineCraft)
     	
     	//DesCrafteos
@@ -266,7 +271,6 @@ public class Crafteos {
     }
       
       public static void IniciarCrafteosNavidad(){
-    	  
       }
       
       public static void IniciarCrafteosDiaHerobrine(){

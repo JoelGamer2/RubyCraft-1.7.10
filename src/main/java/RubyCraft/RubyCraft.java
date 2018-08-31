@@ -23,6 +23,7 @@ import RubyCraft.Armaduras.botasdeZafiro;
 import RubyCraft.Armaduras.cascodePlatino;
 import RubyCraft.Armaduras.cascodeUranio;
 import RubyCraft.Armaduras.pantacasdePlatino;
+import RubyCraft.Bases.Bloque_Reforzado_Base;
 import RubyCraft.Bases.CancionesBase;
 import RubyCraft.Bases.Cementos_Bases;
 import RubyCraft.Biomas.Registrar_Biomas;
@@ -31,7 +32,6 @@ import RubyCraft.Bloques.Andesita;
 import RubyCraft.Bloques.Andesita_Pulida;
 import RubyCraft.Bloques.BloqueObservador;
 import RubyCraft.Bloques.Bloque_Galactico;
-import RubyCraft.Bloques.Bloque_Reforzado_Tier_1;
 import RubyCraft.Bloques.Bloque_de_Actualizaciones;
 import RubyCraft.Bloques.Bloque_de_Aluminio;
 import RubyCraft.Bloques.Bloque_de_Blaze;
@@ -398,6 +398,8 @@ public static Block Bloque_de_Herobrine;
 public static Block obsidiana_que_llora;
 public static Block Bloque_de_Actualizaciones;
 public static Block Bloque_Reforzado_Tier_1;
+public static Block Bloque_Reforzado_Tier_2;
+public static Block Bloque_Reforzado_Tier_3;
 	
 
 //mesa de Crafteo
@@ -1002,9 +1004,17 @@ obsidiana_que_llora.setHarvestLevel("pickaxe", 3);
 Bloque_de_Actualizaciones = new Bloque_de_Actualizaciones(Material.iron).setBlockName("Bloque_de_Actualizaciones").setBlockTextureName(modid + ":Bloque_de_Actualizaciones").setCreativeTab(Rubycrafttab).setHardness(2.0F).setResistance(200.0F);
 GameRegistry.registerBlock(Bloque_de_Actualizaciones, Bloque_de_Actualizaciones.getUnlocalizedName().substring(5));
 
-Bloque_Reforzado_Tier_1 = new Bloque_Reforzado_Tier_1(Material.iron).setBlockName("Bloque_Reforzado_Tier_1").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_1").setCreativeTab(Rubycrafttab).setHardness(70.0F).setResistance(30.0F);
+Bloque_Reforzado_Tier_1 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_1").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_1").setCreativeTab(Rubycrafttab).setHardness(70.0F).setResistance(30.0F);
 GameRegistry.registerBlock(Bloque_Reforzado_Tier_1, Bloque_Reforzado_Tier_1.getUnlocalizedName().substring(5));
 Bloque_Reforzado_Tier_1.setHarvestLevel("pickaxe", 3);
+
+Bloque_Reforzado_Tier_2 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_2").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_2").setCreativeTab(Rubycrafttab).setHardness(90.0F).setResistance(50.0F);
+GameRegistry.registerBlock(Bloque_Reforzado_Tier_2, Bloque_Reforzado_Tier_2.getUnlocalizedName().substring(5));
+Bloque_Reforzado_Tier_1.setHarvestLevel("pickaxe", 3);
+
+Bloque_Reforzado_Tier_3 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_3").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_3").setCreativeTab(Rubycrafttab).setHardness(100.0F).setResistance(60.0F);
+GameRegistry.registerBlock(Bloque_Reforzado_Tier_3, Bloque_Reforzado_Tier_3.getUnlocalizedName().substring(5));
+Bloque_Reforzado_Tier_3.setHarvestLevel("pickaxe", 3);
 
 //Maquinas
 
