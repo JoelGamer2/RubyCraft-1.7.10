@@ -34,11 +34,8 @@ public class MesadeTrabajodeZafiro extends BlockContainer {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons (IIconRegister iconRegister){
 		if(RubyCraft.Navidad == false){
-		this.MesadeTrabajodeZafiroArriba = iconRegister.registerIcon(RubyCraft.modid + ":" + "MesadeTrabajodeZafiro_arriba");
-		this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "MesadeTrabajodeZafiro");
-		}else if(RubyCraft.Navidad == true){
-			this.MesadeTrabajodeZafiroArriba = iconRegister.registerIcon(RubyCraft.modid + ":" + "Navidad/MesadeTrabajodeZafiro_arriba");
-			this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "Navidad/MesadeTrabajodeZafiro");
+		this.MesadeTrabajodeZafiroArriba = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesas/Particulas_zafiro");
+		this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Mesas/Particulas_zafiro");
 		}
 	}
 	
