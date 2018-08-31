@@ -47,4 +47,10 @@ public static void Armaduras(Item objeto,Item casco, Item pechera, Item grebas, 
 		 
 	 }
 	 
+	 public static void Crafteo_Bloque_Reforza(Block tier, Block bloque_de_que_esta_hecho) {
+		 
+		 GameRegistry.addRecipe(new ItemStack(tier, 1), new Object[] {"ooo","obo","ooo",'o',Blocks.obsidian,'b', bloque_de_que_esta_hecho});
+		 
+	 }
+	 
 }
