@@ -22,7 +22,7 @@ public class ElderWays extends Item {
 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player) {
 	
      
-     player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.BLUE + "A ElderWays le faltan:" + Ver_Dias_de_salida_Elder_ways.Dias_));
+     player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GOLD + "ElderWays" + EnumChatFormatting.GREEN + " saldra" + EnumChatFormatting.AQUA + " el" + EnumChatFormatting.GRAY + ": " + EnumChatFormatting.RED  + Ver_Dias_de_salida_Elder_ways.Dias_));
 	
 	return itemstack;
    }

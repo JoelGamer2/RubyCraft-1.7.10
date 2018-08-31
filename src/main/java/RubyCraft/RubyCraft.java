@@ -216,7 +216,7 @@ import net.minecraftforge.common.util.EnumHelper;
 @Mod(modid = RubyCraft.modid, version = RubyCraft.version)
 public class RubyCraft {
 	
-	//Variado variado e
+	//Variado
 	public static final org.apache.logging.log4j.Logger logger = LogManager.getFormatterLogger("RubyCraft");
 	
 	 public static final String modid = "rc";
