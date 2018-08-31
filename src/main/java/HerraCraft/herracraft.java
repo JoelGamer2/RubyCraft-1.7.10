@@ -160,6 +160,7 @@ public class herracraft{
 	public static Item Espada_de_Antimateria;
 	public static Item Hacha_de_Antimateria;
 	public static Item Pala_de_Antimateria;
+	public static Item Alabarda_de_Antimateria;
 	public static Item Espada_de_Redstoner;
 	public static Item Pico_de_Redstoner;
 	public static Item Pala_de_Redstoner;
@@ -337,6 +338,12 @@ public class herracraft{
     	
     	Alabarda_de_Azula = new Alabarda_de_Azula(AzulaMaterial).setUnlocalizedName("Alabarda_de_Azula").setTextureName("rc:Herra/Alabarda_de_Azula").setCreativeTab(Herra);
     	GameRegistry.registerItem(Alabarda_de_Azula, Alabarda_de_Azula.getUnlocalizedName().substring(5));
+    	
+    	Alabarda_de_Antimateria = new Alabarda_de_Antimateria(Galaxya).setUnlocalizedName("Alabarda_de_Antimateria").setTextureName("rc:Herra/Alabarda_de_Antimateria").setCreativeTab(Herra);
+    	GameRegistry.registerItem(Alabarda_de_Antimateria, Alabarda_de_Antimateria.getUnlocalizedName().substring(5));
+    	
+    	
+    	
     //Bloques
     	
     Bloque_de_Plastico = new Bloque_de_Plastico(Material.rock).setBlockName("Bloque_de_Plastico").setBlockTextureName("rc:Herra/Bloque_de_Plastico").setCreativeTab(Herra).setHardness(1.0F);
