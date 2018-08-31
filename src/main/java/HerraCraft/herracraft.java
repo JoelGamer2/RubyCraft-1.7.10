@@ -152,6 +152,7 @@ public class herracraft{
 	public static Item Pala_de_Azula;
 	public static Item Hacha_de_Azula;
 	public static Item Azada_de_Azula;
+	public static Item Alabarda_de_Azula;
 	public static Item Espada_de_Wither;
 	public static Item Espada_de_Caca;
 	public static Item Sable_Kiver;
@@ -333,6 +334,9 @@ public class herracraft{
     	
     	Espada_del_Eden = new Espada_del_Eden(Eden).setUnlocalizedName("Espada_del_Eden").setTextureName("rc:Herra/Espada_del_Eden").setCreativeTab(Herra);
     	GameRegistry.registerItem(Espada_del_Eden, Espada_del_Eden.getUnlocalizedName().substring(5));
+    	
+    	Alabarda_de_Azula = new Alabarda_de_Azula(AzulaMaterial).setUnlocalizedName("Alabarda_de_Azula").setTextureName("rc:Herra/Alabarda_de_Azula").setCreativeTab(Herra);
+    	GameRegistry.registerItem(Alabarda_de_Azula, Alabarda_de_Azula.getUnlocalizedName().substring(5));
     //Bloques
     	
     Bloque_de_Plastico = new Bloque_de_Plastico(Material.rock).setBlockName("Bloque_de_Plastico").setBlockTextureName("rc:Herra/Bloque_de_Plastico").setCreativeTab(Herra).setHardness(1.0F);
