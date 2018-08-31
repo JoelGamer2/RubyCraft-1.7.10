@@ -78,6 +78,8 @@ public class Escaleras_Principal {
     public static Block Escalera_de_Obsidiana_que_llora;
 	public static Block Escalera_de_Bloque_Luminiscente;
 	public static Block Escalera_de_Bloque_Reforzado_Tier_I;
+	public static Block Escalera_de_Bloque_Reforzado_Tier_II;
+	public static Block Escalera_de_Bloque_Reforzado_Tier_III;
 	public static Block Escalera_de_tronco_de_madera_verde;
 	public static Block Escalera_de_trondo_de_madera_azul;
 	
@@ -139,6 +141,8 @@ public class Escaleras_Principal {
 		Escalera_de_Obsidiana_que_llora = new Escalera_de_Obsidiana_que_llora(RubyCraft.obsidiana_que_llora, 0).setBlockName("Escalera_de_Obsidiana_que_llora");
 	    Escalera_de_Bloque_Luminiscente = new Escalera_de_Bloque_Luminiscente(RubyCraft.Bloqueluminiscente, 0).setBlockName("Escalera_de_Bloque_Luminiscente");
 		Escalera_de_Bloque_Reforzado_Tier_I = new Escalera_de_Bloque_Reforzado_Tier_I(RubyCraft.Bloque_Reforzado_Tier_1, 0).setBlockName("Escalera_de_Bloque_Reforzado_Tier_I");	
+		Escalera_de_Bloque_Reforzado_Tier_II = new Escalera_Base(RubyCraft.Bloque_Reforzado_Tier_2, 0).setBlockName("Escalera_de_Bloque_Reforzado_Tier_II");
+		Escalera_de_Bloque_Reforzado_Tier_III = new Escalera_Base(RubyCraft.Bloque_Reforzado_Tier_3, 0).setBlockName("Escalera_de_Bloque_Reforzado_Tier_III");
 		Escalera_Cemento_Endurecido_Negro = new Escalera_Base(Cementos_Bases.Cemento_Endurecido_Negro, 0).setBlockName("Escalera_Cemento_Endurecido_Negro");
 		Escalera_Cemento_Endurecido_Naranja = new Escalera_Base(Cementos_Bases.Cemento_Endurecido_Naranja, 0).setBlockName("Escalera_Cemento_Endurecido_Naranja");
 		Escalera_Cemento_Endurecido_Amarillo = new Escalera_Base(Cementos_Bases.Cemento_Endurecido_Amarillo, 0).setBlockName("Escalera_Cemento_Endurecido_Amarillo");
@@ -200,7 +204,9 @@ public class Escaleras_Principal {
 		RegitrarEscalera(Escalera_de_Cuarzo_verde, 1.5F, 3, 0);
 		RegitrarEscalera(Escalera_de_Obsidiana_que_llora, 50.0F, 2000.0F, 3);
 		RegitrarEscalera(Escalera_de_Bloque_Luminiscente, 0.3F, 0.3F, 0);
-		RegitrarEscalera(Escalera_de_Bloque_Reforzado_Tier_I, 70.0F, 30.0F, 3);		
+		RegitrarEscalera(Escalera_de_Bloque_Reforzado_Tier_I, 70.0F, 70.0F, 3);		
+		RegitrarEscalera(Escalera_de_Bloque_Reforzado_Tier_II, 90.0F, 50.0F, 3);
+		RegitrarEscalera(Escalera_de_Bloque_Reforzado_Tier_III, 100.0F, 60.0F, 3);
 		RegitrarEscalera(Escalera_Cemento_Endurecido_Negro, 1.0F, 2.0F, 2);
 		RegitrarEscalera(Escalera_Cemento_Endurecido_Naranja, 1.0F, 2.0F, 2);
 		RegitrarEscalera(Escalera_Cemento_Endurecido_Amarillo, 1.0F, 2.0F, 2);
@@ -261,7 +267,9 @@ public class Escaleras_Principal {
 		Crafteos(Escalera_de_Cuarzo_verde, RubyCraft.Cuarzo_verde);
 		Crafteos(Escalera_de_Obsidiana_que_llora, RubyCraft.obsidiana_que_llora);
 		Crafteos(Escalera_de_Bloque_Luminiscente, RubyCraft.Bloqueluminiscente);
-		Crafteos(Escalera_de_Bloque_Reforzado_Tier_I, RubyCraft.Bloque_Reforzado_Tier_1);		
+		Crafteos(Escalera_de_Bloque_Reforzado_Tier_I, RubyCraft.Bloque_Reforzado_Tier_1);	
+		Crafteos(Escalera_de_Bloque_Reforzado_Tier_II, RubyCraft.Bloque_Reforzado_Tier_2);
+		Crafteos(Escalera_de_Bloque_Reforzado_Tier_III, RubyCraft.Bloque_Reforzado_Tier_3);
 		Crafteos(Escalera_Cemento_Endurecido_Negro, Cementos_Bases.Cemento_Endurecido_Negro);
 		Crafteos(Escalera_Cemento_Endurecido_Naranja, Cementos_Bases.Cemento_Endurecido_Naranja);
 		Crafteos(Escalera_Cemento_Endurecido_Amarillo, Cementos_Bases.Cemento_Endurecido_Amarillo);
