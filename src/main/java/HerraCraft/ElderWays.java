@@ -27,7 +27,7 @@ public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer
      player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GOLD + "ElderWays" + EnumChatFormatting.GREEN + " saldra" + EnumChatFormatting.AQUA + " el" + EnumChatFormatting.GRAY + ": " + EnumChatFormatting.RED  + Fechas_Proyectos.Dias));
      player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GOLD + "EnderGames Network " + EnumChatFormatting.GREEN + "saldra " + EnumChatFormatting.AQUA + "el" + EnumChatFormatting.GRAY + ": " + EnumChatFormatting.RED + Fechas_Proyectos.Salida_EnderGames));
 	}else if(world.isRemote && player.isSneaking()){
-	     player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.DARK_PURPLE + "Esto son los proyectos activos de joel y alejandro para " + EnumChatFormatting.DARK_PURPLE + "verlo pulsa clicl derecho sin shift"));
+	     player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.DARK_PURPLE + "Esto son los proyectos activos de joel y alejandro para " + EnumChatFormatting.DARK_PURPLE + "verlo pulsa click derecho sin shift"));
 	}
 	return itemstack;
    }
