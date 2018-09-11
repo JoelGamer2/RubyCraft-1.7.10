@@ -86,106 +86,106 @@ public class Transformador_de_Losas_a_Bloques extends Block {
             																																if(world.getBlock(x - 1, y + 4, z) == Blocks.stone_slab){
             																																	Abrir_Gui(player, world, x, y, z);
             																															}else{
-            																																Estructura_error(player);
+            																																Estructura_error(player, world);
             																															}
             																														}else{
-            																															Estructura_error(player);
+            																															Estructura_error(player, world);
             																														}
             																													}else{
-            																														Estructura_error(player);
+            																														Estructura_error(player, world);
             																													}
             																												}else{
-            																													Estructura_error(player);
+            																													Estructura_error(player, world);
             																												}
             																											}else{
-            																												Estructura_error(player);
+            																												Estructura_error(player, world);
             																											}
             																										}else{
-            																											Estructura_error(player);
+            																											Estructura_error(player, world);
             																										}
             																									}else{
-            																										Estructura_error(player);
+            																										Estructura_error(player, world);
             																									}
             																								}else{
-            																									Estructura_error(player);
+            																									Estructura_error(player, world);
             																								}
             																							}else{
-            																								Estructura_error(player);
+            																								Estructura_error(player, world);
             																							}
             																						}else{
-            																							Estructura_error(player);
+            																							Estructura_error(player, world);
             																						}
             																					}else{
-            																						Estructura_error(player);	
+            																						Estructura_error(player, world);	
             																					}
             																				}else{
-            																					Estructura_error(player);
+            																					Estructura_error(player, world);
             																				}
             																			}else{
-            																				Estructura_error(player);
+            																				Estructura_error(player, world);
             																			}
             																		}else{
-            																			Estructura_error(player);
+            																			Estructura_error(player, world);
             																		}
             																	}else{
-            																		Estructura_error(player);
+            																		Estructura_error(player, world);
             																	}
             																}else{
-            																	Estructura_error(player);
+            																	Estructura_error(player, world);
             																}
             															 }else{
-            																 Estructura_error(player); 
+            																 Estructura_error(player, world); 
             															 }
             														 }else{
-            															 Estructura_error(player);
+            															 Estructura_error(player, world);
             														 }
             													 }else{
-            														 Estructura_error(player);
+            														 Estructura_error(player, world);
             													 }
             												 }else{
-            													 Estructura_error(player);
+            													 Estructura_error(player, world);
             												 }
             											 }else{
-            												 Estructura_error(player);
+            												 Estructura_error(player, world);
             											 }
             												 
             											 }else{
-            												 Estructura_error(player);
+            												 Estructura_error(player, world);
             											 }
             										 }else{
-            											 Estructura_error(player);
+            											 Estructura_error(player, world);
             										 }
             									 }else{
-            										 Estructura_error(player); 
+            										 Estructura_error(player, world); 
             									 }
             								 }else{
-            									 Estructura_error(player);
+            									 Estructura_error(player, world);
             								 }
             							  }else{
-            								  Estructura_error(player); 
+            								  Estructura_error(player, world); 
             							  }
             						  }else{
-            							  Estructura_error(player);
+            							  Estructura_error(player, world);
             						  }
             					  }else{
-            						  Estructura_error(player);
+            						  Estructura_error(player, world);
             					  }
             				  }else{
-            					  Estructura_error(player); 
+            					  Estructura_error(player, world); 
             				  }
             			  }else{
-            				  Estructura_error(player); 
+            				  Estructura_error(player, world); 
             			  }
             		  }else{
-            			  Estructura_error(player); 
+            			  Estructura_error(player, world); 
             		  }
             	  }else{
-            		  Estructura_error(player);
+            		  Estructura_error(player, world);
             	  }
                }else{
-            	   Estructura_error(player); 
+            	   Estructura_error(player, world); 
                }
-		}else if(player.isSneaking()){
+		}else if(world.isRemote && player.isSneaking()){
 			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Info La Estructura esta en la Wiki"));
 		}
 		return true;
@@ -196,10 +196,10 @@ public class Transformador_de_Losas_a_Bloques extends Block {
 
 	}
 	
-	public static void Estructura_error(EntityPlayer player){
-		
+	public static void Estructura_error(EntityPlayer player, World world){
+		if(world.isRemote) {
 		player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Estructura Incorrecta"));
-
+		}
 	}
 	
 }

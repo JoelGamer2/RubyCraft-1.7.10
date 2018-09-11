@@ -58,7 +58,7 @@ public class MesadeTrabajodeZafiro extends BlockContainer {
 	}
 	
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int q, float a, float b, float c){
-		if (!player.isSneaking()){
+		if (world.isRemote && !player.isSneaking()){
 			player.openGui(RubyCraft.instance, RubyCraft.guiIDMesadeTrabajodeZafiro, world, x, y, z);
 		}
 			return true;

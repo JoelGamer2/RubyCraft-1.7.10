@@ -26,7 +26,7 @@ public class Espada_de_Platino extends ItemSword {
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
      */
 	public ItemStack onItemRightClick(ItemStack stack,World world, EntityPlayer player){
-		if(player.isSneaking()){
+		if(world.isRemote && player.isSneaking()){
 			if(player.inventory.hasItem(RubyCraft.Platino)){
 				
 				if(RubyCraft.cliente) {

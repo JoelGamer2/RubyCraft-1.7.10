@@ -45,7 +45,9 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 					
 				player.setPosition(x + Coordenadax, y + Coordenaday , z + Coordenadaz);
 				player.addExperienceLevel(Experiencia);	
+				if(world.isRemote) {
 				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Vas" + EnumChatFormatting.BLUE + " a Morir " +  EnumChatFormatting.GREEN + " xD "));
+				}
 				player.addStat(Logros.Siendo_Troleado, 1);
 				
 				}
@@ -87,9 +89,10 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 					world.setBlock(x - 1, y, z, Blocks.flowing_lava);
 					world.setBlock(x, y, z + 1, Blocks.flowing_lava);
 					world.setBlock(x, y, z - 1, Blocks.flowing_lava);
+					if(world.isRemote) {
 					player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Version Trol activa lo siento"));				
-				
-				   }else if(RubyCraft.Navidad == true){
+					}
+				   }else if(RubyCraft.Navidad == true && world.isRemote){
 					RubyCraft.Bloque_de_Diamante_Trol.setHarvestLevel("pickaxe", 5);
 					RubyCraft.Bloque_de_Diamante_Trol.setHardness(100.0F);
 				    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + player.getDisplayName() + EnumChatFormatting.BLUE + " Feliz Navidad" + EnumChatFormatting.GOLD + " : - )" + EnumChatFormatting.RED + " En Navidad no se Trolea"));	

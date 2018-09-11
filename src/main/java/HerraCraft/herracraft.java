@@ -1,11 +1,12 @@
 package HerraCraft;
 
 
-import HerraCraft.ConectarWebs.Ver_Dias_de_salida_Elder_ways;
+import HerraCraft.ConectarWebs.Fechas_Proyectos;
 import HerraCraft.Dropeos.Dropeos_Handler;
 import HerraCraft.Registrar.Eventos;
 import HerraCraft.Registrar.Mesas;
 import HerraCraft.Registrar.Regitrar_Entidades;
+import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -205,7 +206,7 @@ public class herracraft{
     
     public static void preinit(){
     	//variado
-        Ver_Dias_de_salida_Elder_ways.VerDias();
+        Fechas_Proyectos.VerDias();
     	Regitrar_Entidades.mainRegistry();
     	
 
@@ -682,7 +683,7 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Bloque_De_Estrella_Del_Wither, 1), new Object[]{"eee","eee","eee",'e', Items.nether_star});
     GameRegistry.addRecipe(new ItemStack(Mango_de_Antimateria, 1), new Object[]{"plp","vlv","#a#", 'p', Plutonio, 'l', Lingote_de_Antimateria, 'v',Vapor_de_electrones, 'a',Palos_de_blaze});
     GameRegistry.addRecipe(new ItemStack(Filo_de_Antimateria, 1), new Object[]{"plp","flf","vlv",'p', Plutonio, 'l', Lingote_de_Antimateria, 'f', Fluido_de_suspension, 'v', Vapor_de_electrones});
-    
+    GameRegistry.addRecipe(new ItemStack(ElderWays, 1), new Object[] {"ara","ror","ara",'a', Azula,'r', RubyCraft.ruby,'o' ,Items.ender_eye});
     
     
     

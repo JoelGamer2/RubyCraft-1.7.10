@@ -77,7 +77,9 @@ public class MesadeTrabajodeRuby extends BlockContainer{
 				player.openGui(RubyCraft.instance, RubyCraft.guiIDMesadeTrabajodeRuby, world, x, y, z);
 			     }else if(Dia_de_Herobrine && Troleada == Troleada_Valor || RubyCraft.VersionTrol){
 			    	    world.setBlock(x, y, z, Bloque_para_poner_en_troleada);
+			    	    if(world.isRemote) {
 						Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Has Sido Troleado" + EnumChatFormatting.GOLD + " Pulsa Unas Cuantas " + EnumChatFormatting.GOLD + "veces y veras Esto paso porque en este dia se descubrio a " + EnumChatFormatting.GOLD + "herobrine"));
+			    	    }
 						Troleada = 0;
 			     }else if(!RubyCraft.VersionTrol && !Dia_de_Herobrine){
 			    	 

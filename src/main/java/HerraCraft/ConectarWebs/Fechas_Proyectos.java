@@ -5,11 +5,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Ver_Dias_de_salida_Elder_ways {
+public class Fechas_Proyectos {
 
 	
-	public static String URL = "https://www.dropbox.com/s/v12oapjfp2msomf/RubyCraft-DiasSalirMapa.txt?raw=1";
-    public static String Dias_ = "";
+	public static String URL = "https://www.dropbox.com/s/v12oapjfp2msomf/RubyCraft-DiasProyectos.txt?raw=1";
+    public static String Dias = "";
+    public static String Salida_EnderGames = "";
 	
 	
 public static boolean URLNOVALIDAERROR = false;
@@ -22,9 +23,12 @@ public static boolean URLNOVALIDAERROR = false;
 					URL url = new URL(URL);
 					Scanner scanner = new Scanner(url.openStream());
 					String Mensaje1 = scanner.nextLine();
-					String Dias = scanner.nextLine();
+					String Diasmapa = scanner.nextLine();
+					String Mensaje2 = scanner.nextLine();
+					String Diasnetwork = scanner.nextLine();
                     
-					Dias_ = Dias;
+					Dias = Diasmapa;
+					Salida_EnderGames = Diasnetwork;
                    
 				} catch (MalformedURLException e) {
 					URLNOVALIDAERROR = true;
