@@ -157,6 +157,8 @@ item.PPAP_Long_Version.name=Music disc
 item.PPAP_Long_Version.desc=PPAP long Version
 item.TrapAdvenureMusicLevel1.name=Music disc
 item.TrapAdvenureMusicLevel1.desc=Trap Adventure Music Level 1
+item.moviemientonaranja.name=Music disc
+item.moviemientonaranja.desc=Orange Movement
 
 tile.Escalera_de_Diorita_Pulida.name=Polished Diorite Stair
 tile.Escalera_de_Granito_Pulido.name=Polished Granite Stair
@@ -461,7 +463,12 @@ item.Espada_del_Eden.name=Espada del Eden
 item.Polimeros.name=Polimeros
 item.Manzana_D.name=Manzana D
 item.Mango_de_Antimateria.name=Mango de Antimateria
-
+item.Filo_de_Antimateria.name=Filo de Antimateria
+item.Pantalones_de_Caca.name=Pantalones de Caca
+item.Botas_de_Caca.name=Botas de Caca
+item.ElderWays.name=ElderWays
+item.Alabarda_de_Azula.name=Alabarda de Azula
+item.Alabarda_de_Antimateria.name=Alabarda de Antimateria
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
@@ -519,6 +526,8 @@ tile.Cemento_plateado.name=Cemento plateado
 tile.Cemento_naranja.name=Cemento naranja
 tile.Cemento_gris.name=Cemento gris
 tile.Magma_Acuatico.name=Magma Acuatico
+tile.Bloque_De_Estrella_Del_Wither.name=Bloque de Nether Star
+
 
 
 tile.Escalera_De_corazon_de_redstone.name=Escalera de corazon de redstone
