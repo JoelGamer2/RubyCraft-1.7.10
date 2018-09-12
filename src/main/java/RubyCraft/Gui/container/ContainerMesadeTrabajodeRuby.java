@@ -79,7 +79,8 @@ public class ContainerMesadeTrabajodeRuby extends Container {
 
                 if (itemstack != null)
                 {
-                    par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
+                  par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
+                
                 }
             }
         }
