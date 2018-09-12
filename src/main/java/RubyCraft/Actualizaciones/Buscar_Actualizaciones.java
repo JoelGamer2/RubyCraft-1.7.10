@@ -26,11 +26,13 @@ public class Buscar_Actualizaciones {
 					String Mensaje1 = scanner.nextLine();
 					String Mensaje2 = scanner.nextLine();
 					String Mensaje3 = scanner.nextLine();
+					String ChangeLog = scanner.nextLine();
 					scanner.close();
 					if(!RubyCraft.version.equals(UltimaVersion) && !URLNOVALIDA){
 						Bloque_de_Actualizaciones.actualizacion = 15;
 						RubyCraft.logger.info(UltimaVersion + " Esta es la Ultima Version de RubyCraft Disponible");
 						Bloque_de_Actualizaciones.UltimaVersion = UltimaVersion;
+						TestearActualizaciones.ChangeLog = ChangeLog;
 						if(!Mensaje1.equals("")){
 						RubyCraft.logger.info(Mensaje1);
 					    TestearActualizaciones.Mensaje1 = Mensaje1;

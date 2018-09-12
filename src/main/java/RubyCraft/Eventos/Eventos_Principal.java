@@ -34,6 +34,7 @@ public class Eventos_Principal {
 		
 		FMLCommonHandler.instance().bus().register(new Navidad());		
 		
+	//	FMLCommonHandler.instance().bus().register(new QuitarVidaSiUranio());
 		
 		//Herracraft
 		Eventos.Iniciar();

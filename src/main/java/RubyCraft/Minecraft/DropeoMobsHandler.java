@@ -1,5 +1,6 @@
 package RubyCraft.Minecraft;
 
+import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.boss.EntityDragon;
@@ -27,7 +28,7 @@ public class DropeoMobsHandler{
     	
     	if(event.entity instanceof EntityPig){
     	 
-    	ItemStack stack = new ItemStack(RubyCraft.Bloquedecaca, 1);
+    	ItemStack stack = new ItemStack(herracraft.Caca, 1);
     	EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
     	
     	event.drops.add(drop);

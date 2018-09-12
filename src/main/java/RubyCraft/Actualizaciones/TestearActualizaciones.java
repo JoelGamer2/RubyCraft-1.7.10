@@ -6,8 +6,10 @@ import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraft.client.Minecraft;
+import net.minecraft.event.ClickEvent;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IChatComponent;
 
 public class TestearActualizaciones {
 
@@ -18,6 +20,7 @@ public class TestearActualizaciones {
 	public static String Mensaje1 = "";
 	public static String Mensaje2 = "";
 	public static String Mensaje3 = "";
+	public static String ChangeLog = "";
 
 	
 	@SubscribeEvent
@@ -32,6 +35,9 @@ public class TestearActualizaciones {
 			}if(Mensaje3a == true){
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Mensaje3));
 			}
+			IChatComponent url = new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Click para ver el ChangeLog");
+			url.getChatStyle().setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ChangeLog));
+			Minecraft.getMinecraft().thePlayer.addChatMessage(url);
 			Iniciadosesion = true;
 			
 		}else if(Control_de_Version.Version_de_desarrolador == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {

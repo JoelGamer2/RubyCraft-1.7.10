@@ -2,6 +2,8 @@ death.attack.Magma=%1$s discovered floor was lava
 death.attack.Magma.player=%1$s walked into danger zone due to %2$s
 death.attack.Troleo=%1$s died by neglected 
 death.attack.Troleo.player=%$s to been Trolled Por %2$s.
+death.attack.RadioActividad=%1$s Dead by having too much RadioActivity
+death.attack.RadioActividad.player=%$s Dead by Radioactivity but I Trolled %2$s.
 
 achievement.MinaRuby=Mine Ruby
 achievement.MinaRuby.desc=Mine Ruby ore with iron pickaxe
