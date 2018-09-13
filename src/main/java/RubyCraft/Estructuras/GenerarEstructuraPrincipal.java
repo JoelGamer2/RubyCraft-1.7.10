@@ -23,10 +23,10 @@ public class GenerarEstructuraPrincipal implements IWorldGenerator{
 	{
 		
 		  int Xcoord1 = x;
-		  int Ycoord1 = world.getTopSolidOrLiquidBlock(x, z);
+		  int Ycoord1 = 100;
 		  int Zcoord1 = z;
 		   
-		//(new MonumentoMarino()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
+	//	(new MonumentoMarino()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
 	} 
 	
 }
