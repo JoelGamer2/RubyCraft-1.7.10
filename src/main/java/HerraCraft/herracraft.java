@@ -58,6 +58,7 @@ public class herracraft{
     public static Block Bloque_Invisible;
     public static Block Bloque_de_Losa;
     public static Block Bloque_De_Estrella_Del_Wither;
+    public static Block Generator_Boss;
     
     public static final int guiIDMesadeAzula = 10;/**Cambia el puto numeroooooooooooo¡¡¡¡¡¡ cuando hagas otra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡**/
 	//Items declarados
@@ -124,6 +125,8 @@ public class herracraft{
     public static Item Mango_de_Antimateria;
     public static Item Filo_de_Antimateria;
     public static Item ElderWays;
+    public static Item Invocador_Celestial;
+    public static Item Lingote_Demoniaco;
     //Armaduras
     public static Item Casco_de_Azula;
     public static Item Pechera_de_Azula;
@@ -415,6 +418,9 @@ public class herracraft{
     Magma_Acuatico = new Magma_Acuatico(Material.rock).setBlockName("Magma_Acuatico").setBlockTextureName("rc:Herra/acuatico").setHardness(0.9F).setCreativeTab(Herra);
     GameRegistry.registerBlock(Magma_Acuatico, Magma_Acuatico.getUnlocalizedName().substring(5));
     
+    Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setCreativeTab(Herra).setResistance(10.0F);
+    
+    
     //Items
     Azula = new Azula().setUnlocalizedName("Azula").setTextureName("rc:Herra/Azula").setCreativeTab(Herra);
     GameRegistry.registerItem(Azula, Azula.getUnlocalizedName().substring(5));
@@ -583,6 +589,12 @@ public class herracraft{
     
     ElderWays = new ElderWays().setUnlocalizedName("ElderWays").setTextureName("rc:Herra/ElderWays").setCreativeTab(Herra);
     GameRegistry.registerItem(ElderWays, ElderWays.getUnlocalizedName().substring(5));
+    
+    Invocador_Celestial = new Invocador_Celestial().setUnlocalizedName("Invocador_Celestial").setTextureName("rc:Herra/Invocador_Celestial").setCreativeTab(Herra);
+    GameRegistry.registerItem(Invocador_Celestial, Invocador_Celestial.getUnlocalizedName().substring(5));
+    
+    Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco").setCreativeTab(Herra);
+    GameRegistry.registerItem(Lingote_Demoniaco, Lingote_Demoniaco.getUnlocalizedName().substring(5));
     
     }
 	

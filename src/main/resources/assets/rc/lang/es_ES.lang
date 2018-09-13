@@ -471,6 +471,7 @@ item.Botas_de_Caca.name=Botas de Caca
 item.ElderWays.name=ElderWays
 item.Alabarda_de_Azula.name=Alabarda de Azula
 item.Alabarda_de_Antimateria.name=Alabarda de Antimateria
+item.Invocador_Celestial.name=Invocador Celestial
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
@@ -529,6 +530,7 @@ tile.Cemento_naranja.name=Cemento naranja
 tile.Cemento_gris.name=Cemento gris
 tile.Magma_Acuatico.name=Magma Acuatico
 tile.Bloque_De_Estrella_Del_Wither.name=Bloque de Nether Star
+tile.Generator_Boss.name=Generador Boss
 
 
 
