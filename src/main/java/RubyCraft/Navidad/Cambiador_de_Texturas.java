@@ -17,6 +17,7 @@ public class Cambiador_de_Texturas {
 		}else if(!RubyCraft.Navidad && !RubyCraft.HalloWen){
 			Texturas_Normales();
 		}
+		
 	}
 	
 	public static void Texturas_Navidad(){
