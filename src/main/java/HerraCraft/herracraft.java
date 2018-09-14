@@ -425,7 +425,7 @@ public class herracraft{
     Magma_Acuatico = new Magma_Acuatico(Material.rock).setBlockName("Magma_Acuatico").setBlockTextureName("rc:Herra/acuatico").setHardness(0.9F).setCreativeTab(Herra);
     GameRegistry.registerBlock(Magma_Acuatico, Magma_Acuatico.getUnlocalizedName().substring(5));
     
-    Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setCreativeTab(Herra).setResistance(10.0F);
+    Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setResistance(10.0F);
     
     
     //Items
