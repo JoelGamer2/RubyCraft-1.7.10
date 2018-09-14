@@ -181,6 +181,7 @@ public class herracraft{
 	public static Item Espada_de_Sangre;
 	public static Item Espada_Reforzada;
 	public static Item Espada_del_Eden;
+	public static Item Espada_Demoniaca;
 
 	
 	public static final Item.ToolMaterial AzulaMaterial = EnumHelper.addToolMaterial("AzulaMaterial", 5, 3122, 10.0F, 12.0F, 45);
@@ -361,7 +362,8 @@ public class herracraft{
     	Alabarda_de_Antimateria = new Alabarda_de_Antimateria(Galaxya).setUnlocalizedName("Alabarda_de_Antimateria").setTextureName("rc:Herra/Alabarda_de_Antimateria").setCreativeTab(Herra);
     	GameRegistry.registerItem(Alabarda_de_Antimateria, Alabarda_de_Antimateria.getUnlocalizedName().substring(5));
     	
-        
+        Espada_Demoniaca = new Espada_Demoniaca(Demonic).setUnlocalizedName("Espada_Demoniaca").setTextureName("rc:Herra/Espada_Demoniaca");
+        GameRegistry.registerItem(Espada_Demoniaca, Espada_Demoniaca.getUnlocalizedName().substring(5));
     	
     	
     	
