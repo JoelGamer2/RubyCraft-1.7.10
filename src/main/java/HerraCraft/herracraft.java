@@ -600,7 +600,7 @@ public class herracraft{
     Invocador_Celestial = new Invocador_Celestial().setUnlocalizedName("Invocador_Celestial").setTextureName("rc:Herra/Invocador_Celestial").setCreativeTab(Herra);
     GameRegistry.registerItem(Invocador_Celestial, Invocador_Celestial.getUnlocalizedName().substring(5));
     
-    Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco").setCreativeTab(Herra);
+    Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco");
     GameRegistry.registerItem(Lingote_Demoniaco, Lingote_Demoniaco.getUnlocalizedName().substring(5));
     
     }
