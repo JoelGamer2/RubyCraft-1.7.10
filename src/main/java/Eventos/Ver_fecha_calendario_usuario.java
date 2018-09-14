@@ -32,7 +32,7 @@ public class Ver_fecha_calendario_usuario {
 		        
 		    }else{
 		    	//Testear Hallowen
-		    	if(calendar.get(2) + 1 == 10 && calendar.get(5) == 31){
+		    	if(calendar.get(2) + 1 == 10 && calendar.get(5) >= 28 && calendar.get(5) <= 31){
 		    		 Verificar_Fecha.HalloWen = true;
 		    		Verificar_Fecha.Iniciar();
 		    	

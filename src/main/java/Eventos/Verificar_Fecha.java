@@ -10,16 +10,13 @@ import RubyCraft.Registrar.Crafteos;
 
 public class Verificar_Fecha {
 
-	public static int puerto1 = 1234;
+	public static int puerto = 1234;
 
 	
 	public static String Mensajedelserver;
 	public static String mensajecliente;
 	public static DataOutputStream dout1;
 	
-	public static String Version = "1.2";
-	
-	public static int Veces_chat_vacio = 0;
 
 	public static boolean Iniciado = false;
 	
@@ -34,9 +31,10 @@ public class Verificar_Fecha {
 			
 			//System.out.println("Pepe Bot Cliente Version:" + Version);
 			
-			Socket s = new Socket("joelcraft2.ddns.net",puerto1);
+			Socket s = new Socket("217.217.155.253",puerto);
 			DataInputStream din = new DataInputStream(s.getInputStream());
 			DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+			s.setSoTimeout(10000);
 			
 			dout1 = dout;
 			dout=dout1;
@@ -64,7 +62,7 @@ public class Verificar_Fecha {
 				RubyCraft.HalloWen = true;
 	    		Crafteos.IniciarCrafteosHallowen();
 	    		Cambiador_de_Texturas.Texturas();
-	    		
+	    		IniciarItemsEventos.Iniciartodo();
 				inicia = false;
 				
 			}else if(HalloWen == true && msgin.equals("false")) {
@@ -79,7 +77,7 @@ public class Verificar_Fecha {
 				 RubyCraft.Navidad = true;
 				 Crafteos.IniciarCrafteosNavidad();
 			     Cambiador_de_Texturas.Texturas();
-	
+			     IniciarItemsEventos.Iniciartodo();
 				inicia = false;
 				
 				
@@ -99,7 +97,12 @@ public class Verificar_Fecha {
 			
 		
 	}catch (Exception e) {
-		
+		inicia = false;
+		RubyCraft.Navidad = false;
+		RubyCraft.HalloWen = false;
+		Navidad = false;
+		HalloWen = false;
+		Cambiador_de_Texturas.Texturas();
 		System.out.println(e);
 	}
 	
