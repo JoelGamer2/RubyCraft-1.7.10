@@ -150,6 +150,8 @@ public class herracraft{
     public static Item Pantalones_de_militar;
     public static Item Botas_de_militar;
     
+    public static Item Casco_Demoniaco;
+    
 	//Herramientas declaradas
 	public static Item Espada_de_Azula;
 	public static Item Pico_de_Azula;
