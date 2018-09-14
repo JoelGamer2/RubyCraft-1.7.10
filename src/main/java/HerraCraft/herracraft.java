@@ -192,6 +192,7 @@ public class herracraft{
 	public static final Item.ToolMaterial Sangre = EnumHelper.addToolMaterial("Sangre", 5, 1000, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial Reforzado = EnumHelper.addToolMaterial("Reforzado", 5, 1000, 10.0F, 20.0F, 45);
 	public static final Item.ToolMaterial Eden = EnumHelper.addToolMaterial("Eden", 5, 25000, 1000, 96, 45);
+	public static final Item.ToolMaterial Demonic = EnumHelper.addToolMaterial("Demonic", 5, 13000, 800, 122.0F, 45);
 	
 	public static final ItemArmor.ArmorMaterial AzulaArmorMaterial = EnumHelper.addArmorMaterial("AzulaArmorMaterial", 1000, new int[]{7,6,5,2}, 45);
     public static final ItemArmor.ArmorMaterial RedstonerArmorMaterial = EnumHelper.addArmorMaterial("RedtonerArmorMAterial", 1000, new int[]{6,5,3,2}, 45);
@@ -200,6 +201,7 @@ public class herracraft{
     public static final ItemArmor.ArmorMaterial Guerra = EnumHelper.addArmorMaterial("Guerra", 1000, new int[]{7,6,5,4}, 45);
     public static final ItemArmor.ArmorMaterial Enderman = EnumHelper.addArmorMaterial("Enderman", 5000, new int[]{7,6,5,4}, 45);
     public static final ItemArmor.ArmorMaterial Ciborg = EnumHelper.addArmorMaterial("Ciborg", 5000, new int[]{10,10,10,10}, 45);
+    public static final ItemArmor.ArmorMaterial DemonicArmor = EnumHelper.addArmorMaterial("DemonicArmor", 13000, new int[]{16,16,16,16}, 45);
 	
     //Tabs
     public static CreativeTabs Herra = new HerraTab(CreativeTabs.getNextID(), "hr", "hr" + "." + "HerraCraft", 0);    
@@ -243,6 +245,7 @@ public class herracraft{
     	Pantalones_de_militar = new Pantalones_de_militar(Guerra, 0, 2).setUnlocalizedName("Pantalones_de_militar").setTextureName("rc:Herra/Pantalones_de_militar").setCreativeTab(Herra);
     	Botas_de_militar = new Botas_de_militar(Guerra, 0, 3).setUnlocalizedName("Botas_de_militar").setTextureName("rc:Herra/Botas_de_militar").setCreativeTab(Herra);
     	
+    	Casco_Demoniaco = new Casco_Demoniaco(DemonicArmor, 0, 0).setUnlocalizedName("Casco_Demoniaco").setTextureName("rc:Herra/Casco_Demoniaco").setCreativeTab(Herra);
     	
     	
     	GameRegistry.registerItem(Casco_de_Azula, Casco_de_Azula.getUnlocalizedName().substring(5));
@@ -345,6 +348,8 @@ public class herracraft{
     	
     	Alabarda_de_Antimateria = new Alabarda_de_Antimateria(Galaxya).setUnlocalizedName("Alabarda_de_Antimateria").setTextureName("rc:Herra/Alabarda_de_Antimateria").setCreativeTab(Herra);
     	GameRegistry.registerItem(Alabarda_de_Antimateria, Alabarda_de_Antimateria.getUnlocalizedName().substring(5));
+    	
+        
     	
     	
     	
