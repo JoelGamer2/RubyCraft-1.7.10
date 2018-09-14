@@ -472,6 +472,10 @@ item.ElderWays.name=ElderWays
 item.Alabarda_de_Azula.name=Alabarda de Azula
 item.Alabarda_de_Antimateria.name=Alabarda de Antimateria
 item.Invocador_Celestial.name=Invocador Celestial
+item.Casco_Demoniaco.name=Casco Demoniaco
+item.Pechera_Demoniaca.name=Pechera Demoniaca
+item.Botas_Demoniacas.name=Botas Demoniacas
+item.Pantalones_Demoniacos.name=Pantalones Demoniacos
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
