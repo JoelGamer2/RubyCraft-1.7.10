@@ -151,6 +151,9 @@ public class herracraft{
     public static Item Botas_de_militar;
     
     public static Item Casco_Demoniaco;
+    public static Item Pechera_Demoniaca;
+    public static Item Pantalones_Demoniacos;
+    public static Item Botas_Demoniacas;
     
 	//Herramientas declaradas
 	public static Item Espada_de_Azula;
@@ -247,7 +250,10 @@ public class herracraft{
     	Pantalones_de_militar = new Pantalones_de_militar(Guerra, 0, 2).setUnlocalizedName("Pantalones_de_militar").setTextureName("rc:Herra/Pantalones_de_militar").setCreativeTab(Herra);
     	Botas_de_militar = new Botas_de_militar(Guerra, 0, 3).setUnlocalizedName("Botas_de_militar").setTextureName("rc:Herra/Botas_de_militar").setCreativeTab(Herra);
     	
-    	Casco_Demoniaco = new Casco_Demoniaco(DemonicArmor, 0, 0).setUnlocalizedName("Casco_Demoniaco").setTextureName("rc:Herra/Casco_Demoniaco").setCreativeTab(Herra);
+    	Casco_Demoniaco = new Casco_Demoniaco(DemonicArmor, 0, 0).setUnlocalizedName("Casco_Demoniaco").setTextureName("rc:Herra/Casco_Demoniaco");
+    	Pechera_Demoniaca = new Pechera_Demoniaca(DemonicArmor,0, 1).setUnlocalizedName("Pechera_Demoniaca").setTextureName("rc:Herra/Pechera_Demoniaca");
+    	Pantalones_Demoniacos = new Pantalones_Demoniacos(DemonicArmor,0, 2).setUnlocalizedName("Pantalones_Demoniacos").setTextureName("rc:Herra/Pantalones_Demoniacos");
+    	Botas_Demoniacas = new Botas_Demoniacas(DemonicArmor,0, 3).setUnlocalizedName("Botas_Demoniacas").setTextureName("rc:Herra/Botas_Demoniacas");
     	
     	
     	GameRegistry.registerItem(Casco_de_Azula, Casco_de_Azula.getUnlocalizedName().substring(5));
@@ -270,6 +276,10 @@ public class herracraft{
     	GameRegistry.registerItem(Pantalones_de_militar, Pantalones_de_militar.getUnlocalizedName().substring(5));
     	GameRegistry.registerItem(Botas_de_militar, Botas_de_militar.getUnlocalizedName().substring(5));
     	
+    	GameRegistry.registerItem(Casco_Demoniaco, Casco_Demoniaco.getUnlocalizedName().substring(5));
+    	GameRegistry.registerItem(Pechera_Demoniaca, Pechera_Demoniaca.getUnlocalizedName().substring(5));
+    	GameRegistry.registerItem(Pantalones_Demoniacos, Pantalones_Demoniacos.getUnlocalizedName().substring(5));
+    	GameRegistry.registerItem(Botas_Demoniacas, Botas_Demoniacas.getUnlocalizedName().substring(5));
         
     	
     	//Herramientas
@@ -426,6 +436,7 @@ public class herracraft{
     GameRegistry.registerBlock(Magma_Acuatico, Magma_Acuatico.getUnlocalizedName().substring(5));
     
     Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setResistance(10.0F);
+    GameRegistry.registerBlock(Generator_Boss, Generator_Boss.getUnlocalizedName().substring(5));
     
     
     //Items
