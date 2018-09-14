@@ -72,6 +72,7 @@ entity.Invocador.name=Evoker
 entity.HombreCerdo.name=RubyCraft Pigman
 entity.Joseoscar1.name=Joseoscar1
 entity.PatxisGamer.name=Patxis
+entity.Parca.name=Parca
 
 itemGroup.rc=RubyCraft
 
@@ -359,6 +360,7 @@ entity.Herobrine.name=Error 404
 entity.Entity_303.name=Entity 303
 entity.Linck.name=Linck
 
+
 item.Azula.name=Azula
 item.Plastico.name=Plastic
 item.Metal.name=Metal
@@ -436,7 +438,7 @@ item.Sangre_de_animal.name=Animal Blood
 item.Vino.name=Came
 item.Casco_militar.name=Militar Helmet
 item.Pechera_militar.name=Militar Chestplate
-item.Pantalones_de_militar.name=Militar Legginds
+item.Pantalones_de_militar.name=Militar Leggings
 item.Botas_de_militar.name=Militar Boots
 item.Espada_de_diamante.name=Espada de diamante
 item.Diamante_Troll.name=Troll Diamondz
@@ -472,6 +474,10 @@ item.ElderWays.name=ElderWays
 item.Alabarda_de_Azula.name=Azula Halberd
 item.Alabarda_de_Antimateria.name=Antimatter Halberd
 item.Invocador_Celestial.name=Celestial invoker
+item.Casco_Demoniaco.name=Demonic Helmet
+item.Pechera_Demoniaca.name=Demonic Chestplate
+item.Pantalones_Demoniacos.name=Demonic Leggings
+item.Botas_Demoniacas.name=Demonic Boots
 
 tile.Bloque_de_Plastico.name=Plastic Block
 tile.Barrera.name=Barrier
