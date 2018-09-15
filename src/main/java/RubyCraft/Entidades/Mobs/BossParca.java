@@ -3,15 +3,27 @@ package RubyCraft.Entidades.Mobs;
 import java.util.Random;
 
 import HerraCraft.Generator_Boss;
+import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Eventos.Eventos_especiales;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
+import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.boss.IBossDisplayData;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -59,6 +71,8 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
 		Generator_Boss.TiempodelMundo = 0;
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
+		
+		this.dropItem(herracraft.Lingote_Demoniaco, 2);
 	}
 	
 	
@@ -96,29 +110,28 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    
 	    public static String[] Mobs = { 
 	               
-	           "Tank",
+	            "Tank",
 	            "Skeleton",
 	            "Herobrine",
-	        
-	            
-	            
-	            
+	            "Alien",
+	            "Zombie",
+   
 	    };
 	    
 	    public void onLivingUpdate(){
 	    
+	    System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
 	    	
-	    	System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);
 	    	double x = this.posX;
 	    	double y = this.posY;
 	    	double z = this.posZ;
 	    	World world = worldObj;
-	     super.onLivingUpdate();
-	     if(RubyCraft.cliente) {
-	     BossStatus.setBossStatus(this, true);
+	        super.onLivingUpdate();
+	       if(RubyCraft.cliente) {
+	          BossStatus.setBossStatus(this, true);
 	     }
 	     
-	     tick ++;
+	    tick ++;
 	     
 	     /**FASE 1**/
 	     if(Fase == 1) {
@@ -149,32 +162,42 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	         if(!world.isRemote) {
 			 worldObj.spawnEntityInWorld(mob);
 	         }
-	       }else if(tick > 600 || tick == 600 && Fase == 1) {
+	       }else if(tick > 600 && Fase == 1) {
 		    	 Fase = 2;
 		    	 tick = 0;
 		    	 
 		     } 
 	       
 	      /**FASE 2**/
-	        }else if(Fase == 2 && tick == 140) {
+	        }else if(Fase == 2) {
+	        	
+	        	if(tick == 140 || tick == 280 || tick == 420 || tick == 560) {
 		    	 Random xrandomt = new Random(); 
-			     xrandomtp= xrandomt.nextInt(4);
+			     xrandomtp= xrandomt.nextInt(7);
 			     
 			     Random zrandomt = new Random(); 
-			     zrandomtp = zrandomt.nextInt(4);
+			     zrandomtp = zrandomt.nextInt(7);
 		    	 if(!world.isRemote) {
 		    		
 				 this.setPosition(x - xrandomtp , y, z - zrandomtp);
 				 world.updateEntity(this);
 		    	 }
-		    	     }else if( tick > 800) {
+		    	    } else if( tick > 700 && Fase == 2) {
+		    		      Fase = 3;
+		    		      tick = 0; 	
 		    		
-		    	
-		    		 tick = 0;
 		    	 }
-	    	 
+	        	/**FASE 3**/
+	        }else if(Fase == 3) {
+	        	
+	        	if(tick==140) {
+	        		  
+
+	        	}
+	        	
+	        }
 	     }
-	     
+	    
 	    
 }
 

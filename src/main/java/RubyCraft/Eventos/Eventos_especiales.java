@@ -1,18 +1,15 @@
 package RubyCraft.Eventos;
 
 import HerraCraft.Generator_Boss;
-import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
-import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 
 public class Eventos_especiales {
 		
@@ -43,6 +40,9 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onClientTick(WorldTickEvent event){
            if(RubyCraft.cliente == true) {
+        	   
+        	   
+     
 		if(BossParca.Vivo && !musica && Minecraft.getMinecraft().currentScreen == null && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
 			
 

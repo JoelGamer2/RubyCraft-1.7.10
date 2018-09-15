@@ -24,7 +24,9 @@ public class Generar_Dragon extends Block {
 			    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + "El " + EnumChatFormatting.RED + "Dragon " + EnumChatFormatting.GREEN + "Generado con Exito"));
 			    	  EntityDragon Dragon = new EntityDragon(world);
 	                   Dragon.setPosition(x, y + 10, z);
+	                   if(!world.isRemote) {
 	                   world.spawnEntityInWorld(Dragon);
+	                   }
 			    }else{
 					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + player.getDisplayName() + " Necesitas poner un huevo de Dragon " + EnumChatFormatting.RED + "arriba"));
 			    }
