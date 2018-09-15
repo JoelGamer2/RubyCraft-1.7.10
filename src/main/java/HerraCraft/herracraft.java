@@ -719,6 +719,7 @@ public class herracraft{
     
     
     
+    
     //Crafteos de horno
     GameRegistry.addSmelting(Mena_de_Azula,new ItemStack(Azula, 1), 35.0F);
     GameRegistry.addSmelting(Blocks.dirt,new ItemStack(Caca, 1), 35.0F);

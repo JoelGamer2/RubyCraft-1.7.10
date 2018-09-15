@@ -11,6 +11,7 @@ import HerraCraft.Entidades_Principal.DoctorNok;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
 import RubyCraft.RubyCraft;
+import RubyCraft.Entidades.Mobs.BossParca;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntitySkeleton;
@@ -178,11 +179,12 @@ public class Dropeos_Handler {
      
      event.drops.add(drop);
      
+	  }
      
-     
+  
 }
 }
-}
+
 	
 
 

@@ -38,6 +38,10 @@ public class IniciarItemsEventos {
 		
 		if(RubyCraft.HalloWen) {
 			GameRegistry.addRecipe(new ItemStack(herracraft.Generator_Boss, 1), new Object[] { "aaa","aaa","aaa",'a',herracraft.Lingote_Demoniaco});
+			GameRegistry.addRecipe(new ItemStack(herracraft.Casco_Demoniaco, 1), new Object[]{"lll","l#l","###",'l',herracraft.Lingote_Demoniaco});
+			GameRegistry.addRecipe(new ItemStack(herracraft.Pechera_Demoniaca, 1), new Object[]{"l#l","lll","lll",'l',herracraft.Lingote_Demoniaco});
+			GameRegistry.addRecipe(new ItemStack(herracraft.Pantalones_Demoniacos, 1), new Object[]{"lll","l#l","l#l",'l',herracraft.Lingote_Demoniaco});
+			GameRegistry.addRecipe(new ItemStack(herracraft.Botas_Demoniacas, 1), new Object[]{"###","l#l","l#l",'l', herracraft.Lingote_Demoniaco});
 		}
 		
 		
