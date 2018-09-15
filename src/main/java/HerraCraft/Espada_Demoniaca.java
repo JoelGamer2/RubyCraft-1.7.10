@@ -10,6 +10,6 @@ public class Espada_Demoniaca extends ItemSword {
 		
 	}
 	
-
+   
 
 }
