@@ -182,6 +182,7 @@ public class herracraft{
 	public static Item Espada_Reforzada;
 	public static Item Espada_del_Eden;
 	public static Item Espada_Demoniaca;
+	public static Item Guadaña_Tenebrosa;
 
 	
 	public static final Item.ToolMaterial AzulaMaterial = EnumHelper.addToolMaterial("AzulaMaterial", 5, 3122, 10.0F, 12.0F, 45);
@@ -199,6 +200,7 @@ public class herracraft{
 	public static final Item.ToolMaterial Reforzado = EnumHelper.addToolMaterial("Reforzado", 5, 1000, 10.0F, 20.0F, 45);
 	public static final Item.ToolMaterial Eden = EnumHelper.addToolMaterial("Eden", 5, 25000, 1000, 96, 45);
 	public static final Item.ToolMaterial Demonic = EnumHelper.addToolMaterial("Demonic", 5, 13000, 800, 122.0F, 45);
+	public static final Item.ToolMaterial Parca = EnumHelper.addToolMaterial("Parca", 5, 600, 45, 8, 45);
 	
 	public static final ItemArmor.ArmorMaterial AzulaArmorMaterial = EnumHelper.addArmorMaterial("AzulaArmorMaterial", 1000, new int[]{7,6,5,2}, 45);
     public static final ItemArmor.ArmorMaterial RedstonerArmorMaterial = EnumHelper.addArmorMaterial("RedtonerArmorMAterial", 1000, new int[]{6,5,3,2}, 45);
@@ -364,6 +366,9 @@ public class herracraft{
     	
         Espada_Demoniaca = new Espada_Demoniaca(Demonic).setUnlocalizedName("Espada_Demoniaca").setTextureName("rc:Herra/Espada_Demoniaca");
         GameRegistry.registerItem(Espada_Demoniaca, Espada_Demoniaca.getUnlocalizedName().substring(5));
+        
+        Guadaña_Tenebrosa = new Guadañan_Tenebrosa(Parca).setUnlocalizedName("Guadaña_Tenebrosa").setTextureName("rc:Herra/Guadaña_Tenebrosa");
+        GameRegistry.registerItem(Guadaña_Tenebrosa, Guadaña_Tenebrosa.getUnlocalizedName().substring(5));
     	
     	
     	
