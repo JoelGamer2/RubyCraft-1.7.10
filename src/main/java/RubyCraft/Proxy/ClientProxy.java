@@ -28,6 +28,7 @@ import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
 import RubyCraft.Entidades.Granadas.EntidadGranda_de_Uranio;
 import RubyCraft.Entidades.Mobs.AlejandroMob;
 import RubyCraft.Entidades.Mobs.AlienMob;
+import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Entidades.Mobs.HombreCerdo;
 import RubyCraft.Entidades.Mobs.HombreCerdorender;
 import RubyCraft.Entidades.Mobs.Invocador;
@@ -36,6 +37,7 @@ import RubyCraft.Entidades.Mobs.Jose;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.RenderAlejandroMob;
 import RubyCraft.Entidades.Mobs.RenderAlienMob;
+import RubyCraft.Entidades.Mobs.RenderBossparca;
 import RubyCraft.Entidades.Mobs.RenderInvocadorMob;
 import RubyCraft.Entidades.Mobs.RenderIratxeMob;
 import RubyCraft.Entidades.Mobs.RenderJoseMob;
@@ -65,6 +67,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.model.ModelVillager;
+import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -85,7 +88,7 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(HombreCerdo.class, new HombreCerdorender(new ModelBiped(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(Jose.class, new RenderJoseMob(new JoseRenderModel(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(Patxis.class, new RenderPatxisMob(new PatxisRenderModel(), 0));
-	
+	    RenderingRegistry.registerEntityRenderingHandler(BossParca.class, new RenderBossparca(new ModelBiped(), 0));
 		//TileEntity Render
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCofredeRuby.class, new CofredeRubyRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.Cofre_de_Ruby), new ItemRenderCofredeRuby());

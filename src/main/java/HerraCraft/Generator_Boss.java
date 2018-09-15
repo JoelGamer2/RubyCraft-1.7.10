@@ -1,12 +1,15 @@
 package HerraCraft;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Eventos.Eventos_especiales;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class Generator_Boss extends Block {
@@ -33,7 +36,7 @@ public class Generator_Boss extends Block {
 		zg = z;
 		
 		
-		
+		if(!BossParca.Vivo && !player.isSneaking()) {
 			
 			player.playSound(RubyCraft.modid+ ":records.bossparca", Float.MAX_VALUE, 1.0F);
 			TiempodelMundo = world.getWorldTime();
@@ -43,6 +46,12 @@ public class Generator_Boss extends Block {
                mob.setPosition(x, y + 1, z); 
 		       world.spawnEntityInWorld(mob);
 		  }
+		}else if(BossParca.Vivo){
+			
+			
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.BLUE + "Ya hay un boss activo y esta en la fase:" + BossParca.Fase));
+			
+		}
 		return true;
 			
 		

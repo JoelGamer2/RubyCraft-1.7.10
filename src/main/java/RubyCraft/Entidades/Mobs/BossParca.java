@@ -4,6 +4,7 @@ import java.util.Random;
 
 import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
+import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Eventos.Eventos_especiales;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
@@ -38,12 +39,14 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	protected void applyEntityAttributes(){
 		    
 	 super.applyEntityAttributes();
-     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
-	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.60000001192092896D);
+     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(2000.0D);
+	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
 	 Vivo = true;
 	 Fase = 1;
+	 xrandomtp = 0;
+	 zrandomtp = 0;
 	 	 
 		 }
 	
@@ -55,6 +58,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		Generator_Boss.NombreJugador = " ";
 		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
 		Generator_Boss.TiempodelMundo = 0;
+		Bloque_de_Diamante_Trol.Dano = 20.0F;
 	}
 	
 	
@@ -67,7 +71,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 
 	 public boolean isAIEnabled(){
 	    
-	        return true;
+	        return false;
 	    }
 	 
 	    /**
@@ -94,7 +98,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	               
 	           "Tank",
 	            "Skeleton",
-	            "Granada_de_Uranio",
 	            "Herobrine",
 	        
 	            
@@ -164,7 +167,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 				 this.setPosition(x - xrandomtp , y, z - zrandomtp);
 				 world.updateEntity(this);
 		    	 }
-		    	 }else if( tick > 800) {
+		    	     }else if( tick > 800) {
 		    		
 		    	
 		    		 tick = 0;
