@@ -1,5 +1,6 @@
 package RubyCraft.Eventos;
 
+import HerraCraft.Generator_Boss;
 import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
@@ -42,11 +43,11 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onClientTick(WorldTickEvent event){
            if(RubyCraft.cliente == true) {
-		if(BossParca.Vivo && !musica && Minecraft.getMinecraft().currentScreen == null){
-			System.out.println(BossParca.Vivo);
+		if(BossParca.Vivo && !musica && Minecraft.getMinecraft().currentScreen == null && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
+			
 
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE, 1.0F);
-			 Minecraft.getMinecraft().thePlayer.sendChatMessage("d");
+		
 
      musica = true;
 	    }

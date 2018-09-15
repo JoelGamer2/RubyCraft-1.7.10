@@ -2,19 +2,15 @@ package RubyCraft.Entidades.Mobs;
 
 import java.util.Random;
 
+import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
 import RubyCraft.Eventos.Eventos_especiales;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.BlockJukebox;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -22,8 +18,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 	
 	public static int tick = 0;
-	public static int multiplicar = 120;
+	public static int multiplicar = 140;
 	public static boolean Vivo = false;
+	public static boolean Tps = false;
+	
+	public static int Fase = 1;
+	
+	 private static double xrandomtp = 0;
+	 private static  double zrandomtp = 0;
+	
 	public BossParca(World world) {
 		super(world);
 		     
@@ -40,15 +43,18 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
 	 Vivo = true;
+	 Fase = 1;
 	 	 
 		 }
 	
 	
 	@Override
-	public void onDeath(DamageSource p_70645_1_) {
+	public void onDeath(DamageSource damage) {
 		Vivo = false;
 		Eventos_especiales.musica = false;
-	
+		Generator_Boss.NombreJugador = " ";
+		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
+		Generator_Boss.TiempodelMundo = 0;
 	}
 	
 	
@@ -86,29 +92,34 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    
 	    public static String[] Mobs = { 
 	               
-	            "Tank",
-	            "Creeper",
-	            "Alien",
+	           "Tank",
+	            "Skeleton",
+	            "Granada_de_Uranio",
 	            "Herobrine",
+	        
 	            
 	            
 	            
 	    };
 	    
-	    @SideOnly(Side.CLIENT)
-	    public void onLivingUpdate()
-	    {
+	    public void onLivingUpdate(){
+	    
+	    	
+	    	System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);
 	    	double x = this.posX;
 	    	double y = this.posY;
 	    	double z = this.posZ;
 	    	World world = worldObj;
 	     super.onLivingUpdate();
+	     if(RubyCraft.cliente) {
 	     BossStatus.setBossStatus(this, true);
+	     }
 	     
 	     tick ++;
 	     
 	     /**FASE 1**/
-	     if(tick == multiplicar * 1 || tick == multiplicar * 2 || tick == multiplicar * 3 || tick == multiplicar * 4) {
+	     if(Fase == 1) {
+	       if(tick == multiplicar * 1 || tick == multiplicar * 2 || tick == multiplicar * 3 || tick == multiplicar * 4) {
 	      double xrandomgenerado = 0;
 	      double yrandomgenerado = 0;
 	      double zrandomgenerado = 0;
@@ -131,15 +142,36 @@ public class BossParca extends EntityMob implements IBossDisplayData {
          String Mobrandom = Mobs[nSelection]; 
 	     
 	         Entity mob = EntityList.createEntityByName(Mobrandom, this.worldObj);
-	         mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z); // put the location here that you want
+	         mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z);
+	         if(!world.isRemote) {
 			 worldObj.spawnEntityInWorld(mob);
-	    	 
-	        
-	     }else if(tick == 240) {
-	    	 
-	    	 tick = 0;
+	         }
+	       }else if(tick > 600 || tick == 600 && Fase == 1) {
+		    	 Fase = 2;
+		    	 tick = 0;
+		    	 
+		     } 
+	       
+	      /**FASE 2**/
+	        }else if(Fase == 2 && tick == 140) {
+		    	 Random xrandomt = new Random(); 
+			     xrandomtp= xrandomt.nextInt(4);
+			     
+			     Random zrandomt = new Random(); 
+			     zrandomtp = zrandomt.nextInt(4);
+		    	 if(!world.isRemote) {
+		    		
+				 this.setPosition(x - xrandomtp , y, z - zrandomtp);
+				 world.updateEntity(this);
+		    	 }
+		    	 }else if( tick > 800) {
+		    		
+		    	
+		    		 tick = 0;
+		    	 }
 	    	 
 	     }
 	     
-	    }	
+	    
 }
+
