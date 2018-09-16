@@ -59,6 +59,7 @@ public class herracraft{
     public static Block Bloque_de_Losa;
     public static Block Bloque_De_Estrella_Del_Wither;
     public static Block Generator_Boss;
+    public static Block Bloque_Demoniaco;
     
     public static final int guiIDMesadeAzula = 10;/**Cambia el puto numeroooooooooooo¡¡¡¡¡¡ cuando hagas otra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡**/
 	//Items declarados
@@ -444,6 +445,9 @@ public class herracraft{
     
     Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setResistance(10.0F);
     GameRegistry.registerBlock(Generator_Boss, Generator_Boss.getUnlocalizedName().substring(5));
+    
+    Bloque_Demoniaco = new Bloque_Demoniaco(Material.rock).setBlockName("Bloque_Demoniaco").setBlockName("rc:Herra/Bloque_Demoniaco").setHardness(1.6F).setResistance(Float.MAX_VALUE);
+    GameRegistry.registerBlock(Bloque_Demoniaco, Bloque_Demoniaco.getUnlocalizedName().substring(5));
     
     
     //Items
