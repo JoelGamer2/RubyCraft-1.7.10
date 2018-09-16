@@ -21,11 +21,9 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 	
 	public static int tick = 0;
-	public static int multiplicar = 140;
 	public static boolean Vivo = false;
 	public static int Tp_hechos = 0;
 	public static boolean activarchupaalmas = false;
-	
 	
 	public static boolean chat1 = false;
 	public static boolean chat2 = false;
@@ -49,7 +47,22 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	protected void applyEntityAttributes(){
 		    
 	 super.applyEntityAttributes();
-     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
+	 if(worldObj.difficultySetting == EnumDifficulty.EASY) {
+			
+	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1000.0D);
+
+			
+			}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
+				
+			     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(2000.0D);
+
+				
+			}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+				
+			     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000.0D);
+
+				
+			}
 	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
@@ -87,7 +100,19 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	/**Comunica que item dropeara**/
 	private void dropeos() {
 		
+		if(worldObj.difficultySetting == EnumDifficulty.EASY) {
+		
 		this.dropItem(herracraft.Lingote_Demoniaco, 2);
+		
+		}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
+			
+			this.dropItem(herracraft.Lingote_Demoniaco, 4);
+			
+		}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+			
+			this.dropItem(herracraft.Lingote_Demoniaco, 6);
+			
+		}
 			
 		 Random generator2 = new Random(); 
          int nSelection = generator2.nextInt(Mobs.length); 
@@ -207,7 +232,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    	 
 	    	 this.worldObj.spawnParticle("smoke", this.posX - 0.4D, this.posY + 0.4D, this.posZ, 0.0D, 0.2D, 0.0D);
 	    	 
-	       if(tick == multiplicar * 1 || tick == multiplicar * 2 || tick == multiplicar * 3 || tick == multiplicar * 4) {
+	       if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
 	      double xrandomgenerado = 0;
 	      double yrandomgenerado = 0;
 	      double zrandomgenerado = 0;
@@ -270,26 +295,23 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        	/**FASE 3 Quita vida al jugador y se cura el**/
 	        }else if(Fase == 3) {
 	        	
-	        	if(!(tick < 500)) {
+	        	if(!(tick < 400)) {
 	        		this.heal(1.0F);
                     activarchupaalmas = true;
                     
-	        	}else if(tick == 800) {
+	        	}else if(tick == 500) {
 	        		
 	        		Fase = 4;
 	        		tick = 0;
 	        		activarchupaalmas = false;
 	        	}
 	        	/**FASE 4 MODO DIFICIL**/
-	        }else if(Fase == 4) {
-	        	
-	        	if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL || this.worldObj.difficultySetting == EnumDifficulty.EASY) {
-	        		
-	        		
-	        	}else if(this.worldObj.difficultySetting == EnumDifficulty.HARD && tick == 140 || tick == 300 || tick == 400 || tick == 500) {
-	        		
-	            }
-	       }    
+	        
+	       }else if(Fase == 4) {
+	    	   
+	    	   
+	    	   
+	       }
 	  }
 }
 

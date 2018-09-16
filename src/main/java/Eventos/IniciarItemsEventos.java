@@ -35,7 +35,19 @@ public class IniciarItemsEventos {
 			herracraft.Pantalones_Demoniacos.setCreativeTab(RubyCraft.EventosTab);
 			herracraft. Botas_Demoniacas.setCreativeTab(RubyCraft.EventosTab);	
 			herracraft.Bloque_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Guadaña_Tenebrosa.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Guadaña_Tenebrosa.setCreativeTab(RubyCraft.EventosTab);	
+			herracraft.Altar_de_JoelGamer2.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Iratxe.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Alejandro.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Wither_Storm.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Sans.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Miguelperez.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Herobrine.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Entity303.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Jeb.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Lick.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Noch.setCreativeTab(RubyCraft.EventosTab);
+			
 		}
 	}
 	

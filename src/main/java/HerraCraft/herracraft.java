@@ -52,9 +52,14 @@ public class herracraft{
     public static Block Altar_de_Iratxe;
     public static Block Altar_de_Alejandro;
     public static Block Altar_de_Wither_Storm;
-    public static Block Caja_de_Pastillas;
     public static Block Altar_de_Sans;
     public static Block Altar_de_Miguelperez;
+    public static Block Altar_de_Herobrine;
+    public static Block Altar_de_Entity303;
+    public static Block Altar_de_Jeb;
+    public static Block Altar_de_Lick;
+    public static Block Altar_de_Noch;
+    public static Block Caja_de_Pastillas;
     public static Block Bloque_Invisible;
     public static Block Bloque_de_Losa;
     public static Block Bloque_De_Estrella_Del_Wither;
@@ -372,7 +377,6 @@ public class herracraft{
         GameRegistry.registerItem(Guadaña_Tenebrosa, Guadaña_Tenebrosa.getUnlocalizedName().substring(5));
     	
     	
-    	
     //Bloques
     	
     Bloque_de_Plastico = new Bloque_de_Plastico(Material.rock).setBlockName("Bloque_de_Plastico").setBlockTextureName("rc:Herra/Bloque_de_Plastico").setCreativeTab(Herra).setHardness(1.0F);
@@ -449,7 +453,40 @@ public class herracraft{
     Bloque_Demoniaco = new Bloque_Demoniaco(Material.rock).setBlockName("Bloque_Demoniaco").setBlockTextureName("rc:Herra/Bloque_Demoniaco").setHardness(1.6F).setResistance(Float.MAX_VALUE);
     GameRegistry.registerBlock(Bloque_Demoniaco, Bloque_Demoniaco.getUnlocalizedName().substring(5));
     
+	Altar_de_JoelGamer2 = new Altar_de_JoelGamer2(Material.rock).setBlockName("Altar_de_JoelGamer2").setBlockTextureName("rc:Herra/Altar_de_JoelGamer2").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_JoelGamer2, Altar_de_JoelGamer2.getUnlocalizedName().substring(5));
     
+	Altar_de_Iratxe = new Altar_de_Iratxe(Material.rock).setBlockName("Altar_de_Iratxe").setBlockTextureName("rc:Herra/Altar_de_Iratxe").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Iratxe, Altar_de_Iratxe.getUnlocalizedName().substring(5));
+	
+	Altar_de_Alejandro = new Altar_de_Alejandro(Material.rock).setBlockName("Altar_de_Alejandro").setBlockTextureName("rc:Herra/Altar_de_Alejandro").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Alejandro, Altar_de_Alejandro.getUnlocalizedName().substring(5));
+	
+	Altar_de_Wither_Storm = new Altar_de_Wither_Storm(Material.rock).setBlockName("Altar_de_Wither_Storm").setBlockTextureName("rc:Herra/Altar_de_Wither_Storm").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Wither_Storm, Altar_de_Wither_Storm.getUnlocalizedName().substring(5));
+	
+	Altar_de_Sans = new Altar_de_Sans(Material.rock).setBlockName("Altar_de_Sans").setBlockTextureName("rc:Herra/Altar_de_Sans").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Sans, Altar_de_Sans.getUnlocalizedName().substring(5));
+	
+	Altar_de_Miguelperez = new Altar_de_Miguelperez(Material.rock).setBlockName("Altar_de_Miguelperez").setBlockTextureName("rc:Herra/Altar_de_Miguelperez").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Miguelperez, Altar_de_Miguelperez.getUnlocalizedName().substring(5));
+	
+	Altar_de_Herobrine = new Altar_de_Herobrine(Material.rock).setBlockName("Altar_de_Herobrine").setBlockTextureName("rc:Herra/Altar_de_Herobrine").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Herobrine, Altar_de_Herobrine.getUnlocalizedName().substring(5));
+	
+	Altar_de_Entity303 = new Altar_de_Entity303(Material.rock).setBlockName("Altar_de_Entity303").setBlockTextureName("rc:Herra/Altar_de_Entity303").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Entity303, Altar_de_Entity303.getUnlocalizedName().substring(5));
+	
+	Altar_de_Jeb = new Altar_de_Jeb(Material.rock).setBlockName("Altar_de_Jeb").setBlockTextureName("rc:Herra/Altar_de_Jeb").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Jeb, Altar_de_Jeb.getUnlocalizedName().substring(5));
+	
+	Altar_de_Lick = new Altar_de_Lick(Material.rock).setBlockName("Altar_de_Lick").setBlockTextureName("rc:Herra/Altar_de_Lick").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Lick, Altar_de_Lick.getUnlocalizedName().substring(5));
+	
+	Altar_de_Noch = new Altar_de_Noch(Material.rock).setBlockName("Altar_de_Noch").setBlockTextureName("rc:Herra/Altar_de_Noch").setHardness(1.5F).setResistance(2.0F);
+	GameRegistry.registerBlock(Altar_de_Noch, Altar_de_Noch.getUnlocalizedName().substring(5));
+	
+	
     //Items
     Azula = new Azula().setUnlocalizedName("Azula").setTextureName("rc:Herra/Azula").setCreativeTab(Herra);
     GameRegistry.registerItem(Azula, Azula.getUnlocalizedName().substring(5));
@@ -624,7 +661,6 @@ public class herracraft{
     
     Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco");
     GameRegistry.registerItem(Lingote_Demoniaco, Lingote_Demoniaco.getUnlocalizedName().substring(5));
-    
     
     
     if(!RubyCraft.HalloWen) {
