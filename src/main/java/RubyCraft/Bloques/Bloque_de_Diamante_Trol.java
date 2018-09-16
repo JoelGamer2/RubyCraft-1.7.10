@@ -42,12 +42,6 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 	}
 	public boolean onBlockActivated (World world, int x ,int y , int z, EntityPlayer player, int q, float a, float b ,float c){
 		
-		if(BossParca.Vivo) {
-			
-			Dano = 0.0F;
-			
-		}
-		
 		if(!player.isSneaking()){
 				if(RubyCraft.Navidad == false){
 					
@@ -132,14 +126,7 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 	     * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
 	     */
 	    public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
-	    	
-	    	if(BossParca.Vivo) {
-				
-				Dano = 0.0F;
-				
-			}
-			
-	    	
+	
 	    	if(RubyCraft.VersionTrol == true && RubyCraft.Navidad == false && RubyCraft.Dia_de_Los_Inocentes == false){
 	    	
 	    		entity.attackEntityFrom(MensajedeMuerte, DanoTrol);

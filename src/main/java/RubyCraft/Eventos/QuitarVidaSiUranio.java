@@ -18,12 +18,11 @@ public class QuitarVidaSiUranio {
 	@SubscribeEvent
 	 public void onPlayerTick(TickEvent.PlayerTickEvent event){
 		
-		if(event.player.getCurrentArmor(0) != null && event.player.getCurrentArmor(1) != null && event.player.getCurrentArmor(2) != null && event.player.getCurrentArmor(3) != null){
+	/**	if(event.player.getCurrentArmor(0) != null && event.player.getCurrentArmor(1) != null && event.player.getCurrentArmor(2) != null && event.player.getCurrentArmor(3) != null){
 			ItemStack botas = event.player.getCurrentArmor(0);
 			ItemStack grebas = event.player.getCurrentArmor(1);
 			ItemStack pechera = event.player.getCurrentArmor(2);
-			ItemStack casco = event.player.getCurrentArmor(3);
-		if(!(botas.getItem() == RubyCraft.botasdeUranio) && !(grebas.getItem() == RubyCraft.PantacasdeUranio) && !(pechera.getItem() == RubyCraft.PetodeUranio) && !(casco.getItem() == RubyCraft.cascodeUranio)){
+			ItemStack casco = event.player.getCurrentArmor(3);**/
 			
 			  if(event.player.inventory.hasItem(RubyCraft.uranio)) {
 				  
@@ -32,6 +31,6 @@ public class QuitarVidaSiUranio {
 		      
 		  }
 		}
-	}
+	//}
 	
-}
+

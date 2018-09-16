@@ -25,6 +25,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
 public class BossParca extends EntityMob implements IBossDisplayData {
@@ -33,7 +34,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	public static int tick = 0;
 	public static int multiplicar = 140;
 	public static boolean Vivo = false;
-	public static boolean Tps = false;
+	public static int Tp_hechos = 0;
+	public static boolean activarchupaalmas = false;
+	
+	
+	public static boolean chat1 = false;
+	public static boolean chat2 = false;
+	public static boolean chat3 = false;
+	public static boolean chat4 = false;
+
 	
 	public static int Fase = 1;
 	
@@ -59,7 +68,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 Fase = 1;
 	 xrandomtp = 0;
 	 zrandomtp = 0;
-	 	 
+	 Tp_hechos = 0;
+	 Bloque_de_Diamante_Trol.Dano = 0.0F;
+	 activarchupaalmas = false;
+	 
+	 
+	 chat1 = false;
+	 chat2 = false;
+	 chat3 = false;
+	 chat4 = false;	 
 		 }
 	
 	
@@ -79,7 +96,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	
 	 protected String getLivingSound(){
 		    
-	        return "mob.villager.idle";
+	        return RubyCraft.modid + ":ambientebossparca";
 	        
 	    }
 	 
@@ -93,7 +110,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getHurtSound(){
 	    
-	      return "mob.villager.hit";
+	      return RubyCraft.modid + ":golpebossparca";
 	        
 	    }
 
@@ -102,7 +119,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getDeathSound(){
 	    
-	        return "mob.villager.no";
+	        return RubyCraft.modid + ":muertebossparca";
 	        
 	    }	 
 	    
@@ -171,16 +188,25 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	      /**FASE 2**/
 	        }else if(Fase == 2) {
 	        	
-	        	if(tick == 140 || tick == 280 || tick == 420 || tick == 560) {
+	        	if(tick > 400 && !(Tp_hechos == 4)) {
+					 
+					 Tp_hechos ++;
+					 tick = 0; 
+				    }
+	        	
+	        	
+	        	if(tick == 140 || tick == 300 && Tp_hechos < 5) {
 		    	 Random xrandomt = new Random(); 
-			     xrandomtp= xrandomt.nextInt(7);
+			     xrandomtp= xrandomt.nextInt(10);
 			     
 			     Random zrandomt = new Random(); 
-			     zrandomtp = zrandomt.nextInt(7);
+			     zrandomtp = zrandomt.nextInt(10);
 		    	 if(!world.isRemote) {
 		    		
 				 this.setPosition(x - xrandomtp , y, z - zrandomtp);
 				 world.updateEntity(this);
+				 
+				 
 		    	 }
 		    	    } else if( tick > 700 && Fase == 2) {
 		    		      Fase = 3;
@@ -190,14 +216,26 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        	/**FASE 3**/
 	        }else if(Fase == 3) {
 	        	
-	        	if(tick==140) {
-	        		  
-
+	        	if(!(tick < 500)) {
+	        		this.heal(1.0F);
+                    activarchupaalmas = true;
+                    
+	        	}else if(tick == 800) {
+	        		
+	        		Fase = 4;
+	        		tick = 0;
+	        		activarchupaalmas = false;
 	        	}
+	        	/**FASE 4 MODO DIFICIL**/
+	        }else if(Fase == 4) {
 	        	
+	        	if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL || this.worldObj.difficultySetting == EnumDifficulty.EASY) {
+	        		
+	        		
+	        	}else if(this.worldObj.difficultySetting == EnumDifficulty.HARD && tick == 140 || tick == 300 || tick == 400 || tick == 500) {
+	        		
 	        }
 	     }
-	    
-	    
+	    }
 }
 
