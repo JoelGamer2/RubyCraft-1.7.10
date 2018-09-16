@@ -7,23 +7,12 @@ import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Eventos.Eventos_especiales;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
-import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
@@ -95,7 +84,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	
 	
 	
-	
+	/**Comunica que item dropeara**/
 	private void dropeos() {
 		
 		this.dropItem(herracraft.Lingote_Demoniaco, 2);
@@ -277,7 +266,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		    	    } else if( tick > 700 && Fase == 2) {
 		    		      Fase = 3;
 		    		      tick = 0; 	
-		    		
 		    	 }
 	        	/**FASE 3 Quita vida al jugador y se cura el**/
 	        }else if(Fase == 3) {

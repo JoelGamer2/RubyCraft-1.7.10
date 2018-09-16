@@ -5,7 +5,6 @@ import org.apache.logging.log4j.LogManager;
 import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
-import Eventos.Verificar_Fecha;
 import HerraCraft.herracraft;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
@@ -203,11 +202,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
@@ -1150,5 +1151,5 @@ public static void VersionTrolActivar(){
 	  }else if(Navidad){
 		  VersionTrol = false;
 	  }
-   } 
+   }
 }

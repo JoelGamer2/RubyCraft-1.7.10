@@ -1,9 +1,9 @@
 package Eventos;
 
+import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class EventosTab extends CreativeTabs {
@@ -16,17 +16,19 @@ public class EventosTab extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		
 		if(RubyCraft.HalloWen) {
-		   return Item.getItemFromBlock(Blocks.pumpkin);
-		}else {
-			return Item.getItemFromBlock(Blocks.diamond_block);
-		}
+	 		   return Item.getItemFromBlock(Blocks.pumpkin);
+	 		}else if(RubyCraft.Navidad) {
+	 			return Item.getItemFromBlock(Blocks.snow);
+	 		}else {
+	 			return Item.getItemFromBlock(herracraft.Bloque_Invisible);
+	 		}
+		   
 	}
 
 	@Override
 	public boolean hasSearchBar() {
 		return true;
 	}
-
+	
 }
