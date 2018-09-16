@@ -368,7 +368,7 @@ public class herracraft{
         Espada_Demoniaca = new Espada_Demoniaca(Demonic).setUnlocalizedName("Espada_Demoniaca").setTextureName("rc:Herra/Espada_Demoniaca");
         GameRegistry.registerItem(Espada_Demoniaca, Espada_Demoniaca.getUnlocalizedName().substring(5));
         
-        Guadaña_Tenebrosa = new Guadañan_Tenebrosa(Parca).setUnlocalizedName("Guadaña_Tenebrosa").setTextureName("rc:Herra/Guadaña_Tenebrosa");
+        Guadaña_Tenebrosa = new Guadañan_Tenebrosa(Parca).setUnlocalizedName("Guadana_Tenebrosa").setTextureName("rc:Herra/Guadana_Tenebrosa");
         GameRegistry.registerItem(Guadaña_Tenebrosa, Guadaña_Tenebrosa.getUnlocalizedName().substring(5));
     	
     	
