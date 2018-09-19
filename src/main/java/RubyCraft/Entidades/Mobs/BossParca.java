@@ -21,17 +21,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 	
 	public static int tick = 0;
-	public static boolean Vivo = false;
+	public static boolean Activo = false;
 	public static int Tp_hechos = 0;
 	public static boolean activarchupaalmas = false;
+	public static int Fase = 1;
 	
 	public static boolean chat1 = false;
 	public static boolean chat2 = false;
 	public static boolean chat3 = false;
 	public static boolean chat4 = false;
-
-	
-	public static int Fase = 1;
 	
 	 private static double xrandomtp = 0;
 	 private static  double zrandomtp = 0;
@@ -49,7 +47,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 super.applyEntityAttributes();
 	 if(worldObj.difficultySetting == EnumDifficulty.EASY) {
 			
-	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1000.0D);
+	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
 
 			
 			}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
@@ -58,15 +56,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 				
 			}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
-				
-			     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000.0D);
+
+			 this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000.0D);
 
 				
 			}
 	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
-	 Vivo = true;
+	 Activo = true;
 	 Fase = 1;
 	 xrandomtp = 0;
 	 zrandomtp = 0;
@@ -85,13 +83,13 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	/**Comunica cuando el mob muere**/
 	@Override
 	public void onDeath(DamageSource damage) {
-		Vivo = false;
+		Activo = false;
 		Eventos_especiales.musica = false;
 		Generator_Boss.NombreJugador = " ";
 		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
 		Generator_Boss.TiempodelMundo = 0;
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
-	
+		System.out.println(Activo  + " " + Fase + " "+ Eventos_especiales.musica);
 		dropeos();
 	}
 	
@@ -108,7 +106,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 			
 			this.dropItem(herracraft.Lingote_Demoniaco, 4);
 			
-		}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+	   }else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
 			
 			this.dropItem(herracraft.Lingote_Demoniaco, 6);
 			
@@ -213,8 +211,12 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    };
 	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
-	    
-	    System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
+	   	if(!Activo) {
+	   		Activo = true;
+	   		RubyCraft.logger.info("activo");
+	   	}
+
+//	    System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
 	    	
 	    	double x = this.posX;
 	    	double y = this.posY;

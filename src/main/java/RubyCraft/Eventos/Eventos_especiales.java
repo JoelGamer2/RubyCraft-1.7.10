@@ -25,7 +25,7 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	 public void onPlayerTick(TickEvent.PlayerTickEvent event){
 		 
-		if(BossParca.Fase == 3 && BossParca.Vivo) {
+		if(BossParca.Fase == 3 && BossParca.Activo) {
 			
 			event.player.attackEntityFrom(Laparcasellevotualma, 1.0F);
 			
@@ -43,25 +43,25 @@ public class Eventos_especiales {
 			
 			
 			
-			 if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Vivo) {
+			 if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
       		   BossParca.chat1 = true;
       		   event.player.addChatComponentMessage(new ChatComponentText("La parca llama a su ejercito en la 1 fase"));
  
       	   }
       	   
-      	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Vivo) {
+      	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
       		   BossParca.chat2 = true;
       		   event.player.addChatComponentMessage(new ChatComponentText("La parca huye de los humanos en la fase 2"));
  
       	   }
       	   
-      	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Vivo) {
+      	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
       		   BossParca.chat3 = true;
       		   event.player.addChatComponentMessage(new ChatComponentText("La parca 3"));
  
       	   }
       	   
-      	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Vivo) {
+      	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
       		   BossParca.chat4 = true;
       		   event.player.addChatComponentMessage(new ChatComponentText("La parca Hace todo lo anterior en la fase 4 Solo en modo dificil"));
  
@@ -71,7 +71,7 @@ public class Eventos_especiales {
 		}
 		
 		
-		if(!RubyCraft.cliente && BossParca.Vivo && !musica) {
+		if(!RubyCraft.cliente && BossParca.Activo && !musica) {
 			
 			 event.player.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE, 1.0F);
 
@@ -86,33 +86,34 @@ public class Eventos_especiales {
 	public void onworldtick(WorldTickEvent event){
            if(RubyCraft.cliente == true && Minecraft.getMinecraft().currentScreen == null) {
         	   
-        	   
-        	   if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Vivo) {
+       		RubyCraft.logger.info(BossParca.Activo  + " " + BossParca.Fase + " "+ Eventos_especiales.musica);
+
+        	   if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
         		   BossParca.chat1 = true;
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca llama a su ejercito en la 1 fase"));
    
         	   }
         	   
-        	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Vivo) {
+        	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
         		   BossParca.chat2 = true;
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca huye de los humanos en la fase 2"));
    
         	   }
         	   
-        	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Vivo) {
+        	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
         		   BossParca.chat3 = true;
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca 3"));
    
         	   }
         	   
-        	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Vivo) {
+        	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
         		   BossParca.chat4 = true;
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca Hace todo lo anterior en la fase 4 Solo en modo dificil"));
    
         	   }
         	   
      
-		if(BossParca.Vivo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
+		if(BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
 			
 
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE, 1.0F);

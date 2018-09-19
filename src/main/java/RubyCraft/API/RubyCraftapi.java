@@ -25,8 +25,6 @@ public interface RubyCraftapi {
 	
 	public void ModificateGrenade(EntidadGranada_de_Ruby ruby, EntidadGranada_de_Zafiro zafiro, EntidadGranda_de_Uranio uranio);
 	
-	public void BossParcaModificar(BossParca parca);
-	
 	public void RegisterCraftingRecipeCustomCraftingTableHerracraft(Mesas registerer);
 	
 }
