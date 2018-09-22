@@ -91,6 +91,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
 		System.out.println(Activo  + " " + Fase + " "+ Eventos_especiales.musica);
 		dropeos();
+		RubyCraft.logger.info(Activo);
 	}
 	
 	
@@ -211,10 +212,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    };
 	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
-	   	if(!Activo) {
-	   		Activo = true;
-	   		RubyCraft.logger.info("activo");
-	   	}
 
 //	    System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
 	    	

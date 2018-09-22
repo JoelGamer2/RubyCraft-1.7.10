@@ -86,8 +86,6 @@ public class Eventos_especiales {
 	public void onworldtick(WorldTickEvent event){
            if(RubyCraft.cliente == true && Minecraft.getMinecraft().currentScreen == null) {
         	   
-       		RubyCraft.logger.info(BossParca.Activo  + " " + BossParca.Fase + " "+ Eventos_especiales.musica);
-
         	   if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
         		   BossParca.chat1 = true;
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca llama a su ejercito en la 1 fase"));
