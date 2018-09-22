@@ -18,6 +18,11 @@ public class Eventos_especiales {
 	private boolean Iniciadosesion = false;
 	public static boolean musica = false;
 
+	public static String ParcaFase1 = "La parca llama a su ejercito en la 1 fase";
+	public static String ParcaFase2 = "La parca huye de los humanos en la fase 2";
+	public static String ParcaFase3 = "La parca 3";
+	public static String ParcaFase4 = "La parca Hace todo lo anterior en la fase 4 Solo en modo dificil";
+
 	
 	 public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage();
 
@@ -45,25 +50,25 @@ public class Eventos_especiales {
 			
 			 if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
       		   BossParca.chat1 = true;
-      		   event.player.addChatComponentMessage(new ChatComponentText("La parca llama a su ejercito en la 1 fase"));
+      		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase1));
  
       	   }
       	   
       	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
       		   BossParca.chat2 = true;
-      		   event.player.addChatComponentMessage(new ChatComponentText("La parca huye de los humanos en la fase 2"));
+      		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase2));
  
       	   }
       	   
       	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
       		   BossParca.chat3 = true;
-      		   event.player.addChatComponentMessage(new ChatComponentText("La parca 3"));
+      		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase3));
  
       	   }
       	   
       	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
       		   BossParca.chat4 = true;
-      		   event.player.addChatComponentMessage(new ChatComponentText("La parca Hace todo lo anterior en la fase 4 Solo en modo dificil"));
+      		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase4));
  
       	   }
       	   
@@ -88,25 +93,25 @@ public class Eventos_especiales {
         	   
         	   if(!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
         		   BossParca.chat1 = true;
-        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca llama a su ejercito en la 1 fase"));
+        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase1));
    
         	   }
         	   
         	   if(!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
         		   BossParca.chat2 = true;
-        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca huye de los humanos en la fase 2"));
+        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase2));
    
         	   }
         	   
         	   if(!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
         		   BossParca.chat3 = true;
-        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca 3"));
+        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase3));
    
         	   }
         	   
         	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
         		   BossParca.chat4 = true;
-        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText("La parca Hace todo lo anterior en la fase 4 Solo en modo dificil"));
+        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase4));
    
         	   }
         	   

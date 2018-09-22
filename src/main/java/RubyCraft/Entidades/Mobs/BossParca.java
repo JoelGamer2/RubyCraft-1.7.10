@@ -47,7 +47,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 super.applyEntityAttributes();
 	 if(worldObj.difficultySetting == EnumDifficulty.EASY) {
 			
-	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
+	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1000.0D);
 
 			
 			}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
@@ -91,7 +91,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
 		System.out.println(Activo  + " " + Fase + " "+ Eventos_especiales.musica);
 		dropeos();
-		RubyCraft.logger.info(Activo);
 	}
 	
 	
@@ -213,7 +212,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
 
-//	    System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
+ // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
 	    	
 	    	double x = this.posX;
 	    	double y = this.posY;
@@ -287,18 +286,18 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 				 
 				 
 		    	 }
-		    	    } else if( tick > 700 && Fase == 2) {
+		    	    }else if( tick > 700 && Fase == 2) {
 		    		      Fase = 3;
 		    		      tick = 0; 	
 		    	 }
 	        	/**FASE 3 Quita vida al jugador y se cura el**/
 	        }else if(Fase == 3) {
 	        	
-	        	if(!(tick < 400)) {
+	        	if(tick == 200) {
 	        		this.heal(1.0F);
                     activarchupaalmas = true;
                     
-	        	}else if(tick == 500) {
+	        	}else if(tick > 600) {
 	        		
 	        		Fase = 4;
 	        		tick = 0;
