@@ -21,6 +21,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 	
 	public static int tick = 0;
+	public static int tickparticulas = 0;
 	public static boolean Activo = false;
 	public static int Tp_hechos = 0;
 	public static boolean activarchupaalmas = false;
@@ -209,9 +210,51 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	            "Zombie",
    
 	    };
+	    
+	    public void Particulas(double x, double y, double z) {
+	    	tickparticulas++;
+	    	if(tickparticulas == 30) {
+	        this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, 1.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, 1.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, -1.0F, 1.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, -2.0F, 1.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, 1.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, 1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, 1.0F, -2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 7.0F, 1.0F, -1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 8.0F, 1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 9.0F, 1.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 10.0F, 1.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, -1.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, -2.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 1.0F, -3.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, -4.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, -5.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, -6.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 1.0F, -1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, -2.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, -3.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, -4.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, -5.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, -6.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 7.0F, -1.0F, 7.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 8.0F, -2.0F, 8.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 9.0F, -3.0F, 9.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 10.0F, -4.0F, 10.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 11.0F, -5.0F, 11.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 11.0F, -1.0F, 13.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 15.0F, -3.0F, 14.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 17.0F, -4.0F, 15.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 18.0F, -5.0F, 16.0F);
+
+	    	}else if(tickparticulas > 35) {
+	    		tickparticulas = 0;
+	    	}
+	    	
+	    }
+	    
 	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
-
  // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
 	    	
 	    	double x = this.posX;
@@ -221,14 +264,13 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        super.onLivingUpdate();
 	       if(RubyCraft.cliente) {
 	          BossStatus.setBossStatus(this, true);
+	          Particulas(x, y, z);
 	     }
 	     
 	    tick ++;
 	     
 	     /**FASE 1 Spawnea bichos random 4 veces**/
-	     if(Fase == 1) {
-	    	 
-	    	 this.worldObj.spawnParticle("smoke", this.posX - 0.4D, this.posY + 0.4D, this.posZ, 0.0D, 0.2D, 0.0D);
+	     if(Fase == 1) { 
 	    	 
 	       if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
 	      double xrandomgenerado = 0;
