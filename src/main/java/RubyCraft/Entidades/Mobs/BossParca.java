@@ -2,11 +2,11 @@ package RubyCraft.Entidades.Mobs;
 
 import java.util.Random;
 
+import Eventos.Eventos_especiales;
 import HerraCraft.Generator_Boss;
 import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
-import RubyCraft.Eventos.Eventos_especiales;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.SharedMonsterAttributes;

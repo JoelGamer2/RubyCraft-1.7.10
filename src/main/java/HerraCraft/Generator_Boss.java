@@ -1,8 +1,8 @@
 package HerraCraft;
 
+import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Mobs.BossParca;
-import RubyCraft.Eventos.Eventos_especiales;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

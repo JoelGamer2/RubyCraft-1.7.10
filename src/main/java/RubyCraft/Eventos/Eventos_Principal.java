@@ -1,5 +1,6 @@
 package RubyCraft.Eventos;
 
+import Eventos.Eventos_especiales;
 import HerraCraft.Registrar.Eventos;
 import RubyCraft.Teclas.Evento_Teclas;
 import cpw.mods.fml.common.FMLCommonHandler;

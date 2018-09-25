@@ -1,4 +1,4 @@
-package RubyCraft.Eventos;
+package Eventos;
 
 import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
