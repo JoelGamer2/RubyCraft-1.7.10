@@ -5,7 +5,7 @@ death.attack.Troleo.player=%$s to been Trolled Por %2$s.
 death.attack.RadioActividad=%1$s Dead by having too much RadioActivity
 death.attack.RadioActividad.player=%$s Dead by Radioactivity but I Trolled %2$s.
 death.attack.Laparcasellevotualma.player=the parca took the soul of %1$s
-death.attack.RadioActividad.player=%$s Dead by Parca but I trolled by %2$s.
+death.attack.Laparcasellevotualma.player=%$s Dead by Parca but I trolled by %2$s.
 
 achievement.MinaRuby=Mine Ruby
 achievement.MinaRuby.desc=Mine Ruby ore with iron pickaxe

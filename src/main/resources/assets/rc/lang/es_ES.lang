@@ -5,7 +5,7 @@ death.attack.Troleo.player=%$s a Sido Troleado Por %2$s.
 death.attack.RadioActividad=%1$s a Muerto por Tener demasiada RadioActividad.
 death.attack.RadioActividad.player=%$s a Muerto por Radioactividad pero le Troleo %2$s.
 death.attack.Laparcasellevotualma.player=La parca se llevo el alma de %1$s
-death.attack.RadioActividad.player=%$s a Muerto por que la parca se llevo su alma pero le ayudo a morir %2$s.
+death.attack.Laparcasellevotualma.player=%$s a Muerto por que la parca se llevo su alma pero le ayudo a morir %2$s.
 
 achievement.MinaRuby=Mina Ruby
 achievement.MinaRuby.desc=Mina Una Mena de Ruby con un pico de Hierro
