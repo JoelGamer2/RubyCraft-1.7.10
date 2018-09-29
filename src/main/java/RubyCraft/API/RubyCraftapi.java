@@ -1,6 +1,8 @@
 package RubyCraft.API;
 
 
+import HerraCraft.Generator_Boss;
+import Eventos.Eventos_especiales;
 import HerraCraft.Registrar.Mesas;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.Bases.CancionesBase;
@@ -26,5 +28,7 @@ public interface RubyCraftapi {
 	public void ModificateGrenade(EntidadGranada_de_Ruby ruby, EntidadGranada_de_Zafiro zafiro, EntidadGranda_de_Uranio uranio);
 	
 	public void RegisterCraftingRecipeCustomCraftingTableHerracraft(Mesas registerer);
+	
+	public void modifyparca(BossParca parca, Eventos_especiales events, Generator_Boss generator);
 	
 }

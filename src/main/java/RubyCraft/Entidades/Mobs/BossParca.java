@@ -335,8 +335,8 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        	
 	        	if(tick == 200) {
 	        		this.heal(1.0F);
-                    activarchupaalmas = true;
-                    
+                    activarchupaalmas = true;    
+                    /**DESACTIVA EL CONTADOR PORQUE SE ACABARON LAS FASES**/
 	        	}else if(tick > 600) {
 	        		
 	        		Fase = 0;
