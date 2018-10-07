@@ -35,6 +35,8 @@ public class Bloque_de_Actualizaciones extends Block{
 		
 	}
 	
+	
+	
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int q, float a, float b, float c){
 		if (world.isRemote && !player.isSneaking()){
 		 
