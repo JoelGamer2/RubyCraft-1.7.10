@@ -485,6 +485,11 @@ item.Botas_Demoniacas.name=Demonic Boots
 item.Espada_Demoniaca.name=Demonic Sword
 item.Lingote_Demoniaco.name=Demonic Ingot
 item.Guadana_Tenebrosa.name=Dark Scythe
+item.Lingote_del_Eden.name=Eden ingot
+item.Casco_del_Eden.name=Helmet of the Eden
+item.Pechera_del_Eden.name=Eden Chestplate
+item.Grebas_del_Eden.name=Eden Greaves
+item.Botas_del_Eden.name=Eden Boots
 
 tile.Bloque_de_Plastico.name=Plastic Block
 tile.Barrera.name=Barrier

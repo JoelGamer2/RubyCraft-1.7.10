@@ -133,6 +133,7 @@ public class herracraft{
     public static Item ElderWays;
     public static Item Invocador_Celestial;
     public static Item Lingote_Demoniaco;
+    public static Item Lingote_del_Eden;
     //Armaduras
     public static Item Casco_de_Azula;
     public static Item Pechera_de_Azula;
@@ -160,6 +161,11 @@ public class herracraft{
     public static Item Pechera_Demoniaca;
     public static Item Pantalones_Demoniacos;
     public static Item Botas_Demoniacas;
+    
+    public static Item Casco_del_Eden;
+    public static Item Pechera_del_Eden;
+    public static Item Grebas_del_Eden;
+    public static Item Botas_del_Eden;
     
 	//Herramientas declaradas
 	public static Item Espada_de_Azula;
@@ -264,8 +270,12 @@ public class herracraft{
     	Pechera_Demoniaca = new Pechera_Demoniaca(DemonicArmor,0, 1).setUnlocalizedName("Pechera_Demoniaca").setTextureName("rc:Herra/Pechera_Demoniaca");
     	Pantalones_Demoniacos = new Pantalones_Demoniacos(DemonicArmor,0, 2).setUnlocalizedName("Pantalones_Demoniacos").setTextureName("rc:Herra/Pantalones_Demoniacos");
     	Botas_Demoniacas = new Botas_Demoniacas(DemonicArmor,0, 3).setUnlocalizedName("Botas_Demoniacas").setTextureName("rc:Herra/Botas_Demoniacas");
+   	
+    	Casco_del_Eden = new Casco_del_Eden(EdenArmor, 0, 0).setUnlocalizedName("Casco_del_Eden").setTextureName("rc:Herra/Casco_del_Eden");
+        Pechera_del_Eden = new Pechera_del_Eden(EdenArmor, 0, 1).setUnlocalizedName("Pechera_del_Eden").setTextureName("rc:Herra/Pechera_del_Eden");
+    	Grebas_del_Eden = new Grebas_del_Eden(EdenArmor, 0, 2).setUnlocalizedName("Grebas_del_Eden").setTextureName("rc:Herra/Grebas_del_Eden");
+    	Botas_del_Eden = new Botas_del_Eden(EdenArmor, 0, 3).setUnlocalizedName("Botas_del_Eden").setTextureName("rc:Herra/Botas_del_Eden");
     	
-    	Casco_del_Eden = new Casco_del_Eden(EdenArmor, 0, 1).setUnlocalizedName("Casco_del_Eden").setTextureName("rc:Herra/Casco_del_Eden");
     	
     	
     	GameRegistry.registerItem(Casco_de_Azula, Casco_de_Azula.getUnlocalizedName().substring(5));
@@ -292,7 +302,12 @@ public class herracraft{
     	GameRegistry.registerItem(Pechera_Demoniaca, Pechera_Demoniaca.getUnlocalizedName().substring(5));
     	GameRegistry.registerItem(Pantalones_Demoniacos, Pantalones_Demoniacos.getUnlocalizedName().substring(5));
     	GameRegistry.registerItem(Botas_Demoniacas, Botas_Demoniacas.getUnlocalizedName().substring(5));
-        
+    	
+    	GameRegistry.registerItem(Casco_del_Eden, Casco_del_Eden.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(Pechera_del_Eden, Pechera_del_Eden.getUnlocalizedName().substring(5));
+    	GameRegistry.registerItem(Grebas_del_Eden, Grebas_del_Eden.getUnlocalizedName().substring(5));
+    	GameRegistry.registerItem(Botas_del_Eden, Botas_del_Eden.getUnlocalizedName().substring(5));
+    	
     	
     	//Herramientas
     	Espada_de_Azula = new Espada_de_Azula(AzulaMaterial).setUnlocalizedName("Espada_de_Azula").setTextureName("rc:Herra/Espada_de_Azula").setCreativeTab(Herra);
@@ -665,6 +680,8 @@ public class herracraft{
     Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco");
     GameRegistry.registerItem(Lingote_Demoniaco, Lingote_Demoniaco.getUnlocalizedName().substring(5));
     
+    Lingote_del_Eden = new Lingote_del_Eden().setUnlocalizedName("Lingote_del_Eden").setTextureName("rc:Herra/Lingote_del_Eden").setCreativeTab(Herra);
+    GameRegistry.registerItem(Lingote_del_Eden, Lingote_del_Eden.getUnlocalizedName().substring(5));
     
     if(!RubyCraft.HalloWen) {
     	

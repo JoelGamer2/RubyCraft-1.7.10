@@ -485,6 +485,11 @@ item.Pantalones_Demoniacos.name=Pantalones Demoniacos
 item.Espada_Demoniaca.name=Espada Demoniaca
 item.Lingote_Demoniaco.name=Lingote Demoniaco
 item.Guadana_Tenebrosa.name=Guadana Tenebrosa
+item.Lingote_del_Eden.name=Lingote del Eden
+item.Casco_del_Eden.name=Casco del Eden
+item.Pechera_del_Eden.name=Pechera del Eden
+item.Grebas_del_Eden.name=Grebas del Eden
+item.Botas_del_Eden.name=Botas del Eden
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
