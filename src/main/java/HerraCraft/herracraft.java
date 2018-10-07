@@ -216,6 +216,7 @@ public class herracraft{
     public static final ItemArmor.ArmorMaterial Enderman = EnumHelper.addArmorMaterial("Enderman", 5000, new int[]{7,6,5,4}, 45);
     public static final ItemArmor.ArmorMaterial Ciborg = EnumHelper.addArmorMaterial("Ciborg", 5000, new int[]{10,10,10,10}, 45);
     public static final ItemArmor.ArmorMaterial DemonicArmor = EnumHelper.addArmorMaterial("DemonicArmor", 13000, new int[]{16,16,16,16}, 45);
+    public static final ItemArmor.ArmorMaterial EdenArmor = EnumHelper.addArmorMaterial("EdenArmor", 9000, new int[]{10,10,10,10}, 45);
 	
     //Tabs
     public static CreativeTabs Herra = new HerraTab(CreativeTabs.getNextID(), "hr", "hr" + "." + "HerraCraft", 0);    
@@ -263,6 +264,8 @@ public class herracraft{
     	Pechera_Demoniaca = new Pechera_Demoniaca(DemonicArmor,0, 1).setUnlocalizedName("Pechera_Demoniaca").setTextureName("rc:Herra/Pechera_Demoniaca");
     	Pantalones_Demoniacos = new Pantalones_Demoniacos(DemonicArmor,0, 2).setUnlocalizedName("Pantalones_Demoniacos").setTextureName("rc:Herra/Pantalones_Demoniacos");
     	Botas_Demoniacas = new Botas_Demoniacas(DemonicArmor,0, 3).setUnlocalizedName("Botas_Demoniacas").setTextureName("rc:Herra/Botas_Demoniacas");
+    	
+    	Casco_del_Eden = new Casco_del_Eden(EdenArmor, 0, 1).setUnlocalizedName("Casco_del_Eden").setTextureName("rc:Herra/Casco_del_Eden");
     	
     	
     	GameRegistry.registerItem(Casco_de_Azula, Casco_de_Azula.getUnlocalizedName().substring(5));
