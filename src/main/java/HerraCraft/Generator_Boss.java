@@ -1,10 +1,13 @@
 package HerraCraft;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
+
 import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Mobs.BossParca;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,17 +47,17 @@ public class Generator_Boss extends Block {
 		}else if(!world.isRemote && BossParca.Activo){
 			
 			
-			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.BLUE + "Ya hay un boss activo y esta en la fase:" + BossParca.Fase));
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Ya hay un boss activo y esta en la fase:" + BossParca.Fase));
 			
 		    }
      }else if(RubyCraft.Navidad && !world.isRemote) {
-    	 player.addChatComponentMessage(new ChatComponentText("Nada echo aun"));
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Nada echo aun"));
      }else if(!world.isRemote){
     	 
-    	 player.addChatComponentMessage(new ChatComponentText("Ningun evento activo"));
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Ningun evento activo"));
      }
 }else if(!world.isRemote){
-	player.addChatComponentMessage(new ChatComponentText("Necesitas un Invocador celestial para poder activar el boss si hay algun evento activo"));
+	player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Necesitas un invocador celestial en la mano"));
 	
 }
 		return true;		

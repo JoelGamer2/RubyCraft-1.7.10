@@ -26,10 +26,9 @@ public static boolean URLNOVALIDAERROR = false;
 					String Diasmapa = scanner.nextLine();
 					String Mensaje2 = scanner.nextLine();
 					String Diasnetwork = scanner.nextLine();
-                    
 					Dias = Diasmapa;
 					Salida_EnderGames = Diasnetwork;
-                   
+					scanner.close();
 				} catch (MalformedURLException e) {
 					URLNOVALIDAERROR = true;
 					
