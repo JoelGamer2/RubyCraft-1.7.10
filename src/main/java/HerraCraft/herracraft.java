@@ -194,7 +194,7 @@ public class herracraft{
 	public static Item Espada_Reforzada;
 	public static Item Espada_del_Eden;
 	public static Item Espada_Demoniaca;
-	public static Item Guadaña_Tenebrosa;
+	public static Item guadana_Tenebrosa;
 
 	
 	public static final Item.ToolMaterial AzulaMaterial = EnumHelper.addToolMaterial("AzulaMaterial", 5, 3122, 10.0F, 12.0F, 45);
@@ -391,8 +391,8 @@ public class herracraft{
         Espada_Demoniaca = new Espada_Demoniaca(Demonic).setUnlocalizedName("Espada_Demoniaca").setTextureName("rc:Herra/Espada_Demoniaca");
         GameRegistry.registerItem(Espada_Demoniaca, Espada_Demoniaca.getUnlocalizedName().substring(5));
         
-        Guadaña_Tenebrosa = new Guadañan_Tenebrosa(Parca).setUnlocalizedName("Guadana_Tenebrosa").setTextureName("rc:Herra/Guadana_Tenebrosa");
-        GameRegistry.registerItem(Guadaña_Tenebrosa, Guadaña_Tenebrosa.getUnlocalizedName().substring(5));
+        guadana_Tenebrosa = new Guadana_Tenebrosa(Parca).setUnlocalizedName("Guadana_Tenebrosa").setTextureName("rc:Herra/Guadana_Tenebrosa");
+        GameRegistry.registerItem(guadana_Tenebrosa, guadana_Tenebrosa.getUnlocalizedName().substring(5));
     	
     	
     //Bloques
@@ -690,7 +690,7 @@ public class herracraft{
     	Pechera_Demoniaca.setCreativeTab(null);
     	Pantalones_Demoniacos.setCreativeTab(null);
         Botas_Demoniacas.setCreativeTab(null);	
-        Guadaña_Tenebrosa.setCreativeTab(null);
+        guadana_Tenebrosa.setCreativeTab(null);
     	
        }
     
@@ -718,7 +718,8 @@ public class herracraft{
 		Mesas.addRecipeAzula(new ItemStack(Hacha_de_Antimateria, 1), new Object[]{"#lll#","#lp##","#lp##","##p##","##p##",'l', Lingote_de_Antimateria, 'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Pala_de_Antimateria, 1), new Object[]{"##l##","##p##","##p##","##p##","##p##",'l', Lingote_de_Antimateria,'p', Items.stick});
 		Mesas.addRecipeAzula(new ItemStack(Espada_Reforzada, 1), new Object[]{"##h##","##h##","##e##","##h##","##p##",'h', Items.iron_ingot,'e', Items.iron_sword,'p', Items.stick});
-		
+		Mesas.addRecipeAzula(new ItemStack(Lingote_del_Eden, 2), new Object[]{"#####","##c##","#ele#","##c##","#####",'c', Blocks.glass, 'e', Items.nether_star, 'l', Lingote_de_Antimateria});
+
     	//Crafteos sin Forma Mesa de Azula
     	
     	
@@ -794,7 +795,10 @@ public class herracraft{
     GameRegistry.addRecipe(new ItemStack(Mango_de_Antimateria, 1), new Object[]{"plp","vlv","#a#", 'p', Plutonio, 'l', Lingote_de_Antimateria, 'v',Vapor_de_electrones, 'a',Palos_de_blaze});
     GameRegistry.addRecipe(new ItemStack(Filo_de_Antimateria, 1), new Object[]{"plp","flf","vlv",'p', Plutonio, 'l', Lingote_de_Antimateria, 'f', Fluido_de_suspension, 'v', Vapor_de_electrones});
     GameRegistry.addRecipe(new ItemStack(ElderWays, 1), new Object[] {"ara","ror","ara",'a', Azula,'r', RubyCraft.ruby,'o' ,Items.ender_eye});
-    
+    GameRegistry.addRecipe(new ItemStack(Casco_del_Eden, 1), new Object[]{"lll","l#l","###",'l', Lingote_del_Eden});
+    GameRegistry.addRecipe(new ItemStack(Pechera_del_Eden, 1), new Object[]{"l#l","lll","lll",'l', Lingote_del_Eden});
+    GameRegistry.addRecipe(new ItemStack(Grebas_del_Eden, 1), new Object[]{"lll","l#l","l#l",'l', Lingote_del_Eden});
+    GameRegistry.addRecipe(new ItemStack(Botas_del_Eden, 1), new Object[]{"###","l#l","l#l",'l', Lingote_del_Eden});
     
     
     

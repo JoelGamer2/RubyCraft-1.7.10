@@ -9,9 +9,9 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class Guadañan_Tenebrosa extends ItemSword {
+public class Guadana_Tenebrosa extends ItemSword {
 
-	public Guadañan_Tenebrosa(ToolMaterial material) {
+	public Guadana_Tenebrosa(ToolMaterial material) {
 		super(material);
 		
 	}
