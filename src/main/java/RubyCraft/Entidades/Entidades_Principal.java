@@ -31,18 +31,18 @@ public class Entidades_Principal {
 		createEntitySinHuevo(BossParca.class, "Parca");
 		
 		//Entidades Normales
-		createEntity(AlienMob.class, "Alien", 0x6B6B6B, 0x00FF1D);
-		createEntity(AlejandroMob.class, "Alejandro", 0x0280FF, 0x0C00FF);
-		createEntity(Shulker.class, "shulker", 0x57007F, 0x000000);
-		createEntity(Iratxe.class, "Iratxe", 0x9DFF26, 0x3AD1FF);
-		createEntity(Invocador.class, "Invocador", 0x808080, 0x000000);
-		createEntity(HombreCerdo.class, "HombreCerdo", 0xFF8488, 0xFF60F4);
-		createEntity(Jose.class, "Joseoscar1", 0xFFBB7C, 0xFF1C58);
-		createEntity(Patxis.class, "PatxisGamer", 0xFF0008, 0xFF9B49);
+		createEntity(AlienMob.class, "Alien", 0x6B6B6B, 0x00FF1D,25);
+		createEntity(AlejandroMob.class, "Alejandro", 0x0280FF, 0x0C00FF,23);
+		createEntity(Shulker.class, "shulker", 0x57007F, 0x000000,24);
+		createEntity(Iratxe.class, "Iratxe", 0x9DFF26, 0x3AD1FF,22);
+		createEntity(Invocador.class, "Invocador", 0x808080, 0x000000,21);
+		createEntity(HombreCerdo.class, "HombreCerdo", 0xFF8488, 0xFF60F4,19);
+		createEntity(Jose.class, "Joseoscar1", 0xFFBB7C, 0xFF1C58,54);
+		createEntity(Patxis.class, "PatxisGamer", 0xFF0008, 0xFF9B49,87);
 	}
 	
-	private static void createEntity(Class entityClass, String entityName, int ColordeFondo, int ColordeLosPuntos) {
-		int randomId = EntityRegistry.findGlobalUniqueEntityId();
+	private static void createEntity(Class entityClass, String entityName, int ColordeFondo, int ColordeLosPuntos, int randomId) {
+		//int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		
 		SpawnMobs.SpanwearBichos();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
