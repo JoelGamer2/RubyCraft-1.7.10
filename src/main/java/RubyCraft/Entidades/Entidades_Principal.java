@@ -31,7 +31,7 @@ public class Entidades_Principal {
 		createEntitySinHuevo(BossParca.class, "Parca");
 		
 		//Entidades Normales
-		createEntity(AlienMob.class, "Alien", 0x6B6B6B, 0x00FF1D,25);
+		createEntity(AlienMob.class, "AlienR", 0x6B6B6B, 0x00FF1D,25);
 		createEntity(AlejandroMob.class, "Alejandro", 0x0280FF, 0x0C00FF,23);
 		createEntity(Shulker.class, "shulker", 0x57007F, 0x000000,24);
 		createEntity(Iratxe.class, "Iratxe", 0x9DFF26, 0x3AD1FF,22);

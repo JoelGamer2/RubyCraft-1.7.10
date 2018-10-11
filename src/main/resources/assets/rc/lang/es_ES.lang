@@ -66,7 +66,7 @@ Tecla.Prueba.name=Prueba
 
 generator.Ruby=Generacion Ruby
 
-entity.Alien.name=Alien
+entity.AlienR.name=Alien
 entity.Alejandro.name=Alejandro
 entity.shulker.name=Shulker
 entity.Iratxe.name=Iratxe

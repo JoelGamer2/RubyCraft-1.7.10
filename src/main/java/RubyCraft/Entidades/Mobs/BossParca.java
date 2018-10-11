@@ -130,7 +130,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
          
          if(droprandom.equalsIgnoreCase("guadana")) {
         	 
-        	 this.dropItem(herracraft.Guadaña_Tenebrosa, 1);
+        	 this.dropItem(herracraft.guadana_Tenebrosa, 1);
         	 
          }else if(droprandom.equalsIgnoreCase("lingote_demoniaco")) {
         	 
