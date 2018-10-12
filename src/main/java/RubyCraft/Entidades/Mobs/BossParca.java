@@ -205,7 +205,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	            "Tank",
 	            "Skeleton",
 	            "Herobrine",
-	            "Alien",
+	            "AlienR",
 	            "Zombie",
    
 	    };
@@ -262,7 +262,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        super.onLivingUpdate();
 	       if(RubyCraft.cliente) {
 	          BossStatus.setBossStatus(this, true);
-	          Particulas(x, y, z);
+	        //  Particulas(x, y, z);
 	     } 
 	       if(!(Fase == 0)) {
 	            tick ++;
@@ -331,8 +331,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		    		      tick = 0; 	
 		    	 }
 	        	/**FASE 3 Quita vida al jugador y se cura el**/
-	        }else if(Fase == 3) {
-	        	
+	        }else if(Fase == 3) {   	
 	        	if(tick == 200) {
 	        		this.heal(1.0F);
                     activarchupaalmas = true;    
@@ -347,4 +346,3 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	       }
 	  }
 }
-

@@ -57,7 +57,7 @@ public class Generator_Boss extends Block {
 			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Ningun evento activo"));
      }
 }else if(!world.isRemote){
-	player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Necesitas un invocador celestial en la mano"));
+	player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Necesitas un invocador celestial en la " + EnumChatFormatting.RED + "mano"));
 	
 }
 		return true;		
