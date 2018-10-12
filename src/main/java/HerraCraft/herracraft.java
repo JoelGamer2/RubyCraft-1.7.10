@@ -271,10 +271,10 @@ public class herracraft{
     	Pantalones_Demoniacos = new Pantalones_Demoniacos(DemonicArmor,0, 2).setUnlocalizedName("Pantalones_Demoniacos").setTextureName("rc:Herra/Pantalones_Demoniacos");
     	Botas_Demoniacas = new Botas_Demoniacas(DemonicArmor,0, 3).setUnlocalizedName("Botas_Demoniacas").setTextureName("rc:Herra/Botas_Demoniacas");
    	
-    	Casco_del_Eden = new Casco_del_Eden(EdenArmor, 0, 0).setUnlocalizedName("Casco_del_Eden").setTextureName("rc:Herra/Casco_del_Eden");
-        Pechera_del_Eden = new Pechera_del_Eden(EdenArmor, 0, 1).setUnlocalizedName("Pechera_del_Eden").setTextureName("rc:Herra/Pechera_del_Eden");
-    	Grebas_del_Eden = new Grebas_del_Eden(EdenArmor, 0, 2).setUnlocalizedName("Grebas_del_Eden").setTextureName("rc:Herra/Grebas_del_Eden");
-    	Botas_del_Eden = new Botas_del_Eden(EdenArmor, 0, 3).setUnlocalizedName("Botas_del_Eden").setTextureName("rc:Herra/Botas_del_Eden");
+    	Casco_del_Eden = new Casco_del_Eden(EdenArmor, 0, 0).setUnlocalizedName("Casco_del_Eden").setTextureName("rc:Herra/Casco_del_Eden").setCreativeTab(Herra);
+        Pechera_del_Eden = new Pechera_del_Eden(EdenArmor, 0, 1).setUnlocalizedName("Pechera_del_Eden").setTextureName("rc:Herra/Pechera_del_Eden").setCreativeTab(Herra);
+    	Grebas_del_Eden = new Grebas_del_Eden(EdenArmor, 0, 2).setUnlocalizedName("Grebas_del_Eden").setTextureName("rc:Herra/Grebas_del_Eden").setCreativeTab(Herra);
+    	Botas_del_Eden = new Botas_del_Eden(EdenArmor, 0, 3).setUnlocalizedName("Botas_del_Eden").setTextureName("rc:Herra/Botas_del_Eden").setCreativeTab(Herra);
     	
     	
     	
