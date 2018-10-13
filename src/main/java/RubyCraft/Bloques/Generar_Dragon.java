@@ -21,7 +21,9 @@ public class Generar_Dragon extends Block {
 		  if(world.getBlock(x, y + 1, z) == Blocks.dragon_egg){
 			  world.setBlock(x, y + 1, z, Blocks.air);
 			    world.setBlock(x, y, z, Blocks.air);
+			    if(!world.isRemote) {
 			    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + "El " + EnumChatFormatting.RED + "Dragon " + EnumChatFormatting.GREEN + "Generado con Exito"));
+			    }
 			    	  EntityDragon Dragon = new EntityDragon(world);
 	                   Dragon.setPosition(x, y + 10, z);
 	                   if(!world.isRemote) {
