@@ -1,5 +1,6 @@
 package RubyCraft.Registrar;
 
+import HerraCraft.herracraft;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Cementos_Bases;
@@ -89,6 +90,7 @@ public class Crafteos {
     	Crafteos_Bases.Bloques(RubyCraft.Platino, RubyCraft.Bloque_de_Platino);
     	Crafteos_Bases.Bloques(RubyCraft.Aluminio, RubyCraft.Bloque_de_Aluminio);
     	Crafteos_Bases.Bloques(RubyCraft.Lingote_Galactico, RubyCraft.Bloque_Galactico);   
+    	Crafteos_Bases.Bloques(herracraft.Caca, RubyCraft.Bloquedecaca);
     	//Crafteo Cemento
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Negro, 0);
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Rojo, 1);
