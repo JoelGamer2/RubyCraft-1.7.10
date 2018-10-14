@@ -43,9 +43,9 @@ public class BloqueObservador extends BlockCompressedPowered {
 	    }
 	
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-    	
+    	if(!world.isRemote) {
     	energia = 15;
-    	
+    	} 	
     }
 	
     @Override
@@ -75,6 +75,7 @@ public class BloqueObservador extends BlockCompressedPowered {
 
     public int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
     {
+    	
         return energia;
     }
     

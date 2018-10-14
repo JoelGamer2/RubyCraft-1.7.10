@@ -2,22 +2,18 @@ package HerraCraft.Dropeos;
 
 import java.util.Random;
 
-import com.sun.xml.internal.stream.Entity;
-
 import HerraCraft.herracraft;
+import HerraCraft.Entidades_Principal.DoctorNok;
 import HerraCraft.Entidades_Principal.Invisiteibol;
 import HerraCraft.Entidades_Principal.JoelGamer2;
-import HerraCraft.Entidades_Principal.DoctorNok;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
 import RubyCraft.RubyCraft;
-import RubyCraft.Entidades.Mobs.BossParca;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;

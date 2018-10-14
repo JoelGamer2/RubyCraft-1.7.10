@@ -9,7 +9,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class OreDictonary {
 
 	public static void Iniciar(){
-		RegistrarItem("ingotcopper", RubyCraft.Cobre);
+		RegistrarItem("ingotCopper", RubyCraft.Cobre);
 		RegistrarItem("plastico", RubyCraft.Plastico);
 		RegistrarBloque("OreRuby", RubyCraft.Mena_de_Ruby);
 		RegistrarBloque("OreZafiro", RubyCraft.Mena_de_Zafiro);

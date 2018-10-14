@@ -1,16 +1,9 @@
 package RubyCraft.Maquinas.Renderizado;
 
-import java.util.Calendar;
-
 import org.lwjgl.opengl.GL11;
 
 import Eventos.Ver_fecha_calendario_usuario;
-import Eventos.Verificar_Fecha;
-import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
-import RubyCraft.Maquinas.MesadeTrabajodeRuby;
-import RubyCraft.Navidad.Cambiador_de_Texturas;
-import RubyCraft.Registrar.Crafteos;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;

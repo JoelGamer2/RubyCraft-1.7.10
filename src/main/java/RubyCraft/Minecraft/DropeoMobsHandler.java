@@ -2,7 +2,6 @@ package RubyCraft.Minecraft;
 
 import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
-import RubyCraft.Entidades.Mobs.BossParca;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.item.EntityItem;

@@ -5,6 +5,7 @@ import java.util.Random;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Cementos_Bases;
 import net.minecraft.block.BlockFalling;
+import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.World;
 
@@ -17,7 +18,7 @@ public class Polvo_de_Cemento_Amarillo extends BlockFalling{
         super(material);
         this.setTickRandomly(true);
         this.setStepSound(this.soundTypeSand);
-        this.setHardness(1.5F).setCreativeTab(RubyCraft.Rubycrafttab);
+        this.setHardness(0.5F).setCreativeTab(RubyCraft.Rubycrafttab);
        
     }
 

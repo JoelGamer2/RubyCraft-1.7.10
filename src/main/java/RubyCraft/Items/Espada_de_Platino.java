@@ -3,7 +3,6 @@ package RubyCraft.Items;
 import java.util.List;
 
 import RubyCraft.RubyCraft;
-import javafx.scene.control.TextFormatter;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

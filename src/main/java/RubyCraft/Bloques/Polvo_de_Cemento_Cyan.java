@@ -16,7 +16,7 @@ public class Polvo_de_Cemento_Cyan extends BlockFalling{
         super(material);
         this.setTickRandomly(true);
         this.setStepSound(this.soundTypeSand);
-        this.setHardness(1.5F).setCreativeTab(RubyCraft.Rubycrafttab);
+        this.setHardness(0.5F).setCreativeTab(RubyCraft.Rubycrafttab);
        
     }
 

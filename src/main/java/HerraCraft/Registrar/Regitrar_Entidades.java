@@ -1,17 +1,5 @@
 package HerraCraft.Registrar;
 
-import HerraCraft.Entidades.Render.HerobrineRenderModel;
-import HerraCraft.Entidades.Render.JoelGamer2Render;
-import HerraCraft.Entidades.Render.MiguelperezRender;
-import HerraCraft.Entidades.Render.RenderDoctorNokTexture;
-import HerraCraft.Entidades.Render.RenderHerobrineTexture;
-import HerraCraft.Entidades.Render.RenderInvisiteibolTexture;
-import HerraCraft.Entidades.Render.RenderJoelGamer2Texture;
-import HerraCraft.Entidades.Render.RenderMiguelperezTexture;
-import HerraCraft.Entidades.Render.RenderTankTexture;
-import HerraCraft.Entidades.Render.RenderWither_StormTexture;
-import HerraCraft.Entidades.Render.TankRender;
-import HerraCraft.Entidades.Render.Wither_StormRender;
 import HerraCraft.Entidades_Principal.DoctorNok;
 import HerraCraft.Entidades_Principal.Herobrine;
 import HerraCraft.Entidades_Principal.Invisiteibol;
@@ -22,9 +10,7 @@ import HerraCraft.Entidades_Principal.Spawn_Mobs;
 import HerraCraft.Entidades_Principal.Tank;
 import HerraCraft.Entidades_Principal.Wither_Storm;
 import RubyCraft.RubyCraft;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.EntityList;
 
 public class Regitrar_Entidades {

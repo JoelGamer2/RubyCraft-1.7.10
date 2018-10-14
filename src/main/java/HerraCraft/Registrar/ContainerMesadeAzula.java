@@ -12,7 +12,6 @@ import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-
 public class ContainerMesadeAzula extends Container {
 
 	public InventoryCrafting craftMatrix;

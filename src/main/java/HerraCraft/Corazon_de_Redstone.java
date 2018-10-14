@@ -1,9 +1,7 @@
 package HerraCraft;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockCompressedPowered;
 import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 
 public class Corazon_de_Redstone extends BlockCompressedPowered {

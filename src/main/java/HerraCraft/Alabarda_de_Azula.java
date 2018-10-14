@@ -1,6 +1,5 @@
 package HerraCraft;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;
 
 public class Alabarda_de_Azula extends ItemSword {

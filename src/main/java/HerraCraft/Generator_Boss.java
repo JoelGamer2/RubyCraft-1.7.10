@@ -1,13 +1,9 @@
 package HerraCraft;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
-
-import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Mobs.BossParca;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.player.EntityPlayer;

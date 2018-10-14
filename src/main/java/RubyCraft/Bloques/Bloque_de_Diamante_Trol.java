@@ -3,7 +3,6 @@ package RubyCraft.Bloques;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Registrar.Logros;
 import net.minecraft.block.BlockCompressedPowered;
 import net.minecraft.block.material.MapColor;

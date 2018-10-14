@@ -1,13 +1,9 @@
 package RubyCraft.Eventos;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 
 public class QuitarVidaSiUranio {
 

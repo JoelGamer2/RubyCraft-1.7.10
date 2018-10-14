@@ -1,7 +1,7 @@
 package RubyCraft.Armaduras;
 
-import net.minecraft.item.Item;
+import RubyCraft.Bases.Palos;
 
-public class Paloverde extends Item {
+public class Paloverde extends Palos {
 
 }

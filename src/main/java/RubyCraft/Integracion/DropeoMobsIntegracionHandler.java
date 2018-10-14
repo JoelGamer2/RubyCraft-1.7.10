@@ -1,9 +1,7 @@
 package RubyCraft.Integracion;
 
-import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Mobs.AlejandroMob;
-import RubyCraft.Entidades.Mobs.BossParca;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;

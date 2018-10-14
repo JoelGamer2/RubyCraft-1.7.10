@@ -1,9 +1,6 @@
 package RubyCraft.Integracion;
 
 import RubyCraft.RubyCraft;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
 
 public class Crafteos_InteGracion {
 

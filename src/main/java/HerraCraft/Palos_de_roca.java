@@ -1,7 +1,7 @@
 package HerraCraft;
 
-import net.minecraft.item.Item;
+import RubyCraft.Bases.Palos;
 
-public class Palos_de_roca extends Item {
+public class Palos_de_roca extends Palos {
 
 }
