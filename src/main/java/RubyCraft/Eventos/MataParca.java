@@ -1,19 +1,21 @@
 package RubyCraft.Eventos;
 
+import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import net.minecraft.client.Minecraft;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class MinaRuby {
+public class MataParca {
 	
 	@SubscribeEvent
 	public void whenIGetARubyOre(PlayerEvent.ItemPickupEvent e){
-		if(e.pickedUp.getEntityItem().isItemEqual(new ItemStack(Item.getItemFromBlock(RubyCraft.Mena_de_Ruby)))){
-			e.player.addStat(Logros.MinaRuby, 1);
+		if(e.pickedUp.getEntityItem().isItemEqual(new ItemStack(herracraft.Lingote_Demoniaco))){
+			e.player.addStat(Logros.Matar_Parca, 1);
+			
+		       
+			
 		}
 	}
 

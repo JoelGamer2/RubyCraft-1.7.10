@@ -234,8 +234,6 @@ public class RubyCraft {
 	@SidedProxy(clientSide = "RubyCraft.Proxy.ClientProxy", serverSide = "RubyCraft.Proxy.ServerProxy")
 	public static ServerProxy proxy;
 	
-	//BossParcad
-	public static int FaseHP = 0;
 
 
 	//Items 
@@ -487,7 +485,6 @@ public static final ItemArmor.ArmorMaterial PlatinoArmor = EnumHelper.addArmorMa
 
 public static final Enchantment BotasdeVelocidad = new Botas_de_Velocidad(84, 5);
 public static final Enchantment Grebas_de_Regeneracion = new Grebas_de_Regeneracion(85, 6);
-
 public static boolean VersionTrol = false;
 public static boolean Navidad = false;
 public static boolean HalloWen = false;
@@ -495,7 +492,6 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
-	FaseHP = 0;
 	BossParca.Activo = false;
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;

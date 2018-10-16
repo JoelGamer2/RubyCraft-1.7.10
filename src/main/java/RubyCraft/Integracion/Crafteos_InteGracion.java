@@ -1,6 +1,9 @@
 package RubyCraft.Integracion;
 
 import RubyCraft.RubyCraft;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 
 public class Crafteos_InteGracion {
 
@@ -16,9 +19,9 @@ public class Crafteos_InteGracion {
 			
 		if(RubyCraft.modChecker.isOriginsLoaded) {
 				
-				//Block OriginsBlock = GameRegistry.findBlock("or", "origins_block");
+				Block OriginsBlock = GameRegistry.findBlock("or", "origins_block");
 				
-			//	GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloquederuby, 1), new Object[] {"ooo","ooo","ooo",'o',OriginsBlock});
+				GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloquederuby, 1), new Object[] {"ooo","ooo","ooo",'o',OriginsBlock});
 			}
 				
 				

@@ -1,6 +1,8 @@
 package RubyCraft.Registrar;
 
+import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
@@ -31,7 +33,10 @@ public class Logros {
     public static Achievement Amigos_Para_Siempre;
     public static Achievement Siendo_Troleado;
        
-     public static Achievement Es_Navidad;
+    public static Achievement Es_Navidad;
+     
+    public static Achievement Es_Hallowen;
+    public static Achievement Matar_Parca; 
 	
 	public static void Iniciar(){
 		
@@ -49,7 +54,7 @@ public class Logros {
 		CrafteaEspadaZafiro = new Achievement("achievement.CrafteaEspadaZafiro", "CrafteaEspadaZafiro", 9, 8, RubyCraft.Espadadezafiro, CrafteaMesadeZafiro).registerStat();
 		CubretedeZafiros = new Achievement("achievement.Cubremedezafiros", "Cubremedezafiros", 8, 9, RubyCraft.PetodeZafiro, CrafteaMesadeZafiro).registerStat();
 		
-		RevolucionMob = new Achievement("achievement.RevolucionMob", "RevolucionMob", 10, 0, RubyCraft.ruby, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		RevolucionMob = new Achievement("achievement.RevolucionMob", "RevolucionMob", 14, 0, RubyCraft.ruby, (Achievement)null).initIndependentStat().registerStat().setSpecial();
 		
 		ConsigueUranio = new Achievement("achievement.ConsigueUranio", "ConsigueUranio", 11, 5, RubyCraft.uranio, (Achievement)null).initIndependentStat().registerStat();	    
 		
@@ -60,6 +65,10 @@ public class Logros {
 		Siendo_Troleado = new Achievement("achievement.Siendo_Troleado", "Siendo_Troleado", 13, 7, RubyCraft.Bloque_de_Diamante_Trol, Amigos_Para_Siempre).registerStat();
 		
 		Es_Navidad = new Achievement("achievement.Es_Navidad", "Es_Navidad", 15, 7,Items.snowball, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		
+		Es_Hallowen = new Achievement("achievement.Es_Hallowen", "Es_Hallowen", 17,7, Blocks.pumpkin, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		Matar_Parca = new Achievement("achievement.Matar_Parca", "Matar_Parca", 17,9, herracraft.guadana_Tenebrosa, Es_Hallowen).registerStat().setSpecial();
+
 		
 		 AchievementPage.registerAchievementPage(new AchievementPage("RubyCraft", new Achievement[]{
 				 MinaRuby, 
@@ -88,11 +97,10 @@ public class Logros {
 				 
 				 Es_Navidad,
 				 
+				 Es_Hallowen,
+				 Matar_Parca,
 				 
-		 
-		 
-		 
-		 
+				 	 
 		 
 		 }));
 		
