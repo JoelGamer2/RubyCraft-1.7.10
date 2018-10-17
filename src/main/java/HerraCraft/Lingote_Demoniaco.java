@@ -1,7 +1,7 @@
 package HerraCraft;
 
-import net.minecraft.item.Item;
+import RubyCraft.Bases.ItemsEventoHalloween;
 
-public class Lingote_Demoniaco extends Item {
+public class Lingote_Demoniaco extends ItemsEventoHalloween {
 
 }

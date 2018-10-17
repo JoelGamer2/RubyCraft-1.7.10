@@ -1,10 +1,13 @@
 package HerraCraft;
 
+import java.util.List;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class Guadana_Tenebrosa extends ItemSword {
@@ -28,4 +31,10 @@ public class Guadana_Tenebrosa extends ItemSword {
 		}
 	}
 	
+	
+	@Override
+	public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List lore, boolean p_77624_4_) {
+		// TODO Auto-generated method stub
+        lore.add(EnumChatFormatting.RED + "Espada Especial del Evento de Halloween");
+	}
 }
