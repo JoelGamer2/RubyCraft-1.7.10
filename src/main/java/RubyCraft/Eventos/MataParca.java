@@ -1,7 +1,6 @@
 package RubyCraft.Eventos;
 
 import HerraCraft.herracraft;
-import RubyCraft.RubyCraft;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;

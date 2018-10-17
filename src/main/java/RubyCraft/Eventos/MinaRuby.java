@@ -4,7 +4,6 @@ import RubyCraft.RubyCraft;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
