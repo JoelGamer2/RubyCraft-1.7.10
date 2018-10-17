@@ -406,7 +406,7 @@ public static Block Bloque_de_Actualizaciones;
 public static Block Bloque_Reforzado_Tier_1;
 public static Block Bloque_Reforzado_Tier_2;
 public static Block Bloque_Reforzado_Tier_3;
-public static Block Bloque_Reforzada_Tier_4;
+public static Block Bloque_Reforzado_Tier_4;
 public static Block Bloque_Reforzado_Tier_5;
 	
 
@@ -1032,9 +1032,9 @@ Bloque_Reforzado_Tier_3 = new Bloque_Reforzado_Base(Material.iron).setBlockName(
 GameRegistry.registerBlock(Bloque_Reforzado_Tier_3, Bloque_Reforzado_Tier_3.getUnlocalizedName().substring(5));
 Bloque_Reforzado_Tier_3.setHarvestLevel("pickaxe", 3);
 
-Bloque_Reforzada_Tier_4 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_4").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_4").setCreativeTab(Rubycrafttab).setHardness(100.0F).setResistance(200.0F);
-GameRegistry.registerBlock(Bloque_Reforzada_Tier_4, Bloque_Reforzada_Tier_4.getUnlocalizedName().substring(5));
-Bloque_Reforzada_Tier_4.setHarvestLevel("pickaxe", 3);
+Bloque_Reforzado_Tier_4 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_4").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_4").setCreativeTab(Rubycrafttab).setHardness(100.0F).setResistance(200.0F);
+GameRegistry.registerBlock(Bloque_Reforzado_Tier_4, Bloque_Reforzado_Tier_4.getUnlocalizedName().substring(5));
+Bloque_Reforzado_Tier_4.setHarvestLevel("pickaxe", 3);
 
 Bloque_Reforzado_Tier_5 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_5").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_5").setCreativeTab(Rubycrafttab).setHardness(110.0F).setResistance(250.0F);
 GameRegistry.registerBlock(Bloque_Reforzado_Tier_5, Bloque_Reforzado_Tier_5.getUnlocalizedName().substring(5));
