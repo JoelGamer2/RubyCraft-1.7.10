@@ -113,11 +113,11 @@ public class Crafteos {
     
     	
     	//Crafteo Bloque reforzado tiers
-    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_1, Blocks.stone);
-    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_2, Blocks.diamond_block);
-    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_3, RubyCraft.Bloquederuby);
-    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_4, RubyCraft.BloquedeZafiro);
-    	Crafteos_Bases.Crafteo_Bloque_Reforza(RubyCraft.Bloque_Reforzado_Tier_5, RubyCraft.Bloque_de_Platino);
+    	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_1, Blocks.stone);
+    	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_2, Blocks.diamond_block);
+    	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_3, RubyCraft.Bloquederuby);
+    	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_4, RubyCraft.BloquedeZafiro);
+    	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_5, RubyCraft.Bloque_de_Platino);
     	
         //Crafteos sin Formas Mesa(MineCraft)
     	
