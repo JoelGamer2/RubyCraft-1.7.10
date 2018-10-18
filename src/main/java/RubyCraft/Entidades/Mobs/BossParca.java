@@ -102,14 +102,17 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		if(worldObj.difficultySetting == EnumDifficulty.EASY) {
 		
 		this.dropItem(herracraft.Lingote_Demoniaco, 2);
+		this.dropItem(RubyCraft.bossparca, 1);
 		
 		}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
 			
 			this.dropItem(herracraft.Lingote_Demoniaco, 4);
+			this.dropItem(RubyCraft.bossparca, 1);
 			
 	   }else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
 			
 			this.dropItem(herracraft.Lingote_Demoniaco, 6);
+			this.dropItem(RubyCraft.bossparca, 1);
 			
 		}
 			

@@ -5,7 +5,6 @@ import java.util.Calendar;
 import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import RubyCraft.Maquinas.MesadeTrabajodeRuby;
-import RubyCraft.Navidad.Cambiador_de_Texturas;
 import RubyCraft.Registrar.Crafteos;
 
 public class Ver_fecha_calendario_usuario {

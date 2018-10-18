@@ -1,4 +1,4 @@
-package RubyCraft.Navidad;
+package Eventos;
 
 import RubyCraft.RubyCraft;
 
