@@ -3,80 +3,70 @@ package RubyCraft.Bloques;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCompressedPowered;
 import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BloqueObservador extends BlockCompressedPowered {
-
-	int energia = 0;
-	
+public class BloqueObservador extends Block {
 	   private static final String name = "BloqueObservador" + "";
-	   
+	   public static int alejado = 2;	   
 	    private IIcon[] icons = new IIcon[6];
 	
-	public BloqueObservador(MapColor color) {
-		super(color);
-		
+	public BloqueObservador(Material material) {
+		super(material);	
 	}
-
 	
-	 public void updateTick(World world, int x, int y, int z, Random rand){
-		    
-	    
-	    }
-	    
-
-	    /**
-	     * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
-	     * cleared to be reused)
-	     */
-	    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
-	    {
-	        float f = 0.0625F;
-	        return AxisAlignedBB.getBoundingBox((double)((float)x + f), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)(y + 1) - f), (double)((float)(z + 1) - f));
-	    }
-	
-    public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
-    	if(!world.isRemote) {
-    	energia = 15;
-    	} 	
-    }
-	
+	@Override
+	public void onNeighborBlockChange(World world, int x, int y, int z,Block block) {
+		super.onNeighborBlockChange(world, x, y, z + 1, block);
+		
+       if(world.getBlock(x, y, z + 1) == Blocks.air) {
+	    	  
+			
+			if(world.getBlock(x, y, z - alejado) == Blocks.air) {
+			      world.setBlock(x, y, z - alejado, Blocks.redstone_block);
+			       world.setBlock(x, y, z - alejado, Blocks.air);
+			}  	   	
+      	          }else if(!(world.getBlock(x, y, z + 1) == Blocks.air)) {
+      	        	if(world.getBlock(x, y, z - alejado) == Blocks.air) {
+      	  			     world.setBlock(x, y, z - alejado, Blocks.redstone_block);
+      	  			       world.setBlock(x, y, z - alejado, Blocks.air);
+      	  			}  	 
+      	 
+      	          }		
+		
+	}	
     @Override
     public void registerBlockIcons(IIconRegister reg){
     
         for (int i = 0; i < 6; i++) {
         
             icons[i] = reg.registerIcon(RubyCraft.modid + ":" + name + "_" + (i + 1));
-         
+    
         }
     }
- 
+
     @Override
     public IIcon getIcon(int side, int meta)
     {
         return icons[side];
     }
     
-
-    /**
-     * Can this block provide power. Only wire currently seems to have this change based on its state.
-     */
-    public boolean canProvidePower()
-    {
-        return true;
-    }
-
-    public int isProvidingWeakPower(IBlockAccess p_149709_1_, int p_149709_2_, int p_149709_3_, int p_149709_4_, int p_149709_5_)
-    {
-    	
-        return energia;
-    }
+  
+ @Override
+public boolean canConnectRedstone(IBlockAccess world, int x, int y, int z, int side) {
+	return true;
+}
     
+ 
 }

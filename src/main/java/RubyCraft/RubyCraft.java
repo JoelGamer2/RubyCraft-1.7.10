@@ -1004,7 +1004,7 @@ GameRegistry.registerBlock(Ladrillo_de_Diorita, Ladrillo_de_Diorita.getUnlocaliz
 Generar_Dragon = new Generar_Dragon(Material.rock).setBlockName("Generar_Dragon").setBlockTextureName(modid + ":Generar_Dragon").setCreativeTab(Rubycrafttab).setHardness(1.5F);
 GameRegistry.registerBlock(Generar_Dragon, Generar_Dragon.getUnlocalizedName().substring(5));
 
-BloqueObservador = new BloqueObservador(MapColor.grayColor).setBlockName("BloqueObservador").setBlockTextureName(modid + ":BloqueObservador").setCreativeTab(Rubycrafttab).setHardness(1.0F);
+BloqueObservador = new BloqueObservador(Material.rock).setBlockName("BloqueObservador").setBlockTextureName(modid + ":BloqueObservador").setCreativeTab(Rubycrafttab).setHardness(1.0F);
 GameRegistry.registerBlock(BloqueObservador, BloqueObservador.getUnlocalizedName().substring(5));
 
 Calabaza_Espectral = new Calabaza_Espectral(Material.plants).setBlockName("Calabaza_Espectral").setBlockTextureName(modid + ":Calabaza_Espectral").setCreativeTab(Rubycrafttab).setHardness(1.0F);

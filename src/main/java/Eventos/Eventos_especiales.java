@@ -85,6 +85,9 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
 		
+		
+		
+		
 		//Navidad evento
 		
 		
