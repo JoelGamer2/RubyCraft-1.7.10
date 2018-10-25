@@ -35,7 +35,7 @@ public class GuiMesadeTrabajodeRuby extends GuiContainer {
 		if(!RubyCraft.Navidad){
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Mesa_de_Ruby.name"), 102, 80,  0xFF1500);
 		}else if(RubyCraft.Navidad){
-			this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Mesa_de_Ruby_Navidad.name"), 97, 80, 0xFF5507);
+			this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Mesa_de_Ruby_Navidad.name"), 98, 80, 0xFF5507);
 		}
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Fabricacion.name"), 106 , 9, 0xFF4626);
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Inventario.name"),5 , 96, 0x404040);

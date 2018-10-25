@@ -494,12 +494,16 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
+	
+	if(Control_de_Version.Navidad_Activar == true) {
+		Navidad = true;
+	}
 	BossParca.Activo = false;
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
 	}
 	
-	if(!cliente) {
+	if(!cliente && !Control_de_Version.Navidad_Activar) {
 		Ver_fecha_calendario_usuario.iniciar();
 	}
 	  	   
@@ -899,7 +903,7 @@ Mena_de_Zafiro.setHarvestLevel("pickaxe", 4);
 Cristal_Verde_Lima = new Cristal_Verde_Lima(Material.glass).setBlockName("Cristal_Verde_Lima").setBlockTextureName(modid + ":Cristal_Verde_Lima").setCreativeTab(Rubycrafttab).setHardness(0.3F);
 GameRegistry.registerBlock(Cristal_Verde_Lima, Cristal_Verde_Lima.getUnlocalizedName().substring(5));
 
-Bloque_de_Diamante_Trol = new Bloque_de_Diamante_Trol(MapColor.cyanColor).setBlockName("Bloque_de_Diamante_Trol").setBlockTextureName(modid + ":Bloque_de_Diamante_Trol").setCreativeTab(Rubycrafttab).setBlockUnbreakable().setResistance(Float.MAX_VALUE);
+Bloque_de_Diamante_Trol = new Bloque_de_Diamante_Trol(MapColor.cyanColor).setBlockName("Bloque_de_Diamante_Trol").setBlockTextureName(modid + ":Bloque_de_Diamante_Trol").setCreativeTab(Rubycrafttab).setResistance(Float.MAX_VALUE);
 GameRegistry.registerBlock(Bloque_de_Diamante_Trol, Bloque_de_Diamante_Trol.getUnlocalizedName().substring(5));
    
 Bloque_de_comandos = new Bloque_de_comandos(Material.iron).setBlockName("Bloque_de_comandos").setCreativeTab(Rubycrafttab).setBlockUnbreakable().setResistance(Float.MAX_VALUE);
@@ -1053,7 +1057,6 @@ GameRegistry.registerBlock(Bloqueestructural, Bloqueestructural.getUnlocalizedNa
 	
 Transformador_de_Losas_a_Bloques = new Transformador_de_Losas_a_Bloques().setBlockName("Transformador_de_Losas_a_Bloques");
 GameRegistry.registerBlock(Transformador_de_Losas_a_Bloques, Transformador_de_Losas_a_Bloques.getUnlocalizedName().substring(5));
-Transformador_de_Losas_a_Bloques.setHarvestLevel("spade", 1);
 
 Mesa_De_Conjuraciones = new Mesa_De_Conjuraciones(Material.dragonEgg).setBlockName("Mesa_De_Conjuraciones").setCreativeTab(Rubycrafttab).setHardness(1.5F);
 GameRegistry.registerBlock(Mesa_De_Conjuraciones, Mesa_De_Conjuraciones.getUnlocalizedName().substring(5));

@@ -30,9 +30,12 @@ public class GuiTransformador_de_Losas_a_Bloques extends GuiContainer {
 	
 	protected void drawGuiContainerForegroundLayer(int i, int j) {
 		
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Combustible.name"), 95, 74,  0x000000);
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Convertido.name"), 50 , 9,  0x212CFF);
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Inventario.name"),5 , 96,    0x404040);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Combustible.name"), 95, 74, 0x000000);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Convertido.name"), 50 , 9, 0x212CFF);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.Inventario.name"),5 , 96, 0x404040);
+		if(RubyCraft.Navidad) {
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("gui.NavidadConvertidor.name"),95 , 85, 0xFF0000);
+		}
 		
 	}
 	

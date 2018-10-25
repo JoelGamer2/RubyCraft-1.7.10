@@ -462,10 +462,10 @@ public class herracraft{
     Bloque_De_Estrella_Del_Wither = new Bloque_De_Estrella_Del_Wither(Material.rock).setBlockName("Bloque_De_Estrella_Del_Wither").setBlockTextureName("rc:Herra/Bloque_De_Estrella_Del_Wither").setCreativeTab(Herra).setHardness(1.0F).setResistance(6.0F);
     GameRegistry.registerBlock(Bloque_De_Estrella_Del_Wither, Bloque_De_Estrella_Del_Wither.getUnlocalizedName().substring(5));
     
-    Magma_Acuatico = new Magma_Acuatico(Material.rock).setBlockName("Magma_Acuatico").setBlockTextureName("rc:Herra/acuatico").setHardness(0.9F).setCreativeTab(Herra);
+    Magma_Acuatico = new Magma_Acuatico(Material.rock).setBlockName("Magma_Acuatico").setHardness(0.9F).setBlockTextureName("rc:Herra/acuatico").setCreativeTab(Herra);
     GameRegistry.registerBlock(Magma_Acuatico, Magma_Acuatico.getUnlocalizedName().substring(5));
     
-    Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setBlockTextureName("rc:Herra/Generator_Boss").setHardness(1.0F).setResistance(10.0F);
+    Generator_Boss = new Generator_Boss(Material.rock).setBlockName("Generator_Boss").setHardness(1.0F).setResistance(10.0F);
     GameRegistry.registerBlock(Generator_Boss, Generator_Boss.getUnlocalizedName().substring(5));
     
     Bloque_Demoniaco = new Bloque_Demoniaco(Material.rock).setBlockName("Bloque_Demoniaco").setBlockTextureName("rc:Herra/Bloque_Demoniaco").setHardness(1.6F).setResistance(Float.MAX_VALUE);

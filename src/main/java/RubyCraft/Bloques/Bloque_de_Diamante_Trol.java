@@ -36,6 +36,19 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 	public Bloque_de_Diamante_Trol(MapColor material) {
 		super(material);
 		
+		
+		if(RubyCraft.Navidad == true) {
+			
+			this.setHarvestLevel("pickaxe", 5);
+			this.setHardness(100.0F);
+			
+		}else {
+			
+			this.setBlockUnbreakable();
+			
+		}
+		
+		
 		this.setStepSound(this.soundTypeMetal);
 		
 	}
@@ -93,10 +106,11 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 					if(world.isRemote) {
 					player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Version Trol activa lo siento"));				
 					}
-				   }else if(RubyCraft.Navidad == true && world.isRemote){
-					RubyCraft.Bloque_de_Diamante_Trol.setHarvestLevel("pickaxe", 5);
-					RubyCraft.Bloque_de_Diamante_Trol.setHardness(100.0F);
-				    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + player.getDisplayName() + EnumChatFormatting.BLUE + " Feliz Navidad" + EnumChatFormatting.GOLD + " : - )" + EnumChatFormatting.RED + " En Navidad no se Trolea"));	
+				   }else if(RubyCraft.Navidad == true){
+	
+					if(world.isRemote) {
+				    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + player.getDisplayName() + EnumChatFormatting.BLUE + " Feliz Navidad" + EnumChatFormatting.GOLD + " : - )" + EnumChatFormatting.RED + " En Navidad no se Trolea"));
+					}
 				}	
 		}else{
 			//Desbugueo			
