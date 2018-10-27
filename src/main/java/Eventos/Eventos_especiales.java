@@ -7,7 +7,11 @@ import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.init.Blocks;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 
@@ -15,34 +19,39 @@ public class Eventos_especiales {
 
 	private boolean Iniciadosesion = false;
 	public static boolean musica = false;
-
 	public static String ParcaFase1 = "La parca llama a su ejercito en la 1 fase";
 	public static String ParcaFase2 = "La parca huye de los humanos en la fase 2";
-	public static String ParcaFase3 = "La parca 3";
+	public static String ParcaFase3 = "La parca Te chupa tu alma para quedarsela ella";
 	public static String ParcaFase4 = "La parca Hace todo lo anterior en la fase 4 Solo en modo dificil";
-
 	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage();
-
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if(event.player.inventory.hasItem(RubyCraft.CreaCaminos)) {
 		
-		
-		//Navidad evento
-		if (RubyCraft.Navidad == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
-
-			event.player.addStat(Logros.Es_Navidad, 1);
-			Iniciadosesion = true;
+		if(!event.player.isSneaking()) {
+		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ-1, RubyCraft.Andesita);
+		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.Andesita);
+		event.player.worldObj.setBlock((int)event.player.posX+1, (int)event.player.posY -2, (int)event.player.posZ, RubyCraft.Andesita);
+		event.player.worldObj.setBlock((int)event.player.posX-1, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.Andesita);
+		event.player.addPotionEffect(new PotionEffect(Potion.resistance.id, 100,255));
+		event.player.addPotionEffect(new PotionEffect(23, 100, 255));
 		}
+	}
+		//Navidad evento
+		/**if (RubyCraft.Navidad == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+			Iniciadosesion = true;
+			event.player.addStat(Logros.Es_Navidad, 1);
+		}**/
 
 		
 		
 		//Halloween evento 
 		
-		if(RubyCraft.HalloWen == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
-			
+	/**	if(RubyCraft.HalloWen == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+			Iniciadosesion = true;
 			event.player.addStat(Logros.Es_Hallowen, 1);
 			
-		}
+		}**/
 		
 		if(BossParca.Activo) {
 			if (BossParca.Fase == 3 && BossParca.Activo) {
@@ -87,12 +96,10 @@ public class Eventos_especiales {
 		
 		
 		
-		
 		//Navidad evento
 		
 		
 		//Halloween evento 
-		
 		if(BossParca.Activo) {
 		if (RubyCraft.cliente == true && Minecraft.getMinecraft().currentScreen == null) {
 
@@ -124,5 +131,7 @@ public class Eventos_especiales {
 	        }
           
 	}
+	
+	
 	
 }

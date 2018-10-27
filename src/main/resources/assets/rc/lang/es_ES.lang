@@ -4,7 +4,7 @@ death.attack.Troleo=%1$s a Muerto por descuidarse.
 death.attack.Troleo.player=%$s a Sido Troleado Por %2$s.
 death.attack.RadioActividad=%1$s a Muerto por Tener demasiada RadioActividad.
 death.attack.RadioActividad.player=%$s a Muerto por Radioactividad pero le Troleo %2$s.
-death.attack.Laparcasellevotualma.player=La parca se llevo el alma de %1$s
+death.attack.Laparcasellevotualma=La parca se llevo el alma de %1$s
 death.attack.Laparcasellevotualma.player=%$s a Muerto por que la parca se llevo su alma pero le ayudo a morir %2$s.
 
 achievement.MinaRuby=Mina Ruby
@@ -161,6 +161,7 @@ item.Pala_de_cobre.name=Pala de Cobre
 item.Azada_de_cobre.name=Azada de Cobre
 item.Tijeras_de_cobre.name=Tijeras de Cobre
 item.Palo_Morado.name=Palo Morado
+item.CreaCaminos.name=Crea Caminos
 
 item.CanciondeSansDisco.name=Disco de musica
 item.CanciondeSansDisco.desc=Megalovania

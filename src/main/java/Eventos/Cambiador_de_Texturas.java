@@ -12,13 +12,13 @@ public class Cambiador_de_Texturas {
 	
 	public static void Texturas(){
 		if(RubyCraft.cliente) {
-		
 		if(RubyCraft.Navidad){
 			Texturas_Navidad();
 		}else if(RubyCraft.HalloWen){
 			Texturas_Hallowen();
 		}else if(!RubyCraft.Navidad && !RubyCraft.HalloWen){
 			Texturas_Normales();
+	
 		}
 	  }
 	}

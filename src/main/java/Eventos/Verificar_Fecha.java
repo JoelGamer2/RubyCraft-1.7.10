@@ -59,8 +59,11 @@ public class Verificar_Fecha {
 				inicia = false;
 				
 			}else if(HalloWen == true && msgin.equals("false")) {
-
+       
 				inicia = false;
+				if(RubyCraft.cliente) {
+		    		Cambiador_de_Texturas.Texturas();
+		    		}
 				
 			}else if(Navidad == true && msgin.equals("true")) {
 			
@@ -75,7 +78,9 @@ public class Verificar_Fecha {
 			}else if(Navidad == true && msgin.equals("false")) {
 
 				inicia = false;
-
+				if(RubyCraft.cliente) {
+		    		Cambiador_de_Texturas.Texturas();
+		    		}
 			     }		
 
 			}

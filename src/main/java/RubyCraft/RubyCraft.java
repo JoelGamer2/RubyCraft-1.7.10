@@ -127,6 +127,7 @@ import RubyCraft.Items.BoladeResina;
 import RubyCraft.Items.Caparazon_Shulker;
 import RubyCraft.Items.Cobre;
 import RubyCraft.Items.Colores;
+import RubyCraft.Items.CreaCaminos;
 import RubyCraft.Items.Elytra;
 import RubyCraft.Items.Espada_de_Platino;
 import RubyCraft.Items.Espadaderuby;
@@ -274,6 +275,7 @@ public class RubyCraft {
  public static Item Caparazon_Shulker;
  public static Item Moldes_para_cofres;
  public static Item Palo_Morado;
+ public static Item CreaCaminos;
  
  //Discos
 
@@ -747,6 +749,9 @@ GameRegistry.registerItem(Moldes_para_cofres, Moldes_para_cofres.getUnlocalizedN
 
 Palo_Morado = new Palo_Morado().setUnlocalizedName("Palo_Morado").setTextureName(modid + ":Palo_Morado").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(Palo_Morado, Palo_Morado.getUnlocalizedName().substring(5));
+
+CreaCaminos = new CreaCaminos().setUnlocalizedName("CreaCaminos").setTextureName(modid + ":CreaCaminos").setCreativeTab(Rubycrafttab);
+GameRegistry.registerItem(CreaCaminos, CreaCaminos.getUnlocalizedName().substring(5));
 
 //Discos
 
