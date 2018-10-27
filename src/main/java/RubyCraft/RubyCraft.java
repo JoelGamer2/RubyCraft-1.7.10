@@ -86,6 +86,7 @@ import RubyCraft.Bloques.PilarPurpur;
 import RubyCraft.Bloques.PistonSlimeBase;
 import RubyCraft.Bloques.Piston_de_Slime_Cabeza;
 import RubyCraft.Bloques.Prismarina_oscura;
+import RubyCraft.Bloques.bloque_del_crea_caminos;
 import RubyCraft.Bloques.bloquedeZafiro;
 import RubyCraft.Bloques.bloquedecaca;
 import RubyCraft.Bloques.bloquederuby;
@@ -410,6 +411,7 @@ public static Block Bloque_Reforzado_Tier_2;
 public static Block Bloque_Reforzado_Tier_3;
 public static Block Bloque_Reforzado_Tier_4;
 public static Block Bloque_Reforzado_Tier_5;
+public static Block bloque_del_crea_caminos;
 	
 
 //mesa de Crafteo
@@ -1048,6 +1050,9 @@ Bloque_Reforzado_Tier_4.setHarvestLevel("pickaxe", 3);
 Bloque_Reforzado_Tier_5 = new Bloque_Reforzado_Base(Material.iron).setBlockName("Bloque_Reforzado_Tier_5").setBlockTextureName(modid + ":Bloque_Reforzado_Tier_5").setCreativeTab(Rubycrafttab).setHardness(110.0F).setResistance(250.0F);
 GameRegistry.registerBlock(Bloque_Reforzado_Tier_5, Bloque_Reforzado_Tier_5.getUnlocalizedName().substring(5));
 Bloque_Reforzado_Tier_5.setHarvestLevel("pickaxe", 3);
+
+bloque_del_crea_caminos = new bloque_del_crea_caminos(Material.rock).setBlockName("bloque_del_crea_caminos").setBlockTextureName(modid + ":bloque_del_crea_caminos").setCreativeTab(Rubycrafttab).setBlockUnbreakable().setResistance(Float.MAX_VALUE);
+GameRegistry.registerBlock(bloque_del_crea_caminos, bloque_del_crea_caminos.getUnlocalizedName().substring(5));
 
 //Maquinas
 

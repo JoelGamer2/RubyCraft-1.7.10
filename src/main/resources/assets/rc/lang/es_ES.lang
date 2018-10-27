@@ -353,7 +353,7 @@ tile.Bloque_Reforzado_Tier_2.name=Bloque Reforzado Tier II
 tile.Bloque_Reforzado_Tier_3.name=Bloque Reforzado Tier III
 tile.Bloque_Reforzado_Tier_4.name=Bloque Reforzado Tier IV
 tile.Bloque_Reforzado_Tier_5.name=Bloque Reforzado Tier V
-
+tile.bloque_del_crea_caminos.name=Bloque del crea caminos
 
 
 
@@ -560,6 +560,7 @@ tile.Magma_Acuatico.name=Magma Acuatico
 tile.Bloque_De_Estrella_Del_Wither.name=Bloque de Nether Star
 tile.Generator_Boss.name=Generador Boss
 tile.Bloque_Demoniaco.name=Bloque Demoniaco
+
 
 
 tile.Escalera_De_corazon_de_redstone.name=Escalera de corazon de redstone

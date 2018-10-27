@@ -28,11 +28,11 @@ public class Eventos_especiales {
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if(event.player.inventory.hasItem(RubyCraft.CreaCaminos)) {
 		
-		if(!event.player.isSneaking()) {
-		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ-1, RubyCraft.Andesita);
-		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.Andesita);
-		event.player.worldObj.setBlock((int)event.player.posX+1, (int)event.player.posY -2, (int)event.player.posZ, RubyCraft.Andesita);
-		event.player.worldObj.setBlock((int)event.player.posX-1, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.Andesita);
+		if(!event.player.isSneaking() && event.player.worldObj.isRemote) {
+		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ-1, RubyCraft.bloque_del_crea_caminos);
+		event.player.worldObj.setBlock((int)event.player.posX, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.bloque_del_crea_caminos);
+		event.player.worldObj.setBlock((int)event.player.posX+1, (int)event.player.posY -2, (int)event.player.posZ, RubyCraft.bloque_del_crea_caminos);
+		event.player.worldObj.setBlock((int)event.player.posX-1, (int)event.player.posY -2, (int)event.player.posZ+1, RubyCraft.bloque_del_crea_caminos);
 		event.player.addPotionEffect(new PotionEffect(Potion.resistance.id, 100,255));
 		event.player.addPotionEffect(new PotionEffect(23, 100, 255));
 		}

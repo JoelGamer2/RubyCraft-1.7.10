@@ -2,6 +2,7 @@ package RubyCraft.Items;
 
 import java.util.List;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,4 +23,5 @@ public class CreaCaminos extends Item {
 		lore.add(EnumChatFormatting.RED + "Item solo de Creativo");
 		
 	}
+
 }
