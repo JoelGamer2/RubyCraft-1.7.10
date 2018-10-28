@@ -220,7 +220,7 @@ public class RubyCraft {
 	public static final org.apache.logging.log4j.Logger logger = LogManager.getFormatterLogger("RubyCraft");
 	
 	 public static final String modid = "rc";
-	 public static final String version = "1.11";
+	 public static final String version = "1.12";
 	 
 	@Instance(modid)
 	public static RubyCraft instance;
