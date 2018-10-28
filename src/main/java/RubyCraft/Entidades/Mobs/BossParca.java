@@ -30,7 +30,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	public static boolean chat1 = false;
 	public static boolean chat2 = false;
 	public static boolean chat3 = false;
-	public static boolean chat4 = false;
 	
 	 public static double xrandomtp = 0;
 	 public static  double zrandomtp = 0;
@@ -78,7 +77,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 chat1 = false;
 	 chat2 = false;
 	 chat3 = false;
-	 chat4 = false;	 
 		 }
 	
 	/**Comunica cuando el mob muere**/
@@ -339,7 +337,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        	if(tick == 200) {
 	        		this.heal(1.0F);
                     activarchupaalmas = true;    
-                    /**DESACTIVA EL CONTADOR PORQUE SE ACABARON LAS FaseS**/
+                    /**DESACTIVA EL CONTADOR PORQUE YA NO HAY MAS FASES**/
 	        	}else if(tick > 600) {
 	        		
 	        		Fase = 0;

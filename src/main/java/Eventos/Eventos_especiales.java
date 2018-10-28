@@ -1,7 +1,9 @@
 package Eventos;
 
 import HerraCraft.Generator_Boss;
+import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
+import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -10,22 +12,33 @@ import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.EnumDifficulty;
 
 public class Eventos_especiales {
 
 	private boolean Iniciadosesion = false;
 	public static boolean musica = false;
-	public static String ParcaFase1 = "La parca llama a su ejercito en la 1 fase";
-	public static String ParcaFase2 = "La parca huye de los humanos en la fase 2";
-	public static String ParcaFase3 = "La parca Te chupa tu alma para quedarsela ella";
-	public static String ParcaFase4 = "La parca Hace todo lo anterior en la fase 4 Solo en modo dificil";
+	public static String Parcanombre = EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft-Bosses" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + " ";
+	public static String ParcaFase1 = Parcanombre + "La parca llama a su ejercito";
+	public static String ParcaFase2 = Parcanombre + "La parca huye de los humanos";
+	public static String ParcaFase3 = Parcanombre + "La parca Chupa las almas";
 	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage();
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		
+		/**if(Control_de_Version.Version_de_desarrolador && event.player.inventory.hasItemStack(new ItemStack(RubyCraft.bloque_del_crea_caminos, 1))) {
+			
+			event.player.addChatComponentMessage(new ChatComponentText("" + BossParca.tick + " Fase:" + BossParca.Fase + " Tepes hechos:" + BossParca.Tp_hechos));
+			
+		}**/
+		
+		
 		if(event.player.inventory.hasItem(RubyCraft.CreaCaminos)) {
 		
 		if(!event.player.isSneaking() && event.player.worldObj.isRemote) {
@@ -38,20 +51,20 @@ public class Eventos_especiales {
 		}
 	}
 		//Navidad evento
-		/**if (RubyCraft.Navidad == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+		if (RubyCraft.Navidad == true && !Iniciadosesion ) {
 			Iniciadosesion = true;
 			event.player.addStat(Logros.Es_Navidad, 1);
-		}**/
+		}
 
 		
 		
 		//Halloween evento 
 		
-	/**	if(RubyCraft.HalloWen == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+		if(RubyCraft.HalloWen == true && !Iniciadosesion) {
 			Iniciadosesion = true;
 			event.player.addStat(Logros.Es_Hallowen, 1);
 			
-		}**/
+		}
 		
 		if(BossParca.Activo) {
 			if (BossParca.Fase == 3 && BossParca.Activo) {
@@ -93,6 +106,16 @@ public class Eventos_especiales {
 
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
+		
+		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
+			BossParca.Activo = false;
+			Eventos_especiales.musica = false;
+			Generator_Boss.NombreJugador = " ";
+			event.world.setWorldTime(Generator_Boss.TiempodelMundo);
+			Generator_Boss.TiempodelMundo = 0;
+			Bloque_de_Diamante_Trol.Dano = 20.0F;
+			BossParca.Fase = 0;
+		}
 		
 		
 		

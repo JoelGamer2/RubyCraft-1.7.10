@@ -122,6 +122,7 @@ public class Crafteos {
         //Crafteos sin Formas Mesa(MineCraft)
     	
     	//DesCrafteos
+        GameRegistry.addShapelessRecipe(new ItemStack(herracraft.Caca, 9), new Object[]{RubyCraft.Bloquedecaca});
         GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Pepita_de_Hierro, 9), new Object[]{Items.iron_ingot});
         GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Lingote_Galactico , 9), new Object[]{RubyCraft.Bloque_Galactico});
     	GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Cobre, 9), new Object[]{RubyCraft.Bloque_de_Cobre});
