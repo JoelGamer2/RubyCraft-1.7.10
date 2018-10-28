@@ -90,7 +90,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
 		Generator_Boss.TiempodelMundo = 0;
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
-		System.out.println(Activo  + " " + Fase + " "+ Eventos_especiales.musica);
 		dropeos();
 	}
 	
@@ -284,10 +283,10 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	     
 	     Random zrandom = new Random(); 
 	     zrandomgenerado = zrandom.nextInt(6);
-	    
-	     System.out.println(xrandomgenerado);
-	     System.out.println(yrandomgenerado);
-	     System.out.println(zrandomgenerado);
+	
+	     //System.out.println(xrandomgenerado);
+	     //System.out.println(yrandomgenerado);
+	     //System.out.println(zrandomgenerado);
 	     
 	     Random generator = new Random(); 
          int nSelection = generator.nextInt(Mobs.length); 

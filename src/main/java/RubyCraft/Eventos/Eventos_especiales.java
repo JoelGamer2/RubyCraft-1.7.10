@@ -75,8 +75,7 @@ public class Eventos_especiales {
 
 			musica = true;
 		}
-		
-		
+	
 	}
 	 
 	
@@ -103,14 +102,13 @@ public class Eventos_especiales {
         	   }
      
 		if(BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
-			
 
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE, 1.0F);
 		
 
-      musica = true;
-	    }
-      }
+                musica = true;
+	       }
+        }
 	}
 	
 	
