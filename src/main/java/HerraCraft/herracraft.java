@@ -674,7 +674,7 @@ public class herracraft{
     ElderWays = new ElderWays().setUnlocalizedName("ElderWays").setTextureName("rc:Herra/ElderWays").setCreativeTab(Herra);
     GameRegistry.registerItem(ElderWays, ElderWays.getUnlocalizedName().substring(5));
     
-    Invocador_Celestial = new Invocador_Celestial().setUnlocalizedName("Invocador_Celestial").setTextureName("rc:Herra/Invocador_Celestial").setCreativeTab(Herra);
+    Invocador_Celestial = new Invocador_Celestial().setUnlocalizedName("Invocador_Celestial").setTextureName("rc:Herra/Invocador_Celestial");
     GameRegistry.registerItem(Invocador_Celestial, Invocador_Celestial.getUnlocalizedName().substring(5));
     
     Lingote_Demoniaco = new Lingote_Demoniaco().setUnlocalizedName("Lingote_Demoniaco").setTextureName("rc:Herra/Lingote_Demoniaco");

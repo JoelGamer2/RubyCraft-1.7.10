@@ -49,6 +49,13 @@ public class IniciarItemsEventos {
 			herracraft.Altar_de_Jeb.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Altar_de_Lick.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Altar_de_Noch.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
+			
+		}else if(RubyCraft.Navidad) {
+			
+			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
+
 			
 		}
 	}

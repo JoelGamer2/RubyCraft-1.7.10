@@ -491,6 +491,8 @@ public static final ItemArmor.ArmorMaterial PlatinoArmor = EnumHelper.addArmorMa
 
 public static final Enchantment BotasdeVelocidad = new Botas_de_Velocidad(84, 5);
 public static final Enchantment Grebas_de_Regeneracion = new Grebas_de_Regeneracion(85, 6);
+
+
 public static boolean VersionTrol = false;
 public static boolean Navidad = false;
 public static boolean HalloWen = false;
@@ -512,6 +514,12 @@ public void Preinit(FMLPreInitializationEvent event){
 	}
 	  	   
 	herracraft.preinit();
+	if(Control_de_Version.Navidad_Activar == true) {
+	
+			IniciarItemsEventos.Iniciartodo();
+		
+		
+	}
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();
 	}
