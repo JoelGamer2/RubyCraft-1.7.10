@@ -38,7 +38,7 @@ public class Eventos_especiales {
 			
 		}**/
 		
-		
+
 		if(event.player.inventory.hasItem(RubyCraft.CreaCaminos)) {
 		
 		if(!event.player.isSneaking() && event.player.worldObj.isRemote) {
