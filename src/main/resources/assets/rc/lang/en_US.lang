@@ -75,6 +75,7 @@ entity.PatxisGamer.name=Patxis
 entity.Parca.name=Parca
 
 itemGroup.rc=RubyCraft
+itemGroup.EventosTab=Eventos
 
 item.Ruby.name=Ruby
 item.Azadaderuby.name=Ruby Hoe

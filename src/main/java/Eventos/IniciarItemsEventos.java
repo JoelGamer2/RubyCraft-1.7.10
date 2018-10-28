@@ -25,17 +25,17 @@ public class IniciarItemsEventos {
 	public static void Hallowen() {
 		if(RubyCraft.HalloWen) {
 			
-			herracraft.Lingote_Demoniaco.setCreativeTab(herracraft.Herra);
-			herracraft.Generator_Boss.setCreativeTab(herracraft.Herra);
-			RubyCraft.bossparca.setCreativeTab(RubyCraft.Rubycrafttab);
-			herracraft.Espada_Demoniaca.setCreativeTab(herracraft.Herra);
-			herracraft.Espada_Demoniaca.setCreativeTab(herracraft.Herra);
-			herracraft.Casco_Demoniaco.setCreativeTab(herracraft.Herra);
-			herracraft.Pechera_Demoniaca.setCreativeTab(herracraft.Herra);
-			herracraft.Pantalones_Demoniacos.setCreativeTab(herracraft.Herra);
-			herracraft. Botas_Demoniacas.setCreativeTab(herracraft.Herra);	
-			herracraft.Bloque_Demoniaco.setCreativeTab(herracraft.Herra);
-			herracraft.Guadaña_Tenebrosa.setCreativeTab(herracraft.Herra);
+			herracraft.Lingote_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
+			RubyCraft.bossparca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Casco_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Pechera_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Pantalones_Demoniacos.setCreativeTab(RubyCraft.EventosTab);
+			herracraft. Botas_Demoniacas.setCreativeTab(RubyCraft.EventosTab);	
+			herracraft.Bloque_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Guadaña_Tenebrosa.setCreativeTab(RubyCraft.EventosTab);
 		}
 	}
 	

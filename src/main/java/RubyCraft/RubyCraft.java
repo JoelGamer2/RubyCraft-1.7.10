@@ -2,6 +2,7 @@ package RubyCraft;
 
 import org.apache.logging.log4j.LogManager;
 
+import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
@@ -463,6 +464,7 @@ public static DamageSource Troleo = new DamageSource("Troleo").setDamageAllowedI
 
  //Tabs
 public static CreativeTabs Rubycrafttab = new TabdeCreativoAvanzada(CreativeTabs.getNextID(), RubyCraft.modid, RubyCraft.modid + "." + "Rubycrafttab", 0);
+public static CreativeTabs EventosTab = new EventosTab(CreativeTabs.getNextID(), RubyCraft.modid, "EventosTab", 0);
 
 //Materiales
 		  
