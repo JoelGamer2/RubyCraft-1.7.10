@@ -20,6 +20,7 @@ public class Generator_Boss extends Block {
 	
 	public static String NombreJugador = "";
 	public static long TiempodelMundo = 0;
+	public static boolean activadoh = false;
 
 	protected Generator_Boss(Material material) {
 		super(material);
@@ -33,7 +34,7 @@ public class Generator_Boss extends Block {
 		if((player.getCurrentEquippedItem() != null &&  player.getCurrentEquippedItem().getItem() == herracraft.Invocador_Celestial)) {
   if(RubyCraft.HalloWen) {
  
-		if(!BossParca.Activo) {
+		if(!BossParca.Activo && !activadoh) {
 			NombreJugador = player.getDisplayName();
 			player.playSound(RubyCraft.modid+ ":records.bossparca", Float.MAX_VALUE, 1.0F);
 			TiempodelMundo = world.getWorldTime();
@@ -43,11 +44,12 @@ public class Generator_Boss extends Block {
 		       Entity mob = EntityList.createEntityByName("Parca", world);
                mob.setPosition(x, y + 1, z); 
 		       world.spawnEntityInWorld(mob);
+		       activadoh = true;
 		  }
 		}else if(!world.isRemote && BossParca.Activo){
 			
 			
-			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Ya hay un boss activo y esta en la fase:" + BossParca.Fase));
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Ya hay un boss activo y esta en la fase:" + RubyCraft.FaseHP));
 			
 		    }
      }else if(RubyCraft.Navidad && !world.isRemote) {

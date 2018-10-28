@@ -103,6 +103,7 @@ import RubyCraft.Combustible_Iniciar.Combustible_Principal;
 import RubyCraft.Encantamientos.Botas_de_Velocidad;
 import RubyCraft.Encantamientos.Grebas_de_Regeneracion;
 import RubyCraft.Entidades.Entidades_Principal;
+import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Eventos.Eventos_Principal;
 import RubyCraft.Eventos.trol;
 import RubyCraft.Generacion.Generacion_Principal;
@@ -223,7 +224,7 @@ public class RubyCraft {
 	public static final org.apache.logging.log4j.Logger logger = LogManager.getFormatterLogger("RubyCraft");
 	
 	 public static final String modid = "rc";
-	 public static final String version = "1.13";
+	 public static final String version = "1.12";
 	 
 	@Instance(modid)
 	public static RubyCraft instance;
@@ -232,6 +233,9 @@ public class RubyCraft {
 	 
 	@SidedProxy(clientSide = "RubyCraft.Proxy.ClientProxy", serverSide = "RubyCraft.Proxy.ServerProxy")
 	public static ServerProxy proxy;
+	
+	//BossParca
+	public static int FaseHP = 0;
 
 
 	//Items 
@@ -491,6 +495,8 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
+	FaseHP = 0;
+	BossParca.Activo = false;
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
 	}

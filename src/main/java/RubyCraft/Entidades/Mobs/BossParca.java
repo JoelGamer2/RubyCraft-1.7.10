@@ -25,16 +25,15 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	public static boolean Activo = false;
 	public static int Tp_hechos = 0;
 	public static boolean activarchupaalmas = false;
-	public static int Fase = 1;
 	
 	public static boolean chat1 = false;
 	public static boolean chat2 = false;
 	public static boolean chat3 = false;
 	public static boolean chat4 = false;
 	
-	 private static double xrandomtp = 0;
-	 private static  double zrandomtp = 0;
-	 private static int cantidadgenerado = 0;
+	 public static double xrandomtp = 0;
+	 public static  double zrandomtp = 0;
+	 public static int cantidadgenerado = 0;
 	public BossParca(World world) {
 		super(world);
 		     
@@ -66,7 +65,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
 	 Activo = true;
-	 Fase = 1;
+	 RubyCraft.FaseHP = 1;
 	 xrandomtp = 0;
 	 zrandomtp = 0;
 	 Tp_hechos = 0;
@@ -90,7 +89,9 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 		worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
 		Generator_Boss.TiempodelMundo = 0;
 		Bloque_de_Diamante_Trol.Dano = 20.0F;
+		RubyCraft.FaseHP = 0;
 		dropeos();
+		Generator_Boss.activadoh = false;
 	}
 	
 	
@@ -199,7 +200,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	        return false;
 	    }
 	    
-	    /**Lista de mobs random para la fase 1 del boss**/
+	    /**Lista de mobs random para la RubyCraft.FaseHP 1 del boss**/
 	    public static String[] Mobs = { 
 	               
 	            "Tank",
@@ -252,9 +253,9 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    	
 	    }
 	    
-	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
+	    /**Aqui ocurre todas las RubyCraft.FaseHPs del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
- // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
+ // System.out.println(xrandomtp + " " + zrandomtp + " " + RubyCraft.FaseHP + " " + tick);	    	
 	    	double x = this.posX;
 	    	double y = this.posY;
 	    	double z = this.posZ;
@@ -264,11 +265,11 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	          BossStatus.setBossStatus(this, true);
 	        //  Particulas(x, y, z);
 	     } 
-	       if(!(Fase == 0)) {
+	       if(!(RubyCraft.FaseHP == 0)) {
 	            tick ++;
 	       }
-	     /**FASE 1 Spawnea bichos random 4 veces**/
-	     if(Fase == 1) { 
+	     /**RubyCraft.FaseHP 1 Spawnea bichos random 4 veces**/
+	     if(RubyCraft.FaseHP == 1) { 
 	    	 
 	       if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
 	      double xrandomgenerado = 0;
@@ -297,14 +298,14 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	         if(!world.isRemote) {
 			 worldObj.spawnEntityInWorld(mob);
 	         }
-	       }else if(tick > 600 && Fase == 1) {
-		    	 Fase = 2;
+	       }else if(tick > 600 && RubyCraft.FaseHP == 1) {
+		    	 RubyCraft.FaseHP = 2;
 		    	 tick = 0;
 		    	 
 		     } 
 	       
-	      /**FASE 2 se tepea random 4 veces**/
-	        }else if(Fase == 2) {
+	      /**RubyCraft.FaseHP 2 se tepea random 4 veces**/
+	        }else if(RubyCraft.FaseHP == 2) {
 	        	
 	        	if(tick > 400 && !(Tp_hechos == 4)) {
 					 
@@ -326,19 +327,19 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 				 
 				 
 		    	 }
-		    	    }else if( tick > 700 && Fase == 2) {
-		    		      Fase = 3;
+		    	    }else if( tick > 700 && RubyCraft.FaseHP == 2) {
+		    		      RubyCraft.FaseHP = 3;
 		    		      tick = 0; 	
 		    	 }
-	        	/**FASE 3 Quita vida al jugador y se cura el**/
-	        }else if(Fase == 3) {   	
+	        	/**RubyCraft.FaseHP 3 Quita vida al jugador y se cura el**/
+	        }else if(RubyCraft.FaseHP == 3) {   	
 	        	if(tick == 200) {
 	        		this.heal(1.0F);
                     activarchupaalmas = true;    
-                    /**DESACTIVA EL CONTADOR PORQUE SE ACABARON LAS FASES**/
+                    /**DESACTIVA EL CONTADOR PORQUE SE ACABARON LAS RubyCraft.FaseHPS**/
 	        	}else if(tick > 600) {
 	        		
-	        		Fase = 0;
+	        		RubyCraft.FaseHP = 0;
 	        		tick = 0;
 	        		activarchupaalmas = false;
 	        	}
