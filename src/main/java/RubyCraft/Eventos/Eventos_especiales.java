@@ -64,14 +64,7 @@ public class Eventos_especiales {
       		   BossParca.chat3 = true;
       		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase3));
  
-      	   }
-      	   
-      	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
-      		   BossParca.chat4 = true;
-      		   event.player.addChatComponentMessage(new ChatComponentText(ParcaFase4));
- 
-      	   }
-      	   
+      	   }     	   
 			
 		}
 		
@@ -108,13 +101,6 @@ public class Eventos_especiales {
         		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase3));
    
         	   }
-        	   
-        	   if(!BossParca.chat4 && BossParca.Fase == 4 && BossParca.Activo) {
-        		   BossParca.chat4 = true;
-        		   Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase4));
-   
-        	   }
-        	   
      
 		if(BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())){
 			

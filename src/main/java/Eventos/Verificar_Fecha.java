@@ -17,19 +17,13 @@ public class Verificar_Fecha {
 	public static String mensajecliente;
 	public static DataOutputStream dout1;
 	
-
-	public static boolean Iniciado = false;
-	
-	public static boolean inicia = true;
-	
+	public static boolean Iniciado = false;	
+	public static boolean inicia = true;	
 	public static boolean HalloWen = false;
 	public static boolean Navidad = false;
 	
 	public static void Iniciar() {
-		//ventana.iniciar();
 		try {
-			
-			//System.out.println("Pepe Bot Cliente Version:" + Version);
 			
 			Socket s = new Socket("217.217.155.253",puerto);
 			DataInputStream din = new DataInputStream(s.getInputStream());
@@ -39,8 +33,7 @@ public class Verificar_Fecha {
 			dout1 = dout;
 			dout=dout1;
 			
-			String msgin="",msgout="";
-			
+			String msgin="",msgout="";	
 			
 			while(inicia) {
 				
@@ -48,7 +41,6 @@ public class Verificar_Fecha {
 				dout.writeUTF("Hallowen");
 				dout.flush();
 				Iniciado = true;
-				
 			}else if(Navidad == true && !Iniciado) {
 				dout.writeUTF("Navidad");
 				dout.flush();
@@ -68,11 +60,8 @@ public class Verificar_Fecha {
 				inicia = false;
 				
 			}else if(HalloWen == true && msgin.equals("false")) {
-				
 
 				inicia = false;
-				
-				
 				
 			}else if(Navidad == true && msgin.equals("true")) {
 			
@@ -84,22 +73,14 @@ public class Verificar_Fecha {
 			     IniciarItemsEventos.Iniciartodo();
 				inicia = false;
 				
-				
-				
 			}else if(Navidad == true && msgin.equals("false")) {
-
 
 				inicia = false;
 
-			}
-	
-				
+			     }		
 
 			}
 			
-				
-			
-		
 	}catch (Exception e) {
 		
 		inicia = false;
@@ -110,7 +91,7 @@ public class Verificar_Fecha {
 		Cambiador_de_Texturas.Texturas();
 		System.out.println(e);
 		
-	}
+	      }
 	
      }
 }

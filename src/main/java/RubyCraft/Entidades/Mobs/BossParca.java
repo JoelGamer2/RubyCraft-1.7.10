@@ -255,8 +255,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    
 	    /**Aqui ocurre todas las fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
- // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	
-	    	
+ // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
 	    	double x = this.posX;
 	    	double y = this.posY;
 	    	double z = this.posZ;
@@ -265,10 +264,10 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	       if(RubyCraft.cliente) {
 	          BossStatus.setBossStatus(this, true);
 	          Particulas(x, y, z);
-	     }
-	     
-	    tick ++;
-	     
+	     } 
+	       if(!(Fase == 0)) {
+	            tick ++;
+	       }
 	     /**FASE 1 Spawnea bichos random 4 veces**/
 	     if(Fase == 1) { 
 	    	 
@@ -341,16 +340,11 @@ public class BossParca extends EntityMob implements IBossDisplayData {
                     
 	        	}else if(tick > 600) {
 	        		
-	        		Fase = 4;
+	        		Fase = 0;
 	        		tick = 0;
 	        		activarchupaalmas = false;
 	        	}
-	        	/**FASE 4 MODO DIFICIL**/
-	        
-	       }else if(Fase == 4) {
-	    	   
-	    	   
-	    	   
+ 
 	       }
 	  }
 }
