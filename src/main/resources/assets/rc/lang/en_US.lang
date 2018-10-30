@@ -162,6 +162,8 @@ item.TrapAdvenureMusicLevel1.name=Music disc
 item.TrapAdvenureMusicLevel1.desc=Trap Adventure Music Level 1
 item.moviemientonaranja.name=Music disc
 item.moviemientonaranja.desc=Orange Movement
+item.bossparca.name=Disco de musica
+item.bossparca.desc=Musica Boss Parca
 
 tile.Escalera_de_Diorita_Pulida.name=Polished Diorite Stair
 tile.Escalera_de_Granito_Pulido.name=Polished Granite Stair
@@ -359,7 +361,6 @@ entity.Sans.name=Sans
 entity.Herobrine.name=Error 404
 entity.Entity_303.name=Entity 303
 entity.Linck.name=Linck
-
 
 item.Azula.name=Azula
 item.Plastico.name=Plastic

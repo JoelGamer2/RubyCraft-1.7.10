@@ -72,6 +72,7 @@ entity.Invocador.name=Invocador
 entity.HombreCerdo.name=Hombre Cerdo
 entity.Joseoscar1.name=Joseoscar1
 entity.PatxisGamer.name=Patxis
+entity.Parca.name=Parca
 
 itemGroup.rc=RubyCraft
 
