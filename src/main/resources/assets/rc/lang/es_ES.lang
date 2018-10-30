@@ -161,6 +161,8 @@ item.TrapAdvenureMusicLevel1.name=Disco de musica
 item.TrapAdvenureMusicLevel1.desc=Trap Adventure Musica Nivel 1
 item.moviemientonaranja.name=Disco de musica
 item.moviemientonaranja.desc=Movimiento Naranja
+item.bossparca.name=Disco de musica
+item.bossparca.desc=Musica Boss Parca
 
 tile.Escalera_de_Diorita_Pulida.name=Escalera de Diorita Pulida
 tile.Escalera_de_Granito_Pulido.name=Escalera de Granito Pulido

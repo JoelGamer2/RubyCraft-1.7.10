@@ -27,7 +27,7 @@ public class IniciarItemsEventos {
 			
 			herracraft.Lingote_Demoniaco.setCreativeTab(herracraft.Herra);
 			herracraft.Generator_Boss.setCreativeTab(herracraft.Herra);
-			
+			RubyCraft.bossparca.setCreativeTab(RubyCraft.Rubycrafttab);
 		}
 	}
 	

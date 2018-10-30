@@ -6,6 +6,7 @@ import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
 import RubyCraft.Entidades.Granadas.EntidadGranda_de_Uranio;
 import RubyCraft.Entidades.Mobs.AlejandroMob;
 import RubyCraft.Entidades.Mobs.AlienMob;
+import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Entidades.Mobs.HombreCerdo;
 import RubyCraft.Entidades.Mobs.Invocador;
 import RubyCraft.Entidades.Mobs.Iratxe;
@@ -26,7 +27,9 @@ public class Entidades_Principal {
 		//Entidades que no se Pueden Mover
 		createEntitySinHuevo(EntidadGranada_de_Ruby.class,"Granada_de_Ruby");
 		createEntitySinHuevo(EntidadGranada_de_Zafiro.class, "Granada_de_Zafiro");
-		createEntitySinHuevo(EntidadGranda_de_Uranio.class, "Granada_de_Uranio");
+		createEntitySinHuevo(EntidadGranda_de_Uranio.class, "Granada_de_Uranio");	
+		createEntitySinHuevo(BossParca.class, "Parca");
+		
 		//Entidades Normales
 		createEntity(AlienMob.class, "Alien", 0x6B6B6B, 0x00FF1D);
 		createEntity(AlejandroMob.class, "Alejandro", 0x0280FF, 0x0C00FF);
@@ -50,7 +53,7 @@ public class Entidades_Principal {
 	private static void createEntitySinHuevo(Class claseentidad, String nombre) {
 		int RandomId = EntityRegistry.findGlobalUniqueEntityId();
 		
-		SpawnMobs.SpanwearBichos();
+	
 		EntityRegistry.registerGlobalEntityID(claseentidad, nombre, RandomId);
 		EntityRegistry.registerModEntity(claseentidad, nombre, RandomId, RubyCraft.instance, 64, 1, true);
 		

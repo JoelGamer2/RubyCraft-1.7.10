@@ -2,6 +2,7 @@
 
 "records.sans":{"sounds":[{"name":"records.sans","stream":true}],"category":"record"},
 "records.trap1":{"sounds":[{"name":"records.trap1","stream":true}],"category":"record"},
+"records.bossparca":{"sounds":[{"name":"records.bossparca","stream":true}],"category":"record"},
 "records.moviemientonaranja":{"sounds":[{"name":"records.moviemientonaranja","stream":true}],"category":"record"},
 "sonido_Pasto":{"sounds":[{"name":"sonido_Pasto","stream":true}],"category":"block"},
 "records.PpapLong":{"sounds":[{"name":"records.PpapLong","stream":true}],"category":"record"},

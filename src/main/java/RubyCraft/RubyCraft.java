@@ -229,7 +229,7 @@ public class RubyCraft {
 	 
 	@SidedProxy(clientSide = "RubyCraft.Proxy.ClientProxy", serverSide = "RubyCraft.Proxy.ServerProxy")
 	public static ServerProxy proxy;
-	
+
 
 	//Items 
  public static Item ruby; 
@@ -276,6 +276,7 @@ public class RubyCraft {
  public static Item PPAP_Long_Version;
  public static Item TrapAdvenureMusicLevel1;
  public static Item moviemientonaranja;
+ public static Item bossparca;
  
  //Herramientas 
  public static Item Hachaderuby;
@@ -745,6 +746,9 @@ GameRegistry.registerItem(TrapAdvenureMusicLevel1, TrapAdvenureMusicLevel1.getUn
 
 moviemientonaranja = new CancionesBase("moviemientonaranja").setUnlocalizedName("moviemientonaranja").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(moviemientonaranja, moviemientonaranja.getUnlocalizedName().substring(5));
+
+bossparca = new CancionesBase("bossparca").setUnlocalizedName("bossparca");
+GameRegistry.registerItem(bossparca, bossparca.getUnlocalizedName().substring(5));
 
 //Bloques
 	

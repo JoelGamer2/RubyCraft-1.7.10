@@ -1,6 +1,11 @@
 package HerraCraft.Entidades_Principal;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.boss.BossStatus;
+import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.world.World;
 
@@ -52,5 +57,4 @@ public class Wither_Storm extends EntityMob {
 	        return "mob.Wither.death";
 	        
 	    }
-
 }
