@@ -32,7 +32,7 @@ public class Eventos_Principal {
 		
 		FMLCommonHandler.instance().bus().register(new Totem());
 		
-		FMLCommonHandler.instance().bus().register(new Navidad());		
+		FMLCommonHandler.instance().bus().register(new Eventos_especiales());		
 		
 	//	FMLCommonHandler.instance().bus().register(new QuitarVidaSiUranio());
 		

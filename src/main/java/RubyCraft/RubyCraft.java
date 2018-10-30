@@ -2,6 +2,9 @@ package RubyCraft;
 
 import org.apache.logging.log4j.LogManager;
 
+import Eventos.IniciarItemsEventos;
+import Eventos.Ver_fecha_calendario_usuario;
+import Eventos.Verificar_Fecha;
 import HerraCraft.herracraft;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
@@ -490,13 +493,15 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
 	}
+	
+	if(!cliente) {
+		Ver_fecha_calendario_usuario.iniciar();
+	}
 	  	   
 	herracraft.preinit();
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();
 	}
-	
-//Ver_fecha_calendario_usuario.iniciar();
 Control_de_Version.Iniciar_todo();
 
 if(Control_de_Version.Version_de_desarrolador == false) {
@@ -520,6 +525,7 @@ NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());
 Teclas_Principal.Iniciar();	
+
 
 //Herramientas
 Picoderuby = new picoderuby(rubyToolMaterial).setUnlocalizedName("Picoderuby").setTextureName(modid + ":Picoderuby").setCreativeTab(Rubycrafttab);
@@ -1095,6 +1101,14 @@ BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
 
 @EventHandler
 public void init(FMLInitializationEvent event){
+	
+	
+	if(Navidad || HalloWen && !RubyCraft.cliente) {
+		
+		IniciarItemsEventos.Crafteos();
+		
+	}
+	
 	herracraft.init();
 //Variado
 proxy.registerRenderThings();	  

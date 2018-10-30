@@ -10,6 +10,8 @@ public class Cambiador_de_Texturas {
 	private static String HalloWen = modid + "HalloWen/";
 	
 	public static void Texturas(){
+		if(RubyCraft.cliente) {
+		
 		if(RubyCraft.Navidad){
 			Texturas_Navidad();
 		}else if(RubyCraft.HalloWen){
@@ -17,7 +19,7 @@ public class Cambiador_de_Texturas {
 		}else if(!RubyCraft.Navidad && !RubyCraft.HalloWen){
 			Texturas_Normales();
 		}
-		
+	  }
 	}
 	
 	public static void Texturas_Navidad(){

@@ -2,8 +2,11 @@ package RubyCraft.Entidades.Mobs;
 
 import java.util.Random;
 
+import RubyCraft.RubyCraft;
+import RubyCraft.Eventos.Eventos_especiales;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockJukebox;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,6 +15,7 @@ import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class BossParca extends EntityMob implements IBossDisplayData {
@@ -19,6 +23,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	
 	public static int tick = 0;
 	public static int multiplicar = 120;
+	public static boolean Vivo = false;
 	public BossParca(World world) {
 		super(world);
 		     
@@ -34,10 +39,17 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.60000001192092896D);
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
-		    }
+	 Vivo = true;
+	 	 
+		 }
 	
 	
+	@Override
+	public void onDeath(DamageSource p_70645_1_) {
+		Vivo = false;
+		Eventos_especiales.musica = false;
 	
+	}
 	
 	
 	

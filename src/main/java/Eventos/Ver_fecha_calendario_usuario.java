@@ -22,7 +22,13 @@ public class Ver_fecha_calendario_usuario {
 
 		    if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 31 && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
+		       
+		       if(RubyCraft.cliente) {
 		       Verificar_Fecha.Iniciar();
+		       }else if(!RubyCraft.cliente) {
+		    	   RubyCraft.Navidad = true;
+		    	   
+		       }
 		       
 		      //Testear el Dia de Los Inocentes
 	    		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 28){
@@ -34,7 +40,12 @@ public class Ver_fecha_calendario_usuario {
 		    	//Testear Hallowen
 		    	if(calendar.get(2) + 1 == 10 && calendar.get(5) >= 28 && calendar.get(5) <= 31){
 		    		 Verificar_Fecha.HalloWen = true;
-		    		Verificar_Fecha.Iniciar();
+		    		 if(RubyCraft.cliente) {
+		  		       Verificar_Fecha.Iniciar();
+		  		       }else if(!RubyCraft.cliente) {
+				    	   RubyCraft.HalloWen = true;
+				    	   
+				       }
 		    	
 		    	}else{
 		    			//Testear Dia de Herobrine

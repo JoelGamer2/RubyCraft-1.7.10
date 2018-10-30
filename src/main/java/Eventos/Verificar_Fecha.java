@@ -61,7 +61,9 @@ public class Verificar_Fecha {
 				
 				RubyCraft.HalloWen = true;
 	    		Crafteos.IniciarCrafteosHallowen();
+	    		if(RubyCraft.cliente) {
 	    		Cambiador_de_Texturas.Texturas();
+	    		}
 	    		IniciarItemsEventos.Iniciartodo();
 				inicia = false;
 				
@@ -76,7 +78,9 @@ public class Verificar_Fecha {
 			
 				 RubyCraft.Navidad = true;
 				 Crafteos.IniciarCrafteosNavidad();
+				 if(RubyCraft.cliente) {
 			     Cambiador_de_Texturas.Texturas();
+				 }
 			     IniciarItemsEventos.Iniciartodo();
 				inicia = false;
 				
@@ -97,6 +101,7 @@ public class Verificar_Fecha {
 			
 		
 	}catch (Exception e) {
+		
 		inicia = false;
 		RubyCraft.Navidad = false;
 		RubyCraft.HalloWen = false;
@@ -104,6 +109,7 @@ public class Verificar_Fecha {
 		HalloWen = false;
 		Cambiador_de_Texturas.Texturas();
 		System.out.println(e);
+		
 	}
 	
      }

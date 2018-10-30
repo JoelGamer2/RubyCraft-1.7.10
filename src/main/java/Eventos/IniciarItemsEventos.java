@@ -35,6 +35,7 @@ public class IniciarItemsEventos {
 	
 	public static void Crafteos() {
 		
+		
 		if(RubyCraft.HalloWen) {
 			GameRegistry.addRecipe(new ItemStack(herracraft.Generator_Boss, 1), new Object[] { "aaa","aaa","aaa",'a',herracraft.Lingote_Demoniaco});
 		}
