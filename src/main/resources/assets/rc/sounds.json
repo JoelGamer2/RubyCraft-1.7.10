@@ -1,0 +1,17 @@
+{
+
+"records.sans":{"sounds":[{"name":"records.sans","stream":true}],"category":"record"},
+"records.trap1":{"sounds":[{"name":"records.trap1","stream":true}],"category":"record"},
+"records.bossparca":{"sounds":[{"name":"records.bossparca","stream":true}],"category":"record"},
+"records.moviemientonaranja":{"sounds":[{"name":"records.moviemientonaranja","stream":true}],"category":"record"},
+"sonido_Pasto":{"sounds":[{"name":"sonido_Pasto","stream":true}],"category":"block"},
+"records.PpapLong":{"sounds":[{"name":"records.PpapLong","stream":true}],"category":"record"},
+"Hechizo":{"sounds":[{"name":"Hechizo","stream":true}],"category":"block"},
+"Error":{"sounds":[{"name":"Error","stream":true}],"category":"block"},
+"totem":{"sounds":[{"name":"totem","stream":true}],"category":"block"},
+"Logros_especiales":{"sounds":[{"name":"Logros_especiales","stream":true}],"category":"block"},
+"golpebossparca":{"sounds":[{"name":"golpebossparca","stream":true}],"category":"ambient"},
+"ambientebossparca":{"sounds":[{"name":"ambientebossparca","stream":true}],"category":"ambient"},
+"muertebossparca":{"sounds":[{"name":"muertebossparca","stream":true}],"category":"ambient"}
+
+}

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "rc",
+  "name": "RubyCraft",
+  "description": "Este Mod esta hecho para que lo disfrutes tiene objetos basados en ruby y la primera vez que HerraCraft se une con RubyCraft",
+  "version": "--->",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Joel,Alejandro"],
+  "credits": "Miguel,Jesus,Jose",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
