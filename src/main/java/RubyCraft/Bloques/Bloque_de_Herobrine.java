@@ -1,5 +1,7 @@
 package RubyCraft.Bloques;
 
+import java.util.Random;
+
 import RubyCraft.RubyCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +20,7 @@ public class Bloque_de_Herobrine extends Block {
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int q, float a, float b, float c){
 	if (!player.isSneaking()){
 		
-		Tocado = Tocado + 1;
+		Tocado ++;
 		if(Tocado == 5){
 			Tocado = 0;
 			world.setBlock(x, y, z, RubyCraft.MesadeTrabajodeRuby);
@@ -27,5 +29,16 @@ public class Bloque_de_Herobrine extends Block {
 	
 	return true;
 }
-	
+	public boolean isOpaqueCube(){
+		return false;
+	}
+	public boolean isRenderAsNormal(){
+		return false;
+	}
+	protected boolean canSilkHarvest(){
+		return true;
+	}
+	public int quantityDropped(Random rand){
+		return 0;
+	}
 }
