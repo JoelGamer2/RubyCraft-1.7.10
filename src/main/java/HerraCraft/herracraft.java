@@ -27,7 +27,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class herracraft{
 	
-		
+		//nmngolos
 	//Bloques declarados
 	public static Block Bloque_de_Plastico;
 	public static Block Magma_Acuatico;
