@@ -1,6 +1,8 @@
 package HerraCraft;
 
 
+import com.sun.istack.internal.FragmentContentHandler;
+
 import HerraCraft.ConectarWebs.Fechas_Proyectos;
 import HerraCraft.Dropeos.Dropeos_Handler;
 import HerraCraft.Registrar.Eventos;
@@ -65,6 +67,7 @@ public class herracraft{
     public static Block Bloque_De_Estrella_Del_Wither;
     public static Block Generator_Boss;
     public static Block Bloque_Demoniaco;
+    public static Block Hielo_Supercongelado;
     
     public static final int guiIDMesadeAzula = 10;/**Cambia el puto numeroooooooooooo¡¡¡¡¡¡ cuando hagas otra¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡**/
 	//Items declarados
@@ -134,6 +137,8 @@ public class herracraft{
     public static Item Invocador_Celestial;
     public static Item Lingote_Demoniaco;
     public static Item Lingote_del_Eden;
+    public static Item Fragmento_de_Hielo_Supercongelado;
+    
     //Armaduras
     public static Item Casco_de_Azula;
     public static Item Pechera_de_Azula;
@@ -504,6 +509,9 @@ public class herracraft{
 	Altar_de_Noch = new Altar_de_Noch(Material.rock).setBlockName("Altar_de_Noch").setBlockTextureName("rc:Herra/Altar_de_Noch").setHardness(1.5F).setResistance(2.0F);
 	GameRegistry.registerBlock(Altar_de_Noch, Altar_de_Noch.getUnlocalizedName().substring(5));
 	
+	Hielo_Supercongelado = new Hielo_Supercongelado(Material.ice).setBlockName("Hielo_Supercongelado").setBlockTextureName("rc:Herra/Hielo_Supercongelado").setHardness(0.7F).setResistance(0.1F);
+	GameRegistry.registerBlock(Hielo_Supercongelado, Hielo_Supercongelado.getUnlocalizedName().substring(5));
+	
 	
     //Items
     Azula = new Azula().setUnlocalizedName("Azula").setTextureName("rc:Herra/Azula").setCreativeTab(Herra);
@@ -682,6 +690,10 @@ public class herracraft{
     
     Lingote_del_Eden = new Lingote_del_Eden().setUnlocalizedName("Lingote_del_Eden").setTextureName("rc:Herra/Lingote_del_Eden").setCreativeTab(Herra);
     GameRegistry.registerItem(Lingote_del_Eden, Lingote_del_Eden.getUnlocalizedName().substring(5));
+    
+    Fragmento_de_Hielo_Supercongelado = new Fragmento_de_Hielo_Supercongelado().setUnlocalizedName("Fragmento_de_Hielo_Supercongelado").setTextureName("rc:Herra/Fragmento_de_Hielo_Supercongelado");
+    GameRegistry.registerItem(Fragmento_de_Hielo_Supercongelado, Fragmento_de_Hielo_Supercongelado.getUnlocalizedName().substring(5));
+    
     
     if(!RubyCraft.HalloWen) {
     	

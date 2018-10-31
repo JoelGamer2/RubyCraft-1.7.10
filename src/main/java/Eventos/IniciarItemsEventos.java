@@ -55,6 +55,8 @@ public class IniciarItemsEventos {
 			
 			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Fragmento_de_Hielo_Supercongelado.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Hielo_Supercongelado.setCreativeTab(RubyCraft.EventosTab);
 
 			
 		}
