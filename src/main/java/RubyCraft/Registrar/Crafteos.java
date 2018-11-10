@@ -111,7 +111,7 @@ public class Crafteos {
     	
     	Crafteos_Bases.Herramientas(RubyCraft.Cobre, RubyCraft.Palo_Morado, RubyCraft.Pico_de_cobre, RubyCraft.espada_de_cobre, RubyCraft.Hacha_de_cobre, RubyCraft.Pala_de_cobre, RubyCraft.Azada_de_cobre, RubyCraft.Tijeras_de_cobre);
     
-    	//geo
+    	
     	//Crafteo Bloque reforzado Tiers
     	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_1, Blocks.stone);
     	Crafteos_Bases.Crafteo_Bloque_Reforzado(RubyCraft.Bloque_Reforzado_Tier_2, Blocks.diamond_block);
