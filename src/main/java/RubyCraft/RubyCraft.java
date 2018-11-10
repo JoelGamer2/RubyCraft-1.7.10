@@ -194,6 +194,7 @@ import RubyCraft.Registrar.OreDictonary;
 import RubyCraft.Teclas.Teclas_Principal;
 import RubyCraft.TileEntity.Cofre_de_Ruby;
 import RubyCraft.TileEntity.TileEntitys_Principal;
+import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -500,7 +501,7 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
-	
+	Principal.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 		Navidad = true;
 	}
@@ -1135,7 +1136,7 @@ BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
 
 @EventHandler
 public void init(FMLInitializationEvent event){
-	
+	Principal.init();
 	
 	if(Navidad || HalloWen && !RubyCraft.cliente) {
 		
@@ -1164,7 +1165,7 @@ if(VersionTrol == false){
 	
 @EventHandler
 public void PostLoad(FMLPostInitializationEvent Posevent){
-		
+		Principal.postinit();
 	WorldType RUBYWORLDTYPE = new WorldTypeRuby(3, "Ruby"); 
 		
 	//Variado
