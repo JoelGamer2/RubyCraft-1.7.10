@@ -1,7 +1,10 @@
 package RubyCraft.Entidades.Mobs;
 
+import RubyCraft.RubyCraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.init.Blocks;
+import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
 
 public class AlejandroMob extends EntityMob {
@@ -50,5 +53,6 @@ public class AlejandroMob extends EntityMob {
 	        return "mob.endermen.death";
 	        
 	    }
-
+	    
+	   
 }

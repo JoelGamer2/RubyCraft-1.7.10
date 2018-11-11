@@ -1,7 +1,6 @@
 package Eventos;
 
 import HerraCraft.Generator_Boss;
-import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Entidades.Mobs.BossParca;
@@ -9,16 +8,15 @@ import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.EnumDifficulty;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 
 public class Eventos_especiales {
 
@@ -32,13 +30,15 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		
+	
+		
 		/**if(Control_de_Version.Version_de_desarrolador && event.player.inventory.hasItemStack(new ItemStack(RubyCraft.bloque_del_crea_caminos, 1))) {
 			
 			event.player.addChatComponentMessage(new ChatComponentText("" + BossParca.tick + " Fase:" + BossParca.Fase + " Tepes hechos:" + BossParca.Tp_hechos));
 			
 		}**/
 		
-
+		
 		if(event.player.inventory.hasItem(RubyCraft.CreaCaminos)) {
 		
 		if(!event.player.isSneaking() && event.player.worldObj.isRemote) {
@@ -103,7 +103,9 @@ public class Eventos_especiales {
 		
 	}
 }
-
+	
+	
+	
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
 		

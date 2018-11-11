@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class Espada_de_Platino extends ItemSword {
 
 
-	public double Nivel = 0;
+	public static int Nivel = 0;
 	
 	public Espada_de_Platino(ToolMaterial material) {
 		
@@ -25,23 +25,19 @@ public class Espada_de_Platino extends ItemSword {
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
      */
 	public ItemStack onItemRightClick(ItemStack stack,World world, EntityPlayer player){
-		if(world.isRemote && player.isSneaking()){
+		if(!world.isRemote && player.isSneaking()){
 			if(player.inventory.hasItem(RubyCraft.Platino)){
-				
-				if(RubyCraft.cliente) {
-					Nivel = Nivel +0.5;
-					}else if(!RubyCraft.cliente) {
-						Nivel = Nivel +1.0;
-					}
-				
+				if(!(Nivel == 5)) {
+				Nivel ++;
+				}
 				player.inventory.consumeInventoryItem(RubyCraft.Platino);
 				/**
 				 * Este Switch lo que hace es testear porque numero va osea case: 1 = if(NivelNumerosEnteros==1){ } eso es lo que hace
 				 * este switch
 				 **/
-				int NivelNumerosEnteros =(int)Nivel;
-				switch (NivelNumerosEnteros) {
+				switch (Nivel) {
 				case 1:
+					System.out.println(Nivel);
 				    player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
 				    stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.sharpness, 3);
@@ -74,20 +70,24 @@ public class Espada_de_Platino extends ItemSword {
 				   }else{
 					   player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
 					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + player.getDisplayName() + " Para subir a Nivel 4 Necesitas 1 " + EnumChatFormatting.RED + "Amuleto y 1 Varita"));
-					  Nivel = Nivel -1.0;
+					  Nivel--;;
 				   }
 				break;
 				case 5:
 					player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
 					player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles este es el Nivel:" + Nivel + EnumChatFormatting.GOLD + " Para volver al 0 necesitas 1 de Ruby y 1 Plastico"));
-					 Nivel = Nivel -1.0;
+			
 				}
-			}else if(!(Nivel == 0) && player.inventory.hasItem(RubyCraft.ruby) && player.inventory.hasItem(RubyCraft.Plastico)){
-				Nivel = 0;
+			}
+			 if(Nivel == 5 && player.inventory.hasItem(RubyCraft.ruby) && player.inventory.hasItem(RubyCraft.Plastico)){
+				
+				player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
 				player.inventory.consumeInventoryItem(RubyCraft.ruby);
 				player.inventory.consumeInventoryItem(RubyCraft.Plastico);
-				player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
+				stack = new ItemStack(RubyCraft.Espada_de_Platino);
+			    player.inventory.addItemStackToInventory(stack);
 				
+				Nivel = 0;
 				player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " El Item se a reseteado con el Nivel:" + Nivel));
 			}		
 		}

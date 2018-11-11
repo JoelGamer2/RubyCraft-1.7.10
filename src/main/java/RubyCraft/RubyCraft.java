@@ -776,7 +776,7 @@ TrapAdvenureMusicLevel1 = new CancionesBase("trap1").setUnlocalizedName("TrapAdv
 GameRegistry.registerItem(TrapAdvenureMusicLevel1, TrapAdvenureMusicLevel1.getUnlocalizedName().substring(5));
 
 moviemientonaranja = new CancionesBase("moviemientonaranja").setUnlocalizedName("moviemientonaranja").setCreativeTab(Rubycrafttab);
-GameRegistry.registerItem(moviemientonaranja, moviemientonaranja.getUnlocalizedName().substring(5));
+GameRegistry.registerItem(moviemientonaranja,moviemientonaranja.getUnlocalizedName().substring(5));
 
 bossparca = new CancionesBase("bossparca").setUnlocalizedName("bossparca");
 GameRegistry.registerItem(bossparca, bossparca.getUnlocalizedName().substring(5));
@@ -1165,7 +1165,7 @@ if(VersionTrol == false){
 	
 @EventHandler
 public void PostLoad(FMLPostInitializationEvent Posevent){
-		Principal.postinit();
+    Principal.postinit();
 	WorldType RUBYWORLDTYPE = new WorldTypeRuby(3, "Ruby"); 
 		
 	//Variado

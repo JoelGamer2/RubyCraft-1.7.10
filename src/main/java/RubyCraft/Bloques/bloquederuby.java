@@ -11,5 +11,5 @@ public class bloquederuby extends Bloque_con_faro {
 		this.setStepSound(this.soundTypeMetal);
 		
 	}
-		
+	
 }

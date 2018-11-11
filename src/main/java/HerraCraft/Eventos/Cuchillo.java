@@ -3,6 +3,7 @@ package HerraCraft.Eventos;
 import HerraCraft.herracraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class Cuchillo {
@@ -16,8 +17,12 @@ public class Cuchillo {
 		       ItemStack j = e.craftMatrix.getStackInSlot(i);
 		       if(j.getItem() != null && j.getItem() == herracraft.Cuchillo)
 		       {
+		    	   
 		        ItemStack k = new ItemStack(herracraft.Cuchillo, 2, (j.getItemDamage() + 1));
+		        System.out.println(j.getItemDamage() + "");
+		    	   if(j.getItemDamage() <= 999) {
 		        e.craftMatrix.setInventorySlotContents(i, k);
+		    	   }
 		       }
 		      }  
 		  }
