@@ -1,8 +1,6 @@
 package HerraCraft;
 
 
-import com.sun.istack.internal.FragmentContentHandler;
-
 import HerraCraft.ConectarWebs.Fechas_Proyectos;
 import HerraCraft.Dropeos.Dropeos_Handler;
 import HerraCraft.Registrar.Eventos;

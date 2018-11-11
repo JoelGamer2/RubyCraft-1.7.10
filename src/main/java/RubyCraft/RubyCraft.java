@@ -182,7 +182,6 @@ import RubyCraft.Maquinas.Mesa_de_trabajo_de_roble_oscuro;
 import RubyCraft.Maquinas.MesadeTrabajodeRuby;
 import RubyCraft.Maquinas.MesadeTrabajodeZafiro;
 import RubyCraft.Maquinas.Transformador_de_Losas_a_Bloques;
-import RubyCraft.Maquinas.bloqueestructural;
 import RubyCraft.Minecraft.DropeoMobsHandler;
 import RubyCraft.Minecraft.Modificacion_Principal;
 import RubyCraft.Proxy.ServerProxy;
@@ -447,9 +446,6 @@ public static final int guiIDMesadeTrabajodeRuby = 0;
 		
 public static Block MesadeTrabajodeZafiro;
 public static final int guiIDMesadeTrabajodeZafiro = 1;
-		
-public static final int guiIDBloqueEStructural = 2;
-public static Block Bloqueestructural;
 
 public static final int guiIDTransformadorLosisl = 3;
 public static Block Transformador_de_Losas_a_Bloques;
@@ -1070,9 +1066,6 @@ GameRegistry.registerBlock(MesadeTrabajodeRuby, "MesadeTrabajodeRuby");
 
 MesadeTrabajodeZafiro = new MesadeTrabajodeZafiro().setBlockName("MesadeTrabajodeZafiro");
 GameRegistry.registerBlock(MesadeTrabajodeZafiro, "MesadeTrabajodeZafiro");
-
-Bloqueestructural = new bloqueestructural().setBlockName("Bloqueestructural").setCreativeTab(Rubycrafttab).setBlockUnbreakable().setResistance(Float.MAX_VALUE);
-GameRegistry.registerBlock(Bloqueestructural, Bloqueestructural.getUnlocalizedName().substring(5));
 	
 Transformador_de_Losas_a_Bloques = new Transformador_de_Losas_a_Bloques().setBlockName("Transformador_de_Losas_a_Bloques");
 GameRegistry.registerBlock(Transformador_de_Losas_a_Bloques, Transformador_de_Losas_a_Bloques.getUnlocalizedName().substring(5));

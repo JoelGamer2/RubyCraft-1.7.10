@@ -6,7 +6,6 @@ import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import net.minecraft.util.MathHelper;
 
 public class Monton_de_fosiles extends Block {
 

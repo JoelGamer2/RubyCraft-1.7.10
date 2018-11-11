@@ -5,7 +5,6 @@ import HerraCraft.Registrar.ContainerMesadeAzula;
 import HerraCraft.Registrar.GuiMesadeAzula;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
-import RubyCraft.Gui.container.ContainerBloqueEstructural;
 import RubyCraft.Gui.container.ContainerMesadeTrabajodeRuby;
 import RubyCraft.Gui.container.ContainerMesadeTrabajodeZafiro;
 import RubyCraft.Gui.container.ContainerTransformador_de_Losas_a_Bloques;
@@ -30,10 +29,6 @@ public class GuiHandler implements IGuiHandler {
 		}
 		if(ID == RubyCraft.guiIDMesadeTrabajodeZafiro){
 			return ID == RubyCraft.guiIDMesadeTrabajodeZafiro && world.getBlock(x, y, z) == RubyCraft.MesadeTrabajodeZafiro ? new ContainerMesadeTrabajodeZafiro(player.inventory, world, x, y, z) : null;
-			}
-		if(ID == RubyCraft.guiIDBloqueEStructural){
-			
-			return ID == RubyCraft.guiIDBloqueEStructural && world.getBlock(x, y, z) == RubyCraft.Bloqueestructural ? new ContainerBloqueEstructural(player.inventory, world, x ,y, z) : null;
 			}
 		if(ID == RubyCraft.guiIDTransformadorLosisl){
 			return ID == RubyCraft.guiIDTransformadorLosisl && world.getBlock(x, y, z) == RubyCraft.Transformador_de_Losas_a_Bloques ? new ContainerTransformador_de_Losas_a_Bloques(player.inventory, world, x, y, z) : null;
@@ -72,10 +67,7 @@ public class GuiHandler implements IGuiHandler {
 		if(ID == RubyCraft.guiIDMesadeTrabajodeZafiro) {
 			return ID == RubyCraft.guiIDMesadeTrabajodeZafiro && world.getBlock(x, y, z) == RubyCraft.MesadeTrabajodeZafiro ? new GuiMesadeTrabajodeZafiro(player.inventory, world, x, y, z) : null;
 		}
-		if(ID == RubyCraft.guiIDBloqueEStructural){
-			return ID == RubyCraft.guiIDBloqueEStructural && world.getBlock(x, y, z) == RubyCraft.Bloqueestructural ? new GuiBloqueEstructural(player.inventory, world, x, y, z) : null;
-			
-		}if(ID == RubyCraft.guiIDTransformadorLosisl){
+		if(ID == RubyCraft.guiIDTransformadorLosisl){
 			return ID == RubyCraft.guiIDTransformadorLosisl && world.getBlock(x, y, z) == RubyCraft.Transformador_de_Losas_a_Bloques ? new GuiTransformador_de_Losas_a_Bloques(player.inventory, world, x, y, z) : null;
 		}
 		if(ID == RubyCraft.guiIdMesaEscaleraZafiro) {
