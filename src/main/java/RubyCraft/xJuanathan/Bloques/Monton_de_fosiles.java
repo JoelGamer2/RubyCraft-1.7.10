@@ -1,7 +1,8 @@
-package RubyCraft.xJuanathan;
+package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -15,14 +16,20 @@ public class Monton_de_fosiles extends Block {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	//Dropeo al romper el Bloque
+	
 	@Override
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) 
+	{
 		// TODO Auto-generated method stub
 		return Principal.Fragmento_de_fosil;
 	}
 	
+	
 	@Override
-	public int quantityDropped(int meta, int fortune, Random random) {
+	public int quantityDropped(int meta, int fortune, Random random) 
+	{
 		// TODO Auto-generated method stub
 		return 1+random.nextInt(2);
 	}

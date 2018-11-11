@@ -574,6 +574,29 @@ tile.Escalera_Invisible.name=Invisible Stair
 
 tile.Monton_de_fosiles.name=Fossils pile
 
+//Bloques Evento Navidad
+
+tile.Hielo_Glaciar.name=Glaciar Ice
+tile.Hielo_Glaciar_Hueso.name=Glaciar Ice
+tile.Hielo_Glaciar_Adn.name=Glaciar Ice
+tile.Hielo_Glaciar_Ambar.name=Glaciar Ice
+
+tile.Barro.name=Mud
+tile.Barro_Congelado.name=Frost Mud
+tile.Barro_Congelado_Hueso.name=Frost Mud
+tile.Barro_Congelado_Adn.name=Frost Mud
+tile.Barro_Congelado_Ambar.name=Frost Mud
+
+tile.Roca_Fosil.name=Fossil Stone
+tile.Roca_Fosil_Hueso.name=Fossil Stone
+tile.Roca_Fosil_Adn.name=Fossil Stone
+tile.Roca_Fosil_Ambar.name=Fossil Stone
+
+tile.Madera_Fosil.name=Fossil Wood
+tile.Madera_Fosil_Hueso.name=Fossil Wood
+tile.Madera_Fosil_Adn.name=Fossil Wood
+tile.Madera_Fosil_Ambar.name=Fossil Wood
+
 //Item
 
 item.fosil.name=Fossil
