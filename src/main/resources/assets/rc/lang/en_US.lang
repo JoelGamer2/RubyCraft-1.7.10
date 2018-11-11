@@ -564,3 +564,19 @@ tile.Bloque_Demoniaco.name=Demonic Block
 
 tile.Escalera_De_corazon_de_redstone.name=Redstone Heart Stair
 tile.Escalera_Invisible.name=Invisible Stair
+
+
+
+
+//-------------------------Juanathan---------------------------//
+
+//Bloques
+
+tile.Monton_de_fosiles.name=Fossils pile
+
+//Item
+
+item.fosil.name=Fossil
+
+
+

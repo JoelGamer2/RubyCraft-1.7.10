@@ -568,3 +568,17 @@ tile.Hielo_Supercongelado.name=Hielo Supercongelado
 
 tile.Escalera_De_corazon_de_redstone.name=Escalera de corazon de redstone
 tile.Escalera_Invisible.name=Escalera Invisible
+
+
+
+
+//-------------------------Juanathan---------------------------//
+
+//Bloques
+
+tile.Monton_de_fosiles.name=Monton de fosiles
+
+//Items
+
+item.fosil.name=Fosil
+
