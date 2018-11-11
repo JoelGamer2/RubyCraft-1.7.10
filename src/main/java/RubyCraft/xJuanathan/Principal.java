@@ -8,8 +8,8 @@ import RubyCraft.xJuanathan.Bloques.Barro_Congelado_Ambar;
 import RubyCraft.xJuanathan.Bloques.Barro_Congelado_Hueso;
 import RubyCraft.xJuanathan.Bloques.Hielo_Glaciar;
 import RubyCraft.xJuanathan.Bloques.Hielo_Glaciar_Adn;
+import RubyCraft.xJuanathan.Bloques.Hielo_Glaciar_Ambar;
 import RubyCraft.xJuanathan.Bloques.Hielo_Glaciar_Hueso;
-import RubyCraft.xJuanathan.Bloques.Hielo_Glaicar_Ambar;
 import RubyCraft.xJuanathan.Bloques.Madera_Fosil;
 import RubyCraft.xJuanathan.Bloques.Madera_Fosil_Adn;
 import RubyCraft.xJuanathan.Bloques.Madera_Fosil_Ambar;
@@ -83,7 +83,7 @@ public class Principal {
 		GameRegistry.registerBlock(Hielo_Glaciar_Adn, Hielo_Glaciar_Adn.getUnlocalizedName().substring(5));
 		Hielo_Glaciar_Adn.setHarvestLevel("pickaxe", 7);
 		
-		Hielo_Glaciar_Ambar = new Hielo_Glaicar_Ambar(Material.ice).setBlockName("Hielo_Glaciar_Ambar").setBlockTextureName(RubyCraft.modid+":Hielo_Glaicar_Adn").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		Hielo_Glaciar_Ambar = new Hielo_Glaciar_Ambar(Material.ice).setBlockName("Hielo_Glaciar_Ambar").setBlockTextureName(RubyCraft.modid+":Hielo_Glaciar_Ambar").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Hielo_Glaciar_Ambar, Hielo_Glaciar_Ambar.getUnlocalizedName().substring(5));
 		Hielo_Glaciar_Ambar.setHarvestLevel("pickaxe", 7);
 		
