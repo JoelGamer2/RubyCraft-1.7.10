@@ -499,6 +499,7 @@ item.Casco_del_Eden.name=Helmet of the Eden
 item.Pechera_del_Eden.name=Eden Chestplate
 item.Grebas_del_Eden.name=Eden Greaves
 item.Botas_del_Eden.name=Eden Boots
+item.Fragmento_de_Hielo_Supercongelado.name=Hiper packer Fragment
 
 tile.Bloque_de_Plastico.name=Plastic Block
 tile.Barrera.name=Barrier
@@ -559,6 +560,7 @@ tile.Magma_Acuatico.name=Magma Acuatico
 tile.Bloque_De_Estrella_Del_Wither.name=Nether Star Block
 tile.Generator_Boss.name=Generator Boss
 tile.Bloque_Demoniaco.name=Demonic Block
+tile.Hielo_Supercongelado.name=Hiper packed Block
 
 
 tile.Escalera_De_corazon_de_redstone.name=Redstone Heart Stair

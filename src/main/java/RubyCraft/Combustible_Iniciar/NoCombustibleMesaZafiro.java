@@ -1,4 +1,4 @@
-package RubyCraft.NoCombustible_Iniciar;
+package RubyCraft.Combustible_Iniciar;
 
 import cpw.mods.fml.common.IFuelHandler;
 import net.minecraft.block.Block;

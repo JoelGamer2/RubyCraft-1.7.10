@@ -858,7 +858,7 @@ Bloque_de_Blaze.setLightLevel(299999999999999.0F);
 Ladrillo_de_piedra_del_end = new Ladrillo_de_piedra_del_end(Material.rock).setBlockName("Ladrillo_de_piedra_del_end").setBlockTextureName(modid + ":Ladrillo_de_piedra_del_end").setCreativeTab(Rubycrafttab).setHardness(0.6F);
 GameRegistry.registerBlock(Ladrillo_de_piedra_del_end, Ladrillo_de_piedra_del_end.getUnlocalizedName().substring(5));
 
-Bloque_de_azucar = new Bloque_de_azucar(Material.wood).setBlockName("Bloque_de_azucar").setBlockTextureName(modid + ":Bloque_de_azucar").setCreativeTab(Rubycrafttab).setHardness(0.8F);
+Bloque_de_azucar = new Bloque_de_azucar(Material.rock).setBlockName("Bloque_de_azucar").setBlockTextureName(modid + ":Bloque_de_azucar").setCreativeTab(Rubycrafttab).setHardness(0.8F);
 GameRegistry.registerBlock(Bloque_de_azucar, Bloque_de_azucar.getUnlocalizedName().substring(5));
   
 Cuarzo_azul = new Cuarzo_azul(Material.rock).setBlockName("Cuarzo_azul").setBlockTextureName(modid + ":Cuarzo_azul").setCreativeTab(Rubycrafttab).setHardness(1.0F);
