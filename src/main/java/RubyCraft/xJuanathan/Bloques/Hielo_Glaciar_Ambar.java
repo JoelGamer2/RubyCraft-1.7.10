@@ -24,12 +24,37 @@ public class Hielo_Glaciar_Ambar extends Block {
 				return Principal.ambar;
 			}
 			
+	// Dropeo de item afectado por encantamiento fortuna
+			
+			@Override
+			
+			
+			public int quantityDroppedWithBonus(int fortune, Random rand) {
+				
+				if (fortune >= 1)
+				{
+					return (fortune + 1) + rand.nextInt(fortune*2);
+				}
+				
+				else 
+					return 1;
+				
+			}
+			
+	// Dropeo de xp afectado por encantamiento fortuna
+			
 			@Override
 			
 			public int getExpDrop (IBlockAccess world, int metadata, int fortune)
 			{
-				return 2;
+				if (fortune >= 1)
+				{
+					return 2 + (fortune*3);
+				}
 				
+				else
+					
+				return 2;
 			}
 
 }

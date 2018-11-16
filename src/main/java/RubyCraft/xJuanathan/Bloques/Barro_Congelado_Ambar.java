@@ -15,21 +15,12 @@ public class Barro_Congelado_Ambar extends Block {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public int cantidad = 0;
-	
 	//Dropeo al romper el Bloque
 	
 			@Override
 			
 			public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int fortune) 
 			{
-				if (fortune > 0)
-				{
-					cantidad = fortune;
-					//System.out.println(cantidad);
-				}
-				
-				
 				return Principal.ambar;
 			}
 			
