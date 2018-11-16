@@ -42,12 +42,10 @@ public class Barro_Congelado_Ambar extends Block {
 				
 				if (fortune >= 1)
 				{
-					System.out.println(fortune);
 					return (fortune + 1) + rand.nextInt(fortune*2);
 				}
 				
 				else 
-					System.out.println(fortune);
 					return 1;
 				
 			}
