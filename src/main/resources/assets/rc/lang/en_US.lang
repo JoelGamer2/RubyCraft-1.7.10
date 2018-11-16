@@ -601,5 +601,17 @@ tile.Madera_Fosil_Ambar.name=Fossil Wood
 item.fosil.name=Fossil
 item.Fragmento_de_fosil.name=Fossil Shard
 
+//items evento navidad
+
+item.ambar.name=Amber
+item.vial_de_sangre_de_hielo.name=ice blood vial
+item.vial_de_sangre_glaciar.name=glacial blood vial
+item.vial_de_sangre_del_pantano.name=swamp blood vial
+item.vial_de_sangre_cenagosa.name=blood swab vial
+item.vial_de_sangre_de_las_montanas.name=mountain blood vial
+item.vial_de_sangre_rocosa.name=rocky blood vial
+item.vial_de_sangre_del_bosque.name=forest blood vial
+item.vial_de_sangre_selvatica.name=jungle blood vial
+
 
 
