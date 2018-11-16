@@ -499,8 +499,7 @@ item.Casco_del_Eden.name=Casco del Eden
 item.Pechera_del_Eden.name=Pechera del Eden
 item.Grebas_del_Eden.name=Grebas del Eden
 item.Botas_del_Eden.name=Botas del Eden
-item.Fragmento_de_Hielo_Supercongelado.name= Fragmentp de Hielo Supercongelado
-
+item.Fragmento_de_Hielo_Supercongelado.name=Fragmento de Hielo Supercongelado
 
 tile.Bloque_de_Plastico.name=Bloque de Plastico
 tile.Barrera.name=Barrera
@@ -562,7 +561,6 @@ tile.Bloque_De_Estrella_Del_Wither.name=Bloque de Nether Star
 tile.Generator_Boss.name=Generador Boss
 tile.Bloque_Demoniaco.name=Bloque Demoniaco
 tile.Hielo_Supercongelado.name=Hielo Supercongelado
-
 
 
 tile.Escalera_De_corazon_de_redstone.name=Escalera de corazon de redstone
