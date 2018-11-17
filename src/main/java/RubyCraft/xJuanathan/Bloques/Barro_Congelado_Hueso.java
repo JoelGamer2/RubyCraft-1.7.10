@@ -2,12 +2,12 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.Bases.Barros;
 import RubyCraft.xJuanathan.Principal;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-public class Barro_Congelado_Hueso extends Block {
+public class Barro_Congelado_Hueso extends Barros {
 
 	public Barro_Congelado_Hueso(Material p_i45394_1_) {
 		super(p_i45394_1_);

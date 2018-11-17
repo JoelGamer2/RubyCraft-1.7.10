@@ -2,13 +2,13 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.Bases.Hielo;
 import RubyCraft.xJuanathan.Principal;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
 
-public class Hielo_Glaciar_Ambar extends Block {
+public class Hielo_Glaciar_Ambar extends Hielo {
 
 	public Hielo_Glaciar_Ambar(Material p_i45394_1_) {
 		super(p_i45394_1_);

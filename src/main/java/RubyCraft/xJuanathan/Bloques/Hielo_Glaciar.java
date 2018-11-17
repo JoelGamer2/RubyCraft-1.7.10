@@ -1,14 +1,16 @@
 package RubyCraft.xJuanathan.Bloques;
 
-import net.minecraft.block.Block;
+import RubyCraft.Bases.Hielo;
 import net.minecraft.block.material.Material;
 
-public class Hielo_Glaciar extends Block {
+public class Hielo_Glaciar extends Hielo {
 
 	public Hielo_Glaciar(Material ice) 
 	{
-		// TODO Auto-generated constructor stub
+		
 		super(ice);
+		
+		
 	}
 
 }

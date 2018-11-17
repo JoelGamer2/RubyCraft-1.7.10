@@ -2,13 +2,13 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.Bases.Barros;
 import RubyCraft.xJuanathan.Principal;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
 
-public class Barro_Congelado_Ambar extends Block {
+public class Barro_Congelado_Ambar extends Barros {
 
 
 
