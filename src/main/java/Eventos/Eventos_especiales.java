@@ -17,7 +17,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.EnumDifficulty;
 
 public class Eventos_especiales {
-
+	
 	private boolean Iniciadosesion = false;
 	public static boolean musica = false;
 	public static String Parcanombre = EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft-Bosses" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + " ";
@@ -106,7 +106,6 @@ public class Eventos_especiales {
 	
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
-		
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
 			BossParca.Activo = false;
 			Eventos_especiales.musica = false;
