@@ -24,7 +24,7 @@ public class Eventos_especiales {
 	public static String ParcaFase1 = Parcanombre + "La parca llama a su ejercito";
 	public static String ParcaFase2 = Parcanombre + "La parca huye de los humanos";
 	public static String ParcaFase3 = Parcanombre + "La parca Chupa las almas";
-	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage();
+	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage().setDamageBypassesArmor();
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		
