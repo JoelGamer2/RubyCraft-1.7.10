@@ -1,7 +1,11 @@
 package RubyCraft.xJuanathan.Bloques;
 
+import java.util.Random;
+
+import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 
 public class Barro_Congelado_Hueso extends Block {
 
@@ -9,5 +13,47 @@ public class Barro_Congelado_Hueso extends Block {
 		super(p_i45394_1_);
 		// TODO Auto-generated constructor stub
 	}
+	
+	//Dropeo al romper el Bloque
+	
+			@Override
+			public Item getItemDropped(int fortune, Random rand, int probabilidad) 
+			{
+				return Principal.vial_de_sangre_del_pantano;
+			}
 
+			
+	// Dropeo de item afectado por encantamiento fortuna
+			
+			@Override
+			public int quantityDroppedWithBonus(int fortune, Random rand) 
+			{
+				int probabilidad;
+				
+				if (fortune >= 1)
+				{
+					probabilidad = rand.nextInt(100);
+					
+					if (probabilidad >= 86 && probabilidad < 98)
+					{
+						return fortune + 2;
+					}
+					
+					else if (probabilidad >= 98 && probabilidad <= 100)
+					{
+						return fortune + 3;
+					}
+					
+					else {
+					
+					return fortune + 1;
+					}
+				}
+				
+				else {
+					
+				return 1;
+				}
+				
+			}
 }

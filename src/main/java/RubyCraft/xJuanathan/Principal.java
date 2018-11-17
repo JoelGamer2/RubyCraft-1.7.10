@@ -21,6 +21,11 @@ import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Ambar;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Hueso;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
+import RubyCraft.xJuanathan.Items.calavera_elfo;
+import RubyCraft.xJuanathan.Items.calavera_gigante;
+import RubyCraft.xJuanathan.Items.calavera_troll;
+import RubyCraft.xJuanathan.Items.calavera_yeti;
+import RubyCraft.xJuanathan.Items.hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_cenagosa;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_hielo;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_las_montanas;
@@ -82,6 +87,12 @@ public class Principal {
 	
 	public static Item vial_de_sangre_del_bosque;
 	public static Item vial_de_sangre_selvatica;
+	
+	public static Item hueso_fosilizado;
+	public static Item calavera_yeti;
+	public static Item calavera_troll;
+	public static Item calavera_gigante;
+	public static Item calavera_elfo;
 	
 	
 	public static void preinit() 
@@ -197,6 +208,21 @@ public class Principal {
 		
 		vial_de_sangre_selvatica = new vial_de_sangre_selvatica().setUnlocalizedName("vial_de_sangre_selvatica").setTextureName(RubyCraft.modid+":vial_de_sangre_selvatica").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(vial_de_sangre_selvatica, vial_de_sangre_selvatica.getUnlocalizedName().substring(5));
+		
+		hueso_fosilizado = new hueso_fosilizado().setUnlocalizedName("hueso_fosilizado").setTextureName(RubyCraft.modid+":hueso_fosilizado").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(hueso_fosilizado, hueso_fosilizado.getUnlocalizedName().substring(5));
+		
+		calavera_yeti = new calavera_yeti().setUnlocalizedName("calavera_yeti").setTextureName(RubyCraft.modid+":calavera_yeti").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(calavera_yeti, calavera_yeti.getUnlocalizedName().substring(5));
+		
+		calavera_troll = new calavera_troll().setUnlocalizedName("calavera_troll").setTextureName(RubyCraft.modid+":calavera_troll").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(calavera_troll, calavera_troll.getUnlocalizedName().substring(5));
+		
+		calavera_gigante = new calavera_gigante().setUnlocalizedName("calavera_gigante").setTextureName(RubyCraft.modid+":calavera_gigante").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(calavera_gigante, calavera_gigante.getUnlocalizedName().substring(5));
+		
+		calavera_elfo = new calavera_elfo().setUnlocalizedName("calavera_elfo").setTextureName(RubyCraft.modid+":calavera_elfo").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(calavera_elfo, calavera_elfo.getUnlocalizedName().substring(5));
 		
 		
 		
