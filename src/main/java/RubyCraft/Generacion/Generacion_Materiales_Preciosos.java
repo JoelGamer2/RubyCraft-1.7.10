@@ -28,6 +28,7 @@ public class Generacion_Materiales_Preciosos implements IWorldGenerator{
     	generateOre(RubyCraft.Mena_de_Platino, world, rand, x, z, 4, 5, 8, 0, 20, Blocks.stone);
 
     	
+    	
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn){
