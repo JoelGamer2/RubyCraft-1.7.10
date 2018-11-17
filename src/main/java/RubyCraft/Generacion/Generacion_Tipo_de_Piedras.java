@@ -15,7 +15,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
 	
 	private static int barroand = 0;
-	private static int barrocongelado = 0;
+	private static int barroambar = 0;
 	private static int barrohueso = 0;
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -56,13 +56,16 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	int vienSize = min + rand.nextInt(max - min);
     	int menas = vienSize;
     	barroand = rand.nextInt(menas - 3);
-		barrohueso = rand.nextInt(menas - 4);
+		barrohueso = rand.nextInt(menas - 5);
+		barroambar = rand.nextInt(menas -4);
     	int heightRange = 63;
     	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
     	WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
     	
     	WorldGenMinable barrocongeladohueso = new WorldGenMinable(Principal.Barro_Congelado_Hueso,barrohueso, Principal.Barro_Congelado);
     	WorldGenMinable barrocongeladoand = new WorldGenMinable(Principal.Barro_Congelado_Adn, barroand, Principal.Barro_Congelado);
+    	WorldGenMinable barrocongeladoambar = new WorldGenMinable(Principal.Barro_Congelado_Ambar, barroand, Principal.Barro_Congelado);
+
     	
     	for(int i = 0; i < chance; i++){
     		int xRand = x * 16 + rand.nextInt(16);
@@ -72,6 +75,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     		gen.generate(world, rand, xRand, yRand, zRand);
     		barrocongelado.generate(world, rand, xRand, yRand - 1, zRand);
     		
+    		barrocongeladoambar.generate(world, rand, xRand, yRand - 1, zRand);
     		barrocongeladoand.generate(world, rand, xRand, yRand - 1, zRand);
     		barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
     		
