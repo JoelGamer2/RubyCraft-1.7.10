@@ -24,6 +24,9 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 	private static int rocahueso = 0;
 	
 	private static BiomeGenBase biomas;
+	
+	private static int vienSize;
+	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		switch(world.provider.dimensionId){
@@ -38,8 +41,9 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	generateOre(RubyCraft.Diorita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Granito, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
 
-    	generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 1, 60, 90, Blocks.water);
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
+        generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
+        
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn){
@@ -53,37 +57,40 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     		gen.generate(world, random, xRand, yRand, zRand);
     		
     	    }
-        }   
+        }
+    
+    
     
     public void generarbarro(Block block,World world, Random rand, int x,int z, int min,int max, int chance, int ymin, int ymax, Block togenerate) {
 
-       
-    	int vienSize = min + rand.nextInt(max);
-    	barrohueso = (25 * vienSize)/100;
-		barroambar = (15 * vienSize)/100;
-		barroadn = (5 * vienSize)/100;
-    	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
-    	WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
-    	
-    	WorldGenMinable barrocongeladohueso = new WorldGenMinable(Principal.Barro_Congelado_Hueso,barrohueso, Principal.Barro_Congelado);
-    	WorldGenMinable barrocongeladoadn = new WorldGenMinable(Principal.Barro_Congelado_Adn, barroadn, Principal.Barro_Congelado);
-    	WorldGenMinable barrocongeladoambar = new WorldGenMinable(Principal.Barro_Congelado_Ambar, barroambar, Principal.Barro_Congelado);
 
-    	
-    	for(int i = 0; i < chance; i++){
-    		int xRand = x * 16 + rand.nextInt(16);
-    		int yRand = 61;
-    		int zRand = z * 16 + rand.nextInt(16);
-    	   if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
-    		gen.generate(world, rand, xRand, yRand, zRand);
-    		
-    		barrocongelado.generate(world, rand, xRand, yRand - 1, zRand);
-    		barrocongeladoambar.generate(world, rand, xRand, yRand - 1, zRand);
-    		barrocongeladoadn.generate(world, rand, xRand, yRand - 1, zRand);
-    		barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
+        int vienSize = min + rand.nextInt(max - min);
+        int menas = vienSize;
+        barrohueso = rand.nextInt(menas - 3);
+        barroambar = rand.nextInt(menas - 4);
+        barroadn = rand.nextInt(menas - 15);
+        WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
+        WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
+
+        WorldGenMinable barrocongeladohueso = new WorldGenMinable(Principal.Barro_Congelado_Hueso,barrohueso, Principal.Barro_Congelado);
+        WorldGenMinable barrocongeladoand = new WorldGenMinable(Principal.Barro_Congelado_Adn, barroadn, Principal.Barro_Congelado);
+        WorldGenMinable barrocongeladoambar = new WorldGenMinable(Principal.Barro_Congelado_Ambar, barroadn, Principal.Barro_Congelado);
+
+
+        for(int i = 0; i < chance; i++){
+            int xRand = x * 16 + rand.nextInt(16);
+            int yRand = 61;
+            int zRand = z * 16 + rand.nextInt(16);
+           if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
+            gen.generate(world, rand, xRand, yRand, zRand);
+
+            barrocongelado.generate(world, rand, xRand, yRand - 1, zRand);
+            barrocongeladoambar.generate(world, rand, xRand, yRand - 1, zRand);
+            barrocongeladoand.generate(world, rand, xRand, yRand - 1, zRand);
+            barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
                 }
-    	     }  
-          }   
+             }
+          }
     
     
     public void generarrocas(Block block, World world, Random rand, int x, int z, int min, int max, int chance, int ymin, int ymax, Block togenerate) {
@@ -91,9 +98,9 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         
     	int vienSize = min + rand.nextInt(max);
     	
-		rocahueso = (25 * vienSize)/100;
-		rocaambar = (15 * vienSize)/100;
-    	rocaadn = (5 * vienSize)/100;
+		rocahueso = (35 * vienSize)/100;
+		rocaambar = (20 * vienSize)/100;
+    	rocaadn = (10 * vienSize)/100;
     	
     	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
     	

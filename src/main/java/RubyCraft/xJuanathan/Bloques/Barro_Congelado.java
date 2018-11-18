@@ -9,5 +9,11 @@ public class Barro_Congelado extends Barros{
 		super(p_i45394_1_);
 		// TODO Auto-generated constructor stub
 	}
+	   public boolean isOpaqueCube(){
+		   return false;
+	   }
+	   public boolean isRenderAsNormal(){
+		   return false;
+	   }
 
 }
