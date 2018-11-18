@@ -101,19 +101,19 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	WorldGenMinable rocaadngen = new WorldGenMinable(Principal.Roca_Fosil_Adn, rocaadn, Principal.Roca_Fosil);
     	WorldGenMinable rocaambargen = new WorldGenMinable(Principal.Roca_Fosil_Ambar, rocaambar, Principal.Roca_Fosil);
 
-		int heightRange = ymax - ymin;
+		//int heightRange = ymax - ymin;
 
     	for(int i = 0; i < chance; i++){
     		int xRand = x * 16 + rand.nextInt(16);
-    		int yRand = rand.nextInt(heightRange);
+    		int yRand = ymin + rand.nextInt(ymax);
     		int zRand = z * 16 + rand.nextInt(16);
-    	//   if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
+    	   if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Extreme")) {
     		gen.generate(world, rand, xRand, yRand, zRand);
     		
     		rocaambargen.generate(world, rand, xRand, yRand - 1, zRand);
     		rocaadngen.generate(world, rand, xRand, yRand - 1, zRand);
     		rocahuesogen.generate(world, rand, xRand, yRand - 1, zRand);
-          //      }
+                }
     	     }  
           }   
 	}
