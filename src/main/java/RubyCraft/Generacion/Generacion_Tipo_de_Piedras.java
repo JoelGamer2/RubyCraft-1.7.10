@@ -73,8 +73,8 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
 
         WorldGenMinable barrocongeladohueso = new WorldGenMinable(Principal.Barro_Congelado_Hueso,barrohueso, Principal.Barro_Congelado);
-        WorldGenMinable barrocongeladoand = new WorldGenMinable(Principal.Barro_Congelado_Adn, barroadn, Principal.Barro_Congelado);
-        WorldGenMinable barrocongeladoambar = new WorldGenMinable(Principal.Barro_Congelado_Ambar, barroadn, Principal.Barro_Congelado);
+        WorldGenMinable barrocongeladoambar = new WorldGenMinable(Principal.Barro_Congelado_Ambar, barroambar, Principal.Barro_Congelado);
+        WorldGenMinable barrocongeladoadn = new WorldGenMinable(Principal.Barro_Congelado_Adn, barroadn, Principal.Barro_Congelado);
 
 
         for(int i = 0; i < chance; i++){
@@ -86,7 +86,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
             barrocongelado.generate(world, rand, xRand, yRand - 1, zRand);
             barrocongeladoambar.generate(world, rand, xRand, yRand - 1, zRand);
-            barrocongeladoand.generate(world, rand, xRand, yRand - 1, zRand);
+            barrocongeladoadn.generate(world, rand, xRand, yRand - 1, zRand);
             barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
                 }
              }
