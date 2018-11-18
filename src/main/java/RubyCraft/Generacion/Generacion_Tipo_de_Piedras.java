@@ -68,7 +68,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         int menas = vienSize;
         barrohueso = rand.nextInt(menas - 3);
         barroambar = rand.nextInt(menas - 4);
-        barroadn = rand.nextInt(menas - 15);
+        barroadn = 1 + rand.nextInt(menas - 15);
         WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
         WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
 

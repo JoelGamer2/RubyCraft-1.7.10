@@ -81,7 +81,7 @@ public class Principal {
 	
 	
 	//Materiales
-	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 7, 700, 10.0F, 2.0F, 45); 
+	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 7, 700, 8.0F, 2.0F, 45); 
 	
 	//Items Evento Navidad
 	
