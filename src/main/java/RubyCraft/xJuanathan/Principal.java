@@ -1,6 +1,7 @@
 package RubyCraft.xJuanathan;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Items.picoderuby;
 import RubyCraft.xJuanathan.Bloques.Barro;
 import RubyCraft.xJuanathan.Bloques.Barro_Congelado;
 import RubyCraft.xJuanathan.Bloques.Barro_Congelado_Adn;
@@ -19,6 +20,7 @@ import RubyCraft.xJuanathan.Bloques.Roca_Fosil;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Adn;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Ambar;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Hueso;
+import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
 import RubyCraft.xJuanathan.Items.calavera_elfo;
@@ -38,6 +40,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class Principal {
 	
@@ -71,6 +74,14 @@ public class Principal {
 	//Items
 	
 	public static Item Fragmento_de_fosil;
+	
+	//Heramientas
+	public static Item Pico_de_roca_fosilizada;
+	
+	
+	
+	//Materiales
+	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 7, 700, 10.0F, 2.0F, 45); 
 	
 	//Items Evento Navidad
 	
@@ -179,6 +190,10 @@ public class Principal {
 		Fragmento_de_fosil = new Fragmento_de_fosil().setUnlocalizedName("Fragmento_de_fosil").setTextureName(RubyCraft.modid+":Fragmento_de_fosil").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(Fragmento_de_fosil, Fragmento_de_fosil.getUnlocalizedName().substring(5));
 		
+		//Herramientas
+		Pico_de_roca_fosilizada = new Pico_de_roca_fosilizada(rocafosilidadtoolmaterial).setUnlocalizedName("Pico_de_roca_fosilizada").setTextureName(RubyCraft.modid + ":Pico_de_roca_fosilizada").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(Pico_de_roca_fosilizada, Pico_de_roca_fosilizada.getUnlocalizedName().substring(5));
+
 		
 		//Items evento Navidad
 		
