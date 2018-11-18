@@ -9,14 +9,4 @@ public class Barro extends Barros {
 	public Barro(Material p_i45394_1_) {
 		super(p_i45394_1_);
 	}
-	   public boolean isOpaqueCube(){
-		   return false;
-	   }
-	   public boolean isRenderAsNormal(){
-		   return false;
-	   }
-
-	
-
-	
 }
