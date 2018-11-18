@@ -59,9 +59,9 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
        
     	int vienSize = min + rand.nextInt(max);
-    	barroadn = (25 * vienSize)/100;
-		barrohueso = (15 * vienSize)/100;
-		barroambar = (5 * vienSize)/100;
+    	barrohueso = (25 * vienSize)/100;
+		barroambar = (15 * vienSize)/100;
+		barroadn = (5 * vienSize)/100;
     	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
     	WorldGenMinable barrocongelado = new WorldGenMinable(Principal.Barro_Congelado, vienSize,Principal.Barro);
     	
