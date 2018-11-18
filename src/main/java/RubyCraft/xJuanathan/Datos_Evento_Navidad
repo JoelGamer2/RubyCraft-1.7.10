@@ -1,0 +1,95 @@
+
+
+
+/////////////bloques///////////////////////
+
+---Hielo Glaciar                 Este bloque al picar se rompe. Dropeara el bloque de hielo glaciar con el encantamiento toque de seda. Se podra picar con el pico de roca fosilizada
+---Hielo Glaciar Hueso           Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera yeti.
+---Hielo Glaciar Adn             Este bloque dropeara vial de sangre de hielo. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
+---Hielo Glaciar Ambar           Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+
+Estos bloques se generan en rios de biomas helados, apareciendo en la capa superior el hielo glaciar y debajo hielo glaciar con probabilidad de aparicion de
+hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+
+
+---Barro                         Este bloque dropeara el bloque de barro.                  
+---Barro Congelado               Este bloque dropeara con una probabilidad del 98% el bloque de barro congelado y un 2% de hielo glaciar.
+---Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. Se podra picar con el pico de roca fosilizada
+---Barro Congelado Adn           Este bloque dropeara vial de sangre del pantano. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
+---Barro Congelado Ambar         Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+
+
+Estos bloques se generan en el bioma del pantano, apareciendo en la capa superior el barro y debajo el barro congelado con probabilidad de aparicion de 
+barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+
+
+---Roca Fosil                    Este bloque dropeara el bloque de roca fosil.
+---Roca Fosil Hueso              Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera gigante. Se podra picar con el pico de roca fosilizada
+---Roca Fosil Adn                Este bloque dropeara vial de sangre de las montañas. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
+---Roca Fosil Ambar              Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+
+Estos bloques se generan en biomas de extreme hills, apareciendo betas de roca fosil entre la capa 70 y la 256, con probabilidad de aparicion de roca fosil hueso, 
+roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+
+
+---Madera Fosil                  Este bloque dropeara el bloque de madera de fosil.
+---Madera Fosil Hueso            Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera elfo. Se podra picar con el pico de roca fosilizada
+---Madera Fosil Adn              Este bloque dropeara vial de sangre del bosque. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
+---Madera Fosil Ambar            Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+
+Estos bloques se generan en biomas de bosques oscuros, apareciendo en betas debajo de los robles oscuros, apareciendo en la capa superior la madera fosil y debajo con probabilidad
+de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+
+
+/////////////bloques///////////////////////
+
+
+fragmento de fosil                 Este item solamente servira para obtener 3 de polvo de hueso.
+
+hueso fosilizado                   Este item servira para obtener 10 de polvo de hueso o para hacer herramientas de hueso con las que poder picar los bloques de ambar.
+
+ambar                              Este item servira para hacer herramientas de ambar con las que poder picar los bloques de adn. Tambien servira para hacer una armadura.
+
+vial de sangre de hielo            Este item servira para obtener el vial de sangre glaciar. Tambien servira para, al consumirlo, dar inmunidad al fuego, y para imbuir en poder helado la espada de ambar.
+vial de sangre del pantano         Este item servira para obtener el vial de sangre 
+vial de sangre de las montanas
+vial de sangre del bosque
+
+calavera yeti
+calavera troll
+calavera gigante
+calavera elfo
+
+vial de sangre glaciar
+vial de sangre cenagosa
+vial de sangre rocosa
+vial de sangre selvatica
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

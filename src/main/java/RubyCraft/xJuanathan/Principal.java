@@ -1,7 +1,8 @@
 package RubyCraft.xJuanathan;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Items.picoderuby;
+import RubyCraft.xJuanathan.AltarNavidad.altar;
+import RubyCraft.xJuanathan.AltarNavidad.altar_central;
 import RubyCraft.xJuanathan.Bloques.Barro;
 import RubyCraft.xJuanathan.Bloques.Barro_Congelado;
 import RubyCraft.xJuanathan.Bloques.Barro_Congelado_Adn;
@@ -47,6 +48,11 @@ public class Principal {
 	//Bloques
 
 	public static Block Monton_de_fosiles;
+	
+	// Altar Evento Navidad
+	
+	public static Block altar;
+	public static Block altar_central;
 	
 	// Bloques Evento Navidad
 	
@@ -113,6 +119,16 @@ public class Principal {
 		Monton_de_fosiles = new Monton_de_fosiles(Material.rock).setBlockName("Monton_de_fosiles").setBlockTextureName(RubyCraft.modid+":Monton_de_fosiles").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Monton_de_fosiles, Monton_de_fosiles.getUnlocalizedName().substring(5));
 		Monton_de_fosiles.setHarvestLevel("pickaxe", 1);
+		
+		//Altar evento Navidad
+		
+		altar = new altar(Material.rock).setBlockName("altar").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(altar, altar.getUnlocalizedName().substring(5));
+		altar.setHarvestLevel("pickaxe", 10);
+		
+		altar_central = new altar_central(Material.rock).setBlockName("altar_central").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(altar_central, altar_central.getUnlocalizedName().substring(5));
+		altar_central.setHarvestLevel("pickaxe", 10);
 		
 		//Bloques evento Navidad
 		
