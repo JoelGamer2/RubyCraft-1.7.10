@@ -23,6 +23,10 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 	private static int rocaambar = 0;
 	private static int rocahueso = 0;
 	
+	private static int hieloadn = 0;
+	private static int hieloambar = 0;
+	private static int hielohueso = 0;
+	
 	private static BiomeGenBase biomas;
 	
 	private static int vienSize;
@@ -43,6 +47,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
         generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
+        generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
         
     }
     
@@ -121,4 +126,35 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
                 }
     	     }  
           }   
+    
+    
+public void generarhielo(Block block, World world, Random rand, int x, int z, int min, int max, int chance, int ymin, int ymax, Block togenerate) {
+
+        
+    	int vienSize = min + rand.nextInt(max);
+    	
+		hielohueso = (15 * vienSize)/100;
+		hieloambar = (10 * vienSize)/100;
+    	hieloadn = (7 * vienSize)/100;
+    	
+    	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
+    	
+    	WorldGenMinable hielohuesogen = new WorldGenMinable(Principal.Hielo_Glaciar_Hueso,hielohueso, Blocks.water);
+    	WorldGenMinable hieloadngen = new WorldGenMinable(Principal.Hielo_Glaciar_Adn, hieloadn, Blocks.water);
+    	WorldGenMinable hieloambargen = new WorldGenMinable(Principal.Hielo_Glaciar_Ambar, hieloambar, Blocks.water);
+
+    	for(int i = 0; i < chance; i++){
+    		int xRand = x * 16 + rand.nextInt(16);
+    		int yRand = 63;
+    		int zRand = z * 16 + rand.nextInt(16);
+    	   if(world.getBiomeGenForCoords(xRand, zRand).biomeName.equalsIgnoreCase("FrozenRiver")) {
+    		gen.generate(world, rand, xRand, yRand, zRand);
+    		
+    		hieloambargen.generate(world, rand, xRand, yRand - 1, zRand);
+    		hieloadngen.generate(world, rand, xRand, yRand - 1, zRand);
+    		hielohuesogen.generate(world, rand, xRand, yRand - 1, zRand);
+                }
+    	     }  
+          }   
+    
 	}
