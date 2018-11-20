@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
+import Eventos.Verificar_Fecha;
 import HerraCraft.herracraft;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
@@ -497,6 +498,8 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
+	Verificar_Fecha.VerFechasEventos();
+    Verificar_Fecha.VerIpePuerto();
 	Principal.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 		Navidad = true;
@@ -523,6 +526,7 @@ public void Preinit(FMLPreInitializationEvent event){
 Control_de_Version.Iniciar_todo();
 
 if(Control_de_Version.Version_de_desarrolador == false) {
+	Verificar_Fecha.VerIpePuerto();
 Buscar_Actualizaciones.MirarActualizaciones();
 }
 BuscarVersionTrol.MirarVersionTrol();

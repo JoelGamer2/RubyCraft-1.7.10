@@ -9,21 +9,27 @@ import RubyCraft.Registrar.Crafteos;
 
 public class Ver_fecha_calendario_usuario {
 
+	public static int IHalloween;
+	public static int AHalloween;
+	public static int MesHalloween;
+	
+	public static int INavidad;
+	public static int ANavidad;
+	public static int MesNavidad;
 	
 	public static void iniciar() {
-		
 		
 		
 		/** Testear Calendario **/
 		 
 		//Testear Navidad
 			Calendar calendar = Calendar.getInstance();
-
-		    if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 31 && Control_de_Version.Navidad_Activar == false){
+          
+		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
 		       
 		       if(RubyCraft.cliente) {
-		       Verificar_Fecha.Iniciar();
+		       Verificar_Fecha.iniciar();
 		       }else if(!RubyCraft.cliente) {
 		    	   RubyCraft.Navidad = true;
 		    	   
@@ -37,10 +43,10 @@ public class Ver_fecha_calendario_usuario {
 		        
 		    }else{
 		    	//Testear Hallowen
-		    	if(calendar.get(2) + 1 == 10 && calendar.get(5) >= 28 && calendar.get(5) <= 31){
+		    	if(calendar.get(2) + 1 == MesHalloween && calendar.get(5) >= IHalloween && calendar.get(5) <= AHalloween){
 		    		 Verificar_Fecha.HalloWen = true;
 		    		 if(RubyCraft.cliente) {
-		  		       Verificar_Fecha.Iniciar();
+		  		       Verificar_Fecha.iniciar();
 		  		       }else if(!RubyCraft.cliente) {
 				    	   RubyCraft.HalloWen = true;
 				    	   
