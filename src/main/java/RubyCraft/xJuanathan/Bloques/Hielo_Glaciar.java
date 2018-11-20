@@ -7,10 +7,7 @@ public class Hielo_Glaciar extends Hielo {
 
 	public Hielo_Glaciar(Material ice) 
 	{
-		
 		super(ice);
-		
-		
 	}
 
 }
