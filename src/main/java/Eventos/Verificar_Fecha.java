@@ -26,7 +26,7 @@ public class Verificar_Fecha {
 	public static boolean HalloWen = false;
 	public static boolean Navidad = false;
 	
-	private static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/Eventos.txt?raw=1";
+	private static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
 	
 	
 public static boolean URLNOVALIDAERROR = false;
