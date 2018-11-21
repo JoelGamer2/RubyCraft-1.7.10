@@ -22,15 +22,16 @@ hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comu
                                  Se podra picar con la pala de aprendiz de arqueologo.
                                  
 ---Barro Congelado               Este bloque dropeara con una probabilidad del 98% el bloque de barro congelado y un 2% de hielo glaciar. Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft.
+                                 Se podra picar con el pico de aprendiz de arqueologo.
 
 ---Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. Se podra picar con el pico de roca fosilizada
-                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft.
+                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de roca fosilizada
                                  
 ---Barro Congelado Ambar         Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
-                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft.
+                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de hueso fosilizado
                                  
 ---Barro Congelado Adn           Este bloque dropeara vial de sangre del pantano. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
-                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft.
+                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de ambar.
 
 
 Estos bloques se generan en el bioma del pantano, apareciendo en la capa superior el barro y debajo el barro congelado con probabilidad de aparicion de 
@@ -147,20 +148,63 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
                                       En arcos proporcionara infinidad.
                                       
                                       
----flor de las nieves                Podra encontrarse en biomas helados.
+---flor de las nieves                 Podra encontrarse en biomas helados.
 
----flor del pantano                  Podra encontrarse en pantanos.
+---flor del pantano                   Podra encontrarse en pantanos.
+ 
+---flor de las montañas               Podra encontrarse en alta montaña.
 
----flor de las montañas              Podra encontrarse en alta montaña.
+---flor del bosque                    Podra encontrarse en bosques oscuros.
 
----flor del bosque                   Podra encontrarse en bosques oscuros.
-    
-    
-    
-    
-    
-    
-    
+---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
+
+---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
+
+---cuerda                             Sirve para craftear cuerda trenzada. Se consigue poniendo 3 de hilo de cuerda en horizontal en el medio de la mesa de crafteo.
+
+
+/////////////Herramientas///////////////////////
+
+
+---Herramientas de aprendiz de arqueologo      Estas son las primeras herramientas que deberemos craftear para poder ir avanzando en el evento de navidad.
+                                               Estaran formadas por: pico de aprendiz de arqueologo, hacha de aprendiz de arqueologo y pala de aprendiz de arqueologo.
+                                               
+                                               ("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45)
+                                               
+     ---pico de aprendiz de arqueologo         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
+                                            
+                                 S M S
+           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
+                                   P                                     
+
+   ---hacha de aprendiz de arqueologo          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
+
+                                 S M S
+           Mesa de crafteo ==>     C S         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
+                                   P 
+
+   ---pala de aprendiz de arqueologo           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
+
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
+                                   P 
+                                   
+                                   
+              
+                                   
+                                   
+                                   
+                                   
+
+---pico de aprendiz de arqueologo
+
+---pico de roca fosilizada
+
+---pico de hueso fosilizado
+
+---pico de ambar
+
+
     
     
     
