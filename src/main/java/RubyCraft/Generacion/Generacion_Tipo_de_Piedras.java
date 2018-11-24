@@ -3,6 +3,7 @@ package RubyCraft.Generacion;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Estructuras.Arbol;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
@@ -27,6 +28,10 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 	private static int hieloambar = 0;
 	private static int hielohueso = 0;
 	
+	private static int maderaadn = 0;
+	private static int maderaambar = 0;
+	private static int maderahueso = 0;
+	
 	private static BiomeGenBase biomas;
 	
 	private static int vienSize;
@@ -48,7 +53,6 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
         generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
         generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
-        
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn){
@@ -84,10 +88,13 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
         for(int i = 0; i < chance; i++){
             int xRand = x * 16 + rand.nextInt(16);
-            int yRand = 61;
             int zRand = z * 16 + rand.nextInt(16);
+            int yRand = 61;
            if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
+        	   
+        	   if(world.getBlock(xRand, yRand, zRand) == Principal.Madera_Fosil) {
             gen.generate(world, rand, xRand, yRand, zRand);
+        	   }
 
             barrocongelado.generate(world, rand, xRand, yRand - 1, zRand);
             barrocongeladoambar.generate(world, rand, xRand, yRand - 1, zRand);
@@ -156,5 +163,6 @@ public void generarhielo(Block block, World world, Random rand, int x, int z, in
                 }
     	     }  
           }   
-    
+
+
 	}
