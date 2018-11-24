@@ -108,9 +108,7 @@ public class ClientProxy extends ServerProxy {
         //Variado
 		FMLCommonHandler.instance().bus().register(new Encantamiento_MineCraft_Objetos(Minecraft.getMinecraft()));
 		FMLCommonHandler.instance().bus().register(new Mods_Encantamientos(Minecraft.getMinecraft()));
-		
-		
-		
+			
 		
 		//HerraCraft
 		RenderingRegistry.registerEntityRenderingHandler(Tank.class, new RenderTankTexture(new TankRender(), 0));
