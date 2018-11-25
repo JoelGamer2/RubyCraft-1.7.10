@@ -21,6 +21,10 @@ import RubyCraft.xJuanathan.Bloques.Roca_Fosil;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Adn;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Ambar;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Hueso;
+import RubyCraft.xJuanathan.Bloques.flor_de_las_montanas;
+import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
+import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
+import RubyCraft.xJuanathan.Bloques.flor_del_bosque;
 import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
@@ -28,7 +32,15 @@ import RubyCraft.xJuanathan.Items.calavera_elfo;
 import RubyCraft.xJuanathan.Items.calavera_gigante;
 import RubyCraft.xJuanathan.Items.calavera_troll;
 import RubyCraft.xJuanathan.Items.calavera_yeti;
+import RubyCraft.xJuanathan.Items.cuerda;
+import RubyCraft.xJuanathan.Items.cuerda_trenzada;
+import RubyCraft.xJuanathan.Items.esencia_de_las_montanas;
+import RubyCraft.xJuanathan.Items.esencia_de_los_hielos;
+import RubyCraft.xJuanathan.Items.esencia_del_bosque;
+import RubyCraft.xJuanathan.Items.esencia_del_pantano;
+import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
+import RubyCraft.xJuanathan.Items.silex;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_cenagosa;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_hielo;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_las_montanas;
@@ -77,6 +89,11 @@ public class Principal {
 	public static Block Madera_Fosil_Adn;
 	public static Block Madera_Fosil_Ambar;
 	
+	public static Block flor_de_las_nieves;
+	public static Block flor_del_Pantano;
+	public static Block flor_de_las_montanas;
+	public static Block flor_del_bosque;
+	
 	//Items
 	
 	public static Item Fragmento_de_fosil;
@@ -106,10 +123,22 @@ public class Principal {
 	public static Item vial_de_sangre_selvatica;
 	
 	public static Item hueso_fosilizado;
+	
 	public static Item calavera_yeti;
 	public static Item calavera_troll;
 	public static Item calavera_gigante;
 	public static Item calavera_elfo;
+	
+	public static Item esencia_de_los_hielos;
+	public static Item esencia_del_pantano;
+	public static Item esencia_de_las_montanas;
+	public static Item esencia_del_bosque;
+	
+	public static Item silex;
+	
+	public static Item hilo_de_cuerda;
+	public static Item cuerda;
+	public static Item cuerda_trenzada;
 	
 	
 	public static void preinit() 
@@ -200,6 +229,22 @@ public class Principal {
 		GameRegistry.registerBlock(Madera_Fosil_Ambar, Madera_Fosil_Ambar.getUnlocalizedName().substring(5));
 		Madera_Fosil_Ambar.setHarvestLevel("axe", 2);
 		
+		flor_de_las_nieves = new flor_de_las_nieves(Material.wood).setBlockName("flor_de_las_nieves").setBlockTextureName(RubyCraft.modid+":flor_de_las_nieves").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(flor_de_las_nieves, flor_de_las_nieves.getUnlocalizedName().substring(5));
+		flor_de_las_nieves.setHarvestLevel("axe", 2);
+		
+		flor_del_Pantano = new flor_del_Pantano(Material.wood).setBlockName("flor_del_Pantano").setBlockTextureName(RubyCraft.modid+":flor_del_Pantano").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(flor_del_Pantano, flor_del_Pantano.getUnlocalizedName().substring(5));
+		flor_del_Pantano.setHarvestLevel("axe", 2);
+		
+		flor_de_las_montanas = new flor_de_las_montanas(Material.wood).setBlockName("flor_de_las_montanas").setBlockTextureName(RubyCraft.modid+":flor_de_las_montanas").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(flor_de_las_montanas, flor_de_las_montanas.getUnlocalizedName().substring(5));
+		flor_de_las_montanas.setHarvestLevel("axe", 2);
+		
+		flor_del_bosque = new flor_del_bosque(Material.wood).setBlockName("flor_del_bosque").setBlockTextureName(RubyCraft.modid+":flor_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(flor_del_bosque, flor_del_bosque.getUnlocalizedName().substring(5));
+		flor_del_bosque.setHarvestLevel("axe", 2);
+		
 		
 		//Items
 		
@@ -254,6 +299,30 @@ public class Principal {
 		
 		calavera_elfo = new calavera_elfo().setUnlocalizedName("calavera_elfo").setTextureName(RubyCraft.modid+":calavera_elfo").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(calavera_elfo, calavera_elfo.getUnlocalizedName().substring(5));
+		
+		esencia_de_los_hielos = new esencia_de_los_hielos().setUnlocalizedName("esencia_de_los_hielos").setTextureName(RubyCraft.modid+":esencia_de_los_hielos").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(esencia_de_los_hielos, esencia_de_los_hielos.getUnlocalizedName().substring(5));
+		
+		esencia_del_pantano = new esencia_del_pantano().setUnlocalizedName("esencia_del_pantano").setTextureName(RubyCraft.modid+":esencia_del_pantano").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(esencia_del_pantano, esencia_del_pantano.getUnlocalizedName().substring(5));
+		
+		esencia_de_las_montanas = new esencia_de_las_montanas().setUnlocalizedName("esencia_de_las_montanas").setTextureName(RubyCraft.modid+":esencia_de_las_montanas").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(esencia_de_las_montanas, esencia_de_las_montanas.getUnlocalizedName().substring(5));
+		
+		esencia_del_bosque = new esencia_del_bosque().setUnlocalizedName("esencia_del_bosque").setTextureName(RubyCraft.modid+":esencia_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(esencia_del_bosque, esencia_del_bosque.getUnlocalizedName().substring(5));
+		
+		silex = new silex().setUnlocalizedName("silex").setTextureName(RubyCraft.modid+":silex").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(silex, silex.getUnlocalizedName().substring(5));
+		
+		hilo_de_cuerda = new hilo_de_cuerda().setUnlocalizedName("hilo_de_cuerda").setTextureName(RubyCraft.modid+":hilo_de_cuerda").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(hilo_de_cuerda, hilo_de_cuerda.getUnlocalizedName().substring(5));
+		
+		cuerda = new cuerda().setUnlocalizedName("cuerda").setTextureName(RubyCraft.modid+":cuerda").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(cuerda, cuerda.getUnlocalizedName().substring(5));
+		
+		cuerda_trenzada = new cuerda_trenzada().setUnlocalizedName("cuerda_trenzada").setTextureName(RubyCraft.modid+":cuerda_trenzada").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(cuerda_trenzada, cuerda_trenzada.getUnlocalizedName().substring(5));
 		
 		
 		
