@@ -4,12 +4,9 @@ import java.util.Random;
 
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.IWorldGenerator;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 
 public class generararboles implements IWorldGenerator{
 

@@ -1,7 +1,5 @@
 package Eventos;
 
-import java.util.Calendar;
-
 import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
