@@ -1,9 +1,9 @@
 package RubyCraft.xJuanathan.Bloques;
 
-import net.minecraft.block.Block;
+import RubyCraft.Bases.Flores;
 import net.minecraft.block.material.Material;
 
-public class flor_del_Pantano extends Block{
+public class flor_del_Pantano extends Flores{
 
 	public flor_del_Pantano(Material p_i45394_1_) {
 		super(p_i45394_1_);

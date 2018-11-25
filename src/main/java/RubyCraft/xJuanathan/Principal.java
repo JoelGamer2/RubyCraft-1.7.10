@@ -229,19 +229,19 @@ public class Principal {
 		GameRegistry.registerBlock(Madera_Fosil_Ambar, Madera_Fosil_Ambar.getUnlocalizedName().substring(5));
 		Madera_Fosil_Ambar.setHarvestLevel("axe", 2);
 		
-		flor_de_las_nieves = new flor_de_las_nieves(Material.wood).setBlockName("flor_de_las_nieves").setBlockTextureName(RubyCraft.modid+":flor_de_las_nieves").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		flor_de_las_nieves = new flor_de_las_nieves(Material.plants).setBlockName("flor_de_las_nieves").setBlockTextureName(RubyCraft.modid+":flor_de_las_nieves").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_de_las_nieves, flor_de_las_nieves.getUnlocalizedName().substring(5));
 		flor_de_las_nieves.setHarvestLevel("axe", 2);
 		
-		flor_del_Pantano = new flor_del_Pantano(Material.wood).setBlockName("flor_del_Pantano").setBlockTextureName(RubyCraft.modid+":flor_del_Pantano").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		flor_del_Pantano = new flor_del_Pantano(Material.plants).setBlockName("flor_del_Pantano").setBlockTextureName(RubyCraft.modid+":flor_del_Pantano").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_del_Pantano, flor_del_Pantano.getUnlocalizedName().substring(5));
 		flor_del_Pantano.setHarvestLevel("axe", 2);
 		
-		flor_de_las_montanas = new flor_de_las_montanas(Material.wood).setBlockName("flor_de_las_montanas").setBlockTextureName(RubyCraft.modid+":flor_de_las_montanas").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		flor_de_las_montanas = new flor_de_las_montanas(Material.plants).setBlockName("flor_de_las_montanas").setBlockTextureName(RubyCraft.modid+":flor_de_las_montanas").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_de_las_montanas, flor_de_las_montanas.getUnlocalizedName().substring(5));
 		flor_de_las_montanas.setHarvestLevel("axe", 2);
 		
-		flor_del_bosque = new flor_del_bosque(Material.wood).setBlockName("flor_del_bosque").setBlockTextureName(RubyCraft.modid+":flor_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
+		flor_del_bosque = new flor_del_bosque(Material.plants).setBlockName("flor_del_bosque").setBlockTextureName(RubyCraft.modid+":flor_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_del_bosque, flor_del_bosque.getUnlocalizedName().substring(5));
 		flor_del_bosque.setHarvestLevel("axe", 2);
 		
