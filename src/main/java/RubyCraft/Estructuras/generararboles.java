@@ -45,7 +45,7 @@ public class generararboles implements IWorldGenerator{
     	}
     }
     public void generatetreegrande(World world, Random rand, int chunkX, int chunkZ, int chance){
-        int probrand = rand.nextInt(120);
+        int probrand = rand.nextInt(150);
      	Arbol gen = new Arbol();
      	if(probrand <= 3) {
      		int xRand = chunkX * 16 + rand.nextInt(16);

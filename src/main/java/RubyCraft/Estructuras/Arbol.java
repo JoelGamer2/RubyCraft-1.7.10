@@ -1612,8 +1612,10 @@ private static Block bloque;
         }else if(bloque1.equalsIgnoreCase("adn")) {
         	
         	detectaradn = 1 + generator2.nextInt(10);
-        	if(detectaradn < 3) {
+        	if(detectaradn <= 3) {
         		bloque = Maderaadn;
+        	}else {
+        		bloque = MaderaFosil;
         	}
         }else if(bloque1.equalsIgnoreCase("ambar")) {
         	bloque = Maderaambar;
