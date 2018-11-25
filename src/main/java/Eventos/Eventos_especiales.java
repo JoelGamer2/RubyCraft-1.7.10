@@ -106,6 +106,7 @@ public class Eventos_especiales {
 	
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
+	
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
 			BossParca.Activo = false;
 			Eventos_especiales.musica = false;
