@@ -12,10 +12,6 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class Arbol extends WorldGenerator
 {
-	
-public static int x1;
-public static int y1 = 0;
-public static int z1;
 
 private static Block MaderaFosil = Principal.Madera_Fosil;
 private static Block Maderaadn = Principal.Madera_Fosil_Adn;
