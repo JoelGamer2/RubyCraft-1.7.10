@@ -3,6 +3,7 @@ package RubyCraft.Generacion;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Estructuras.Arbol;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
@@ -52,7 +53,6 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
         generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
         generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
-        generarmadera(Principal.Madera_Fosil, world, rand, x, z, 20, 40, 40, 63, 63, Principal.Madera_Fosil);
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn){
@@ -91,8 +91,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
             int zRand = z * 16 + rand.nextInt(16);
             int yRand = 61;
            if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
-        	   
-        	   if(world.getBlock(xRand, yRand, zRand) == Principal.Madera_Fosil) {
+        	         
             gen.generate(world, rand, xRand, yRand, zRand);
         	   }
 
@@ -101,7 +100,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
             barrocongeladoadn.generate(world, rand, xRand, yRand - 1, zRand);
             barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
                 }
-             }
+             
           }
     
     
@@ -163,32 +162,4 @@ public void generarhielo(Block block, World world, Random rand, int x, int z, in
                 }
     	     }  
           }   
-
-public void generarmadera(Block block, World world, Random rand, int x, int z, int min, int max, int chance, int ymin, int ymax, Block togenerate) {
-
-    
-	int vienSize = min + rand.nextInt(max);
-	
-	maderahueso = (15 * vienSize)/100;
-	maderaambar = (10 * vienSize)/100;
-	maderaadn = (7 * vienSize)/100;
-	
-	WorldGenMinable gen = new WorldGenMinable(block, vienSize, togenerate);
-	
-	WorldGenMinable maderahuesogen = new WorldGenMinable(Principal.Madera_Fosil_Hueso,hielohueso, Principal.Madera_Fosil);
-	WorldGenMinable maderaadngen = new WorldGenMinable(Principal.Madera_Fosil_Adn, hieloadn, Principal.Madera_Fosil);
-	WorldGenMinable maderaambargen = new WorldGenMinable(Principal.Madera_Fosil_Ambar, hieloambar, Principal.Madera_Fosil);
-
-	for(int i = 0; i < chance; i++){
-		int xRand = x * 16 + rand.nextInt(16);
-		int yRand = 50 + rand.nextInt(170);
-		int zRand = z * 16 + rand.nextInt(16);
-		//gen.generate(world, rand, xRand, yRand, zRand);
-		
-		maderahuesogen.generate(world, rand, xRand, yRand - 1, zRand);
-		maderaadngen.generate(world, rand, xRand, yRand - 1, zRand);
-		maderahuesogen.generate(world, rand, xRand, yRand - 1, zRand);
-            
-	     }  
-      }   
 	}

@@ -4,6 +4,7 @@ package RubyCraft.Estructuras;
 import java.util.Random;
 
 import RubyCraft.xJuanathan.Principal;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -11,13 +12,19 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class Arbol extends WorldGenerator
 {
-	
-public static int x1;
-public static int y1 = 0;
-public static int z1;
+
+private static Block MaderaFosil = Principal.Madera_Fosil;
+private static Block Maderaadn = Principal.Madera_Fosil_Adn;
+private static Block Maderaambar = Principal.Madera_Fosil_Ambar;
+private static Block MaderaHueso = Principal.Madera_Fosil_Hueso;
+
+private static Block bloque;
+
 	public boolean generate(World world, Random rand, int x, int y, int z)
 	{
 	
+		
+		
 		    generate_r0(world,  x, y, z);
 		
 
@@ -29,166 +36,217 @@ public static int z1;
 	public boolean generate_r0(World world,  int x, int y, int z)
 	{
 		
-
-		world.setBlock(x + 11, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		
-		world.setBlock(x + 12, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 0, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 1, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 2, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 15, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 16, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 19, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 11, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 12, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 15, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 16, y + 3, z + 20, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 4, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 4, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 4, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 4, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 5, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 5, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 5, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 5, z + 18, Principal.Madera_Fosil, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 0, z + 15, bloque, 0, 3);	
+		world.setBlock(x + 12, y + 0, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 0, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 0, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 0, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 0, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 0, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 0, z + 16, bloque, 0, 3);
+		world.setBlock(x + 13, y + 0, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 0, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 0, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 0, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 0, z + 17, bloque, 0, 3);
+		world.setBlock(x + 12, y + 0, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 0, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 0, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 0, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 0, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 0, z + 18, bloque, 0, 3);
+		world.setBlock(x + 12, y + 0, z + 18, bloque, 0, 3);
+		world.setBlock(x + 13, y + 0, z + 18, bloque, 0, 3);
+		world.setBlock(x + 14, y + 0, z + 18, bloque, 0, 3);
+		world.setBlock(x + 15, y + 0, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 0, z + 18, bloque, 0, 3);
+		world.setBlock(x + 11, y + 0, z + 19, bloque, 0, 3);
+		world.setBlock(x + 12, y + 0, z + 19, bloque, 0, 3);
+		world.setBlock(x + 13, y + 0, z + 19, bloque, 0, 3);
+		world.setBlock(x + 14, y + 0, z + 19, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 0, z + 19, bloque, 0, 3);
+		world.setBlock(x + 16, y + 0, z + 19, bloque, 0, 3);
+		world.setBlock(x + 11, y + 0, z + 20, bloque, 0, 3);
+		world.setBlock(x + 12, y + 0, z + 20, bloque, 0, 3);
+		world.setBlock(x + 13, y + 0, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 0, z + 20, bloque, 0, 3);
+		world.setBlock(x + 15, y + 0, z + 20, bloque, 0, 3);
+		world.setBlock(x + 16, y + 0, z + 20, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 1, z + 15, bloque, 0, 3);
+		world.setBlock(x + 13, y + 1, z + 15, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 15, bloque, 0, 3);
+		world.setBlock(x + 15, y + 1, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 1, z + 15, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 16, bloque, 0, 3);
+		world.setBlock(x + 12, y + 1, z + 16, bloque, 0, 3);
+		world.setBlock(x + 13, y + 1, z + 16, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 16, bloque, 0, 3);
+		world.setBlock(x + 15, y + 1, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 1, z + 16, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 17, bloque, 0, 3);
+		world.setBlock(x + 12, y + 1, z + 17, bloque, 0, 3);
+		world.setBlock(x + 13, y + 1, z + 17, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 1, z + 17, bloque, 0, 3);
+		world.setBlock(x + 16, y + 1, z + 17, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 1, z + 18, bloque, 0, 3);
+		world.setBlock(x + 13, y + 1, z + 18, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 18, bloque, 0, 3);
+		world.setBlock(x + 15, y + 1, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 1, z + 18, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 19, bloque, 0, 3);
+		world.setBlock(x + 12, y + 1, z + 19, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 1, z + 19, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 19, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 1, z + 19, bloque, 0, 3);
+		world.setBlock(x + 16, y + 1, z + 19, bloque, 0, 3);
+		world.setBlock(x + 11, y + 1, z + 20, bloque, 0, 3);
+		world.setBlock(x + 12, y + 1, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 1, z + 20, bloque, 0, 3);
+		world.setBlock(x + 14, y + 1, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 1, z + 20, bloque, 0, 3);
+		world.setBlock(x + 16, y + 1, z + 20, bloque, 0, 3);
+		world.setBlock(x + 11, y + 2, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 2, z + 15, bloque, 0, 3);
+		world.setBlock(x + 13, y + 2, z + 15, bloque, 0, 3);
+		world.setBlock(x + 14, y + 2, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 2, z + 15, bloque, 0, 3);
+		world.setBlock(x + 16, y + 2, z + 15, bloque, 0, 3);
+		world.setBlock(x + 11, y + 2, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 2, z + 16, bloque, 0, 3);
+		world.setBlock(x + 13, y + 2, z + 16, bloque, 0, 3);
+		world.setBlock(x + 14, y + 2, z + 16, bloque, 0, 3);
+		world.setBlock(x + 15, y + 2, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 2, z + 16, bloque, 0, 3);
+		world.setBlock(x + 11, y + 2, z + 17, bloque, 0, 3);
+		world.setBlock(x + 12, y + 2, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 2, z + 17, bloque, 0, 3);
+		world.setBlock(x + 14, y + 2, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 2, z + 17, bloque, 0, 3);
+		world.setBlock(x + 16, y + 2, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 2, z + 18, bloque, 0, 3);
+		world.setBlock(x + 12, y + 2, z + 18, bloque, 0, 3);
+		world.setBlock(x + 13, y + 2, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 2, z + 18, bloque, 0, 3);
+		world.setBlock(x + 15, y + 2, z + 18, bloque, 0, 3);
+		world.setBlock(x + 16, y + 2, z + 18, bloque, 0, 3);
+		world.setBlock(x + 11, y + 2, z + 19, bloque, 0, 3);
+		world.setBlock(x + 12, y + 2, z + 19, bloque, 0, 3);
+		world.setBlock(x + 13, y + 2, z + 19, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 2, z + 19, bloque, 0, 3);
+		world.setBlock(x + 15, y + 2, z + 19, bloque, 0, 3);
+		world.setBlock(x + 16, y + 2, z + 19, bloque, 0, 3);
+		world.setBlock(x + 11, y + 2, z + 20, bloque, 0, 3);
+		world.setBlock(x + 12, y + 2, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 2, z + 20, bloque, 0, 3);
+		world.setBlock(x + 14, y + 2, z + 20, bloque, 0, 3);
+		world.setBlock(x + 15, y + 2, z + 20, bloque, 0, 3);
+		world.setBlock(x + 16, y + 2, z + 20, bloque, 0, 3);
+		world.setBlock(x + 11, y + 3, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 3, z + 15, bloque, 0, 3);
+		world.setBlock(x + 13, y + 3, z + 15, bloque, 0, 3);
+		world.setBlock(x + 14, y + 3, z + 15, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 3, z + 15, bloque, 0, 3);
+		world.setBlock(x + 16, y + 3, z + 15, bloque, 0, 3);
+		world.setBlock(x + 11, y + 3, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 12, y + 3, z + 16, bloque, 0, 3);
+		world.setBlock(x + 13, y + 3, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 3, z + 16, bloque, 0, 3);
+		world.setBlock(x + 15, y + 3, z + 16, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 3, z + 16, bloque, 0, 3);
+		world.setBlock(x + 11, y + 3, z + 17, bloque, 0, 3);
+		world.setBlock(x + 12, y + 3, z + 17, bloque, 0, 3);
+		world.setBlock(x + 13, y + 3, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 3, z + 17, bloque, 0, 3);
+		world.setBlock(x + 15, y + 3, z + 17, bloque, 0, 3);
+		world.setBlock(x + 16, y + 3, z + 17, bloque, 0, 3);
+		world.setBlock(x + 11, y + 3, z + 18, bloque, 0, 3);
+		world.setBlock(x + 12, y + 3, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 3, z + 18, bloque, 0, 3);
+		world.setBlock(x + 14, y + 3, z + 18, bloque, 0, 3);
+		world.setBlock(x + 15, y + 3, z + 18, bloque, 0, 3);
+		world.setBlock(x + 16, y + 3, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 11, y + 3, z + 19, bloque, 0, 3);
+		world.setBlock(x + 12, y + 3, z + 19, bloque, 0, 3);
+		world.setBlock(x + 13, y + 3, z + 19, bloque, 0, 3);
+		world.setBlock(x + 14, y + 3, z + 19, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 15, y + 3, z + 19, bloque, 0, 3);
+		world.setBlock(x + 16, y + 3, z + 19, bloque, 0, 3);
+		world.setBlock(x + 11, y + 3, z + 20, bloque, 0, 3);
+		world.setBlock(x + 12, y + 3, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 13, y + 3, z + 20, bloque, 0, 3);
+		world.setBlock(x + 14, y + 3, z + 20, bloque, 0, 3);
+		world.setBlock(x + 15, y + 3, z + 20, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 16, y + 3, z + 20, bloque, 0, 3);
+		world.setBlock(x + 13, y + 4, z + 17, bloque, 0, 3);
+		world.setBlock(x + 14, y + 4, z + 17, bloque, 0, 3);
+		world.setBlock(x + 13, y + 4, z + 18, bloque, 0, 3);
+		world.setBlock(x + 14, y + 4, z + 18, bloque, 0, 3);
+		world.setBlock(x + 13, y + 5, z + 17, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 5, z + 17, bloque, 0, 3);
+		world.setBlock(x + 13, y + 5, z + 18, bloque, 0, 3);
+		world.setBlock(x + 14, y + 5, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
 		world.setBlock(x + 8, y + 6, z + 12, Blocks.log2, 1, 3);
 		world.setBlock(x + 19, y + 6, z + 12, Blocks.log2, 1, 3);
-		world.setBlock(x + 13, y + 6, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 6, z + 17, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 13, y + 6, z + 18, Principal.Madera_Fosil, 0, 3);
-		world.setBlock(x + 14, y + 6, z + 18, Principal.Madera_Fosil, 0, 3);
+		world.setBlock(x + 13, y + 6, z + 17, bloque, 0, 3);
+		world.setBlock(x + 14, y + 6, z + 17, bloque, 0, 3);
+		world.setBlock(x + 13, y + 6, z + 18, bloque, 0, 3);
+		VerqueBloqueGenerar();
+		world.setBlock(x + 14, y + 6, z + 18, bloque, 0, 3);
 		world.setBlock(x + 8, y + 6, z + 23, Blocks.log2, 1, 3);
 		world.setBlock(x + 19, y + 6, z + 23, Blocks.log2, 1, 3);
 		world.setBlock(x + 8, y + 7, z + 11, Blocks.log2, 1, 3);
@@ -1536,6 +1594,45 @@ public static int z1;
 		return true;
 
 	}
+	
+	
+	public static void VerqueBloqueGenerar() {
+	   int detectaradn = 0;
+		Random generator2 = new Random(); 
+        int nSelection = generator2.nextInt(posiblesbloques.length); 
+        String bloque1 = posiblesbloques[nSelection]; 
+        
+        
+        if(bloque1.equalsIgnoreCase("hueso")) {
+        	bloque = MaderaHueso;
+        }else if(bloque1.equalsIgnoreCase("adn")) {
+        	
+        	detectaradn = 1 + generator2.nextInt(10);
+        	if(detectaradn <= 3) {
+        		bloque = Maderaadn;
+        	}else {
+        		bloque = MaderaFosil;
+        	}
+        }else if(bloque1.equalsIgnoreCase("ambar")) {
+        	bloque = Maderaambar;
+        }else if(bloque1.equalsIgnoreCase("normal")) {
+        	bloque = MaderaFosil;
+        }
+		
+	}
+	
+	
+	private static String[] posiblesbloques = {
+			"normal",
+			"hueso",
+			"normal",
+			"adn",
+			"normal",
+			"ambar",
+			"normal",
+			
+	};
+	
 	public boolean generate_r02(World world,  int x, int y, int z)
 	{
 
