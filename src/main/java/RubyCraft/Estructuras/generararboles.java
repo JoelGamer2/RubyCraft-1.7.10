@@ -6,6 +6,7 @@ import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 
 public class generararboles implements IWorldGenerator{
@@ -23,9 +24,9 @@ public class generararboles implements IWorldGenerator{
 		//generateOre(block,                world, rand, x, z, min, max, chance, minY, maxY, generateIn);
     	generatetree(world, rand, x,z,1);
     	
-    	if(RubyCraft.Navidad) {
+    	
     	generatetreegrande(world, rand, x, z, 1);
-    	}
+    	
     	
     	
     }

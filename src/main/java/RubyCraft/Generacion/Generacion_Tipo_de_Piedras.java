@@ -91,8 +91,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
             int zRand = z * 16 + rand.nextInt(16);
             int yRand = 61;
            if(world.getBiomeGenForCoords(xRand, zRand).biomeName.startsWith("Swampland")) {
-        	   
-        	   if(world.getBlock(xRand, yRand, zRand) == Principal.Madera_Fosil) {
+        	         
             gen.generate(world, rand, xRand, yRand, zRand);
         	   }
 
@@ -101,7 +100,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
             barrocongeladoadn.generate(world, rand, xRand, yRand - 1, zRand);
             barrocongeladohueso.generate(world, rand, xRand, yRand - 1, zRand);
                 }
-             }
+             
           }
     
     
