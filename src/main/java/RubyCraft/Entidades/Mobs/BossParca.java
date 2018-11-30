@@ -13,7 +13,6 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
@@ -252,11 +251,6 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    		tickparticulas = 0;
 	    	}
 	    	
-	    }
-	    @Override
-	    protected int getExperiencePoints(EntityPlayer player) {
-	    	// TODO Auto-generated method stub
-	    	return 20;
 	    }
 	    
 	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/

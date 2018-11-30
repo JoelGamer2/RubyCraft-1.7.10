@@ -2,12 +2,12 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
-import RubyCraft.Bases.Barros;
 import RubyCraft.xJuanathan.Principal;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-public class Barro_Congelado_Adn extends Barros{
+public class Barro_Congelado_Adn extends Block {
 
 	public Barro_Congelado_Adn(Material p_i45394_1_) {
 		super(p_i45394_1_);
@@ -23,38 +23,4 @@ public class Barro_Congelado_Adn extends Barros{
 				return Principal.vial_de_sangre_del_pantano;
 			}
 
-			
-	// Dropeo de item afectado por encantamiento fortuna
-			
-			@Override
-			public int quantityDroppedWithBonus(int fortune, Random rand) 
-			{
-				int probabilidad;
-				
-				if (fortune >= 1)
-				{
-					probabilidad = rand.nextInt(100);
-					
-					if (probabilidad >= 86 && probabilidad < 98)
-					{
-						return fortune + 2;
-					}
-					
-					else if (probabilidad >= 98 && probabilidad <= 100)
-					{
-						return fortune + 3;
-					}
-					
-					else {
-					
-					return fortune + 1;
-					}
-				}
-				
-				else {
-					
-				return 1;
-				}
-				
-			}
 }

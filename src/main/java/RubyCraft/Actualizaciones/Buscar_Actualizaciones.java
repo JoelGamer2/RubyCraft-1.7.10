@@ -33,7 +33,6 @@ public class Buscar_Actualizaciones {
 						RubyCraft.logger.info(UltimaVersion + " Esta es la Ultima Version de RubyCraft Disponible");
 						Bloque_de_Actualizaciones.UltimaVersion = UltimaVersion;
 						TestearActualizaciones.ChangeLog = ChangeLog;
-						Bloque_de_Actualizaciones.changeLog = ChangeLog;
 						if(!Mensaje1.equals("")){
 						RubyCraft.logger.info(Mensaje1);
 					    TestearActualizaciones.Mensaje1 = Mensaje1;

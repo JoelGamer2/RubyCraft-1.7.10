@@ -1,7 +1,6 @@
 package RubyCraft.TileEntity;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TileEntitys_Principal {
@@ -14,7 +13,6 @@ public class TileEntitys_Principal {
 		GameRegistry.registerTileEntity(TileEntityCofredeRuby.class, RubyCraft.modid + "CofredeRubyTileEntity");
 		GameRegistry.registerTileEntity(TileEntityMesa_de_Ruby.class, RubyCraft.modid + "Mesa de Ruby");
 		GameRegistry.registerTileEntity(TileEntityMesa_de_Zafiro.class, RubyCraft.modid + "Mesa de Zafiro");
-		GameRegistry.registerTileEntity(TileEntityAltar.class, RubyCraft.modid + "Altar");
 	}
 	
 }

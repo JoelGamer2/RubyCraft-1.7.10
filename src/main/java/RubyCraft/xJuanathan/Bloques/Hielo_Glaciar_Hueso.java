@@ -1,9 +1,9 @@
 package RubyCraft.xJuanathan.Bloques;
 
-import RubyCraft.Bases.Hielo;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class Hielo_Glaciar_Hueso extends Hielo {
+public class Hielo_Glaciar_Hueso extends Block {
 
 	public Hielo_Glaciar_Hueso(Material p_i45394_1_) {
 		super(p_i45394_1_);
