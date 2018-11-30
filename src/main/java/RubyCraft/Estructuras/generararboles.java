@@ -38,7 +38,7 @@ public class generararboles implements IWorldGenerator{
     		int xRand = chunkX * 16 + rand.nextInt(16);
     		int zRand = chunkZ * 16 + rand.nextInt(16);
     		int yRand = world.getHeightValue(xRand, zRand) -1;
-    		if(world.getBlock(xRand, yRand, zRand) == Blocks.grass) {
+    		if(world.getBlock(xRand, yRand, zRand) == Blocks.grass && yRand > 10) {
     		gen.generate(world, rand, xRand, yRand + 1, zRand);
 
     		}
@@ -53,8 +53,10 @@ public class generararboles implements IWorldGenerator{
      		int zRand = chunkZ * 16 + rand.nextInt(16);
      		int yRand = world.getHeightValue(xRand, zRand) -1;
      		if(world.getBlock(xRand, yRand, zRand) == Blocks.grass) {
+     			
+     			if(world.getBiomeGenForCoords(xRand, zRand) == BiomeGenBase.plains && yRand > 10) {
      		gen.generate_r0(world, xRand, yRand -8, zRand);
-
+     			}
      		}
      		
      	}
