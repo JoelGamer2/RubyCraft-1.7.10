@@ -26,6 +26,9 @@ import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
 import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
 import RubyCraft.xJuanathan.Bloques.flor_del_bosque;
 import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
+import RubyCraft.xJuanathan.Herramientas.hacha_de_arqueologo;
+import RubyCraft.xJuanathan.Herramientas.pala_de_arqueologo;
+import RubyCraft.xJuanathan.Herramientas.pico_de_arqueologo;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
 import RubyCraft.xJuanathan.Items.calavera_elfo;
@@ -100,12 +103,17 @@ public class Principal {
 	public static Item Fragmento_de_fosil;
 	
 	//Heramientas
+	public static Item pico_de_arqueologo;
+	public static Item hacha_de_arqueologo;
+	public static Item pala_de_arqueologo;
+	
 	public static Item Pico_de_roca_fosilizada;
 	
 	
 	
 	//Materiales
 	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 7, 700, 8.0F, 2.0F, 45); 
+	public static final Item.ToolMaterial arqueologotoolmaterial = EnumHelper.addToolMaterial("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45);
 	
 	//Items Evento Navidad
 	
@@ -258,6 +266,14 @@ public class Principal {
 		Pico_de_roca_fosilizada = new Pico_de_roca_fosilizada(rocafosilidadtoolmaterial).setUnlocalizedName("Pico_de_roca_fosilizada").setTextureName(RubyCraft.modid + ":Pico_de_roca_fosilizada").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(Pico_de_roca_fosilizada, Pico_de_roca_fosilizada.getUnlocalizedName().substring(5));
 
+		pico_de_arqueologo = new pico_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("pico_de_arqueologo").setTextureName(RubyCraft.modid + ":pico_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(pico_de_arqueologo, pico_de_arqueologo.getUnlocalizedName().substring(5));
+		 
+		hacha_de_arqueologo = new hacha_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("hacha_de_arqueologo").setTextureName(RubyCraft.modid + ":hacha_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(hacha_de_arqueologo, hacha_de_arqueologo.getUnlocalizedName().substring(5));
+		
+		pala_de_arqueologo = new pala_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("pala_de_arqueologo").setTextureName(RubyCraft.modid + ":pala_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(pala_de_arqueologo, pala_de_arqueologo.getUnlocalizedName().substring(5));
 		
 		//Items evento Navidad
 		
