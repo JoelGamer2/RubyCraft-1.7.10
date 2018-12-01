@@ -32,6 +32,7 @@ import RubyCraft.xJuanathan.Items.calavera_elfo;
 import RubyCraft.xJuanathan.Items.calavera_gigante;
 import RubyCraft.xJuanathan.Items.calavera_troll;
 import RubyCraft.xJuanathan.Items.calavera_yeti;
+import RubyCraft.xJuanathan.Items.catalizador_de_esencias;
 import RubyCraft.xJuanathan.Items.cuerda;
 import RubyCraft.xJuanathan.Items.cuerda_trenzada;
 import RubyCraft.xJuanathan.Items.esencia_de_las_montanas;
@@ -133,6 +134,8 @@ public class Principal {
 	public static Item esencia_del_pantano;
 	public static Item esencia_de_las_montanas;
 	public static Item esencia_del_bosque;
+	
+	public static Item catalizador_de_esencias;
 	
 	public static Item silex;
 	
@@ -311,6 +314,9 @@ public class Principal {
 		
 		esencia_del_bosque = new esencia_del_bosque().setUnlocalizedName("esencia_del_bosque").setTextureName(RubyCraft.modid+":esencia_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(esencia_del_bosque, esencia_del_bosque.getUnlocalizedName().substring(5));
+		
+		catalizador_de_esencias = new catalizador_de_esencias().setUnlocalizedName("catalizador_de_esencias").setTextureName(RubyCraft.modid+":catalizador_de_esencias").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(catalizador_de_esencias, catalizador_de_esencias.getUnlocalizedName().substring(5));
 		
 		silex = new silex().setUnlocalizedName("silex").setTextureName(RubyCraft.modid+":silex").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(silex, silex.getUnlocalizedName().substring(5));
