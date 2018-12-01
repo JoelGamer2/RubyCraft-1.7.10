@@ -161,11 +161,25 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
 
+---punta de espada                    Servirá para hacer la espada de aprendiz de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada.
+
 ---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
+
+                                   H 
+           Mesa de crafteo ==>     H           H=hilo        
+                                   H
 
 ---cuerda                             Sirve para craftear cuerda trenzada. Se consigue poniendo 3 de hilo de cuerda en horizontal en el medio de la mesa de crafteo.
 
+                                   H 
+           Mesa de crafteo ==>     H           H=hilo de cuerda         
+                                   H
+
 ---cuerda trenzada                    Sirve para craftear herramientas de aprendiz de arqueologo.
+
+                                 C H C
+           Mesa de crafteo ==>   H C H         H=hilo de cuerda, C=cuerda.        
+                                 C H C
 
 
 /////////////Herramientas///////////////////////
@@ -174,7 +188,7 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 ---Herramientas de aprendiz de arqueologo      Estas son las primeras herramientas que deberemos craftear para poder ir avanzando en el evento de navidad.
                                                Estaran formadas por: pico de aprendiz de arqueologo, hacha de aprendiz de arqueologo y pala de aprendiz de arqueologo.
                                                
-                                               ("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45)
+                                               ("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45) (nivel, durabilidad, eficiencia, daño +4, nivel encantamiento)
                                                
      ---pico de aprendiz de arqueologo         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
                                             
@@ -194,7 +208,11 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
            Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
                                    P 
                                    
-                                   
+   ---espada de aprendiz de arqueologo         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada. 
+
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada.  
+                                   P
               
                                    
                                    
