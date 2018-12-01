@@ -26,6 +26,7 @@ import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
 import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
 import RubyCraft.xJuanathan.Bloques.flor_del_bosque;
 import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
+import RubyCraft.xJuanathan.Herramientas.espada_de_arqueologo;
 import RubyCraft.xJuanathan.Herramientas.hacha_de_arqueologo;
 import RubyCraft.xJuanathan.Herramientas.pala_de_arqueologo;
 import RubyCraft.xJuanathan.Herramientas.pico_de_arqueologo;
@@ -44,6 +45,7 @@ import RubyCraft.xJuanathan.Items.esencia_del_bosque;
 import RubyCraft.xJuanathan.Items.esencia_del_pantano;
 import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
+import RubyCraft.xJuanathan.Items.punta_de_espada;
 import RubyCraft.xJuanathan.Items.silex;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_cenagosa;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_hielo;
@@ -106,6 +108,7 @@ public class Principal {
 	public static Item pico_de_arqueologo;
 	public static Item hacha_de_arqueologo;
 	public static Item pala_de_arqueologo;
+	public static Item espada_de_arqueologo;
 	
 	public static Item Pico_de_roca_fosilizada;
 	
@@ -151,6 +154,7 @@ public class Principal {
 	public static Item cuerda;
 	public static Item cuerda_trenzada;
 	
+	public static Item punta_de_espada;
 	
 	public static void preinit() 
 	{
@@ -275,6 +279,9 @@ public class Principal {
 		pala_de_arqueologo = new pala_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("pala_de_arqueologo").setTextureName(RubyCraft.modid + ":pala_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(pala_de_arqueologo, pala_de_arqueologo.getUnlocalizedName().substring(5));
 		
+		espada_de_arqueologo = new espada_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("espada_de_arqueologo").setTextureName(RubyCraft.modChecker + ":espada_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(espada_de_arqueologo, espada_de_arqueologo.getUnlocalizedName().substring(5));
+		
 		//Items evento Navidad
 		
 		ambar = new ambar().setUnlocalizedName("ambar").setTextureName(RubyCraft.modid+":ambar").setCreativeTab(RubyCraft.Rubycrafttab);
@@ -346,7 +353,8 @@ public class Principal {
 		cuerda_trenzada = new cuerda_trenzada().setUnlocalizedName("cuerda_trenzada").setTextureName(RubyCraft.modid+":cuerda_trenzada").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(cuerda_trenzada, cuerda_trenzada.getUnlocalizedName().substring(5));
 		
-		
+		punta_de_espada = new punta_de_espada().setUnlocalizedName("punta_de_espada").setTextureName(RubyCraft.modid + ":punta_de_espada").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(punta_de_espada, punta_de_espada.getUnlocalizedName().substring(5));
 		
 	}
 	
