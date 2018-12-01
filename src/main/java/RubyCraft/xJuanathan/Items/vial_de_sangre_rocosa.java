@@ -24,7 +24,7 @@ public class vial_de_sangre_rocosa extends Item{
 
 	        if (!world.isRemote)
 	        {
-	        	player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, ( (600 - 200) * 30) / 1 , 1));
+	        	player.addPotionEffect(new PotionEffect(5, ( (600 - 200) * 30) / 1 , 1));
 	        }
                  if(!(stack.stackSize == 0)) {
                      return stack.stackSize <= 0 ? new ItemStack(this) : stack;
