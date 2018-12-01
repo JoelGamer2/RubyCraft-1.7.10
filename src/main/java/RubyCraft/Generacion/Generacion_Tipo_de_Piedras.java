@@ -3,7 +3,6 @@ package RubyCraft.Generacion;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Estructuras.Arbol;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;

@@ -2,7 +2,6 @@ package RubyCraft.Estructuras;
 
 import java.util.Random;
 
-import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;

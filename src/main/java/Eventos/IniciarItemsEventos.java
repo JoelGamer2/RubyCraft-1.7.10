@@ -2,6 +2,7 @@ package Eventos;
 
 import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
+import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -85,6 +86,11 @@ public class IniciarItemsEventos {
 		
 		if(RubyCraft.Navidad) {
 			
+			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_glaciar, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_los_hielos,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_hielo,'f',Principal.flor_de_las_nieves,'c',Principal.calavera_yeti});
+			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_del_pantano, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_pantano,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_pantano,'f',Principal.flor_del_Pantano,'c',Principal.calavera_troll});
+			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_rocosa, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_las_montanas,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_las_montanas,'f',Principal.flor_de_las_montanas,'c',Principal.calavera_gigante});
+			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_selvatica, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_bosque,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_bosque,'f',Principal.flor_del_bosque,'c',Principal.calavera_elfo});
+
 		}
 		
 	}
