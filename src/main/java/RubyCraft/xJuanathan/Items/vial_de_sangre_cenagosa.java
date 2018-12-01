@@ -26,14 +26,14 @@ public class vial_de_sangre_cenagosa extends Item{
 	        {
 	        	player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, ( (600 - 200) * 30) / 1 , 1));
 	        }
-           if(player.capabilities.isCreativeMode) {
-        	   
-	        return stack.stackSize <= 0 ? new ItemStack(this) : stack ;
-	        
-           }else {
+                 if(!(stack.stackSize == 0)) {
+                     return stack.stackSize <= 0 ? new ItemStack(this) : stack;
+                       }else if(!player.capabilities.isCreativeMode){
+                	      return null;
+                 }else {
+                     return stack.stackSize <= 0 ? new ItemStack(this) : stack;
+                 }
            
-           return null;
-           }
 	    }
 
 	    /**
