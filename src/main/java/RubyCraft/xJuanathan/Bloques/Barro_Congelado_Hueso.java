@@ -14,46 +14,46 @@ public class Barro_Congelado_Hueso extends Barros {
 		// TODO Auto-generated constructor stub
 	}
 	
-	//Dropeo al romper el Bloque
+	//Dropeo al romper el bloque
 	
-			@Override
-			public Item getItemDropped(int fortune, Random rand, int probabilidad) 
-			{
-				return Principal.vial_de_sangre_del_pantano;
-			}
-
+	@Override
+	public Item getItemDropped(int probabilidad, Random rand, int fortune) 
+	{
+		int topehueso = 80;
+		int topecalavera = 95;
+		
+		if (fortune >= 0)
+		{
+			probabilidad = rand.nextInt(100);
 			
-	// Dropeo de item afectado por encantamiento fortuna
-			
-			@Override
-			public int quantityDroppedWithBonus(int fortune, Random rand) 
+			if (fortune == 1)
 			{
-				int probabilidad;
-				
-				if (fortune >= 1)
-				{
-					probabilidad = rand.nextInt(100);
-					
-					if (probabilidad >= 86 && probabilidad < 98)
-					{
-						return fortune + 2;
-					}
-					
-					else if (probabilidad >= 98 && probabilidad <= 100)
-					{
-						return fortune + 3;
-					}
-					
-					else {
-					
-					return fortune + 1;
-					}
-				}
-				
-				else {
-					
-				return 1;
-				}
-				
+				topehueso = 75;
+				topecalavera = 90;
 			}
+			
+			else if (fortune > 1 && fortune <= 8)
+			{
+				topehueso = 80 - ((fortune*10) - 8);
+				topecalavera = 95 - ((fortune*10) - 10);
+			}
+			
+			if (probabilidad >= 0 && probabilidad < topehueso)
+			{
+				return Principal.Fragmento_de_fosil;
+			}
+			
+			else if (probabilidad >= topehueso && probabilidad < topecalavera)
+			{
+				return Principal.hueso_fosilizado;
+			}
+			
+			else if (probabilidad >= topecalavera && probabilidad <= 100)
+			{
+				return Principal.calavera_troll;
+			}
+		}
+		
+		return null;
+	}
 }

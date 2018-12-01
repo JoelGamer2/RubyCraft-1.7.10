@@ -7,7 +7,8 @@
                                  Con fortuna 0 la probabilidad sera de un 5% para la esencia, aumentando un 10% la probabilidad con cada nivel de fortuna.
                                  Se podra picar con el pico de aprendiz de arqueologo.
                                  
----Hielo Glaciar Hueso           Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera yeti. Se podra picar con el pico de roca fosilizada
+---Hielo Glaciar Hueso           Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera yeti. 
+                                 La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
 ---Hielo Glaciar Ambar           Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
 
@@ -21,11 +22,11 @@ hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comu
                                  Con fortuna 0 la probabilidad sera de un 95% para el barro y un 5% para la esencia, disminuyendo un 10% el barro y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con la pala de aprendiz de arqueologo.
                                  
----Barro Congelado               Este bloque dropeara con una probabilidad del 98% el bloque de barro congelado y un 2% de hielo glaciar. Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft.
+---Barro Congelado               Este bloque dropeara con una probabilidad del 98% el bloque de barro congelado y un 2% de hielo glaciar.
                                  Se podra picar con el pico de aprendiz de arqueologo.
 
----Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. Se podra picar con el pico de roca fosilizada
-                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de roca fosilizada
+---Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. 
+                                 La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
                                  
 ---Barro Congelado Ambar         Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
                                  Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de hueso fosilizado
@@ -42,7 +43,8 @@ barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el ma
                                  Con fortuna 0 la probabilidad sera de un 95% para la roca y un 5% para la esencia, disminuyendo un 10% la roca y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con el pico de aprendiz de arqueologo.
                                  
----Roca Fosil Hueso              Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera gigante. Se podra picar con el pico de roca fosilizada
+---Roca Fosil Hueso              Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera gigante. 
+                                 La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
 ---Roca Fosil Ambar              Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
 
@@ -56,7 +58,8 @@ roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun e
                                  Con fortuna 0 la probabilidad sera de un 95% para la madera y un 5% para la esencia, disminuyendo un 10% la madera y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con el hacha de aprendiz de arqueologo.
 
----Madera Fosil Hueso            Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera elfo. Se podra picar con el pico de roca fosilizada
+---Madera Fosil Hueso            Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera elfo. 
+                                 La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
 ---Madera Fosil Ambar            Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
 

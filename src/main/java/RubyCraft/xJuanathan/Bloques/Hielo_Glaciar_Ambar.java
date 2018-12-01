@@ -10,8 +10,8 @@ import net.minecraft.world.IBlockAccess;
 
 public class Hielo_Glaciar_Ambar extends Hielo {
 
-	public Hielo_Glaciar_Ambar(Material p_i45394_1_) {
-		super(p_i45394_1_);
+	public Hielo_Glaciar_Ambar(Material ice) {
+		super(ice);
 		// TODO Auto-generated constructor stub
 	}
 	

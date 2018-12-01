@@ -608,12 +608,54 @@ item.Fragmento_de_fosil.name=Fragmento de fosil
 item.ambar.name=Ambar
 item.vial_de_sangre_de_hielo.name=vial de sangre de hielo
 item.vial_de_sangre_glaciar.name=vial de sangre glaciar
+
 item.vial_de_sangre_del_pantano.name=vial de sangre del pantano
 item.vial_de_sangre_cenagosa.name=vial de sangre cenagosa
+
 item.vial_de_sangre_de_las_montanas.name=vial de sangre de las montanas
 item.vial_de_sangre_rocosa.name=vial de sangre rocosa
+
 item.vial_de_sangre_del_bosque.name=vial de sangre del bosque
 item.vial_de_sangre_selvatica.name=vial de sangre selvatica
+
+item.hueso_fosilizado.name=Hueso fosilizado
+
+item.calavera_yeti.name=Calavera de Yeti
+item.calavera_troll.name=Calavera de Troll
+item.calavera_gigante.name=Calavera de Gigante
+item.calavera_elfo.name=Calavera de Elfo
+
+item.esencia_de_los_hielos.name=Esencia de los hielos
+item.esencia_del_pantano.name=Esencia del pantano
+item.esencia_de_las_montanas.name=Esencia de las montanas
+item.esencia_del_bosque.name=Esencia del bosque
+
+item.silex.name=Silex
+
+item.hilo_de_cuerda.name=Hilo de cuerda
+item.cuerda.name=Cuerda
+item.cuerda_trenzada.name=Cuerda trenzada
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

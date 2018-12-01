@@ -9,8 +9,8 @@ import net.minecraft.item.Item;
 
 public class Hielo_Glaciar_Adn extends Hielo {
 
-	public Hielo_Glaciar_Adn(Material p_i45394_1_) {
-		super(p_i45394_1_);
+	public Hielo_Glaciar_Adn(Material ice) {
+		super(ice);
 		// TODO Auto-generated constructor stub
 	}
 	

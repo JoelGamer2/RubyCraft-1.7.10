@@ -10,5 +10,4 @@ public class Hielo extends Block {
 		this.slipperiness = 1.1F;
 		this.setStepSound(this.soundTypeGlass);
 	}
-
 }
