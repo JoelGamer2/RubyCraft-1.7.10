@@ -17,14 +17,14 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.EnumDifficulty;
 
 public class Eventos_especiales {
-
+	
 	private boolean Iniciadosesion = false;
 	public static boolean musica = false;
 	public static String Parcanombre = EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft-Bosses" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + " ";
 	public static String ParcaFase1 = Parcanombre + "La parca llama a su ejercito";
 	public static String ParcaFase2 = Parcanombre + "La parca huye de los humanos";
 	public static String ParcaFase3 = Parcanombre + "La parca Chupa las almas";
-	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage();
+	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage().setDamageBypassesArmor();
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		
@@ -106,7 +106,7 @@ public class Eventos_especiales {
 	
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
-		
+	
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
 			BossParca.Activo = false;
 			Eventos_especiales.musica = false;

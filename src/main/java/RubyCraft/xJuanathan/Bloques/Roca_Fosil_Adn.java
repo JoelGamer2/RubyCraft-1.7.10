@@ -23,4 +23,38 @@ public class Roca_Fosil_Adn extends Block {
 			return Principal.vial_de_sangre_de_las_montanas;
 		}
 
+		
+		// Dropeo de item afectado por encantamiento fortuna
+				
+				@Override
+				public int quantityDroppedWithBonus(int fortune, Random rand) 
+				{
+					int probabilidad;
+					
+					if (fortune >= 1)
+					{
+						probabilidad = rand.nextInt(100);
+						
+						if (probabilidad >= 86 && probabilidad < 98)
+						{
+							return fortune + 2;
+						}
+						
+						else if (probabilidad >= 98 && probabilidad <= 100)
+						{
+							return fortune + 3;
+						}
+						
+						else {
+						
+						return fortune + 1;
+						}
+					}
+					
+					else {
+						
+					return 1;
+					}
+					
+				}
 }

@@ -9,8 +9,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.event.ClickEvent;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
 public class Bloque_de_Actualizaciones extends Block{
@@ -23,6 +25,7 @@ public class Bloque_de_Actualizaciones extends Block{
 	public static String Mensaje1 = "";
 	public static String Mensaje2 = "";
 	public static String Mensaje3 = "";
+	public static String changeLog = "";
 	/**Addons can not Modify
 	   Addons no pueden Modificar
 	 **/
@@ -52,7 +55,9 @@ public class Bloque_de_Actualizaciones extends Block{
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Mensaje3));
 				
 				}
-				
+				IChatComponent url = new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Click para ver el ChangeLog");
+				url.getChatStyle().setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, changeLog));
+				Minecraft.getMinecraft().thePlayer.addChatMessage(url);
 			}else if(Control_de_Version.Version_de_desarrolador) {
 				
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Cuidado esta es la DeveloperBuild " + EnumChatFormatting.GOLD + "puede ocurrir muchos bugs Version: " + EnumChatFormatting.RED + RubyCraft.version + EnumChatFormatting.RED + " INDEV"));
