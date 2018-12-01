@@ -630,6 +630,8 @@ item.esencia_del_pantano.name=swamp essence
 item.esencia_de_las_montanas.name=Mountain essence
 item.esencia_del_bosque.name=Forest essence
 
+item.catalizador_de_esencias.name=essence catalyst
+
 item.silex.name=Silex
 
 item.hilo_de_cuerda.name=string thread
