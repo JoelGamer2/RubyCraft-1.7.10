@@ -3,10 +3,15 @@ package RubyCraft.Generacion;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Estructuras.ArbolVerde;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -52,12 +57,17 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
         generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
         generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
+        
+        generarflores(world, rand, x, z, 1, Principal.flor_de_las_nieves, Blocks.snow_layer, BiomeGenBase.icePlains);
+        generarflores(world, rand, x, z, 1, Principal.flor_del_Pantano, Blocks.air, BiomeGenBase.swampland);
+        generarflores(world, rand, x, z, 1, Principal.flor_de_las_montanas, Blocks.air, BiomeGenBase.extremeHills);
+        generarflores(world, rand, x, z, 1, Principal.flor_del_bosque, Blocks.air, BiomeGenBase.forest);
     }
     
-    public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn){
+    public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generatein){
     	int vienSize = minVienSize + random.nextInt(maxVienSize - minVienSize);
     	int heightRange = maxY - minY;
-    	WorldGenMinable gen = new WorldGenMinable(block, vienSize, generateIn);
+    	WorldGenMinable gen = new WorldGenMinable(block, vienSize, generatein);
     	for(int i = 0; i < chance; i++){
     		int xRand = chunkX * 16 + random.nextInt(16);
     		int yRand = random.nextInt(heightRange);
@@ -67,7 +77,22 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	    }
         }
     
-    
+    public void generarflores(World world, Random rand, int chunkX, int chunkZ, int chance, Block block, Block  generatein, BiomeGenBase bioma){
+        int probrand = rand.nextInt(10);
+     	
+     	 WorldGenMinable gen = new WorldGenMinable(block, 5, generatein);
+     	if(probrand <= 3) {
+     		int xRand = chunkX * 16 + rand.nextInt(16);
+     		int zRand = chunkZ * 16 + rand.nextInt(16);
+     		int yRand = world.getHeightValue(xRand, zRand) -1;
+     		if(world.getBiomeGenForCoords(xRand, zRand) == bioma && yRand > 10 && world.getBlock(xRand, yRand, zRand) == Blocks.grass) {
+     		gen.generate(world, rand, xRand, yRand + 1, zRand);
+     		}
+
+     		
+     		
+     	}
+     }
     
     public void generarbarro(Block block,World world, Random rand, int x,int z, int min,int max, int chance, int ymin, int ymax, Block togenerate) {
 

@@ -7,19 +7,52 @@ import net.minecraft.world.World;
 
 public class Flores extends Block{
 
-	public Flores(Material p_i45394_1_) {
-		super(p_i45394_1_);
-		// TODO Auto-generated constructor stub
+	public Flores(Material material) {
+		super(material);
+		
+		this.setStepSound(this.soundTypeGrass);
 	}
+	/**Pone la caja de colisiones visual en su sitio**/
+	@Override
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
+	
+		return AxisAlignedBB.getBoundingBox(x+0.25, y, z+0.25, x+0.7, y+0.85, z+0.7);
+	}
+	
 	/**
      * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
      * cleared to be reused)
      */
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
     {
         return null;
     }
     
+    
+    /**Detecta donde se puede colocar el bloque solo se podra colocar en material tipo hierba y tierra**/
+    @Override
+ public boolean canBlockStay(World world, int x, int y, int z) {
+ 	
+ 	   if(world.getBlock(x, y - 1, z).getMaterial() == Material.grass || world.getBlock(x, y - 1, z).getMaterial() == Material.ground) {
+ 		   return true;
+ 	   }else {
+ 	   return false;
+ 	   }
+ }
+    @Override
+    public boolean canPlaceBlockAt(World world, int x, int y, int z)
+     {
+         return !super.canPlaceBlockAt(world, x, y, z) ? false : this.canBlockStay(world, x, y, z);
+     }
+    
+     @Override
+    public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
+    {
+        if (!this.canBlockStay(world, x, y, z))
+        {
+            world.func_147480_a(x, y, z, true);
+        }
+    }
     
     public boolean isOpaqueCube()
     {
@@ -40,8 +73,5 @@ public class Flores extends Block{
     public int getRenderType()
     {
         return 1;
-    }
-    
-   
-
+    }   
 }

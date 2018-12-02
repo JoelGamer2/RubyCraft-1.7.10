@@ -72,9 +72,11 @@ public static boolean URLNOVALIDAERROR = false;
 					
 					scanner.close();
 				} catch (MalformedURLException e) {
+					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e);
 					URLNOVALIDAERROR = true;
 					
 				} catch (IOException e1) {
+					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e1);
 					URLNOVALIDAERROR = true;
 				}
 			}
