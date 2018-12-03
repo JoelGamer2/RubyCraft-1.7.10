@@ -1,7 +1,5 @@
 package Eventos;
 
-import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
-
 import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
@@ -92,14 +90,20 @@ public class IniciarItemsEventos {
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_del_pantano, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_pantano,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_pantano,'f',Principal.flor_del_Pantano,'c',Principal.calavera_troll});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_rocosa, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_las_montanas,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_las_montanas,'f',Principal.flor_de_las_montanas,'c',Principal.calavera_gigante});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_selvatica, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_bosque,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_bosque,'f',Principal.flor_del_bosque,'c',Principal.calavera_elfo});
-            GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada, 1), new Object[] {"s","s",'s',Principal.silex});
-            GameRegistry.addRecipe(new ItemStack(Principal.espada_de_arqueologo, 1), new Object[] {" e ","cmc"," p ",'e',Principal.punta_de_espada,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+           
+			GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada_de_silex, 1), new Object[] {"s","s",'s',Principal.silex});
+            
+			GameRegistry.addRecipe(new ItemStack(Principal.espada_de_arqueologo, 1), new Object[] {" e ","cmc"," p ",'e',Principal.punta_de_espada_de_silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             GameRegistry.addRecipe(new ItemStack(Principal.pico_de_arqueologo, 1), new Object[] {"sms"," c "," p ",'s',Principal.silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             GameRegistry.addRecipe(new ItemStack(Principal.hacha_de_arqueologo, 1), new Object[] {"sms"," cs"," p ",'s',Principal.silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             GameRegistry.addRecipe(new ItemStack(Principal.pala_de_arqueologo, 1), new Object[] {" s ","cmc"," p ",'s',Principal.silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+           
             GameRegistry.addRecipe(new ItemStack(Principal.hilo_de_cuerda, 1), new Object[] {"h","h","h",'h',Items.string});
             GameRegistry.addRecipe(new ItemStack(Principal.cuerda, 3), new Object[] {"h","h","h",'h',Principal.hilo_de_cuerda});
             GameRegistry.addRecipe(new ItemStack(Principal.cuerda_trenzada, 3), new Object[] {"chc","hch","chc",'c',Principal.cuerda,'h',Principal.hilo_de_cuerda});
+           
+            GameRegistry.addRecipe(new ItemStack(Principal.diamante_activado, 1), new Object[] {" b ","hdm"," p ",'b',Principal.vial_de_sangre_del_bosque,'h',Principal.vial_de_sangre_de_hielo,'d',Items.diamond,'m',Principal.vial_de_sangre_de_las_montanas,'p',Principal.vial_de_sangre_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.catalizador_de_esencias, 1), new Object[] {" b ","hdm"," p ",'b',Principal.esencia_del_bosque,'h',Principal.esencia_de_los_hielos,'d',Principal.diamante_activado,'m',Principal.esencia_de_las_montanas,'p',Principal.esencia_del_pantano});
 		}
 		
 	}

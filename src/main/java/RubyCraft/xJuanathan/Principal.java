@@ -39,13 +39,14 @@ import RubyCraft.xJuanathan.Items.calavera_yeti;
 import RubyCraft.xJuanathan.Items.catalizador_de_esencias;
 import RubyCraft.xJuanathan.Items.cuerda;
 import RubyCraft.xJuanathan.Items.cuerda_trenzada;
+import RubyCraft.xJuanathan.Items.diamante_activado;
 import RubyCraft.xJuanathan.Items.esencia_de_las_montanas;
 import RubyCraft.xJuanathan.Items.esencia_de_los_hielos;
 import RubyCraft.xJuanathan.Items.esencia_del_bosque;
 import RubyCraft.xJuanathan.Items.esencia_del_pantano;
 import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
-import RubyCraft.xJuanathan.Items.punta_de_espada;
+import RubyCraft.xJuanathan.Items.punta_de_espada_de_silex;
 import RubyCraft.xJuanathan.Items.silex;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_cenagosa;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_hielo;
@@ -58,7 +59,9 @@ import RubyCraft.xJuanathan.Items.vial_de_sangre_selvatica;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class Principal {
@@ -146,6 +149,7 @@ public class Principal {
 	public static Item esencia_de_las_montanas;
 	public static Item esencia_del_bosque;
 	
+	public static Item diamante_activado;
 	public static Item catalizador_de_esencias;
 	
 	public static Item silex;
@@ -154,7 +158,7 @@ public class Principal {
 	public static Item cuerda;
 	public static Item cuerda_trenzada;
 	
-	public static Item punta_de_espada;
+	public static Item punta_de_espada_de_silex;
 	
 	public static void preinit() 
 	{
@@ -178,7 +182,7 @@ public class Principal {
 		
 		Hielo_Glaciar = new Hielo_Glaciar(Material.ice).setBlockName("Hielo_Glaciar").setBlockTextureName(RubyCraft.modid+":Hielo_Glaciar").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Hielo_Glaciar, Hielo_Glaciar.getUnlocalizedName().substring(5));
-		Hielo_Glaciar.setHarvestLevel("pickaxe", 2);
+		Hielo_Glaciar.setHarvestLevel("pickaxe", 10);
 		
 		Hielo_Glaciar_Hueso = new Hielo_Glaciar_Hueso(Material.ice).setBlockName("Hielo_Glaciar_Hueso").setBlockTextureName(RubyCraft.modid+":Hielo_Glaciar_Hueso").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Hielo_Glaciar_Hueso, Hielo_Glaciar_Hueso.getUnlocalizedName().substring(5));
@@ -194,11 +198,11 @@ public class Principal {
 		
 		Barro = new Barro(Material.sand).setBlockName("Barro").setBlockTextureName(RubyCraft.modid+":Barro").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro, Barro.getUnlocalizedName().substring(5));
-		Barro.setHarvestLevel("shovel", 2);
+		Barro.setHarvestLevel("shovel", 10);
 		
 		Barro_Congelado = new Barro_Congelado(Material.rock).setBlockName("Barro_Congelado").setBlockTextureName(RubyCraft.modid+":Barro_Congelado").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro_Congelado, Barro_Congelado.getUnlocalizedName().substring(5));
-		Barro_Congelado.setHarvestLevel("pickaxe", 2);
+		Barro_Congelado.setHarvestLevel("pickaxe", 10);
 		
 		Barro_Congelado_Hueso = new Barro_Congelado_Hueso(Material.rock).setBlockName("Barro_Congelado_Hueso").setBlockTextureName(RubyCraft.modid+":Barro_Congelado_Hueso").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro_Congelado_Hueso, Barro_Congelado_Hueso.getUnlocalizedName().substring(5));
@@ -214,7 +218,7 @@ public class Principal {
 		
 		Roca_Fosil = new Roca_Fosil(Material.rock).setBlockName("Roca_Fosil").setBlockTextureName(RubyCraft.modid+":Roca_Fosil").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Roca_Fosil, Roca_Fosil.getUnlocalizedName().substring(5));
-		Roca_Fosil.setHarvestLevel("pickaxe", 2);
+		Roca_Fosil.setHarvestLevel("pickaxe", 10);
 		
 		Roca_Fosil_Hueso = new Roca_Fosil_Hueso(Material.rock).setBlockName("Roca_Fosil_Hueso").setBlockTextureName(RubyCraft.modid+":Roca_Fosil_Hueso").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Roca_Fosil_Hueso, Roca_Fosil_Hueso.getUnlocalizedName().substring(5));
@@ -230,7 +234,7 @@ public class Principal {
 		
 		Madera_Fosil = new Madera_Fosil(Material.wood).setBlockName("Madera_Fosil").setBlockTextureName(RubyCraft.modid+":Madera_Fosil").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Madera_Fosil, Madera_Fosil.getUnlocalizedName().substring(5));
-		Madera_Fosil.setHarvestLevel("axe", 2);
+		Madera_Fosil.setHarvestLevel("axe", 10);
 		
 		Madera_Fosil_Hueso = new Madera_Fosil_Hueso(Material.wood).setBlockName("Madera_Fosil_Hueso").setBlockTextureName(RubyCraft.modid+":Madera_Fosil_Hueso").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Madera_Fosil_Hueso, Madera_Fosil_Hueso.getUnlocalizedName().substring(5));
@@ -279,7 +283,7 @@ public class Principal {
 		pala_de_arqueologo = new pala_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("pala_de_arqueologo").setTextureName(RubyCraft.modid + ":pala_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(pala_de_arqueologo, pala_de_arqueologo.getUnlocalizedName().substring(5));
 		
-		espada_de_arqueologo = new espada_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("espada_de_arqueologo").setTextureName(RubyCraft.modChecker + ":espada_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
+		espada_de_arqueologo = new espada_de_arqueologo(arqueologotoolmaterial).setUnlocalizedName("espada_de_arqueologo").setTextureName(RubyCraft.modid + ":espada_de_arqueologo").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(espada_de_arqueologo, espada_de_arqueologo.getUnlocalizedName().substring(5));
 		
 		//Items evento Navidad
@@ -338,6 +342,9 @@ public class Principal {
 		esencia_del_bosque = new esencia_del_bosque().setUnlocalizedName("esencia_del_bosque").setTextureName(RubyCraft.modid+":esencia_del_bosque").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(esencia_del_bosque, esencia_del_bosque.getUnlocalizedName().substring(5));
 		
+		diamante_activado = new diamante_activado().setUnlocalizedName("diamante_activado").setTextureName(RubyCraft.modid+":diamante_activado").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(diamante_activado, diamante_activado.getUnlocalizedName().substring(5));
+		
 		catalizador_de_esencias = new catalizador_de_esencias().setUnlocalizedName("catalizador_de_esencias").setTextureName(RubyCraft.modid+":catalizador_de_esencias").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(catalizador_de_esencias, catalizador_de_esencias.getUnlocalizedName().substring(5));
 		
@@ -353,8 +360,8 @@ public class Principal {
 		cuerda_trenzada = new cuerda_trenzada().setUnlocalizedName("cuerda_trenzada").setTextureName(RubyCraft.modid+":cuerda_trenzada").setCreativeTab(RubyCraft.Rubycrafttab);
 		GameRegistry.registerItem(cuerda_trenzada, cuerda_trenzada.getUnlocalizedName().substring(5));
 		
-		punta_de_espada = new punta_de_espada().setUnlocalizedName("punta_de_espada").setTextureName(RubyCraft.modid + ":punta_de_espada").setCreativeTab(RubyCraft.Rubycrafttab);
-		GameRegistry.registerItem(punta_de_espada, punta_de_espada.getUnlocalizedName().substring(5));
+		punta_de_espada_de_silex = new punta_de_espada_de_silex().setUnlocalizedName("punta_de_espada_de_silex").setTextureName(RubyCraft.modid + ":punta_de_espada_de_silex").setCreativeTab(RubyCraft.Rubycrafttab);
+		GameRegistry.registerItem(punta_de_espada_de_silex, punta_de_espada_de_silex.getUnlocalizedName().substring(5));
 		
 	}
 	
@@ -363,10 +370,6 @@ public class Principal {
 	public static void init() 
 	{
 		//Crafteos Items
-		
-		
-		
-		
 	}
 	
 	

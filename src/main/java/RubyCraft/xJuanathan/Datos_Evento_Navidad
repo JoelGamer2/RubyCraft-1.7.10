@@ -4,13 +4,14 @@
 /////////////bloques///////////////////////
 
 ---Hielo Glaciar                 Este bloque al picar tendra una probabilidad de dropear esencia de los hielos segun el encantamiento de fortuna.
-                                 Con fortuna 0 la probabilidad sera de un 5% para la esencia, aumentando un 10% la probabilidad con cada nivel de fortuna.
+                                 Con fortuna 0 la probabilidad sera de un 95% de no dropear nada y un 5% para la esencia, aumentando un 10% la probabilidad con cada nivel de fortuna.
                                  Se podra picar con el pico de aprendiz de arqueologo.
                                  
 ---Hielo Glaciar Hueso           Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera yeti. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
----Hielo Glaciar Ambar           Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+---Hielo Glaciar Ambar           Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. También dará experiencia, la cual aumentará con el encantamiento de fortuna.
+                                 Se podra picar con el pico de hueso fosilizado
 
 ---Hielo Glaciar Adn             Este bloque dropeara vial de sangre de hielo. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
@@ -22,14 +23,14 @@ hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comu
                                  Con fortuna 0 la probabilidad sera de un 95% para el barro y un 5% para la esencia, disminuyendo un 10% el barro y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con la pala de aprendiz de arqueologo.
                                  
----Barro Congelado               Este bloque dropeara con una probabilidad del 98% el bloque de barro congelado y un 2% de hielo glaciar.
+---Barro Congelado               Este bloque dropeara con una probabilidad del 90% el bloque de barro congelado y un 5% de hielo glaciar, aumentando un 10% la probabilidad con cada nivel de fortuna.
                                  Se podra picar con el pico de aprendiz de arqueologo.
 
 ---Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
                                  
----Barro Congelado Ambar         Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
-                                 Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de hueso fosilizado
+---Barro Congelado Ambar         Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. También dará experiencia, la cual aumentará con el encantamiento de fortuna.
+                                 Se podra picar con el pico de hueso fosilizado
                                  
 ---Barro Congelado Adn           Este bloque dropeara vial de sangre del pantano. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
                                  Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de ambar.
@@ -46,7 +47,8 @@ barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el ma
 ---Roca Fosil Hueso              Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera gigante. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
----Roca Fosil Ambar              Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+---Roca Fosil Ambar              Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. También dará experiencia, la cual aumentará con el encantamiento de fortuna.
+                                 Se podra picar con el pico de hueso fosilizado
 
 ---Roca Fosil Adn                Este bloque dropeara vial de sangre de las montañas. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
@@ -61,11 +63,12 @@ roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun e
 ---Madera Fosil Hueso            Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera elfo. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
 
----Madera Fosil Ambar            Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de hueso fosilizado
+---Madera Fosil Ambar            Este bloque dropeara ambar. Estara afectado por el encantamiento fortuna. También dará experiencia, la cual aumentará con el encantamiento de fortuna.
+                                 Se podra picar con el pico de hueso fosilizado
 
 ---Madera Fosil Adn              Este bloque dropeara vial de sangre del bosque. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
-Estos bloques se generan en biomas de bosques oscuros(RoofedForest), apareciendo en betas debajo de los robles oscuros, apareciendo en la capa superior la madera fosil y debajo con probabilidad
+Estos bloques se generan en biomas de llanura (Plains), apareciendo en betas debajo de un roble oscuro gigante, apareciendo un bloque de madera fosilizada y ,dentro, con probabilidad
 de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
@@ -101,6 +104,18 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 ---esencia de las montañas.           Este item servira para obtener el catalizador de esencias, y el vial de sangre rocosa, entre otras cosas.
 
 ---esencia del bosque.                Este item servira para obtener el catalizador de esencias, y el vial de sangre selvatica, entre otras cosas.
+
+---diamante activado                  Este item servira para obtener el catalizador de esencias.
+
+                          B  
+  Mesa de crafteo ==>   H D M         H=vial de sangre de hielo, M=vial de sangre de las montañas, P=vial de sangre del pantano, B=vial de sangre del bosque, D=diamante
+                          P 
+
+---catalizador de esencias            Este item servirá para obtener viales de sangre avanzados.
+
+                          B  
+  Mesa de crafteo ==>   H D M         H=esencia de los hielos, M=esencia de las montañas, P=esencia del pantano, B=esencia del bosque, D=diamante activado
+                          P  
 
 ---vial de sangre glaciar             Este item se crafteara con vial de sangre de hielo, calavera yeti, flor de las nieves, catalizador de esencias y hielo glaciar. Stack maximo del item = 16.
 
@@ -161,7 +176,7 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
 
----punta de espada                    Servirá para hacer la espada de aprendiz de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada.
+---punta de espada de silex           Servirá para hacer la espada de aprendiz de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
 
 ---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
 
