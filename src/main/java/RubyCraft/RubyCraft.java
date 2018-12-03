@@ -2,6 +2,8 @@ package RubyCraft;
 
 import org.apache.logging.log4j.LogManager;
 
+import com.sun.prism.paint.Color;
+
 import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
@@ -517,8 +519,7 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(Control_de_Version.Navidad_Activar == true) {
 	
 			IniciarItemsEventos.Iniciartodo();
-		
-		
+			
 	}
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();

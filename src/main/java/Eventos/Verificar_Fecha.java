@@ -184,7 +184,7 @@ public static boolean URLNOVALIDAERROR = false;
 		Navidad = false;
 		HalloWen = false;
 		Cambiador_de_Texturas.Texturas();
-		System.out.println(e);
+		RubyCraft.logger.error("Se ha producido un error al Intentar conectarse con el Servidor para Verficar el Posible evento error:" + e);
 		
 	      }
 	
