@@ -230,8 +230,14 @@ public class Crafteos {
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.PetodePlatino, 1), new Object []{"b  b","bzzb","bppb","bppb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.BloquedeZafiro,'p',RubyCraft.Platino});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.pantacasdePlatino, 1), new Object[]{"bzzb","r  r","b  b","b  b",'b',RubyCraft.Bloque_de_Platino,'r',RubyCraft.Bloquederuby,'z',RubyCraft.BloquedeZafiro});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.cascodePlatino, 1), new Object[]{"bbbb","a  a","b  b","####",'b',RubyCraft.Bloque_de_Platino,'a',RubyCraft.amuleto});
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.botasdePlatino, 1), new Object[]{"####","b  b","b  b","bpzb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.zafiro,'p',RubyCraft.Platino});
-         
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.botasdePlatino, 1), new Object[]{"####","b  b","b  b","bpzb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.zafiro,'p',RubyCraft.Platino});    
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pico_de_Platino, 1), new Object[] {"pppp"," vv "," vv "," vv ",'p',RubyCraft.Bloque_de_Platino,'v',RubyCraft.Barita});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Espada_de_Platino, 1), new Object[] {"pp","pp","pp","vv",'v',RubyCraft.Barita,'p',RubyCraft.Bloque_de_Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Hacha_de_Platino, 1), new Object[] {" ppp"," vvp"," vv "," vv ",'v',RubyCraft.Barita,'p',RubyCraft.Bloque_de_Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pala_de_Platino, 1), new Object[] {" pp "," vv "," vv "," vv ",'v',RubyCraft.Barita,'p',RubyCraft.Bloque_de_Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Azada_de_Platino, 1), new Object[] {" ppp"," vv "," vv "," vv ",'v',RubyCraft.Barita,'p',RubyCraft.Bloque_de_Platino});
+         Registros.addShapelessRecipeZafiro(new ItemStack(RubyCraft.Tijeras_de_Platino, 1), new Object[] {RubyCraft.Bloque_de_Platino,RubyCraft.Bloque_de_Platino});
+
       }
     public static void IniciarCrafteosTransformadoraBloques(){
     	

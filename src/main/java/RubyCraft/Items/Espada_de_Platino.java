@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class Espada_de_Platino extends ItemSword {
 
 
-	public static int Nivel = 0;
+	private static int Nivel = 0;
 	
 	public Espada_de_Platino(ToolMaterial material) {
 		
@@ -69,13 +69,13 @@ public class Espada_de_Platino extends ItemSword {
 				  
 				   }else{
 					   player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
-					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + player.getDisplayName() + " Para subir a Nivel 4 Necesitas 1 " + EnumChatFormatting.RED + "Amuleto y 1 Varita"));
+					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + player.getDisplayName() + " Para subir a Nivel 4 Necesitas 1 " + EnumChatFormatting.RED + "Amuleto y 1 Varita"));
 					  Nivel--;;
 				   }
 				break;
 				case 5:
 					player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
-					player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles este es el Nivel:" + Nivel + EnumChatFormatting.GOLD + " Para volver al 0 necesitas 1 de Ruby y 1 Plastico"));
+					player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles este es el Nivel:" + Nivel + EnumChatFormatting.GOLD + " Para volver " + EnumChatFormatting.GOLD + "al 0 necesitas 1 de Ruby y 1 Plastico"));
 			
 				}
 			}

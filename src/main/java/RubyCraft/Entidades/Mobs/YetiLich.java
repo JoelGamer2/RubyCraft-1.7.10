@@ -1,6 +1,7 @@
 package RubyCraft.Entidades.Mobs;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Bases.BaseMobs;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -8,7 +9,7 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class YetiLich extends EntityMob implements IBossDisplayData {
+public class YetiLich extends BaseMobs implements IBossDisplayData {
 
 	
 	
