@@ -1,4 +1,4 @@
-package RubyCraft.xJuanathan.Herramientas;
+package RubyCraft.xJuanathan.Armas;
 
 import net.minecraft.item.ItemSword;
 

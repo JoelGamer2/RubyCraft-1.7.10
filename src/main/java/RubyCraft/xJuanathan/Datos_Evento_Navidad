@@ -5,7 +5,7 @@
 
 ---Hielo Glaciar                 Este bloque al picar tendra una probabilidad de dropear esencia de los hielos segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% de no dropear nada y un 5% para la esencia, aumentando un 10% la probabilidad con cada nivel de fortuna.
-                                 Se podra picar con el pico de aprendiz de arqueologo.
+                                 Se podra picar con el pico de arqueologo.
                                  
 ---Hielo Glaciar Hueso           Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera yeti. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
@@ -21,10 +21,10 @@ hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comu
 
 ---Barro                         Este bloque al picar tendra una probabilidad de dropear el bloque de barro o dropear esencia del pantano segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% para el barro y un 5% para la esencia, disminuyendo un 10% el barro y aumentando un 10% la esencia con cada nivel de fortuna.
-                                 Se podra picar con la pala de aprendiz de arqueologo.
+                                 Se podra picar con la pala de arqueologo.
                                  
 ---Barro Congelado               Este bloque dropeara con una probabilidad del 90% el bloque de barro congelado y un 5% de hielo glaciar, aumentando un 10% la probabilidad con cada nivel de fortuna.
-                                 Se podra picar con el pico de aprendiz de arqueologo.
+                                 Se podra picar con el pico de arqueologo.
 
 ---Barro Congelado Hueso         Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera troll. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
@@ -42,7 +42,7 @@ barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el ma
 
 ---Roca Fosil                    Este bloque al picar tendra una probabilidad de dropear el bloque de roca o dropear esencia de las montañas segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% para la roca y un 5% para la esencia, disminuyendo un 10% la roca y aumentando un 10% la esencia con cada nivel de fortuna.
-                                 Se podra picar con el pico de aprendiz de arqueologo.
+                                 Se podra picar con el pico de arqueologo.
                                  
 ---Roca Fosil Hueso              Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera gigante. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
@@ -58,7 +58,7 @@ roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun e
 
 ---Madera Fosil                  Este bloque al picar tendra una probabilidad de dropear el bloque de madera o dropear esencia del bosque segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% para la madera y un 5% para la esencia, disminuyendo un 10% la madera y aumentando un 10% la esencia con cada nivel de fortuna.
-                                 Se podra picar con el hacha de aprendiz de arqueologo.
+                                 Se podra picar con el hacha de arqueologo.
 
 ---Madera Fosil Hueso            Este bloque tendra una probabilidad de dropear un 80% de fragmento de fosil, un 15% de hueso fosilizado y un 5% de calavera elfo. 
                                  La probabilidad de dropeo cambiará según el encantamiento de fortuna del pico. Se podra picar con el pico de roca fosilizada.
@@ -176,7 +176,11 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
 
----punta de espada de silex           Servirá para hacer la espada de aprendiz de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
+---punta de espada de silex           Servirá para hacer la espada de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
+
+---roca fosilizada afilada            Servirá para craftear herramientas de roca fosilizada. Se conseguirá poniendo dos de roca fosilizada en la mesa de crafteo. Dará una roca fosilizada afilada.
+
+---punta de espada de roca fosilizada Servirá para hacer la espada de roca fosilizada. Se consigue poniendo dos de roca fosilizada afilada en la mesa de crafteo. Dará una punta de roca fosilizada.
 
 ---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
 
@@ -200,56 +204,123 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 /////////////Herramientas///////////////////////
 
 
----Herramientas de aprendiz de arqueologo      Estas son las primeras herramientas que deberemos craftear para poder ir avanzando en el evento de navidad.
-                                               Estaran formadas por: pico de aprendiz de arqueologo, hacha de aprendiz de arqueologo y pala de aprendiz de arqueologo.
+---Herramientas de arqueologo                  Estas son las primeras herramientas que deberemos craftear para poder ir avanzando en el evento de navidad.
+                                               Estaran formadas por: pico de arqueologo, hacha de arqueologo y pala de arqueologo.
                                                
-                                               ("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45) (nivel, durabilidad, eficiencia, daño +4, nivel encantamiento)
-                                               
-     ---pico de aprendiz de arqueologo         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
+     ---pico de arqueologo                     Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
                                             
                                  S M S
            Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
                                    P                                     
 
-   ---hacha de aprendiz de arqueologo          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
+   ---hacha de arqueologo                      Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
 
                                  S M S
            Mesa de crafteo ==>     C S         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
                                    P 
 
-   ---pala de aprendiz de arqueologo           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
+   ---pala de arqueologo                       Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
 
                                    S  
            Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
                                    P 
-                                   
-   ---espada de aprendiz de arqueologo         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada. 
-
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada.  
-                                   P
               
                                    
+---Herramientas de roca fosilizada             Estas son las herramientas con las que podremos picar el mineral de hueso fosilizado para poder ir avanzando en el evento de navidad.
+                                               Estaran formadas por: pico de roca fosilizada, hacha de roca fosilizada y pala de roca fosilizada.
+                                               
+     ---pico de roca fosilizada                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada.
+                                            
+                                 R M R
+           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
+                                   P                                     
+
+   ---hacha de roca fosilizada                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
+
+                                 R M R
+           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
+                                   P 
+
+   ---pala de roca fosilizada                  Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
+
+                                   R  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
+                                   P 
+
+
+
+---Herramientas de hueso fosilizado            Estas son las herramientas con las que podremos picar el mineral de ambar para poder ir avanzando en el evento de navidad.
+                                               Estaran formadas por: pico de hueso fosilizado, hacha de hueso fosilizado y pala de hueso fosilizado.
+                                               
+     ---pico de hueso fosilizado               Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado.
+                                            
+                                 H M H
+           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
+                                   P                                     
+
+   ---hacha de hueso fosilizado                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
+
+                                 H M H
+           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
+                                   P 
+
+   ---pala de hueso fosilizado                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
+
+                                   H  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
+                                   P      
+
+
+
+---Herramientas de ambar                       Estas son las herramientas con las que podremos picar el mineral de adn para poder ir avanzando en el evento de navidad.
+                                               Estaran formadas por: pico de ambar, hacha de ambar y pala de ambar.
+                                               
+     ---pico de ambar                          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado.
+                                            
+                                 A M A
+           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
+                                   P                                     
+
+   ---hacha de ambar                           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar. 
+
+                                 A M A
+           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
+                                   P 
+
+   ---pala de ambar                            Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar. 
+
+                                   A  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
+                                   P                                    
+
+
+
+/////////////Armas///////////////////////
+    
+    
+---espada de arqueologo                      Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de silex. 
+
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de silex.         
+                                   P 
+    
+---espada de roca fosilizada                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de roca fosilizada. 
+
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de roca fosilizada.         
+                                   P 
                                    
-                                   
-                                   
+---espada de hueso fosilizado                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de hueso fosilizado. 
 
----pico de aprendiz de arqueologo
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de hueso fosilizado.         
+                                   P 
+    
+---espada de ambar                           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de ambar. 
 
----pico de roca fosilizada
-
----pico de hueso fosilizado
-
----pico de ambar
-
-
-    
-    
-    
-    
-    
-    
-    
+                                   S  
+           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de ambar.         
+                                   P 
     
     
     
