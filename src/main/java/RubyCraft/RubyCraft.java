@@ -527,7 +527,7 @@ public void Preinit(FMLPreInitializationEvent event){
 Control_de_Version.Iniciar_todo();
 
 if(Control_de_Version.Version_de_desarrolador == false) {
-	Verificar_Fecha.VerIpePuerto();
+Verificar_Fecha.VerIpePuerto();
 Buscar_Actualizaciones.MirarActualizaciones();
 }
 BuscarVersionTrol.MirarVersionTrol();
