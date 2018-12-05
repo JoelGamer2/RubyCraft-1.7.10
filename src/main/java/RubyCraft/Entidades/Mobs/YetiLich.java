@@ -30,7 +30,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	private static int cantidad_ya_generada2 = 0;
 	private static int cantidad_ya_generada3 = 0;
 	private static int cantidad_ya_generada4 = 0;
-	public static long tiempoqueestaba;
+	private static long tiempoqueestaba;
 	private static long noche = 15000;
 	private static int xrandomv;
 	private static int zrandomv;
@@ -82,6 +82,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	public void onDeath(DamageSource damage) {
 		Fase = 0;
 		Activo = false;
+		this.worldObj.setWorldTime(tiempoqueestaba);
 		resetear();
 		dropeos();	
           if(!this.worldObj.isRemote && !(worldObj.getBlock((int)posX - 10, (int)posY, (int)posZ) == Blocks.air)) {

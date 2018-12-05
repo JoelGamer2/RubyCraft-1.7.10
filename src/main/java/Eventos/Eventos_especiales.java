@@ -4,6 +4,7 @@ import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Entidades.Mobs.BossParca;
+import RubyCraft.Entidades.Mobs.Lich;
 import RubyCraft.Entidades.Mobs.YetiLich;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -121,7 +122,9 @@ public class Eventos_especiales {
 			YetiLich.reiniciarsiespacifico();
 		}
 		
-		
+		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && Lich.Activo && RubyCraft.Navidad) {
+			Lich.reiniciarsiespacifico();
+		}
 		
 		//Navidad evento
 		

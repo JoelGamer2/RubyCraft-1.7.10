@@ -3,6 +3,7 @@ package RubyCraft.Entidades.Mobs;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.xJuanathan.Principal;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
@@ -37,6 +38,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	private static int xrandom;
 	private static int zrandom;
 	private static int tick;
+	public static boolean Activo;
 	public Lich(World world) {
 		super(world);
 		     
@@ -44,24 +46,28 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	 this.stepHeight = 1.0F; 
 	 
 	}
+	public static void reiniciarsiespacifico() {
+		 resetear();
+		 Fase = 0;
 
+	 }
 	protected void applyEntityAttributes(){	
-		
+		Activo = true;
 		if(this.worldObj.difficultySetting == EnumDifficulty.HARD) {
+			 cantidad_a_generar1 = 12;
+			 cantidad_a_generar2 = 12;
+			 cantidad_a_generar3 = 24;
+			 cantidad_a_generar4 = 12;
+		}else if(this.worldObj.difficultySetting == EnumDifficulty.EASY) {
+			 cantidad_a_generar1 = 4;
+			 cantidad_a_generar2 = 4;
+			 cantidad_a_generar3 = 8;
+			 cantidad_a_generar4 = 4;
+		}else if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL) {
 			 cantidad_a_generar1 = 6;
 			 cantidad_a_generar2 = 6;
 			 cantidad_a_generar3 = 12;
 			 cantidad_a_generar4 = 6;
-		}else if(this.worldObj.difficultySetting == EnumDifficulty.EASY) {
-			 cantidad_a_generar1 = 2;
-			 cantidad_a_generar2 = 2;
-			 cantidad_a_generar3 = 4;
-			 cantidad_a_generar4 = 2;
-		}else if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL) {
-			 cantidad_a_generar1 = 3;
-			 cantidad_a_generar2 = 3;
-			 cantidad_a_generar3 = 6;
-			 cantidad_a_generar4 = 3;
 		}
 		 Fase = 1;
 		 tiempoqueestaba = this.worldObj.getWorldTime();
@@ -144,16 +150,16 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	          BossStatus.statusBarTime = 10;
           }
 	       if(Fase == 1) {
-	    		GenerarMobs("Zombie", world, x, y, z, 1, 300);
+	    		GenerarMobs("Zombie", world, x, y, z, 1, 150);
 	       }if(this.getHealth() <= 15000F && this.getHealth() >= 10000F) {
 	    	   Fase = 2;         
-	    	   GenerarMobs("Skeleton", world, x, y, z, 2, 250);
+	    	   GenerarMobs("Skeleton", world, x, y, z, 2, 125);
 	       }else if(this.getHealth() <= 10000F && this.getHealth() >= 5000F) {
 	    	   Fase = 3;
-	    	   GenerarMobs("Blaze", world, x, y, z, 3, 150);   
+	    	   GenerarMobs("Blaze", world, x, y, z, 3, 75);   
 	       }else if(this.getHealth() <= 5000F && this.getHealth() >= 1F) {
 	    	   Fase = 4;
-	    	   GenerarMobs("Ghast", world, x, y, z, 4, 100);   
+	    	   GenerarMobs("Ghast", world, x, y, z, 4, 50);   
 	       }
 	    }
 	    
@@ -172,7 +178,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	         }
 	    	tick ++;
 	    	
-	    	if(tick >= 1000) {
+	    	if(tick >= 500) {
 	    		 cantidad_ya_generada1 = 0;
 	    		 cantidad_ya_generada2 = 0;
 	    		 cantidad_ya_generada3 = 0;
@@ -192,6 +198,11 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	    		   esqueleto.setPosition(x + xrandomv, y, z + zrandomv);
 	    		   mob.setPosition(x + xrandomv - 1, y, z + zrandomv);
 	    		   esqueleto.setCurrentItemOrArmor(0, new ItemStack(Items.bow, 1));
+	    		   mob.setCurrentItemOrArmor(0, new ItemStack(Principal.espada_ancestral, 1));
+	    		   mob.setCurrentItemOrArmor(1, new ItemStack(RubyCraft.CascodeZafiro, 1));
+	    		   mob.setCurrentItemOrArmor(2, new ItemStack(RubyCraft.PetodeZafiro, 1));
+	    		   mob.setCurrentItemOrArmor(3, new ItemStack(RubyCraft.PantacasdeZafiro, 1));
+	    		   mob.setCurrentItemOrArmor(4, new ItemStack(RubyCraft.botasdeZafiro, 1));
 	    		  world.spawnEntityInWorld(mob);
 	    		  world.spawnEntityInWorld(esqueleto);
 	    		cantidad_ya_generada1 ++;
@@ -206,7 +217,11 @@ public class Lich extends EntityMob implements IBossDisplayData {
 		    		   Entity creeper = EntityList.createEntityByName("Creeper", world);
 		    		   if(tick >= cooldown) {
 		    		   mob.setPosition(x + xrandomv - 1, y, z + zrandomv);
-		    		   mob.setCurrentItemOrArmor(0, new ItemStack(Items.bow, 1));
+		    		   mob.setCurrentItemOrArmor(0, new ItemStack(Principal.espada_ancestral, 1));
+		    		   mob.setCurrentItemOrArmor(1, new ItemStack(RubyCraft.CascodeZafiro, 1));
+		    		   mob.setCurrentItemOrArmor(2, new ItemStack(RubyCraft.PetodeZafiro, 1));
+		    		   mob.setCurrentItemOrArmor(3, new ItemStack(RubyCraft.PantacasdeZafiro, 1));
+		    		   mob.setCurrentItemOrArmor(4, new ItemStack(RubyCraft.botasdeZafiro, 1));
 		    		   creeper.setPosition(x + xrandomv, y, z + zrandomv);
 		    		  world.spawnEntityInWorld(mob);
 		    		  world.spawnEntityInWorld(creeper);
@@ -234,7 +249,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	                    	           Entity mob = EntityList.createEntityByName(nombre, world);
 	                    	           Entity cerdo = EntityList.createEntityByName("HombreCerdo", world);
 	                    	        if(tick >= cooldown) {
-	                    	            cerdo.setCurrentItemOrArmor(0, new ItemStack(RubyCraft.Espadaderuby, 1));
+	                    	            cerdo.setCurrentItemOrArmor(0, new ItemStack(Principal.espada_ancestral, 1));
 	   		    		                mob.setPosition(x + xrandomv - 1, y, z + zrandomv);
 	   		    		                cerdo.setPosition(x + xrandomv, y, z + zrandomv);
 	   		    		                world.spawnEntityInWorld(mob);
