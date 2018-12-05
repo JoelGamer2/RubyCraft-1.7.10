@@ -475,7 +475,7 @@ public static CreativeTabs EventosTab = new EventosTab(CreativeTabs.getNextID(),
 
 //Materiales
 		  
-public static final Item.ToolMaterial rubyToolMaterial = EnumHelper.addToolMaterial("rubyToolMaterial", 4, 3000, 10.0F, 5.0F, 45);		 
+public static final Item.ToolMaterial rubyToolMaterial = EnumHelper.addToolMaterial("rubyToolMaterial", 4, 3000, 10.0F, (5.0F -1.0F) + 4996F, 45);		 
 public static final Item.ToolMaterial zafiromaterial = EnumHelper.addToolMaterial("zafiromaterial", 5, 2000, 35.0F, 8.0F, 45);
 public static final Item.ToolMaterial NadaMaterial = EnumHelper.addToolMaterial("NadaMaterial", 1, 100, 1, 1, 1);
 public static final Item.ToolMaterial PlatinoMaterial = EnumHelper.addToolMaterial("PlatinoMaterial", 6, 4000, 45.0F, 10.0F, 45);

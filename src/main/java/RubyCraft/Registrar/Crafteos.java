@@ -226,7 +226,6 @@ public class Crafteos {
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Mesa_De_Conjuraciones, 1), new Object[]{"cppu","varv","vzav","uppc",'c',RubyCraft.Bloquedecaca,'p',RubyCraft.Plastico,'v',RubyCraft.Barita,'a',RubyCraft.anillo,'u',RubyCraft.uranio,'z',RubyCraft.zafiro,'r',RubyCraft.ruby});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Cofre_de_Ruby, 2), new Object[]{"mrrm","rmcr","rcmr","mrrm",'m',RubyCraft.Moldes_para_cofres,'r',RubyCraft.ruby,'c',Blocks.chest});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Moldes_para_cofres, 2), new Object[]{"hpph","phcp","pchp","hpph",'h',Items.iron_ingot,'p',RubyCraft.Pepita_de_Hierro,'c',Blocks.chest});
-         
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.PetodePlatino, 1), new Object []{"b  b","bzzb","bppb","bppb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.BloquedeZafiro,'p',RubyCraft.Platino});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.pantacasdePlatino, 1), new Object[]{"bzzb","r  r","b  b","b  b",'b',RubyCraft.Bloque_de_Platino,'r',RubyCraft.Bloquederuby,'z',RubyCraft.BloquedeZafiro});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.cascodePlatino, 1), new Object[]{"bbbb","a  a","b  b","####",'b',RubyCraft.Bloque_de_Platino,'a',RubyCraft.amuleto});

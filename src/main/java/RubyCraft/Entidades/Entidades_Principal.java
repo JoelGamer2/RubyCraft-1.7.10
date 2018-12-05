@@ -11,6 +11,7 @@ import RubyCraft.Entidades.Mobs.HombreCerdo;
 import RubyCraft.Entidades.Mobs.Invocador;
 import RubyCraft.Entidades.Mobs.Iratxe;
 import RubyCraft.Entidades.Mobs.Jose;
+import RubyCraft.Entidades.Mobs.Lich;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.Shulker;
 import RubyCraft.Entidades.Mobs.YetiLich;
@@ -31,6 +32,7 @@ public class Entidades_Principal {
 		createEntitySinHuevo(EntidadGranda_de_Uranio.class, "Granada_de_Uranio");	
 		createEntitySinHuevo(BossParca.class, "Parca");
 		createEntitySinHuevo(YetiLich.class, "YetiLichR");
+		createEntitySinHuevo(Lich.class, "LichR");
 		
 		//Entidades Normales
 		createEntity(AlienMob.class, "AlienR", 0x6B6B6B, 0x00FF1D);

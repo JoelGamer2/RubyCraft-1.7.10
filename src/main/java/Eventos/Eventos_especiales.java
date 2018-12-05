@@ -4,6 +4,7 @@ import HerraCraft.Generator_Boss;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import RubyCraft.Entidades.Mobs.BossParca;
+import RubyCraft.Entidades.Mobs.YetiLich;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
@@ -28,12 +29,12 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		
-	
+	//event.player.addChatComponentMessage(new ChatComponentText(YetiLich.Fase + ""));
 		
 		/**if(Control_de_Version.Version_de_desarrolador && event.player.inventory.hasItemStack(new ItemStack(RubyCraft.bloque_del_crea_caminos, 1))) {
 			
 			event.player.addChatComponentMessage(new ChatComponentText("" + BossParca.tick + " Fase:" + BossParca.Fase + " Tepes hechos:" + BossParca.Tp_hechos));
-			
+			 
 		}**/
 		
 		
