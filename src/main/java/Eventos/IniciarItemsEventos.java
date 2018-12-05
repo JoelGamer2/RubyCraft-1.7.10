@@ -93,8 +93,13 @@ public class IniciarItemsEventos {
            
 
 			GameRegistry.addRecipe(new ItemStack(Principal.silex, 1), new Object[] {"s","b",'s',Blocks.cobblestone,'b',Blocks.gravel});
+			GameRegistry.addRecipe(new ItemStack(Principal.roca_fosilizada_afilada, 1), new Object[] {"s","s",'s',Principal.Roca_Fosil});
+			GameRegistry.addRecipe(new ItemStack(Principal.hueso_tallado, 1), new Object[] {"s","b",'s',Blocks.cobblestone,'b',Principal.hueso_fosilizado});
+			
 			GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada_de_silex, 1), new Object[] {"s","s",'s',Principal.silex});
 			GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada_de_roca_fosilizada, 1), new Object[] {"s","s",'s',Principal.roca_fosilizada_afilada});
+			GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada_de_hueso_fosilizado, 1), new Object[] {"s","s",'s',Principal.hueso_tallado});
+			GameRegistry.addRecipe(new ItemStack(Principal.punta_de_espada_de_ambar, 1), new Object[] {"s","s",'s',Principal.ambar_endurecido});
             
 			GameRegistry.addRecipe(new ItemStack(Principal.espada_de_arqueologo, 1), new Object[] {" e ","cmc"," p ",'e',Principal.punta_de_espada_de_silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             GameRegistry.addRecipe(new ItemStack(Principal.pico_de_arqueologo, 1), new Object[] {"sms"," c "," p ",'s',Principal.silex,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
@@ -107,14 +112,14 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.pala_de_roca_fosilizada, 1), new Object[] {" s ","cmc"," p ",'s',Principal.roca_fosilizada_afilada,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             
             GameRegistry.addRecipe(new ItemStack(Principal.espada_de_hueso_fosilizado, 1), new Object[] {" e ","cmc"," p ",'e',Principal.punta_de_espada_de_hueso_fosilizado,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.pico_de_hueso_fosilizado, 1), new Object[] {"sms"," c "," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.hacha_de_hueso_fosilizado, 1), new Object[] {"sms"," cs"," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.pala_de_hueso_fosilizado, 1), new Object[] {" s ","cmc"," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.pico_de_hueso_fosilizado, 1), new Object[] {"sms"," c "," p ",'s',Principal.hueso_tallado,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.hacha_de_hueso_fosilizado, 1), new Object[] {"sms"," cs"," p ",'s',Principal.hueso_tallado,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.pala_de_hueso_fosilizado, 1), new Object[] {" s ","cmc"," p ",'s',Principal.hueso_tallado,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             
             GameRegistry.addRecipe(new ItemStack(Principal.espada_de_ambar, 1), new Object[] {" e ","cmc"," p ",'e',Principal.punta_de_espada_de_ambar,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.pico_de_ambar, 1), new Object[] {"sms"," c "," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.hacha_de_ambar, 1), new Object[] {"sms"," cs"," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
-            GameRegistry.addRecipe(new ItemStack(Principal.pala_de_ambar, 1), new Object[] {" s ","cmc"," p ",'s',Principal.Roca_Fosil,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.pico_de_ambar, 1), new Object[] {"sms"," c "," p ",'s',Principal.ambar_endurecido,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.hacha_de_ambar, 1), new Object[] {"sms"," cs"," p ",'s',Principal.ambar_endurecido,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
+            GameRegistry.addRecipe(new ItemStack(Principal.pala_de_ambar, 1), new Object[] {" s ","cmc"," p ",'s',Principal.ambar_endurecido,'c',Principal.cuerda_trenzada,'p',Items.stick,'m', new ItemStack(Blocks.planks, 1, 5)});
             
             GameRegistry.addRecipe(new ItemStack(Principal.hilo_de_cuerda, 1), new Object[] {"h","h","h",'h',Items.string});
             GameRegistry.addRecipe(new ItemStack(Principal.cuerda, 3), new Object[] {"h","h","h",'h',Principal.hilo_de_cuerda});
@@ -122,6 +127,13 @@ public class IniciarItemsEventos {
            
             GameRegistry.addRecipe(new ItemStack(Principal.diamante_activado, 1), new Object[] {" b ","hdm"," p ",'b',Principal.vial_de_sangre_del_bosque,'h',Principal.vial_de_sangre_de_hielo,'d',Items.diamond,'m',Principal.vial_de_sangre_de_las_montanas,'p',Principal.vial_de_sangre_del_pantano});
             GameRegistry.addRecipe(new ItemStack(Principal.catalizador_de_esencias, 1), new Object[] {" b ","hdm"," p ",'b',Principal.esencia_del_bosque,'h',Principal.esencia_de_los_hielos,'d',Principal.diamante_activado,'m',Principal.esencia_de_las_montanas,'p',Principal.esencia_del_pantano});
+		
+            GameRegistry.addRecipe(new ItemStack(Principal.polvo_de_diamante, 3), new Object[] {"h",'h',Items.diamond});
+            GameRegistry.addSmelting(new ItemStack(Principal.polvo_de_diamante, 3), new ItemStack(Items.diamond, 1), 10.0F);
+            GameRegistry.addSmelting(Principal.ambar, new ItemStack(Principal.cubo_de_ambar_fundido, 1), 10.0F);
+            GameRegistry.addRecipe(new ItemStack(Principal.cubo_de_ambar_con_diamante, 1), new Object[] {"ddd","dcd","ddd",'c',Principal.cubo_de_ambar_fundido,'d',Principal.polvo_de_diamante});
+            GameRegistry.addSmelting(Principal.cubo_de_ambar_con_diamante, new ItemStack(Principal.cubo_de_ambar_endurecido, 1), 10.0F);
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_endurecido, 1), new Object[] {"c","a",'c',Principal.cubo_de_ambar_endurecido,'a',Items.water_bucket});
 		}
 		
 	}

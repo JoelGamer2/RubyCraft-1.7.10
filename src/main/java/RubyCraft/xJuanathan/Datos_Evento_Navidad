@@ -72,6 +72,11 @@ Estos bloques se generan en biomas de llanura (Plains), apareciendo en betas deb
 de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
+---Piedra ancestral              Este bloque al picar tendra una probabilidad de dropear el bloque de piedra o dropear esencia ancestral segun el encantamiento de fortuna.
+                                 Con fortuna 0 la probabilidad sera de un 95% para el bloque y un 5% para la esencia, disminuyendo un 10% el bloque y aumentando un 10% la esencia con cada nivel de fortuna.
+                                 Se podra picar con el pico de ambar.
+
+
 /////////////Items///////////////////////
 
 
@@ -104,6 +109,8 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 ---esencia de las montañas.           Este item servira para obtener el catalizador de esencias, y el vial de sangre rocosa, entre otras cosas.
 
 ---esencia del bosque.                Este item servira para obtener el catalizador de esencias, y el vial de sangre selvatica, entre otras cosas.
+
+---esencia ancestral                  Este item sirve para craftear la espada ancestral.
 
 ---diamante activado                  Este item servira para obtener el catalizador de esencias.
 
@@ -176,11 +183,26 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
 
+---hueso tallado                      Servirá para hacer herramientas de hueso fosilizado. Se conseguirá poniendo uno de hueso fosilizado y uno de piedra en la mesa de crafteo. Dará uno de hueso tallado.
+
 ---punta de espada de silex           Servirá para hacer la espada de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
 
----roca fosilizada afilada            Servirá para craftear herramientas de roca fosilizada. Se conseguirá poniendo dos de roca fosilizada en la mesa de crafteo. Dará una roca fosilizada afilada.
-
 ---punta de espada de roca fosilizada Servirá para hacer la espada de roca fosilizada. Se consigue poniendo dos de roca fosilizada afilada en la mesa de crafteo. Dará una punta de roca fosilizada.
+
+---punta de espada de hueso tallado   Servirá para hacer la espada de hueso. Se consigue poniendo dos de hueso tallado en la mesa de crafteo. Dará una punta de espada de hueso tallado.
+
+---polvo de diamante                  Servirá para endurecer otros items. Se consigue poniendo uno de diamante en la mesa de crafteo. Dará 3 de polvo de diamante.
+
+---cubo de ambar fundido              Servirá para crear ambar con diamante. Se conseguirá poniendo uno de ambar en el horno. Dará un cubo de ambar fundido.
+
+---cubo de ambar con diamante         Servirá para crear cubo de ambar endurecido fundido. Se conseguirá poniendo en la mesa de crafteo un cubo de ambar fundido y rodeandolo de polvo de diamante. 
+                                      Dará un cubo de ambar con diamante.
+
+---cubo de ambar endurecido           Servira para crear ambar endurecido. Se conseguirá poniendo en el horno un cubo de ambar con diamante. Dará un cubo de ambar endurecido.
+
+---ambar endurecido                   Servirá para crear herramientas de ambar endurecido. Se conseguirá poniendo un cubo de ambar endurecido y un cubo de agua.
+
+---roca fosilizada afilada            Servirá para craftear herramientas de roca fosilizada. Se conseguirá poniendo dos de roca fosil en la mesa de crafteo. Dará una roca fosilizada afilada.
 
 ---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
 

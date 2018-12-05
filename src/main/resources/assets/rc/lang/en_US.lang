@@ -571,11 +571,13 @@ tile.Escalera_Invisible.name=Invisible Stair
 
 //-------------------------Juanathan---------------------------//
 
-//Bloques
+////////////////////////////////////////////////////Bloques
 
 tile.Monton_de_fosiles.name=Fossils pile
 
-//Bloques Evento Navidad
+
+
+////////////////////////////////////////////////////Bloques Evento Navidad
 
 tile.Hielo_Glaciar.name=Glaciar Ice
 tile.Hielo_Glaciar_Hueso.name=Glaciar Ice
@@ -598,11 +600,25 @@ tile.Madera_Fosil_Hueso.name=Fossil Wood
 tile.Madera_Fosil_Adn.name=Fossil Wood
 tile.Madera_Fosil_Ambar.name=Fossil Wood
 
-//Item
+tile.flor_de_las_nieves.name=Snow flower
+tile.flor_de_las_montanas.name=Mountain flower
+tile.flor_del_Pantano.name=Swamp flower
+tile.flor_del_bosque.name=Forest flower
+
+tile.altar.name=Altar
+tile.altar_central.name=Central altar
+
+tile.piedra_ancestral.name=Ancestral stone
+
+
+
+////////////////////////////////////////////////////Item
 
 item.Fragmento_de_fosil.name=Fossil Shard
 
-//items evento navidad
+
+
+////////////////////////////////////////////////////items evento navidad
 
 item.ambar.name=Amber
 
@@ -630,20 +646,60 @@ item.esencia_del_pantano.name=swamp essence
 item.esencia_de_las_montanas.name=Mountain essence
 item.esencia_del_bosque.name=Forest essence
 
+item.esencia_ancestral.name=Ancestral essence
+
 item.diamante_activado.name=Activated diamond
 item.catalizador_de_esencias.name=Essence catalyst
 
 item.silex.name=Silex
+item.roca_fosilizada_afilada.name=Fossil stone sharp
+item.hueso_tallado.name=Carved bone
+
+item.polvo_de_diamante.name=Diamond dust
+item.cubo_de_ambar_fundido.name=Molten amber bucket
+item.cubo_de_ambar_con_diamante.name=Diamond amber bucket
+item.cubo_de_ambar_endurecido.name=Hardened amber bucket
+item.ambar_endurecido.name=Hardened amber
 
 item.hilo_de_cuerda.name=String thread
 item.cuerda.name=Rope
 item.cuerda_trenzada.name=Braided rope
 
 item.punta_de_espada_de_silex.name=Silex sword tip
+item.punta_de_espada_de_roca_fosilizada.name=Fossil stone sword tip
+item.punta_de_espada_de_hueso_fosilizado.name=Fossil bone sword tip
+item.punta_de_espada_de_ambar.name=Ambar sword tip
 
 
+////////////////////////////////////////////////////Herramientas
 
 
+item.pico_de_arqueologo.name=Archeologist pickaxe
+item.hacha_de_arqueologo.name=Archeologist axe
+item.pala_de_arqueologo.name=Archeologist shovel
+
+item.Pico_de_roca_fosilizada.name=Fossil stone pickaxe
+item.hacha_de_roca_fosilizada.name=Fossil stone axe
+item.pala_de_roca_fosilizada.name=Fossil stone shovel
+
+item.pico_de_hueso_fosilizado.name=Fossil bone pickaxe
+item.hacha_de_hueso_fosilizado.name=Fossil bone axe
+item.pala_de_hueso_fosilizado.name=Fossil bone shovel
+
+item.pico_de_ambar.name=Amber pickaxe
+item.hacha_de_ambar.name=Amber axe
+item.pala_de_ambar.name=Amber shovel
+
+
+////////////////////////////////////////////////////Armas
+
+
+item.espada_de_arqueologo.name=Archeologist sword
+item.espada_de_roca_fosilizada.name=Fossil stone sword
+item.espada_de_hueso_fosilizado.name=Fossil bone sword
+item.espada_de_ambar.name=Amber sword
+
+item.espada_ancestral.name=Ancestral sword
 
 
 

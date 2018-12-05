@@ -571,11 +571,13 @@ tile.Escalera_Invisible.name=Escalera Invisible
 
 //-------------------------Juanathan---------------------------//
 
-//Bloques
+////////////////////////////////////////////////////Bloques
 
 tile.Monton_de_fosiles.name=Monton de fosiles
 
-//Bloques Evento Navidad
+
+
+////////////////////////////////////////////////////Bloques Evento Navidad
 
 tile.Hielo_Glaciar.name=Hielo Glaciar
 tile.Hielo_Glaciar_Hueso.name=Hielo Glaciar
@@ -598,12 +600,26 @@ tile.Madera_Fosil_Hueso.name=Madera Fosilizada
 tile.Madera_Fosil_Adn.name=Madera Fosilizada
 tile.Madera_Fosil_Ambar.name=Madera Fosilizada
 
-//Items
+tile.flor_de_las_nieves.name=Flor de las nieves
+tile.flor_de_las_montanas.name=Flor de las montanas
+tile.flor_del_Pantano.name=Flor del pantano
+tile.flor_del_bosque.name=Flor del bosque
+
+tile.altar.name=Altar
+tile.altar_central.name=Altar central
+
+tile.piedra_ancestral.name=Piedra ancestral
+
+
+
+////////////////////////////////////////////////////Items
 
 item.fosil.name=Fosil
 item.Fragmento_de_fosil.name=Fragmento de fosil
 
-//items evento navidad
+
+
+////////////////////////////////////////////////////items evento navidad
 
 item.ambar.name=Ambar
 item.vial_de_sangre_de_hielo.name=vial de sangre de hielo
@@ -630,16 +646,60 @@ item.esencia_del_pantano.name=Esencia del pantano
 item.esencia_de_las_montanas.name=Esencia de las montanas
 item.esencia_del_bosque.name=Esencia del bosque
 
+item.esencia_ancestral.name=Esencia ancestral
+
 item.diamante_activado.name=Diamante activado
 item.catalizador_de_esencias.name=catalizador de esencias
 
 item.silex.name=Silex
+item.roca_fosilizada_afilada.name=Roca fosilizada afilada
+item.hueso_tallado.name=Hueso tallado
+
+item.polvo_de_diamante.name=Polvo de diamante
+item.cubo_de_ambar_fundido.name=Cubo de ambar fundido
+item.cubo_de_ambar_con_diamante.name=Cubo de ambar con diamante
+item.cubo_de_ambar_endurecido.name=Cubo de ambar endurecido
+item.ambar_endurecido.name=Ambar endurecido
 
 item.hilo_de_cuerda.name=Hilo de cuerda
 item.cuerda.name=Cuerda
 item.cuerda_trenzada.name=Cuerda trenzada
 
 item.punta_de_espada_de_silex.name=Punta de espada de silex
+item.punta_de_espada_de_roca_fosilizada.name=Punta de espada de roca fosilizada
+item.punta_de_espada_de_hueso_fosilizado.name=Punta de espada de hueso fosilizado
+item.punta_de_espada_de_ambar.name=Punta de espada de ambar
+
+
+////////////////////////////////////////////////////Herramientas
+
+
+item.pico_de_arqueologo.name=Pico de arqueologo
+item.hacha_de_arqueologo.name=Hacha de arqueologo
+item.pala_de_arqueologo.name=Pala de arqueologo
+
+item.Pico_de_roca_fosilizada.name=Pico de roca fosilizada
+item.hacha_de_roca_fosilizada.name=Hacha de roca fosilizada
+item.pala_de_roca_fosilizada.name=Pala de roca fosilizada
+
+item.pico_de_hueso_fosilizado.name=Pico de hueso fosilizado
+item.hacha_de_hueso_fosilizado.name=Hacha de hueso fosilizado
+item.pala_de_hueso_fosilizado.name=Pala de hueso fosilizado
+
+item.pico_de_ambar.name=Pico de ambar
+item.hacha_de_ambar.name=Hacha de ambar
+item.pala_de_ambar.name=Pala de ambar
+
+
+////////////////////////////////////////////////////Armas
+
+
+item.espada_de_arqueologo.name=Espada de arqueologo
+item.espada_de_roca_fosilizada.name=Espada de roca fosilizada
+item.espada_de_hueso_fosilizado.name=Espada de hueso fosilizado
+item.espada_de_ambar.name=Espada de ambar
+
+item.espada_ancestral.name=Espada ancestral
 
 
 

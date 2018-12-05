@@ -30,6 +30,7 @@ import RubyCraft.xJuanathan.Bloques.flor_de_las_montanas;
 import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
 import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
 import RubyCraft.xJuanathan.Bloques.flor_del_bosque;
+import RubyCraft.xJuanathan.Bloques.piedra_ancestral;
 import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
 import RubyCraft.xJuanathan.Herramientas.hacha_de_ambar;
 import RubyCraft.xJuanathan.Herramientas.hacha_de_arqueologo;
@@ -44,20 +45,27 @@ import RubyCraft.xJuanathan.Herramientas.pico_de_arqueologo;
 import RubyCraft.xJuanathan.Herramientas.pico_de_hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
+import RubyCraft.xJuanathan.Items.ambar_endurecido;
 import RubyCraft.xJuanathan.Items.calavera_elfo;
 import RubyCraft.xJuanathan.Items.calavera_gigante;
 import RubyCraft.xJuanathan.Items.calavera_troll;
 import RubyCraft.xJuanathan.Items.calavera_yeti;
 import RubyCraft.xJuanathan.Items.catalizador_de_esencias;
+import RubyCraft.xJuanathan.Items.cubo_de_ambar_con_diamante;
+import RubyCraft.xJuanathan.Items.cubo_de_ambar_endurecido;
+import RubyCraft.xJuanathan.Items.cubo_de_ambar_fundido;
 import RubyCraft.xJuanathan.Items.cuerda;
 import RubyCraft.xJuanathan.Items.cuerda_trenzada;
 import RubyCraft.xJuanathan.Items.diamante_activado;
+import RubyCraft.xJuanathan.Items.esencia_ancestral;
 import RubyCraft.xJuanathan.Items.esencia_de_las_montanas;
 import RubyCraft.xJuanathan.Items.esencia_de_los_hielos;
 import RubyCraft.xJuanathan.Items.esencia_del_bosque;
 import RubyCraft.xJuanathan.Items.esencia_del_pantano;
 import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
+import RubyCraft.xJuanathan.Items.hueso_tallado;
+import RubyCraft.xJuanathan.Items.polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_ambar;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_roca_fosilizada;
@@ -120,6 +128,8 @@ public class Principal {
 	public static Block flor_de_las_montanas;
 	public static Block flor_del_bosque;
 	
+	public static Block piedra_ancestral;
+	
 	//Items
 	
 	public static Item Fragmento_de_fosil;
@@ -160,7 +170,7 @@ public class Principal {
 	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
 	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
-	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 9.6F, 96.0F, 45);
+	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 96.0F, 45);
 	
 	//Items Evento Navidad
 	
@@ -190,11 +200,21 @@ public class Principal {
 	public static Item esencia_de_las_montanas;
 	public static Item esencia_del_bosque;
 	
+	public static Item esencia_ancestral;
+	
 	public static Item diamante_activado;
 	public static Item catalizador_de_esencias;
 	
 	public static Item silex;
 	public static Item roca_fosilizada_afilada;
+	
+	public static Item hueso_tallado;
+	
+	public static Item polvo_de_diamante;
+	public static Item cubo_de_ambar_fundido;
+	public static Item cubo_de_ambar_con_diamante;
+	public static Item cubo_de_ambar_endurecido;
+	public static Item ambar_endurecido;
 	
 	public static Item hilo_de_cuerda;
 	public static Item cuerda;
@@ -205,14 +225,22 @@ public class Principal {
 	public static Item punta_de_espada_de_hueso_fosilizado;
 	public static Item punta_de_espada_de_ambar;
 	
+	public static Item ambar_sangriento;
+	public static Item ambar_de_poder;
+	public static Item ambar_mistico;
+	public static Item ambar_ancestral;
+	public static Item lingote_de_ambar_ancestral;
+	
 	//CreativeTab Seleccion
 	
 	private static CreativeTabs Prueba;
 	
+	
+	
 	public static void preinit() 
 	{
 		
-		if(!RubyCraft.Navidad)
+		if(RubyCraft.Navidad)
 		{
 			Prueba = RubyCraft.EventosTab;
 		}
@@ -324,6 +352,10 @@ public class Principal {
 		flor_del_bosque = new flor_del_bosque(Material.plants).setBlockName("flor_del_bosque").setBlockTextureName(RubyCraft.modid+":flor_del_bosque").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_del_bosque, flor_del_bosque.getUnlocalizedName().substring(5));
 		flor_del_bosque.setHarvestLevel("axe", 2);
+		
+		piedra_ancestral = new piedra_ancestral(Material.rock).setBlockName("piedra_ancestral").setBlockTextureName(RubyCraft.modid+":piedra_ancestral").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(piedra_ancestral, piedra_ancestral.getUnlocalizedName().substring(5));
+		piedra_ancestral.setHarvestLevel("pickaxe", 13);
 		
 		
 		//Items
@@ -453,6 +485,9 @@ public class Principal {
 		esencia_del_bosque = new esencia_del_bosque().setUnlocalizedName("esencia_del_bosque").setTextureName(RubyCraft.modid+":esencia_del_bosque").setCreativeTab(Prueba);
 		GameRegistry.registerItem(esencia_del_bosque, esencia_del_bosque.getUnlocalizedName().substring(5));
 		
+		esencia_ancestral = new esencia_ancestral().setUnlocalizedName("esencia_ancestral").setTextureName(RubyCraft.modid+":esencia_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(esencia_ancestral, esencia_ancestral.getUnlocalizedName().substring(5));
+		
 		diamante_activado = new diamante_activado().setUnlocalizedName("diamante_activado").setTextureName(RubyCraft.modid+":diamante_activado").setCreativeTab(Prueba);
 		GameRegistry.registerItem(diamante_activado, diamante_activado.getUnlocalizedName().substring(5));
 		
@@ -464,6 +499,24 @@ public class Principal {
 		
 		roca_fosilizada_afilada = new roca_fosilizada_afilada().setUnlocalizedName("roca_fosilizada_afilada").setTextureName(RubyCraft.modid+":roca_fosilizada_afilada").setCreativeTab(Prueba);
 		GameRegistry.registerItem(roca_fosilizada_afilada, roca_fosilizada_afilada.getUnlocalizedName().substring(5));
+		
+		hueso_tallado = new hueso_tallado().setUnlocalizedName("hueso_tallado").setTextureName(RubyCraft.modid+":hueso_tallado").setCreativeTab(Prueba);
+		GameRegistry.registerItem(hueso_tallado, hueso_tallado.getUnlocalizedName().substring(5));
+		
+		polvo_de_diamante = new polvo_de_diamante().setUnlocalizedName("polvo_de_diamante").setTextureName(RubyCraft.modid+":polvo_de_diamante").setCreativeTab(Prueba);
+		GameRegistry.registerItem(polvo_de_diamante, polvo_de_diamante.getUnlocalizedName().substring(5));
+		
+		cubo_de_ambar_fundido = new cubo_de_ambar_fundido().setUnlocalizedName("cubo_de_ambar_fundido").setTextureName(RubyCraft.modid+":cubo_de_ambar_fundido").setCreativeTab(Prueba);
+		GameRegistry.registerItem(cubo_de_ambar_fundido, cubo_de_ambar_fundido.getUnlocalizedName().substring(5));
+		
+		cubo_de_ambar_con_diamante = new cubo_de_ambar_con_diamante().setUnlocalizedName("cubo_de_ambar_con_diamante").setTextureName(RubyCraft.modid+":cubo_de_ambar_con_diamante").setCreativeTab(Prueba);
+		GameRegistry.registerItem(cubo_de_ambar_con_diamante, cubo_de_ambar_con_diamante.getUnlocalizedName().substring(5));
+		
+		cubo_de_ambar_endurecido = new cubo_de_ambar_endurecido().setUnlocalizedName("cubo_de_ambar_endurecido").setTextureName(RubyCraft.modid+":cubo_de_ambar_endurecido").setCreativeTab(Prueba);
+		GameRegistry.registerItem(cubo_de_ambar_endurecido, cubo_de_ambar_endurecido.getUnlocalizedName().substring(5));
+		
+		ambar_endurecido = new ambar_endurecido().setUnlocalizedName("ambar_endurecido").setTextureName(RubyCraft.modid+":ambar_endurecido").setCreativeTab(Prueba);
+		GameRegistry.registerItem(ambar_endurecido, ambar_endurecido.getUnlocalizedName().substring(5));
 		
 		hilo_de_cuerda = new hilo_de_cuerda().setUnlocalizedName("hilo_de_cuerda").setTextureName(RubyCraft.modid+":hilo_de_cuerda").setCreativeTab(Prueba);
 		GameRegistry.registerItem(hilo_de_cuerda, hilo_de_cuerda.getUnlocalizedName().substring(5));
