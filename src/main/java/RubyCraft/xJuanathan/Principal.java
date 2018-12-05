@@ -45,7 +45,11 @@ import RubyCraft.xJuanathan.Herramientas.pico_de_arqueologo;
 import RubyCraft.xJuanathan.Herramientas.pico_de_hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.Fragmento_de_fosil;
 import RubyCraft.xJuanathan.Items.ambar;
+import RubyCraft.xJuanathan.Items.ambar_ancestral;
+import RubyCraft.xJuanathan.Items.ambar_de_poder;
 import RubyCraft.xJuanathan.Items.ambar_endurecido;
+import RubyCraft.xJuanathan.Items.ambar_mistico;
+import RubyCraft.xJuanathan.Items.ambar_sangriento;
 import RubyCraft.xJuanathan.Items.calavera_elfo;
 import RubyCraft.xJuanathan.Items.calavera_gigante;
 import RubyCraft.xJuanathan.Items.calavera_troll;
@@ -65,6 +69,7 @@ import RubyCraft.xJuanathan.Items.esencia_del_pantano;
 import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.hueso_tallado;
+import RubyCraft.xJuanathan.Items.lingote_de_ambar_ancestral;
 import RubyCraft.xJuanathan.Items.polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_ambar;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_hueso_fosilizado;
@@ -170,7 +175,7 @@ public class Principal {
 	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
 	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
-	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 96.0F, 45);
+	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 94.0F, 45);
 	
 	//Items Evento Navidad
 	
@@ -247,7 +252,7 @@ public class Principal {
 		
 		else 
 		{
-			Prueba = null;
+			Prueba = RubyCraft.Rubycrafttab;
 		}
 		
 		
@@ -538,6 +543,21 @@ public class Principal {
 		
 		punta_de_espada_de_ambar = new punta_de_espada_de_ambar().setUnlocalizedName("punta_de_espada_de_ambar").setTextureName(RubyCraft.modid + ":punta_de_espada_de_ambar").setCreativeTab(Prueba);
 		GameRegistry.registerItem(punta_de_espada_de_ambar, punta_de_espada_de_ambar.getUnlocalizedName().substring(5));
+		
+		ambar_sangriento = new ambar_sangriento().setUnlocalizedName("ambar_sangriento").setTextureName(RubyCraft.modid + ":ambar_sangriento").setCreativeTab(Prueba);
+		GameRegistry.registerItem(ambar_sangriento, ambar_sangriento.getUnlocalizedName().substring(5));
+		
+		ambar_de_poder = new ambar_de_poder().setUnlocalizedName("ambar_de_poder").setTextureName(RubyCraft.modid + ":ambar_de_poder").setCreativeTab(Prueba);
+		GameRegistry.registerItem(ambar_de_poder, ambar_de_poder.getUnlocalizedName().substring(5));
+		
+		ambar_mistico = new ambar_mistico().setUnlocalizedName("ambar_mistico").setTextureName(RubyCraft.modid + ":ambar_mistico").setCreativeTab(Prueba);
+		GameRegistry.registerItem(ambar_mistico, ambar_mistico.getUnlocalizedName().substring(5));
+		
+		ambar_ancestral = new ambar_ancestral().setUnlocalizedName("ambar_ancestral").setTextureName(RubyCraft.modid + ":ambar_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(ambar_ancestral, ambar_ancestral.getUnlocalizedName().substring(5));
+		
+		lingote_de_ambar_ancestral = new lingote_de_ambar_ancestral().setUnlocalizedName("lingote_de_ambar_ancestral").setTextureName(RubyCraft.modid + ":lingote_de_ambar_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(lingote_de_ambar_ancestral, lingote_de_ambar_ancestral.getUnlocalizedName().substring(5));
 		
 	}
 	
