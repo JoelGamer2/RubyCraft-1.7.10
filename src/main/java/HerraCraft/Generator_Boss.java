@@ -52,7 +52,7 @@ public class Generator_Boss extends Block {
 		    }
      }else if(RubyCraft.Navidad && !world.isRemote) {
     	 
-			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "Nada echo aun"));
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + "El Boss se invoca con una estructura con altares"));
 			
 
 			

@@ -53,6 +53,7 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	generateOre(RubyCraft.Andesita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Diorita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Granito, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
+    	generateOreLadodelava(Principal.piedra_ancestral, world, rand, x, z, 2, 9, 15, 2, 8, Blocks.stone);
 
         generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
         generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
@@ -74,6 +75,19 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     		int zRand = chunkZ * 16 + random.nextInt(16);
     		gen.generate(world, random, xRand, yRand, zRand);
     		
+    	    }
+        }
+    
+    public void generateOreLadodelava(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generatein){
+    	int vienSize = minVienSize + random.nextInt(maxVienSize - minVienSize);
+    	WorldGenMinable gen = new WorldGenMinable(block, vienSize, generatein);
+    	for(int i = 0; i < chance; i++){
+    		int xRand = chunkX * 16 + random.nextInt(16);
+    		int yRand = minY + random.nextInt(maxY);
+    		int zRand = chunkZ * 16 + random.nextInt(16);
+    		if(world.getBlock(xRand + 1, yRand, zRand) == Blocks.lava || world.getBlock(xRand, yRand, zRand + 1) == Blocks.lava || world.getBlock(xRand - 1, yRand, zRand) == Blocks.lava || world.getBlock(xRand, yRand, zRand - 1) == Blocks.lava || world.getBlock(xRand, yRand - 1, zRand) == Blocks.lava || world.getBlock(xRand , yRand + 1, zRand) == Blocks.lava) {
+    		gen.generate(world, random, xRand, yRand, zRand);
+    		  }
     	    }
         }
     
