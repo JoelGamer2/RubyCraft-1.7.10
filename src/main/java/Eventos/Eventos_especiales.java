@@ -116,6 +116,9 @@ public class Eventos_especiales {
 			Generator_Boss.TiempodelMundo = 0;
 			Bloque_de_Diamante_Trol.Dano = 20.0F;
 			BossParca.Fase = 0;
+		} 
+		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && YetiLich.Activo && RubyCraft.Navidad) {
+			YetiLich.reiniciarsiespacifico();
 		}
 		
 		
