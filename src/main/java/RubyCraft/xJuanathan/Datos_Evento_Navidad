@@ -75,6 +75,12 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 ---Piedra ancestral              Este bloque al picar tendra una probabilidad de dropear el bloque de piedra o dropear esencia ancestral segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% para el bloque y un 5% para la esencia, disminuyendo un 10% el bloque y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con el pico de ambar.
+                                 
+---bloque de ambar ancestral        Sirve para craftear el lingote de ambar ancestral.
+
+                                 E E E
+           Mesa de crafteo ==>   E   E         E=ambar ancestral.       
+                                 E E E
 
 
 /////////////Items///////////////////////
@@ -193,6 +199,13 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---polvo de diamante                  Servirá para endurecer otros items. Se consigue poniendo uno de diamante en la mesa de crafteo. Dará 3 de polvo de diamante.
 
+---Monton de polvo de diamante        Servirá para conseguir diamante. Cocinando un monton de diamante en el horno dará un diamante.
+
+                                  E E E 
+           Mesa de crafteo ==>    E   E          E=polvo de diamante
+                                  E E E
+
+
 ---cubo de ambar fundido              Servirá para crear ambar con diamante. Se conseguirá poniendo uno de ambar en el horno. Dará un cubo de ambar fundido.
 
 ---cubo de ambar con diamante         Servirá para crear cubo de ambar endurecido fundido. Se conseguirá poniendo en la mesa de crafteo un cubo de ambar fundido y rodeandolo de polvo de diamante. 
@@ -221,6 +234,33 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
                                  C H C
            Mesa de crafteo ==>   H C H         H=hilo de cuerda, C=cuerda.        
                                  C H C
+
+---ambar sangriento                   Sirve para craftear el ambar de poder.
+
+                                 P M H
+           Mesa de crafteo ==>   H A B         A=ambar, M=vial de sangre de la montaña, H=vial de sangre de hielo, B=vial de sangre del bosque, P=vial de sangre del pantano.       
+                                 B P M
+
+---ambar de poder                    Sirve para craftear el ambar mistico.
+
+                                 P M H
+           Mesa de crafteo ==>   H A B         A=ambar sangriento, M=vial de sangre rocosa, H=vial de sangre glaciar, B=vial de sangre selvatica, P=vial de sangre cenagosa.       
+                                 B P M
+
+---ambar místico                    Sirve para craftear el ambar ancestral.
+
+                                 P M H
+           Mesa de crafteo ==>   H A B         A=ambar de poder, M=esencia de las montañas, H=esencia de los hielos, B=esencia del bosque, P=esencia del pantano.       
+                                 B P M
+
+---ambar ancestral                  Sirve para craftear el bloque de ambar ancestral.
+
+                                 E E E
+           Mesa de crafteo ==>   E A E         A=ambar místico, E=esencia ancestral.       
+                                 E E E
+                                 
+---lingote de ambar ancestral       Sirve para craftear la espada ancestral. Se consigue cocinando ambar ancestral en un horno. Dará un lingote de ambar ancestral por cada bloque de ambar ancestral.
+
 
 
 /////////////Herramientas///////////////////////

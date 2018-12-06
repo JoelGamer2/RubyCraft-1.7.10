@@ -26,6 +26,7 @@ import RubyCraft.xJuanathan.Bloques.Roca_Fosil;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Adn;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Ambar;
 import RubyCraft.xJuanathan.Bloques.Roca_Fosil_Hueso;
+import RubyCraft.xJuanathan.Bloques.bloque_de_ambar_ancestral;
 import RubyCraft.xJuanathan.Bloques.flor_de_las_montanas;
 import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
 import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
@@ -70,6 +71,7 @@ import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.hueso_tallado;
 import RubyCraft.xJuanathan.Items.lingote_de_ambar_ancestral;
+import RubyCraft.xJuanathan.Items.monton_de_polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_ambar;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_hueso_fosilizado;
@@ -134,6 +136,8 @@ public class Principal {
 	public static Block flor_del_bosque;
 	
 	public static Block piedra_ancestral;
+	
+	public static Block bloque_de_ambar_ancestral;
 	
 	//Items
 	
@@ -221,6 +225,8 @@ public class Principal {
 	public static Item cubo_de_ambar_endurecido;
 	public static Item ambar_endurecido;
 	
+	public static Item monton_de_polvo_de_diamante;
+	
 	public static Item hilo_de_cuerda;
 	public static Item cuerda;
 	public static Item cuerda_trenzada;
@@ -238,7 +244,7 @@ public class Principal {
 	
 	//CreativeTab Seleccion
 	
-	private static CreativeTabs Prueba;
+	public static CreativeTabs Prueba;
 	
 	
 	
@@ -361,6 +367,10 @@ public class Principal {
 		piedra_ancestral = new piedra_ancestral(Material.rock).setBlockName("piedra_ancestral").setBlockTextureName(RubyCraft.modid+":piedra_ancestral").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(piedra_ancestral, piedra_ancestral.getUnlocalizedName().substring(5));
 		piedra_ancestral.setHarvestLevel("pickaxe", 13);
+		
+		bloque_de_ambar_ancestral = new bloque_de_ambar_ancestral(Material.rock).setBlockName("bloque_de_ambar_ancestral").setBlockTextureName(RubyCraft.modid+":bloque_de_ambar_ancestral").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(bloque_de_ambar_ancestral, bloque_de_ambar_ancestral.getUnlocalizedName().substring(5));
+		bloque_de_ambar_ancestral.setHarvestLevel("pickaxe", 13);
 		
 		
 		//Items
@@ -510,6 +520,9 @@ public class Principal {
 		
 		polvo_de_diamante = new polvo_de_diamante().setUnlocalizedName("polvo_de_diamante").setTextureName(RubyCraft.modid+":polvo_de_diamante").setCreativeTab(Prueba);
 		GameRegistry.registerItem(polvo_de_diamante, polvo_de_diamante.getUnlocalizedName().substring(5));
+		
+		monton_de_polvo_de_diamante = new monton_de_polvo_de_diamante().setUnlocalizedName("monton_de_polvo_de_diamante").setTextureName(RubyCraft.modid+":monton_de_polvo_de_diamante").setCreativeTab(Prueba);
+		GameRegistry.registerItem(monton_de_polvo_de_diamante, monton_de_polvo_de_diamante.getUnlocalizedName().substring(5));
 		
 		cubo_de_ambar_fundido = new cubo_de_ambar_fundido().setUnlocalizedName("cubo_de_ambar_fundido").setTextureName(RubyCraft.modid+":cubo_de_ambar_fundido").setCreativeTab(Prueba);
 		GameRegistry.registerItem(cubo_de_ambar_fundido, cubo_de_ambar_fundido.getUnlocalizedName().substring(5));

@@ -59,9 +59,9 @@ public class Espada_de_Platino extends ItemSword {
 					
                     break;
 				case 4:
-					 if(player.inventory.hasItem(RubyCraft.Barita) && player.inventory.hasItem(RubyCraft.amuleto)){
+					 if(player.inventory.hasItem(RubyCraft.varita) && player.inventory.hasItem(RubyCraft.amuleto)){
 					player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
-					player.inventory.consumeInventoryItem(RubyCraft.Barita);
+					player.inventory.consumeInventoryItem(RubyCraft.varita);
 					player.inventory.consumeInventoryItem(RubyCraft.amuleto);
 					stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.knockback, 2);

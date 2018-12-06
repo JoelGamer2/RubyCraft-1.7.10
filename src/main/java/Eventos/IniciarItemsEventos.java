@@ -18,9 +18,6 @@ public class IniciarItemsEventos {
 	}
 	
 	public static void Navidad() {
-		if(RubyCraft.Navidad) {
-			
-		}
 		
 	}
 	
@@ -129,11 +126,19 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.catalizador_de_esencias, 1), new Object[] {" b ","hdm"," p ",'b',Principal.esencia_del_bosque,'h',Principal.esencia_de_los_hielos,'d',Principal.diamante_activado,'m',Principal.esencia_de_las_montanas,'p',Principal.esencia_del_pantano});
 		
             GameRegistry.addRecipe(new ItemStack(Principal.polvo_de_diamante, 3), new Object[] {"h",'h',Items.diamond});
-            GameRegistry.addSmelting(new ItemStack(Principal.polvo_de_diamante, 3), new ItemStack(Items.diamond, 1), 10.0F);
+            GameRegistry.addRecipe(new ItemStack(Items.diamond, 1), new Object[] {"h  ","  h"," h ",'h',Principal.monton_de_polvo_de_diamante});
+            GameRegistry.addSmelting(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new ItemStack(Items.diamond, 1), 10.0F);
             GameRegistry.addSmelting(Principal.ambar, new ItemStack(Principal.cubo_de_ambar_fundido, 1), 10.0F);
             GameRegistry.addRecipe(new ItemStack(Principal.cubo_de_ambar_con_diamante, 1), new Object[] {"ddd","dcd","ddd",'c',Principal.cubo_de_ambar_fundido,'d',Principal.polvo_de_diamante});
             GameRegistry.addSmelting(Principal.cubo_de_ambar_con_diamante, new ItemStack(Principal.cubo_de_ambar_endurecido, 1), 10.0F);
             GameRegistry.addRecipe(new ItemStack(Principal.ambar_endurecido, 1), new Object[] {"c","a",'c',Principal.cubo_de_ambar_endurecido,'a',Items.water_bucket});
+            
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_sangriento, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar,'m',Principal.vial_de_sangre_de_las_montanas,'h',Principal.vial_de_sangre_de_hielo,'b',Principal.vial_de_sangre_del_bosque,'p',Principal.vial_de_sangre_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_de_poder, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar_sangriento,'m',Principal.vial_de_sangre_rocosa,'h',Principal.vial_de_sangre_glaciar,'b',Principal.vial_de_sangre_selvatica,'p',Principal.vial_de_sangre_cenagosa});
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_mistico, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar_de_poder,'m',Principal.esencia_de_las_montanas,'h',Principal.esencia_de_los_hielos,'b',Principal.esencia_del_bosque,'p',Principal.esencia_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_ancestral, 1), new Object[] {"eee","eae","eee",'a',Principal.ambar_mistico,'m',Principal.esencia_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.bloque_de_ambar_ancestral, 1), new Object[] {"eee","e e","eee",'m',Principal.ambar_ancestral});
+            GameRegistry.addSmelting(Principal.bloque_de_ambar_ancestral, new ItemStack(Principal.lingote_de_ambar_ancestral, 1), 10.0F);
 		}
 		
 	}
