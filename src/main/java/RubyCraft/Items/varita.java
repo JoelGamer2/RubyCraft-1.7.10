@@ -10,9 +10,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 
-public class Barita extends ItemHoe {
+public class varita extends ItemHoe {
 
-	public Barita(ToolMaterial material) {
+	public varita(ToolMaterial material) {
 		super(material);
 		this.setMaxStackSize(1);
 	}

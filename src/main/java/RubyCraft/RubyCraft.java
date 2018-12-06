@@ -124,7 +124,7 @@ import RubyCraft.Items.Arco_de_Zafiro;
 import RubyCraft.Items.Azada_de_Platino;
 import RubyCraft.Items.Azada_de_cobre;
 import RubyCraft.Items.Azadaderuby;
-import RubyCraft.Items.Barita;
+import RubyCraft.Items.varita;
 import RubyCraft.Items.Barras_de_Aluminio;
 import RubyCraft.Items.Bloque_de_Cobre;
 import RubyCraft.Items.BoladeResina;
@@ -266,7 +266,7 @@ public class RubyCraft {
  public static Item Arco_de_Zafiro;
  public static Item Totem_de_la_no_muerte;
  public static Item Granada_de_Uranio;
- public static Item Barita;
+ public static Item varita;
  public static Item Pepita_de_Ruby;
  public static Item Pepita_de_Hierro;
  public static Item Pepita_de_Zafiro;
@@ -723,8 +723,8 @@ GameRegistry.registerItem(Totem_de_la_no_muerte, Totem_de_la_no_muerte.getUnloca
 Granada_de_Uranio = new Granada_de_Uranio().setUnlocalizedName("Granada_de_Uranio").setTextureName(modid + ":Granada_de_Uranio").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(Granada_de_Uranio, Granada_de_Uranio.getUnlocalizedName().substring(5));
 
-Barita = new Barita(NadaMaterial).setUnlocalizedName("Barita").setTextureName(modid + ":Barita").setCreativeTab(Rubycrafttab);
-GameRegistry.registerItem(Barita, Barita.getUnlocalizedName().substring(5));
+varita = new varita(NadaMaterial).setUnlocalizedName("varita").setTextureName(modid + ":varita").setCreativeTab(Rubycrafttab);
+GameRegistry.registerItem(varita, varita.getUnlocalizedName().substring(5));
 
 Pepita_de_Ruby = new Pepita_de_Ruby().setUnlocalizedName("Pepita_de_Ruby").setTextureName(modid + ":Pepita_de_Ruby").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(Pepita_de_Ruby, Pepita_de_Ruby.getUnlocalizedName().substring(5));

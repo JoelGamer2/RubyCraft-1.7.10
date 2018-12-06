@@ -30,7 +30,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	private static int cantidad_ya_generada2 = 0;
 	private static int cantidad_ya_generada3 = 0;
 	private static int cantidad_ya_generada4 = 0;
-	private static long tiempoqueestaba;
+	public static long tiempoqueestaba;
 	private static long noche = 15000;
 	private static int xrandomv;
 	private static int zrandomv;
@@ -74,7 +74,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 		 resetear();
 		 super.applyEntityAttributes();
 	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20000.0D);
-		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(7.0D);	
+		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);	
 		 
 		 }
 	/**Comunica cuando el mob muere**/

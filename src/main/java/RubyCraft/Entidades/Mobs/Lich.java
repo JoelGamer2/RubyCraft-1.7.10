@@ -31,7 +31,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	private static int cantidad_ya_generada2 = 0;
 	private static int cantidad_ya_generada3 = 0;
 	private static int cantidad_ya_generada4 = 0;
-	private static long tiempoqueestaba;
+	private static long tiempoqueestaba = YetiLich.tiempoqueestaba;
 	private static long noche = 15000;
 	private static int xrandomv;
 	private static int zrandomv;
@@ -70,12 +70,11 @@ public class Lich extends EntityMob implements IBossDisplayData {
 			 cantidad_a_generar4 = 6;
 		}
 		 Fase = 1;
-		 tiempoqueestaba = this.worldObj.getWorldTime();
 		 this.worldObj.setWorldTime(noche);
 		 resetear();
 		 super.applyEntityAttributes();
 	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40000.0D);
-		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(7.0D);	
+		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40.0D);	
 		 
 		 }
 	
@@ -151,13 +150,13 @@ public class Lich extends EntityMob implements IBossDisplayData {
           }
 	       if(Fase == 1) {
 	    		GenerarMobs("Zombie", world, x, y, z, 1, 150);
-	       }if(this.getHealth() <= 15000F && this.getHealth() >= 10000F) {
+	       }if(this.getHealth() <= 30000F && this.getHealth() >= 20000F) {
 	    	   Fase = 2;         
 	    	   GenerarMobs("Skeleton", world, x, y, z, 2, 125);
-	       }else if(this.getHealth() <= 10000F && this.getHealth() >= 5000F) {
+	       }else if(this.getHealth() <= 20000F && this.getHealth() >= 10000F) {
 	    	   Fase = 3;
 	    	   GenerarMobs("Blaze", world, x, y, z, 3, 75);   
-	       }else if(this.getHealth() <= 5000F && this.getHealth() >= 1F) {
+	       }else if(this.getHealth() <= 10000F && this.getHealth() >= 1F) {
 	    	   Fase = 4;
 	    	   GenerarMobs("Ghast", world, x, y, z, 4, 50);   
 	       }
@@ -203,6 +202,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	    		   mob.setCurrentItemOrArmor(2, new ItemStack(RubyCraft.PetodeZafiro, 1));
 	    		   mob.setCurrentItemOrArmor(3, new ItemStack(RubyCraft.PantacasdeZafiro, 1));
 	    		   mob.setCurrentItemOrArmor(4, new ItemStack(RubyCraft.botasdeZafiro, 1));
+	    		   mob.captureDrops = false;
 	    		  world.spawnEntityInWorld(mob);
 	    		  world.spawnEntityInWorld(esqueleto);
 	    		cantidad_ya_generada1 ++;
@@ -222,6 +222,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 		    		   mob.setCurrentItemOrArmor(2, new ItemStack(RubyCraft.PetodeZafiro, 1));
 		    		   mob.setCurrentItemOrArmor(3, new ItemStack(RubyCraft.PantacasdeZafiro, 1));
 		    		   mob.setCurrentItemOrArmor(4, new ItemStack(RubyCraft.botasdeZafiro, 1));
+		    		   mob.captureDrops = false;
 		    		   creeper.setPosition(x + xrandomv, y, z + zrandomv);
 		    		  world.spawnEntityInWorld(mob);
 		    		  world.spawnEntityInWorld(creeper);
