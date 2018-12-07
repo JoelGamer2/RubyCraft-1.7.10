@@ -22,6 +22,7 @@ public class espada_ancestral extends ItemSword{
 public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 	
 	Encantamientos.encantar(stack, player, world, this, Enchantment.blastProtection, Principal.vial_de_sangre_glaciar);
+	Encantamientos.encantar(stack, player, world, this, Enchantment.sharpness, Principal.vial_de_sangre_selvatica);
 	return super.onItemRightClick(stack, world, player);
 }
 	
