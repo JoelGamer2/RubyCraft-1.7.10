@@ -34,6 +34,7 @@ import RubyCraft.Entidades.Mobs.HombreCerdorender;
 import RubyCraft.Entidades.Mobs.Invocador;
 import RubyCraft.Entidades.Mobs.Iratxe;
 import RubyCraft.Entidades.Mobs.Jose;
+import RubyCraft.Entidades.Mobs.Lich;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.RenderAlejandroMob;
 import RubyCraft.Entidades.Mobs.RenderAlienMob;
@@ -41,14 +42,18 @@ import RubyCraft.Entidades.Mobs.RenderBossparca;
 import RubyCraft.Entidades.Mobs.RenderInvocadorMob;
 import RubyCraft.Entidades.Mobs.RenderIratxeMob;
 import RubyCraft.Entidades.Mobs.RenderJoseMob;
+import RubyCraft.Entidades.Mobs.RenderLich;
 import RubyCraft.Entidades.Mobs.RenderPatxisMob;
 import RubyCraft.Entidades.Mobs.RenderShulkerMob;
+import RubyCraft.Entidades.Mobs.RenderYetiLich;
 import RubyCraft.Entidades.Mobs.Shulker;
+import RubyCraft.Entidades.Mobs.YetiLich;
 import RubyCraft.Entidades.Mobs.ModelRender.AlejandroRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.AlienRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.IratxeRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.JoseRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.PatxisRenderModel;
+import RubyCraft.Entidades.Mobs.ModelRender.RenderModelYetiLich;
 import RubyCraft.Entidades.Mobs.ModelRender.shulkerRenderModel;
 import RubyCraft.Integracion.Mods_Encantamientos;
 import RubyCraft.Maquinas.Renderizado.Render_Mesa_de_Ruby;
@@ -92,6 +97,9 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(Jose.class, new RenderJoseMob(new JoseRenderModel(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(Patxis.class, new RenderPatxisMob(new PatxisRenderModel(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(BossParca.class, new RenderBossparca(new ModelBiped(), 0));
+	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new RenderModelYetiLich(), 0));
+	    RenderingRegistry.registerEntityRenderingHandler(Lich.class, new RenderLich(new ModelBiped(), 0));
+
 		//TileEntity Render
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCofredeRuby.class, new CofredeRubyRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.Cofre_de_Ruby), new ItemRenderCofredeRuby());
