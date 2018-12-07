@@ -1,11 +1,8 @@
 package RubyCraft.xJuanathan.Armas;
 
-import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Encantamientos;
-import RubyCraft.Encantamientos.Encantamiento_MineCraft_Objetos;
 import RubyCraft.xJuanathan.Principal;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -25,6 +22,5 @@ public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer pla
 	Encantamientos.encantar(stack, player, world, this, Enchantment.sharpness, Principal.vial_de_sangre_selvatica);
 	return super.onItemRightClick(stack, world, player);
 }
-	
 	
 }
