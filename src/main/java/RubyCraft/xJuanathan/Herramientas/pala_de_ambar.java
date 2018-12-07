@@ -16,7 +16,7 @@ public class pala_de_ambar extends ItemSpade{
 	}
 
 	
-    @Override
+    @Override 
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) 
     {
 	    Encantamientos.encantar(stack, player, world, this, Enchantment.efficiency, Principal.vial_de_sangre_glaciar);

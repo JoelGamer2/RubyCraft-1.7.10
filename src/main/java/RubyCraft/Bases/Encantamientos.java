@@ -41,7 +41,7 @@ public class Encantamientos {
 				Borrar_Encantamientos(encantamiento, stack);
 			}
 			stack.addEnchantment(encantamiento, j + 1);
-			player.inventory.consumeInventoryItem(vial);
+			player.inventory.consumeInventoryItem(vial); 
 			//player.inventory.addItemStackToInventory(stack);
 			}
 		}

@@ -26,4 +26,4 @@ public class Pico_de_roca_fosilizada extends ItemPickaxe {
 	    return super.onItemRightClick(stack, world, player);
     }
 
-}
+} 

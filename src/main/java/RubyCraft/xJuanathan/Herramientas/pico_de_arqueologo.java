@@ -27,4 +27,4 @@ public class pico_de_arqueologo extends ItemPickaxe {
 	    return super.onItemRightClick(stack, world, player);
     }
 
-}
+} 

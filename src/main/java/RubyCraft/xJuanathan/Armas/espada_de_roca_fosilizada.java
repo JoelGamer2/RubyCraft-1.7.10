@@ -24,6 +24,6 @@ public class espada_de_roca_fosilizada extends ItemSword{
     	Encantamientos.encantar(stack, player, world, this, Enchantment.looting, Principal.vial_de_sangre_rocosa);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.sharpness, Principal.vial_de_sangre_selvatica);
 	    return super.onItemRightClick(stack, world, player);
-    }
+    } 
 
 }

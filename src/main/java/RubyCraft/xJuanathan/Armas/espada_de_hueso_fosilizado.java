@@ -25,5 +25,5 @@ public class espada_de_hueso_fosilizado extends ItemSword{
     	Encantamientos.encantar(stack, player, world, this, Enchantment.sharpness, Principal.vial_de_sangre_selvatica);
 	    return super.onItemRightClick(stack, world, player);
     }
-
+ 
 }

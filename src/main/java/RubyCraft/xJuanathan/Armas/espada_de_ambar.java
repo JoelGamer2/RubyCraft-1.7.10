@@ -26,4 +26,4 @@ public class espada_de_ambar extends ItemSword{
 	    return super.onItemRightClick(stack, world, player);
     }
 
-}
+} 

@@ -25,4 +25,4 @@ public class espada_ancestral extends ItemSword{
     	Encantamientos.encantar(stack, player, world, this, Enchantment.sharpness, Principal.vial_de_sangre_selvatica);
 	    return super.onItemRightClick(stack, world, player);
     }
-}
+} 

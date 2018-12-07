@@ -18,7 +18,7 @@ public class hacha_de_hueso_fosilizado extends ItemAxe{
 	
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) 
-    {
+    { 
 	    Encantamientos.encantar(stack, player, world, this, Enchantment.efficiency, Principal.vial_de_sangre_glaciar);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.silkTouch, Principal.vial_de_sangre_cenagosa);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.unbreaking, Principal.vial_de_sangre_rocosa);
