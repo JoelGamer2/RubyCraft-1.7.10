@@ -31,18 +31,15 @@ public class Encantamientos {
 	
 	public static void encantar(ItemStack stack, EntityPlayer player, World world, Item espada, Enchantment encantamiento, Item vial) {
 
-        if(player.inventory.hasItem(vial) && !world.isRemote) {
+        if(player.inventory.hasItem(vial)) {
 
             int j = EnchantmentHelper.getEnchantmentLevel(encantamiento.effectId, stack);
             if(j < 10) {
-            //player.inventory.consumeInventoryItem(espada);
-            //player.inventory.consumeInventoryItem(vial);
             if(!(j == 0)) {
                 Borrar_Encantamientos(encantamiento, stack);
             }
             stack.addEnchantment(encantamiento, j + 1);
             player.inventory.consumeInventoryItem(vial); 
-            //player.inventory.addItemStackToInventory(stack);
             }
         }
 
