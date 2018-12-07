@@ -1,12 +1,11 @@
 package RubyCraft.Bases;
 
-import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.Principal;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
 
 public class Encantamientos {
@@ -20,7 +19,7 @@ public class Encantamientos {
 			player.inventory.consumeInventoryItem(espada);
 			player.inventory.consumeInventoryItem(vial);
 			if(!(j == 0)) {
-			stack.stackTagCompound.removeTag("ench");
+				BorrarEncantamiento.removeEnchantment(encantamiento, stack);
 			}
 			stack.addEnchantment(encantamiento, j + 1);
 			player.inventory.addItemStackToInventory(stack);
