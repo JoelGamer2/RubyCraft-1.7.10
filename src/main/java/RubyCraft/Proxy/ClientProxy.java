@@ -53,6 +53,7 @@ import RubyCraft.Entidades.Mobs.ModelRender.AlienRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.IratxeRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.JoseRenderModel;
 import RubyCraft.Entidades.Mobs.ModelRender.PatxisRenderModel;
+import RubyCraft.Entidades.Mobs.ModelRender.RenderModelYetiLich;
 import RubyCraft.Entidades.Mobs.ModelRender.shulkerRenderModel;
 import RubyCraft.Integracion.Mods_Encantamientos;
 import RubyCraft.Maquinas.Renderizado.Render_Mesa_de_Ruby;
@@ -96,7 +97,7 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(Jose.class, new RenderJoseMob(new JoseRenderModel(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(Patxis.class, new RenderPatxisMob(new PatxisRenderModel(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(BossParca.class, new RenderBossparca(new ModelBiped(), 0));
-	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new ModelBiped(), 0));
+	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new RenderModelYetiLich(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(Lich.class, new RenderLich(new ModelBiped(), 0));
 
 		//TileEntity Render
