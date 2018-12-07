@@ -10,7 +10,8 @@ import net.minecraft.item.ItemStack;
 
 public class IniciarItemsEventos {
 
-	
+
+
 	public static void Iniciartodo() {
 		Navidad();
 		Hallowen();

@@ -179,7 +179,7 @@ public class Principal {
 	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
 	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
-	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 996.0F, 45);
+	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 496.0F, 45);
 	
 	//Items Evento Navidad
 	
