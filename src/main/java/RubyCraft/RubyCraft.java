@@ -502,7 +502,6 @@ public static boolean cliente = false;
 public void Preinit(FMLPreInitializationEvent event){
 	Verificar_Fecha.VerFechasEventos();
     Verificar_Fecha.VerIpePuerto();
-	Principal.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 		Navidad = true;
 	}
@@ -513,8 +512,7 @@ public void Preinit(FMLPreInitializationEvent event){
 	
 	if(!cliente && !Control_de_Version.Navidad_Activar) {
 		Ver_fecha_calendario_usuario.iniciar();
-	}
-	  	   
+	}  	   
 	herracraft.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 	
@@ -540,7 +538,7 @@ Cementos_Bases.Iniciar();
 
 modChecker = new BuscadordeMods();
 modChecker.Mensaje();
-
+Principal.preinit();
 Generacion_Principal.InicicializarGeneraciones();
 		
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
@@ -606,7 +604,6 @@ GameRegistry.registerItem(espada_de_cobre, espada_de_cobre.getUnlocalizedName().
 GameRegistry.registerItem(Pala_de_cobre, Pala_de_cobre.getUnlocalizedName().substring(5));
 GameRegistry.registerItem(Azada_de_cobre, Azada_de_cobre.getUnlocalizedName().substring(5));
 GameRegistry.registerItem(Tijeras_de_cobre, Tijeras_de_cobre.getUnlocalizedName().substring(5));
-
 //Armadura
 		
 CascodeRuby = new CascodeRuby(RubyArmorMaterial, 0, 0).setUnlocalizedName("CascodeRuby").setTextureName(modid + ":CascodeRuby").setCreativeTab(Rubycrafttab);

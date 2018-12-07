@@ -1,6 +1,7 @@
 package RubyCraft.xJuanathan;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Items.Ruby;
 import RubyCraft.xJuanathan.AltarNavidad.altar;
 import RubyCraft.xJuanathan.AltarNavidad.altar_central;
 import RubyCraft.xJuanathan.Armas.espada_ancestral;
@@ -254,18 +255,7 @@ public class Principal {
 	
 	public static void preinit() 
 	{
-		
-		if(RubyCraft.Navidad)
-		{
-			Prueba = RubyCraft.EventosTab;
-		}
-		
-		else if (!RubyCraft.Navidad)
-		{
-			Prueba = RubyCraft.Rubycrafttab;
-		}
-		
-		
+		Prueba = RubyCraft.Rubycrafttab;
 		//Bloques
 		
 		Monton_de_fosiles = new Monton_de_fosiles(Material.rock).setBlockName("Monton_de_fosiles").setBlockTextureName(RubyCraft.modid+":Monton_de_fosiles").setCreativeTab(RubyCraft.Rubycrafttab).setHardness(4.0F).setResistance(3.0F);
