@@ -71,6 +71,8 @@ import RubyCraft.xJuanathan.Items.hilo_de_cuerda;
 import RubyCraft.xJuanathan.Items.hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.hueso_tallado;
 import RubyCraft.xJuanathan.Items.lingote_de_ambar_ancestral;
+import RubyCraft.xJuanathan.Items.mango_de_espada;
+import RubyCraft.xJuanathan.Items.mango_de_herramientas;
 import RubyCraft.xJuanathan.Items.monton_de_polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.polvo_de_diamante;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_ambar;
@@ -91,9 +93,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class Principal {
@@ -179,9 +179,11 @@ public class Principal {
 	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
 	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
-	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 94.0F, 45);
+	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 996.0F, 45);
 	
 	//Items Evento Navidad
+	
+	public static Item mango_de_herramientas;
 	
 	public static Item ambar;
 	
@@ -231,6 +233,8 @@ public class Principal {
 	public static Item cuerda;
 	public static Item cuerda_trenzada;
 	
+	public static Item mango_de_espada;
+	
 	public static Item punta_de_espada_de_silex;
 	public static Item punta_de_espada_de_roca_fosilizada;
 	public static Item punta_de_espada_de_hueso_fosilizado;
@@ -256,7 +260,7 @@ public class Principal {
 			Prueba = RubyCraft.EventosTab;
 		}
 		
-		else 
+		else if (!RubyCraft.Navidad)
 		{
 			Prueba = RubyCraft.Rubycrafttab;
 		}
@@ -445,6 +449,12 @@ public class Principal {
 		
 		
 		//Items evento Navidad
+		
+		mango_de_herramientas = new mango_de_herramientas().setUnlocalizedName("mango_de_herramientas").setTextureName(RubyCraft.modid+":mango_de_herramientas").setCreativeTab(Prueba);
+		GameRegistry.registerItem(mango_de_herramientas, mango_de_herramientas.getUnlocalizedName().substring(5));
+		
+		mango_de_espada = new mango_de_espada().setUnlocalizedName("mango_de_espada").setTextureName(RubyCraft.modid+":mango_de_espada").setCreativeTab(Prueba);
+		GameRegistry.registerItem(mango_de_espada, mango_de_espada.getUnlocalizedName().substring(5));
 		
 		ambar = new ambar().setUnlocalizedName("ambar").setTextureName(RubyCraft.modid+":ambar").setCreativeTab(Prueba);
 		GameRegistry.registerItem(ambar, ambar.getUnlocalizedName().substring(5));
