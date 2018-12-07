@@ -139,8 +139,8 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.ambar_sangriento, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar,'m',Principal.vial_de_sangre_de_las_montanas,'h',Principal.vial_de_sangre_de_hielo,'b',Principal.vial_de_sangre_del_bosque,'p',Principal.vial_de_sangre_del_pantano});
             GameRegistry.addRecipe(new ItemStack(Principal.ambar_de_poder, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar_sangriento,'m',Principal.vial_de_sangre_rocosa,'h',Principal.vial_de_sangre_glaciar,'b',Principal.vial_de_sangre_selvatica,'p',Principal.vial_de_sangre_cenagosa});
             GameRegistry.addRecipe(new ItemStack(Principal.ambar_mistico, 1), new Object[] {"pmh","hab","bpm",'a',Principal.ambar_de_poder,'m',Principal.esencia_de_las_montanas,'h',Principal.esencia_de_los_hielos,'b',Principal.esencia_del_bosque,'p',Principal.esencia_del_pantano});
-            GameRegistry.addRecipe(new ItemStack(Principal.ambar_ancestral, 1), new Object[] {"eee","eae","eee",'a',Principal.ambar_mistico,'m',Principal.esencia_ancestral});
-            GameRegistry.addRecipe(new ItemStack(Principal.bloque_de_ambar_ancestral, 1), new Object[] {"eee","e e","eee",'m',Principal.ambar_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.ambar_ancestral, 1), new Object[] {"eee","eae","eee",'a',Principal.ambar_mistico,'e',Principal.esencia_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.bloque_de_ambar_ancestral, 1), new Object[] {"eee","e e","eee",'e',Principal.ambar_ancestral});
             GameRegistry.addSmelting(Principal.bloque_de_ambar_ancestral, new ItemStack(Principal.lingote_de_ambar_ancestral, 1), 10.0F);
             
             GameRegistry.addRecipe(new ItemStack(Principal.espada_ancestral, 1), new Object[] {" a "," a "," p ",'a',Principal.lingote_de_ambar_ancestral,'p',Principal.mango_de_espada});

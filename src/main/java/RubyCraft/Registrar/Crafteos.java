@@ -7,7 +7,9 @@ import RubyCraft.Bases.Cementos_Bases;
 import RubyCraft.Bases.Crafteos_Bases;
 import RubyCraft.Integracion.Crafteos_InteGracion;
 import RubyCraft.Registrar.Registros_Importantes.Registros;
+import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -25,7 +27,6 @@ public class Crafteos {
 	}
 
 	public static void MesaMineCraft(){
-
 		//recetas con formas Mesa(MineCraft)
 		GameRegistry.addRecipe(new ItemStack(RubyCraft.MesadeTrabajodeRuby, 1), new Object[]{"brb","rmr","brb",'b',RubyCraft.Bloquederuby,'r',RubyCraft.ruby,'m',Blocks.crafting_table});    	
     	GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloque_de_Diamante_Trol, 1), new Object[]{"edr","dld","rde",'e', Items.ender_pearl,'d',Items.diamond,'r',Items.redstone,'l',Items.lava_bucket});
