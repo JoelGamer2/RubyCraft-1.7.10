@@ -41,7 +41,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	public YetiLich(World world) {
 		super(world);
 		     
-	 this.setSize(0.6F, 1.9F);
+	 this.setSize(2.5F, 5.5F);
 	 this.stepHeight = 1.0F; 
 	 
 	}
@@ -74,6 +74,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 		 resetear();
 		 super.applyEntityAttributes();
 	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20000.0D);
+		 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1D);
 		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);	
 		 
 		 }
