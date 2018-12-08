@@ -2,23 +2,64 @@ package RubyCraft.xJuanathan.AltarNavidad;
 
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
+import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
+import RubyCraft.xJuanathan.TileEntity.TileEntityAltarCentral;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class altar_central extends Block{
+public class altar_central extends BlockContainer{
 
+	public static Block blockID;
+	@SideOnly(Side.CLIENT)
+	private IIcon Particulasaltar;
+	
 	public altar_central(Material p_i45394_1_) {
 		super(p_i45394_1_);
 		// TODO Auto-generated constructor stub
 	}
 
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon (int side, int metadata){
+		 return side == 1 ? this.Particulasaltar : this.blockIcon;
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons (IIconRegister iconRegister){
+		this.Particulasaltar = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Altares/Particulasaltar");
+		this.blockIcon = iconRegister.registerIcon(RubyCraft.modid + ":" + "TileEntitys/Altares/Particulasaltar");
+		
+	}
+	
+	@Override
+	public int getRenderType() {	
+		return -1;
+	}
+	
+	public boolean isOpaqueCube() {
+		return false;
+	}
+	public boolean isNormalCube() {
+		return false;
+	}
+	
+	@Override
+	public TileEntity createNewTileEntity(World world, int id) {
+		return new TileEntityAltarCentral();
+	}
+	
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z,EntityPlayer player, int aa, float a, float b, float c) {
 		
@@ -79,5 +120,4 @@ public class altar_central extends Block{
 		player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Estructura Erronea"));
 		
 	}
-	
 }

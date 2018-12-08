@@ -66,9 +66,12 @@ import RubyCraft.TileEntity.Render.ItemRenderCofredeRuby;
 import RubyCraft.TileEntity.Render.Mesa_de_Ruby_Item_Renderer;
 import RubyCraft.TileEntity.Render.Mesa_de_Zafiro_Item_Renderer;
 import RubyCraft.xJuanathan.Principal;
+import RubyCraft.xJuanathan.RenderModel.AltarCentral_Item;
+import RubyCraft.xJuanathan.RenderModel.AltarCentral_Renderizado_Textura;
 import RubyCraft.xJuanathan.RenderModel.Altar_Renderizado_Item;
 import RubyCraft.xJuanathan.RenderModel.Altar_Renderizado_Textura;
 import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
+import RubyCraft.xJuanathan.TileEntity.TileEntityAltarCentral;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -112,6 +115,9 @@ public class ClientProxy extends ServerProxy {
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAltar.class, new Altar_Renderizado_Textura());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Principal.altar), new Altar_Renderizado_Item(new TileEntityAltar(), new Altar_Renderizado_Textura()));
+		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAltarCentral.class, new AltarCentral_Renderizado_Textura());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Principal.altar_central), new AltarCentral_Item(new TileEntityAltarCentral(), new AltarCentral_Renderizado_Textura()));
 		
         //Variado
 		FMLCommonHandler.instance().bus().register(new Encantamiento_MineCraft_Objetos(Minecraft.getMinecraft()));

@@ -9,14 +9,14 @@ import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
-public class Altar_Renderizado_Textura extends  TileEntitySpecialRenderer {
+public class AltarCentral_Renderizado_Textura extends  TileEntitySpecialRenderer {
 
-	private AltarModelo model;
+	private AltarCentralModelo model;
 	
-	private ResourceLocation textura = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Altares/Altar.png");
+	private ResourceLocation textura = new ResourceLocation(RubyCraft.modid + ":textures/blocks/TileEntitys/Altares/altar_central.png");
 	
-	 public Altar_Renderizado_Textura() {
-		 model = new AltarModelo();
+	 public AltarCentral_Renderizado_Textura() {
+		 model = new AltarCentralModelo();
 		 
 		 
 			    
