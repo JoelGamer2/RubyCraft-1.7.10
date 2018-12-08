@@ -667,7 +667,7 @@ item.roca_fosilizada_afilada.name=Fossil stone sharp
 item.hueso_tallado.name=Carved bone
 
 item.polvo_de_diamante.name=Diamond dust
-Item.monton_de_polvo_de_diamante.name=Lots of diamond dust
+item.monton_de_polvo_de_diamante.name=Lots of diamond dust
 item.cubo_de_ambar_fundido.name=Molten amber bucket
 item.cubo_de_ambar_con_diamante.name=Diamond amber bucket
 item.cubo_de_ambar_endurecido.name=Hardened amber bucket
