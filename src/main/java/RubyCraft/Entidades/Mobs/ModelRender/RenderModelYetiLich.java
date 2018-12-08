@@ -26,13 +26,13 @@ public class RenderModelYetiLich extends ModelBase
     
       PieDerecho = new ModelRenderer(this, 0, 236);
       PieDerecho.addBox(0F, 0F, 0F, 8, 4, 16);
-      PieDerecho.setRotationPoint(-16F, 20F, -8F);
+      PieDerecho.setRotationPoint(0F, 26F, -8F);
       PieDerecho.setTextureSize(256, 256);
       PieDerecho.mirror = true;
       setRotation(PieDerecho, 0F, 0F, 0F);
       PieIzquierdo = new ModelRenderer(this, 50, 236);
       PieIzquierdo.addBox(0F, 0F, 0F, 8, 4, 16);
-      PieIzquierdo.setRotationPoint(8F, 20F, -8F);
+      PieIzquierdo.setRotationPoint(0F, 26F, -8F);
       PieIzquierdo.setTextureSize(256, 256);
       PieIzquierdo.mirror = true;
       setRotation(PieIzquierdo, 0F, 0F, 0F);
@@ -90,8 +90,8 @@ public class RenderModelYetiLich extends ModelBase
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-    PieDerecho.render(f5);
-    PieIzquierdo.render(f5);
+  //  PieDerecho.render(f5);
+  //  PieIzquierdo.render(f5);
     PiernaDerecha.render(f5);
     PiernaIzquierda.render(f5);
     CuerpoInferior.render(f5);
@@ -100,6 +100,9 @@ public class RenderModelYetiLich extends ModelBase
     BrazoDerecho.render(f5);
     BrazoIzquierdo.render(f5);
     Cabeza.render(f5);
+    
+    PiernaDerecha.addChild(PieDerecho);
+    PiernaIzquierda.addChild(PieIzquierdo);
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
