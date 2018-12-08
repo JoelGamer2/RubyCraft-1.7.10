@@ -41,7 +41,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	public YetiLich(World world) {
 		super(world);
 		     
-	 this.setSize(2.5F, 5.5F);
+	 this.setSize(2.5F, 6.8F);
 	 this.stepHeight = 1.0F; 
 	 
 	}

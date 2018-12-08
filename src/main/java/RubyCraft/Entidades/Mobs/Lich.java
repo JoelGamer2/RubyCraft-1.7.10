@@ -74,6 +74,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 		 resetear();
 		 super.applyEntityAttributes();
 	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40000.0D);
+		 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
 		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40.0D);	
 		 
 		 }
