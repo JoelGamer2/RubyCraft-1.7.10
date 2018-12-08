@@ -33,6 +33,10 @@ import RubyCraft.xJuanathan.Bloques.flor_de_las_nieves;
 import RubyCraft.xJuanathan.Bloques.flor_del_Pantano;
 import RubyCraft.xJuanathan.Bloques.flor_del_bosque;
 import RubyCraft.xJuanathan.Bloques.piedra_ancestral;
+import RubyCraft.xJuanathan.Bloques.piedra_ancestral_de_poder;
+import RubyCraft.xJuanathan.Bloques.piedra_ancestral_esencial;
+import RubyCraft.xJuanathan.Bloques.piedra_ancestral_poseida;
+import RubyCraft.xJuanathan.Bloques.piedra_ancestral_sangrienta;
 import RubyCraft.xJuanathan.Herramientas.Pico_de_roca_fosilizada;
 import RubyCraft.xJuanathan.Herramientas.hacha_de_ambar;
 import RubyCraft.xJuanathan.Herramientas.hacha_de_arqueologo;
@@ -63,6 +67,7 @@ import RubyCraft.xJuanathan.Items.cubo_de_ambar_fundido;
 import RubyCraft.xJuanathan.Items.cuerda;
 import RubyCraft.xJuanathan.Items.cuerda_trenzada;
 import RubyCraft.xJuanathan.Items.diamante_activado;
+import RubyCraft.xJuanathan.Items.diamante_de_poder;
 import RubyCraft.xJuanathan.Items.esencia_ancestral;
 import RubyCraft.xJuanathan.Items.esencia_de_las_montanas;
 import RubyCraft.xJuanathan.Items.esencia_de_los_hielos;
@@ -137,6 +142,10 @@ public class Principal {
 	public static Block flor_del_bosque;
 	
 	public static Block piedra_ancestral;
+	public static Block piedra_ancestral_sangrienta;
+	public static Block piedra_ancestral_de_poder;
+	public static Block piedra_ancestral_esencial;
+	public static Block piedra_ancestral_poseida;
 	
 	public static Block bloque_de_ambar_ancestral;
 	
@@ -215,6 +224,7 @@ public class Principal {
 	public static Item esencia_ancestral;
 	
 	public static Item diamante_activado;
+	public static Item diamante_de_poder;
 	public static Item catalizador_de_esencias;
 	
 	public static Item silex;
@@ -362,6 +372,22 @@ public class Principal {
 		GameRegistry.registerBlock(piedra_ancestral, piedra_ancestral.getUnlocalizedName().substring(5));
 		piedra_ancestral.setHarvestLevel("pickaxe", 13);
 		
+		piedra_ancestral_sangrienta = new piedra_ancestral_sangrienta(Material.rock).setBlockName("piedra_ancestral_sangrienta").setBlockTextureName(RubyCraft.modid+":piedra_ancestral_sangrienta").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(piedra_ancestral_sangrienta, piedra_ancestral_sangrienta.getUnlocalizedName().substring(5));
+		piedra_ancestral.setHarvestLevel("pickaxe", 13);
+		
+		piedra_ancestral_de_poder = new piedra_ancestral_de_poder(Material.rock).setBlockName("piedra_ancestral_de_poder").setBlockTextureName(RubyCraft.modid+":piedra_ancestral_de_poder").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(piedra_ancestral_de_poder, piedra_ancestral_de_poder.getUnlocalizedName().substring(5));
+		piedra_ancestral.setHarvestLevel("pickaxe", 13);
+		
+		piedra_ancestral_esencial = new piedra_ancestral_esencial(Material.rock).setBlockName("piedra_ancestral_esencial").setBlockTextureName(RubyCraft.modid+":piedra_ancestral_esencial").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(piedra_ancestral_esencial, piedra_ancestral_esencial.getUnlocalizedName().substring(5));
+		piedra_ancestral.setHarvestLevel("pickaxe", 13);
+		
+		piedra_ancestral_poseida = new piedra_ancestral_poseida(Material.rock).setBlockName("piedra_ancestral_poseida").setBlockTextureName(RubyCraft.modid+":piedra_ancestral_poseida").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
+		GameRegistry.registerBlock(piedra_ancestral_poseida, piedra_ancestral_poseida.getUnlocalizedName().substring(5));
+		piedra_ancestral.setHarvestLevel("pickaxe", 13);
+		
 		bloque_de_ambar_ancestral = new bloque_de_ambar_ancestral(Material.rock).setBlockName("bloque_de_ambar_ancestral").setBlockTextureName(RubyCraft.modid+":bloque_de_ambar_ancestral").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(bloque_de_ambar_ancestral, bloque_de_ambar_ancestral.getUnlocalizedName().substring(5));
 		bloque_de_ambar_ancestral.setHarvestLevel("pickaxe", 13);
@@ -505,6 +531,9 @@ public class Principal {
 		
 		diamante_activado = new diamante_activado().setUnlocalizedName("diamante_activado").setTextureName(RubyCraft.modid+":diamante_activado").setCreativeTab(Prueba);
 		GameRegistry.registerItem(diamante_activado, diamante_activado.getUnlocalizedName().substring(5));
+		
+		diamante_de_poder = new diamante_de_poder().setUnlocalizedName("diamante_de_poder").setTextureName(RubyCraft.modid+":diamante_de_poder").setCreativeTab(Prueba);
+		GameRegistry.registerItem(diamante_de_poder, diamante_de_poder.getUnlocalizedName().substring(5));
 		
 		catalizador_de_esencias = new catalizador_de_esencias().setUnlocalizedName("catalizador_de_esencias").setTextureName(RubyCraft.modid+":catalizador_de_esencias").setCreativeTab(Prueba);
 		GameRegistry.registerItem(catalizador_de_esencias, catalizador_de_esencias.getUnlocalizedName().substring(5));

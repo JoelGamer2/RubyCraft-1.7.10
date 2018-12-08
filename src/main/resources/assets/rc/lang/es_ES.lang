@@ -611,6 +611,12 @@ tile.altar.name=Altar
 tile.altar_central.name=Altar central
 
 tile.piedra_ancestral.name=Piedra ancestral
+tile.piedra_ancestral_sangrienta.name=Piedra ancestral sangrienta
+tile.piedra_ancestral_de_poder.name=Piedra ancestral de poder
+tile.piedra_ancestral_esencial.name=Piedra ancestral esencial
+tile.piedra_ancestral_poseida.name=Piedra ancestral poseida
+
+tile.bloque_de_ambar_ancestral.name=Bloque de ambar ancestral
 
 
 
@@ -622,6 +628,8 @@ item.Fragmento_de_fosil.name=Fragmento de fosil
 
 
 ////////////////////////////////////////////////////items evento navidad
+
+item.mango_de_herramientas.name=Mango de herramientas
 
 item.ambar.name=Ambar
 item.vial_de_sangre_de_hielo.name=vial de sangre de hielo
@@ -651,6 +659,7 @@ item.esencia_del_bosque.name=Esencia del bosque
 item.esencia_ancestral.name=Esencia ancestral
 
 item.diamante_activado.name=Diamante activado
+item.diamante_de_poder.name=Diamante de poder
 item.catalizador_de_esencias.name=catalizador de esencias
 
 item.silex.name=Silex
@@ -658,6 +667,7 @@ item.roca_fosilizada_afilada.name=Roca fosilizada afilada
 item.hueso_tallado.name=Hueso tallado
 
 item.polvo_de_diamante.name=Polvo de diamante
+Item.monton_de_polvo_de_diamante.name=Monton de polvo de diamante
 item.cubo_de_ambar_fundido.name=Cubo de ambar fundido
 item.cubo_de_ambar_con_diamante.name=Cubo de ambar con diamante
 item.cubo_de_ambar_endurecido.name=Cubo de ambar endurecido
@@ -667,10 +677,18 @@ item.hilo_de_cuerda.name=Hilo de cuerda
 item.cuerda.name=Cuerda
 item.cuerda_trenzada.name=Cuerda trenzada
 
+item.mango_de_espada.name=Mango de espada
+
 item.punta_de_espada_de_silex.name=Punta de espada de silex
 item.punta_de_espada_de_roca_fosilizada.name=Punta de espada de roca fosilizada
 item.punta_de_espada_de_hueso_fosilizado.name=Punta de espada de hueso fosilizado
 item.punta_de_espada_de_ambar.name=Punta de espada de ambar
+
+item.ambar_sangriento.name=Ambar sangriento
+item.ambar_de_poder.name=Ambar de poder
+item.ambar_mistico.name=Ambar mistico
+item.ambar_ancestral.name=Ambar ancestral
+item.lingote_de_ambar_ancestral.name=Lingote de ambar ancestral
 
 
 ////////////////////////////////////////////////////Herramientas

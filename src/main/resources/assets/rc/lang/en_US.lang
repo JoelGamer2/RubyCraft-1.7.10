@@ -611,6 +611,12 @@ tile.altar.name=Altar
 tile.altar_central.name=Central altar
 
 tile.piedra_ancestral.name=Ancestral stone
+tile.piedra_ancestral_sangrienta.name=Blood ancestral stone
+tile.piedra_ancestral_de_poder.name=Power ancestral stone
+tile.piedra_ancestral_esencial.name=Essential ancestral stone
+tile.piedra_ancestral_poseida.name=Possessed ancestral stone
+
+tile.bloque_de_ambar_ancestral.name=Ambar ancestral block
 
 
 
@@ -621,6 +627,8 @@ item.Fragmento_de_fosil.name=Fossil Shard
 
 
 ////////////////////////////////////////////////////items evento navidad
+
+item.mango_de_herramientas.name=Tool handle
 
 item.ambar.name=Amber
 
@@ -651,6 +659,7 @@ item.esencia_del_bosque.name=Forest essence
 item.esencia_ancestral.name=Ancestral essence
 
 item.diamante_activado.name=Activated diamond
+item.diamante_de_poder.name=Power diamond
 item.catalizador_de_esencias.name=Essence catalyst
 
 item.silex.name=Silex
@@ -658,6 +667,7 @@ item.roca_fosilizada_afilada.name=Fossil stone sharp
 item.hueso_tallado.name=Carved bone
 
 item.polvo_de_diamante.name=Diamond dust
+Item.monton_de_polvo_de_diamante.name=Lots of diamond dust
 item.cubo_de_ambar_fundido.name=Molten amber bucket
 item.cubo_de_ambar_con_diamante.name=Diamond amber bucket
 item.cubo_de_ambar_endurecido.name=Hardened amber bucket
@@ -667,10 +677,18 @@ item.hilo_de_cuerda.name=String thread
 item.cuerda.name=Rope
 item.cuerda_trenzada.name=Braided rope
 
+item.mango_de_espada.name=Sword handle
+
 item.punta_de_espada_de_silex.name=Silex sword tip
 item.punta_de_espada_de_roca_fosilizada.name=Fossil stone sword tip
 item.punta_de_espada_de_hueso_fosilizado.name=Fossil bone sword tip
 item.punta_de_espada_de_ambar.name=Ambar sword tip
+
+item.ambar_sangriento.name=Blood amber
+item.ambar_de_poder.name=Power amber
+item.ambar_mistico.name=Mystic amber
+item.ambar_ancestral.name=Ancestral amber
+item.lingote_de_ambar_ancestral.name=Ancestral amber ingot
 
 
 ////////////////////////////////////////////////////Herramientas

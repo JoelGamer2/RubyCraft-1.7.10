@@ -227,6 +227,13 @@ public class IniciarItemsEventos {
             GameRegistry.addSmelting(Principal.bloque_de_ambar_ancestral, new ItemStack(Principal.lingote_de_ambar_ancestral, 1), 10.0F);
             
             GameRegistry.addRecipe(new ItemStack(Principal.espada_ancestral, 1), new Object[] {" a "," a "," p ",'a',Principal.lingote_de_ambar_ancestral,'p',Principal.mango_de_espada});
+            
+            GameRegistry.addRecipe(new ItemStack(Principal.piedra_ancestral_sangrienta, 1), new Object[] {"pmh","hab","bpm",'a',Principal.piedra_ancestral,'m',Principal.vial_de_sangre_de_las_montanas,'h',Principal.vial_de_sangre_de_hielo,'b',Principal.vial_de_sangre_del_bosque,'p',Principal.vial_de_sangre_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.piedra_ancestral_de_poder, 1), new Object[] {"pmh","hab","bpm",'a',Principal.piedra_ancestral_sangrienta,'m',Principal.vial_de_sangre_rocosa,'h',Principal.vial_de_sangre_glaciar,'b',Principal.vial_de_sangre_selvatica,'p',Principal.vial_de_sangre_cenagosa});
+            GameRegistry.addRecipe(new ItemStack(Principal.piedra_ancestral_esencial, 1), new Object[] {"pmh","hab","bpm",'a',Principal.piedra_ancestral_de_poder,'m',Principal.esencia_de_las_montanas,'h',Principal.esencia_de_los_hielos,'b',Principal.esencia_del_bosque,'p',Principal.esencia_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.piedra_ancestral_poseida, 1), new Object[] {"pmh","hab","bpm",'a',Principal.piedra_ancestral_esencial,'m',Principal.calavera_gigante,'h',Principal.calavera_yeti,'b',Principal.calavera_elfo,'p',Principal.calavera_troll});
+            GameRegistry.addRecipe(new ItemStack(Principal.altar, 1), new Object[] {"ppp","dpd","ppp",'p',Principal.piedra_ancestral_poseida,'d',Principal.diamante_activado});
+            GameRegistry.addRecipe(new ItemStack(Principal.altar_central, 1), new Object[] {"pap","dpd","ppp",'p',Principal.piedra_ancestral_poseida,'a',Principal.diamante_activado,'d',Principal.diamante_de_poder});
 		}
 		
 	}
