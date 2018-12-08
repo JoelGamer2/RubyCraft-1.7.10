@@ -101,8 +101,8 @@ public class RenderModelYetiLich extends ModelBase
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-    PieDerecho.render(f5);
-    PieIzquierdo.render(f5);
+   // PieDerecho.render(f5);
+   // PieIzquierdo.render(f5);
     PiernaDerecha.render(f5);
     PiernaIzquierda.render(f5);
     CuerpoInferior.render(f5);
@@ -111,6 +111,9 @@ public class RenderModelYetiLich extends ModelBase
     BrazoDerecho.render(f5);
     BrazoIzquierdo.render(f5);
     Cabeza.render(f5);
+    
+    PiernaDerecha.addChild(PieDerecho);
+    PiernaIzquierda.addChild(PieIzquierdo);
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
@@ -134,10 +137,10 @@ public class RenderModelYetiLich extends ModelBase
 	    this.PiernaIzquierda.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
 	    this.PiernaDerecha.rotateAngleY = 0.0F;
 	    this.PiernaIzquierda.rotateAngleY = 0.0F;
-	    this.PieDerecho.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
-	    this.PieIzquierdo.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-	    this.PieDerecho.rotateAngleY = 0.0F;
-	    this.PieDerecho.rotateAngleY = 0.0F;
+	 //   this.PieDerecho.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+	 //   this.PieIzquierdo.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+	 //   this.PieDerecho.rotateAngleY = 0.0F;
+	 //   this.PieDerecho.rotateAngleY = 0.0F;
 		  super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
   }
 
