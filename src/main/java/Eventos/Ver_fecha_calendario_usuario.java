@@ -73,7 +73,6 @@ public class Ver_fecha_calendario_usuario {
 	
 	public static void iniciar() {
 		
-		System.out.println(INavidad + " " + ANavidad + " " + MesNavidad + " " + "Idiotaaaaaaaaaaaaaaaaaaaaa");
 		//Testear Navidad
 			Calendar calendar = Calendar.getInstance();
           
