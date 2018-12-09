@@ -117,7 +117,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	/**Returns the sounds of ambient for the mob**/
 	 protected String getLivingSound(){
 		    
-	        return RubyCraft.modid + ":ambientebossparca1";
+	        return RubyCraft.modid + ":ambientebossparca";
 	        
 	    }
 	 
@@ -127,7 +127,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getHurtSound(){
 	    
-	      return RubyCraft.modid + ":golpebossparc1a";
+	      return RubyCraft.modid + ":golpebossparca";
 	        
 	    }
 
@@ -136,7 +136,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getDeathSound(){
 	    
-	        return RubyCraft.modid + ":muertebossparc1a";
+	        return RubyCraft.modid + ":muertebossparca";
 	        
 	    }	 
 	    
