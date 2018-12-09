@@ -1,6 +1,10 @@
 package Eventos;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Calendar;
+import java.util.Scanner;
 
 import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
@@ -17,21 +21,71 @@ public class Ver_fecha_calendario_usuario {
 	public static int ANavidad;
 	public static int MesNavidad;
 	
+	
+	public static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
+
+	public static void VerFechasEventos(){
+		new Thread("VerFechaEventos"){
+			
+			public void run(){
+				try {
+					URL url = new URL(URL);
+					Scanner scanner = new Scanner(url.openStream());
+					String hueco1 = scanner.nextLine();
+					String hueco2 = scanner.nextLine();
+					String hueco3 = scanner.nextLine();
+					String hueco4 = scanner.nextLine();
+					String hueco5 = scanner.nextLine();
+					String hueco6 = scanner.nextLine();
+					
+					String IHalloween = scanner.nextLine();
+					String AHalloween = scanner.nextLine();
+					String MesHalloween = scanner.nextLine();
+					
+					String hueco7 = scanner.nextLine();
+
+					String INavidad = scanner.nextLine();
+					String ANavidad = scanner.nextLine();
+					String MesNavidad = scanner.nextLine();
+					
+					Ver_fecha_calendario_usuario.IHalloween = Integer.parseInt(IHalloween);
+					Ver_fecha_calendario_usuario.AHalloween = Integer.parseInt(AHalloween);
+					Ver_fecha_calendario_usuario.MesHalloween = Integer.parseInt(MesHalloween);
+					
+					Ver_fecha_calendario_usuario.INavidad = Integer.parseInt(INavidad);
+					Ver_fecha_calendario_usuario.ANavidad = Integer.parseInt(ANavidad);
+					Ver_fecha_calendario_usuario.MesNavidad = Integer.parseInt(MesNavidad);
+					scanner.close();
+					iniciar();
+				} catch (MalformedURLException e) {
+					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e);
+					
+					
+				} catch (IOException e1) {
+					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e1);
+					
+				}
+			}
+			
+		}.start();
+	}
+	
+	
 	public static void iniciar() {
 		
-		
-		/** Testear Calendario **/
-		 
+		System.out.println(INavidad + " " + ANavidad + " " + MesNavidad + " " + "Idiotaaaaaaaaaaaaaaaaaaaaa");
 		//Testear Navidad
 			Calendar calendar = Calendar.getInstance();
           
 		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
-		       
 		       if(RubyCraft.cliente) {
 		       Verificar_Fecha.iniciar();
 		       }else if(!RubyCraft.cliente) {
 		    	   RubyCraft.Navidad = true;
+					Crafteos.IniciarCrafteosNavidad();
+						 IniciarItemsEventos.Iniciartodo();
+						 
 		    	   
 		       }
 		       
@@ -49,6 +103,9 @@ public class Ver_fecha_calendario_usuario {
 		  		       Verificar_Fecha.iniciar();
 		  		       }else if(!RubyCraft.cliente) {
 				    	   RubyCraft.HalloWen = true;
+							Crafteos.IniciarCrafteosHallowen();
+							IniciarItemsEventos.Iniciartodo();
+				    	  
 				    	   
 				       }
 		    	

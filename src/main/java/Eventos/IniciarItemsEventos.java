@@ -173,7 +173,7 @@ public class IniciarItemsEventos {
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_del_pantano, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_pantano,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_pantano,'f',Principal.flor_del_Pantano,'c',Principal.calavera_troll});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_rocosa, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_las_montanas,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_las_montanas,'f',Principal.flor_de_las_montanas,'c',Principal.calavera_gigante});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_selvatica, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_bosque,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_bosque,'f',Principal.flor_del_bosque,'c',Principal.calavera_elfo});
-           
+        
 
 			GameRegistry.addRecipe(new ItemStack(Principal.silex, 1), new Object[] {"s","b",'s',Blocks.cobblestone,'b',Blocks.gravel});
 			GameRegistry.addRecipe(new ItemStack(Principal.roca_fosilizada_afilada, 1), new Object[] {"s","s",'s',Principal.Roca_Fosil});

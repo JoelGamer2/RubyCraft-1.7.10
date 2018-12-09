@@ -2,8 +2,6 @@ package RubyCraft;
 
 import org.apache.logging.log4j.LogManager;
 
-import com.sun.prism.paint.Color;
-
 import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
@@ -124,7 +122,6 @@ import RubyCraft.Items.Arco_de_Zafiro;
 import RubyCraft.Items.Azada_de_Platino;
 import RubyCraft.Items.Azada_de_cobre;
 import RubyCraft.Items.Azadaderuby;
-import RubyCraft.Items.varita;
 import RubyCraft.Items.Barras_de_Aluminio;
 import RubyCraft.Items.Bloque_de_Cobre;
 import RubyCraft.Items.BoladeResina;
@@ -174,6 +171,7 @@ import RubyCraft.Items.hachaderuby;
 import RubyCraft.Items.marcodelamuleto;
 import RubyCraft.Items.picoderuby;
 import RubyCraft.Items.picodezafiro;
+import RubyCraft.Items.varita;
 import RubyCraft.Lamparas.Lampara_de_Ruby;
 import RubyCraft.Lamparas.Lampara_de_Zafiro;
 import RubyCraft.Maquinas.Mesa_De_Conjuraciones;
@@ -500,7 +498,7 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
-	Verificar_Fecha.VerFechasEventos();
+	Ver_fecha_calendario_usuario.VerFechasEventos();
     Verificar_Fecha.VerIpePuerto();
 	if(Control_de_Version.Navidad_Activar == true) {
 		Navidad = true;
@@ -510,9 +508,7 @@ public void Preinit(FMLPreInitializationEvent event){
 		cliente = true;
 	}
 	
-	if(!cliente && !Control_de_Version.Navidad_Activar) {
-		Ver_fecha_calendario_usuario.iniciar();
-	}  	   
+	 	   
 	herracraft.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 	

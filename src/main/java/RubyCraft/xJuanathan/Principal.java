@@ -1,7 +1,6 @@
 package RubyCraft.xJuanathan;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Items.Ruby;
 import RubyCraft.xJuanathan.AltarNavidad.altar;
 import RubyCraft.xJuanathan.AltarNavidad.altar_central;
 import RubyCraft.xJuanathan.Armas.espada_ancestral;

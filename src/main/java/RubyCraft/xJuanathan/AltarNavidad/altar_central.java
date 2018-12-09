@@ -2,7 +2,6 @@ package RubyCraft.xJuanathan.AltarNavidad;
 
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
 import RubyCraft.xJuanathan.TileEntity.TileEntityAltarCentral;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

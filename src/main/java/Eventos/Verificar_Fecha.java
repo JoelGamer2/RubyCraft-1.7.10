@@ -26,63 +26,38 @@ public class Verificar_Fecha {
 	public static boolean HalloWen = false;
 	public static boolean Navidad = false;
 	
-	private static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
-	
+	public static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
+
 	
 public static boolean URLNOVALIDAERROR = false;
 	
 	
 	public static void iniciar() {
-		IniciarVerificador();
+		//IniciarVerificador();
+		iniciareventosinserver();
 		
 	}
 	
 	
-	public static void VerFechasEventos(){
-		new Thread("VerFechaEventos"){
-			
-			public void run(){
-				try {
-					URL url = new URL(URL);
-					Scanner scanner = new Scanner(url.openStream());
-					String hueco1 = scanner.nextLine();
-					String hueco2 = scanner.nextLine();
-					String hueco3 = scanner.nextLine();
-					String hueco4 = scanner.nextLine();
-					String hueco5 = scanner.nextLine();
-					String hueco6 = scanner.nextLine();
-					
-					String IHalloween = scanner.nextLine();
-					String AHalloween = scanner.nextLine();
-					String MesHalloween = scanner.nextLine();
-					
-					String hueco7 = scanner.nextLine();
-
-					String INavidad = scanner.nextLine();
-					String ANavidad = scanner.nextLine();
-					String MesNavidad = scanner.nextLine();
-					
-					Ver_fecha_calendario_usuario.IHalloween = Integer.parseInt(IHalloween);
-					Ver_fecha_calendario_usuario.AHalloween = Integer.parseInt(AHalloween);
-					Ver_fecha_calendario_usuario.MesHalloween = Integer.parseInt(MesHalloween);
-					
-					Ver_fecha_calendario_usuario.INavidad = Integer.parseInt(INavidad);
-					Ver_fecha_calendario_usuario.ANavidad = Integer.parseInt(ANavidad);
-					Ver_fecha_calendario_usuario.MesNavidad = Integer.parseInt(MesNavidad);
-					
-					scanner.close();
-				} catch (MalformedURLException e) {
-					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e);
-					URLNOVALIDAERROR = true;
-					
-				} catch (IOException e1) {
-					RubyCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e1);
-					URLNOVALIDAERROR = true;
-				}
+	public static void iniciareventosinserver() {
+		
+		if(Navidad == true) {
+			RubyCraft.Navidad = true;
+			Crafteos.IniciarCrafteosNavidad();
+				 IniciarItemsEventos.Iniciartodo();
+				 if(RubyCraft.cliente) {
+			     Cambiador_de_Texturas.Texturas();				 
 			}
-			
-		}.start();
+		}else if (HalloWen == true) {
+			RubyCraft.HalloWen = true;
+			Crafteos.IniciarCrafteosHallowen();
+			IniciarItemsEventos.Iniciartodo();
+			if(RubyCraft.cliente == true) {
+				Cambiador_de_Texturas.Texturas();
+			}
+		}
 	}
+	
 	
 	
 	public static void VerIpePuerto(){

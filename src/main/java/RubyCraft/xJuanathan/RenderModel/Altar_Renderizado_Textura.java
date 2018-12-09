@@ -2,7 +2,6 @@ package RubyCraft.xJuanathan.RenderModel;
 
 import org.lwjgl.opengl.GL11;
 
-import Eventos.Ver_fecha_calendario_usuario;
 import RubyCraft.RubyCraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;

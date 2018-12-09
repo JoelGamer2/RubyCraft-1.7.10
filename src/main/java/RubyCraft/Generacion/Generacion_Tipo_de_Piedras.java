@@ -3,15 +3,10 @@ package RubyCraft.Generacion;
 import java.util.Random;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Estructuras.ArbolVerde;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
