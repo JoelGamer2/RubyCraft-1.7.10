@@ -162,9 +162,6 @@ public static boolean URLNOVALIDAERROR = false;
 				 Crafteos.IniciarCrafteosNavidad();
 				 if(RubyCraft.cliente) {
 			     Cambiador_de_Texturas.Texturas();
-			     s.close();
-			     dout.close();
-			     din.close();
 				 }
 			     IniciarItemsEventos.Iniciartodo();
 				inicia = false;
