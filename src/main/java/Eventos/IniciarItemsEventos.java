@@ -139,6 +139,11 @@ public class IniciarItemsEventos {
 			 Principal.ambar_mistico.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.ambar_ancestral.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.lingote_de_ambar_ancestral.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.piedra_ancestral_sangrienta.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.piedra_ancestral_de_poder.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.piedra_ancestral_esencial.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.piedra_ancestral_poseida.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.diamante_de_poder.setCreativeTab(RubyCraft.EventosTab);
 		}
 	}
 	
