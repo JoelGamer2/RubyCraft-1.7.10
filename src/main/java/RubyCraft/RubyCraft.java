@@ -211,9 +211,11 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.common.BiomeManager;
@@ -507,7 +509,6 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
 	}
-	
 	 	   
 	herracraft.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {

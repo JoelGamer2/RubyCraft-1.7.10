@@ -11,6 +11,8 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
 import net.minecraft.client.Minecraft;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
@@ -67,26 +69,26 @@ public class Eventos_especiales {
 		}
 		
 		if(BossParca.Activo) {
-			if (BossParca.Fase == 3 && BossParca.Activo) {
+			if (BossParca.Fase == 3 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
 				event.player.attackEntityFrom(Laparcasellevotualma, 1.0F);
 
 			}
 			if (!RubyCraft.cliente) {
 
-				if (!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
+				if (!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 					BossParca.chat1 = true;
 					event.player.addChatComponentMessage(new ChatComponentText(ParcaFase1));
 
 				}
 
-				if (!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
+				if (!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 					BossParca.chat2 = true;
 					event.player.addChatComponentMessage(new ChatComponentText(ParcaFase2));
 
 				}
 
-				if (!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
+				if (!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 					BossParca.chat3 = true;
 					event.player.addChatComponentMessage(new ChatComponentText(ParcaFase3));
 
@@ -94,7 +96,7 @@ public class Eventos_especiales {
 
 			}
 
-			if (!RubyCraft.cliente && BossParca.Activo && !musica && BossParca.Fase == 1) {
+			if (!RubyCraft.cliente && BossParca.Activo && !musica && BossParca.Fase == 1 && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
 				event.player.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE, 1.0F);
 
@@ -133,25 +135,25 @@ public class Eventos_especiales {
 		if(BossParca.Activo) {
 		if (RubyCraft.cliente == true && Minecraft.getMinecraft().currentScreen == null) {
 
-			if (!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo) {
+			if (!BossParca.chat1 && BossParca.Fase == 1 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 				BossParca.chat1 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase1));
 
 			}
 
-			if (!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo) {
+			if (!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 				BossParca.chat2 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase2));
 
 			}
 
-			if (!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo) {
+			if (!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 				BossParca.chat3 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase3));
 
 			}
 
-			if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName())) {
+			if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName()) && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
 				Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE,1.0F);
 
