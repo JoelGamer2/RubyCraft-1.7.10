@@ -2,6 +2,7 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Barros;
 import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.material.Material;
@@ -19,31 +20,34 @@ public class Barro_Congelado extends Barros{
 	@Override
 	public Item getItemDropped(int probabilidad, Random rand, int fortune) 
 	{
-		int tope = 90;
-		
-		if (fortune >= 0)
+		if (RubyCraft.Navidad)
 		{
-			probabilidad = rand.nextInt(100);
+			int tope = 90;
+		
+		    if (fortune >= 0)
+	    	{
+	    		probabilidad = rand.nextInt(100);
 			
-			if (fortune == 1)
-			{
-				tope = 90;
-			}
+	    		if (fortune == 1)
+		    	{
+			    	tope = 90;
+    			}
 			
-			else if (fortune > 1 && fortune <= 10)
-			{
-				tope = 90 - ((fortune*10) - 15);
-			}
+	    		else if (fortune > 1 && fortune <= 10)
+	    		{
+	    			tope = 90 - ((fortune*10) - 15);
+	    		}
 			
-			if (probabilidad >= 0 && probabilidad < tope)
-			{
-				return Item.getItemFromBlock(this);
-			}
+	    		if (probabilidad >= 0 && probabilidad < tope)
+	    		{
+	    			return Item.getItemFromBlock(this);
+	    		}
 			
-			else if (probabilidad >= tope && probabilidad <= 100)
-			{
-				return Item.getItemFromBlock(Principal.Hielo_Glaciar);
-			}
+	    		else if (probabilidad >= tope && probabilidad <= 100)
+		    	{
+	    			return Item.getItemFromBlock(Principal.Hielo_Glaciar);
+		    	}
+	    	}
 		}
 		
 		return null;

@@ -98,7 +98,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class Principal {
@@ -607,7 +609,10 @@ public class Principal {
 	public static void init() 
 	{
 		//Crafteos Items
-	}
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 3, 15), Principal.Fragmento_de_fosil);
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 10, 15), Principal.hueso_fosilizado);
+    }
 	
 	
 	public static void postinit() 

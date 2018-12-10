@@ -2,6 +2,7 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,8 +20,15 @@ public class Roca_Fosil_Adn extends Block {
 		@Override
 		public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) 
 		{
-			// TODO Auto-generated method stub
-			return Principal.vial_de_sangre_de_las_montanas;
+			if (RubyCraft.Navidad)
+			{
+				return Principal.vial_de_sangre_de_las_montanas;
+			}
+			
+			else
+			{
+				return null;
+			}
 		}
 
 		

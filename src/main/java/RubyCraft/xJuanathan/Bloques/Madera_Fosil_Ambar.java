@@ -2,6 +2,7 @@ package RubyCraft.xJuanathan.Bloques;
 
 import java.util.Random;
 
+import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -20,8 +21,15 @@ public class Madera_Fosil_Ambar extends Block {
 			@Override
 			public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) 
 			{
-				// TODO Auto-generated method stub
-				return Principal.ambar;
+				if (RubyCraft.Navidad)
+				{
+				    return Principal.ambar;
+				}
+				
+				else 
+				{
+					return null;
+				}
 			}
 			
 	// Dropeo de item afectado por encantamiento fortuna
@@ -65,13 +73,22 @@ public class Madera_Fosil_Ambar extends Block {
 			@Override
 			public int getExpDrop(IBlockAccess world, int metadata, int fortune)
 			{
-				if (fortune >= 1)
+				if (RubyCraft.Navidad)
 				{
-					return 2 + (fortune*3);
-				}
+			    	if (fortune >= 1)
+			    	{
+			    		return 2 + (fortune*3);
+			    	}
+				
+			    	else
+			    	{
+			    	    return 2;
+			    	}
+			    }
 				
 				else
-					
-				return 2;
+				{
+					return 0;
+				}
 			}
 }
