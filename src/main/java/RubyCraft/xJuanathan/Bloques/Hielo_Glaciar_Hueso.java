@@ -35,10 +35,10 @@ public class Hielo_Glaciar_Hueso extends Hielo {
 		    		topecalavera = 90;
 		    	}
 			
-		    	else if (fortune > 1 && fortune <= 8)
+		    	else if (fortune > 1 && fortune <= 10)
 		    	{
-		    		topehueso = 80 - ((fortune*10) - 8);
-		    		topecalavera = 95 - ((fortune*10) - 10);
+		    		topehueso = 80 - ((fortune*8) - 8);
+		    		topecalavera = 95 - ((fortune*9) - 10);
 		    	}
 			
 		    	if (probabilidad >= 0 && probabilidad < topehueso)

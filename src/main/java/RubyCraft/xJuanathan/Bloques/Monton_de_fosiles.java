@@ -35,10 +35,36 @@ public class Monton_de_fosiles extends Block {
 	
 	
 	@Override
-	public int quantityDropped(int meta, int fortune, Random random) 
+	public int quantityDroppedWithBonus(int fortune, Random rand) 
 	{
-		// TODO Auto-generated method stub
-		return 1+random.nextInt(2);
+		
+		int probabilidad;
+		
+		if (fortune >= 1)
+		{
+			probabilidad = rand.nextInt(100);
+			
+			if (probabilidad >= 80 && probabilidad < 98)
+			{
+				return fortune + 2;
+			}
+			
+			else if (probabilidad >= 98 && probabilidad <= 100)
+			{
+				return fortune + 3;
+			}
+			
+			else {
+			
+			return fortune + 1;
+			}
+		}
+		
+		else {
+			
+		return 1;
+		}
+		
 	}
 
 }
