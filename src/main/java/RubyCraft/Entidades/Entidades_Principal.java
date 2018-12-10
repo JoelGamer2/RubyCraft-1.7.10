@@ -15,6 +15,7 @@ import RubyCraft.Entidades.Mobs.Lich;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.Shulker;
 import RubyCraft.Entidades.Mobs.YetiLich;
+import RubyCraft.Entidades.Mobs.YetiLichEstatua;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 
@@ -43,6 +44,7 @@ public class Entidades_Principal {
 		createEntity(HombreCerdo.class, "HombreCerdo", 0xFF8488, 0xFF60F4);
 		createEntity(Jose.class, "Joseoscar1", 0xFFBB7C, 0xFF1C58);
 		createEntity(Patxis.class, "PatxisGamer", 0xFF0008, 0xFF9B49);
+		createEntity(YetiLichEstatua.class, "YetiLichRE", 0x000000, 0x195D42);
 	}
 	
 	private static void createEntity(Class entityClass, String entityName, int ColordeFondo, int ColordeLosPuntos) {
@@ -52,6 +54,11 @@ public class Entidades_Principal {
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
 		EntityRegistry.registerModEntity(entityClass, entityName, randomId, RubyCraft.instance, 64, 1, true);
 		createEgg(randomId, ColordeFondo, ColordeLosPuntos);
+		
+		if(entityName == "YetiLichRE") {
+			Lich.idyetilich = randomId;
+		}
+		
 	}
 	
 	private static void createEntitySinHuevo(Class claseentidad, String nombre) {

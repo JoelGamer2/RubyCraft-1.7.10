@@ -82,6 +82,7 @@ entity.PatxisGamer.name=Patxis
 entity.Parca.name=Parca
 entity.YetiLichR.name=Yeti Lich
 entity.LichR.name=Lich
+entity.YetiLichRE.name=Statue Yeti Lich
 
 itemGroup.rc=RubyCraft
 itemGroup.EventosTab=Eventos

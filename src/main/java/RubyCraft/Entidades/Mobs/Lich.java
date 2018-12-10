@@ -36,6 +36,7 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	private static int zrandom;
 	private static int tick;
 	public static boolean Activo;
+	public static int idyetilich = 0;
 	public Lich(World world) {
 		super(world);
 		     
@@ -75,17 +76,16 @@ public class Lich extends EntityMob implements IBossDisplayData {
 		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40.0D);	
 		 
 		 }
-	
 	/**Comunica cuando el mob muere**/
 	@Override
 	public void onDeath(DamageSource damage) {
 		Fase = 0;
 		this.worldObj.setWorldTime(tiempoqueestaba);
+    	 this.experienceValue = 12000;
 		resetear();
 		dropeos();	
 		this.attackingPlayer.setHealth(1);
 		}
-	
 	private static void resetear() {
 		 cantidad_ya_generada1 = 0;
 		 cantidad_ya_generada2 = 0;
@@ -97,43 +97,48 @@ public class Lich extends EntityMob implements IBossDisplayData {
 		 zrandom = 0;
 		 tick = 0;
 	}
-	
-	private static void dropeos() {
+	/**Esta funcion hace que el mob dropee cosas**/
+	private void dropeos() {
+		this.entityDropItem(new ItemStack(Items.spawn_egg,1 , idyetilich), 1);
+		if(this.worldObj.difficultySetting == EnumDifficulty.EASY) {
+			this.dropItem(Items.diamond, 15);
+			this.entityDropItem(new ItemStack(Items.golden_apple, 1, 1), 1);
+		}else if(this.worldObj.difficultySetting == EnumDifficulty.NORMAL) {
+			this.dropItem(Items.diamond, 30);
+			this.entityDropItem(new ItemStack(Items.golden_apple, 1, 1), 5);
+		}else if(this.worldObj.difficultySetting == EnumDifficulty.HARD) {
+			this.dropItem(Items.diamond, 64);
+			this.entityDropItem(new ItemStack(Items.golden_apple, 1, 1), 16);
+		}
 		
 	}
-	
 	/**Returns the sounds of ambient for the mob**/
 	 protected String getLivingSound(){
 		    
-	        return RubyCraft.modid + ":ambientebossparca1";
+	        return RubyCraft.modid + ":ambientebossparca";
 	        
 	    }
-	 
-	 
 	    /**
 	     * Returns the sound this mob makes when it is hurt.
 	     */
 	    protected String getHurtSound(){
 	    
-	      return RubyCraft.modid + ":golpebossparc1a";
+	      return RubyCraft.modid + ":golpebossparca";
 	        
 	    }
-
 	    /**
 	     * Returns the sound this mob makes on death.
 	     */
 	    protected String getDeathSound(){
 	    
-	        return RubyCraft.modid + ":muertebossparc1a";
+	        return RubyCraft.modid + ":muertebossparca";
 	        
-	    }	 
-	    
+	    }	   
 	    /**Activa la AI personalalizada**/
 	    public boolean isAIEnabled(){
 		    
 	        return false;
-	    }
-	    
+	    } 
 	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){	
 	    //	Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(tick + ""));
@@ -158,14 +163,11 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	    	   Fase = 4;
 	    	   GenerarMobs("Ghast", world, x, y, z, 4, 50);   
 	       }
-	    }
-	    
+	    }    
 	    private static void GenerarMobs(String nombre,World world, double x, double y, double z, int Fase, int cooldown) {
-	    	Random e = new Random();
-	    	
+	    	Random e = new Random(); 	
 	    	xrandom = 1 + e.nextInt(10);
 	    	zrandom = 1 + e.nextInt(10);
-	    	
 	    	if(world.getBlock((int)x + (int)xrandom, (int)y, (int)z + (int)zrandom) == Blocks.air) {
 	    		xrandomv = xrandom;
 	    		zrandomv = zrandom;
@@ -174,7 +176,6 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	        	 zrandomv = 0;
 	         }
 	    	tick ++;
-	    	
 	    	if(tick >= 500) {
 	    		 cantidad_ya_generada1 = 0;
 	    		 cantidad_ya_generada2 = 0;
@@ -188,7 +189,6 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	    	}
 	    	   if(!world.isRemote) {
 	    	if(!(cantidad_ya_generada1 == cantidad_a_generar1) && Fase == 1) {
-
 	    	 Entity mob = EntityList.createEntityByName(nombre, world);
 	    	 Entity esqueleto = EntityList.createEntityByName("Skeleton", world);
 	    		  if(tick >= cooldown) {
@@ -262,6 +262,5 @@ public class Lich extends EntityMob implements IBossDisplayData {
 	                    	        }
 	                    	  }
 	                      }
-	    	         
 	           }
 	    }    

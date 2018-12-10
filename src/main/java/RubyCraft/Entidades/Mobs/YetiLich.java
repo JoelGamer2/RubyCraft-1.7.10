@@ -81,8 +81,8 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 		Fase = 0;
 		Activo = false;
 		this.worldObj.setWorldTime(tiempoqueestaba);
+     	 this.experienceValue = 5000;
 		resetear();
-		dropeos();	
           if(!this.worldObj.isRemote && !(worldObj.getBlock((int)posX - 10, (int)posY, (int)posZ) == Blocks.air)) {
         	  Entity e = EntityList.createEntityByName("LichR", this.worldObj);
         	  e.setPosition(this.posX, this.posY, this.posZ);
@@ -105,10 +105,6 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 		 xrandom = 0;
 		 zrandom = 0;
 		 tick = 0;
-	}
-	
-	private static void dropeos() {
-		
 	}
 	
 	/**Returns the sounds of ambient for the mob**/
@@ -167,8 +163,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 	    	   Fase = 4;
 	    	   GenerarMobs("Ghast", world, x, y, z, 4, 100);   
 	       }
-	    }
-	    
+	    }    
 	    private static void GenerarMobs(String nombre,World world, double x, double y, double z, int Fase, int cooldown) {
 	    	Random e = new Random();
 	    	
@@ -229,8 +224,7 @@ public class YetiLich extends EntityMob implements IBossDisplayData {
 			    	  xrandom = 0;
 			    	  zrandom = 0;
 		    		   }
-	                      }else if(!(cantidad_ya_generada3 == cantidad_a_generar3) && Fase == 3) {
-	                    	  
+	                      }else if(!(cantidad_ya_generada3 == cantidad_a_generar3) && Fase == 3) {    	  
 	                    	  Entity mob = EntityList.createEntityByName(nombre, world);
 	                    	  if(tick >= cooldown) {
 	   		    		      mob.setPosition(x + xrandomv, y, z + zrandomv);

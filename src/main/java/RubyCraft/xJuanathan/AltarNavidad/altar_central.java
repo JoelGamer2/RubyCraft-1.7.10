@@ -91,6 +91,7 @@ public class altar_central extends BlockContainer{
 	}
 	
 	private static void Activar(World world, EntityPlayer player, int x, int y, int z) {
+		if(RubyCraft.Navidad) {
 			player.playSound(RubyCraft.modid + ":Hechizo", 5.0F, 1.0F);
 		if(!world.isRemote) {
 			world.setBlock(x, y, z, Blocks.air);
@@ -104,7 +105,9 @@ public class altar_central extends BlockContainer{
 			YetiLich.setPosition(x, y, z);
 			world.spawnEntityInWorld(YetiLich);
 		}
-		
+	  }else if(!world.isRemote) {
+			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft Eventos" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + "Ningun evento activo"));
+	  }
 	}
 	
 	private static void Estructura_erronea(World world, EntityPlayer player, int x, int y, int z) {
