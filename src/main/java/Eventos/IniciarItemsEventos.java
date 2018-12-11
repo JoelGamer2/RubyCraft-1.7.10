@@ -179,7 +179,7 @@ public class IniciarItemsEventos {
 			GameRegistry.addRecipe(new ItemStack(Principal.mango_de_espada, 1), new Object[] {"idi"," m ",'m', Principal.mango_de_herramientas,'i',Items.iron_ingot,'d',Items.diamond});
 			
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_glaciar, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_los_hielos,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_hielo,'f',Principal.flor_de_las_nieves,'c',Principal.calavera_yeti});
-			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_del_pantano, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_pantano,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_pantano,'f',Principal.flor_del_Pantano,'c',Principal.calavera_troll});
+			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_cenagosa, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_pantano,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_pantano,'f',Principal.flor_del_Pantano,'c',Principal.calavera_troll});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_rocosa, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_de_las_montanas,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_de_las_montanas,'f',Principal.flor_de_las_montanas,'c',Principal.calavera_gigante});
 			GameRegistry.addRecipe(new ItemStack(Principal.vial_de_sangre_selvatica, 1), new Object[] {"eae","fcf","vvv",'e',Principal.esencia_del_bosque,'a',Principal.catalizador_de_esencias,'v',Principal.vial_de_sangre_del_bosque,'f',Principal.flor_del_bosque,'c',Principal.calavera_elfo});
         
@@ -223,6 +223,7 @@ public class IniciarItemsEventos {
 		
             GameRegistry.addRecipe(new ItemStack(Principal.polvo_de_diamante, 3), new Object[] {"h",'h',Items.diamond});
             GameRegistry.addRecipe(new ItemStack(Items.diamond, 1), new Object[] {"h  ","  h"," h ",'h',Principal.monton_de_polvo_de_diamante});
+            GameRegistry.addRecipe(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new Object[] {"h  ","  h"," h ",'h',Principal.polvo_de_diamante});
             GameRegistry.addSmelting(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new ItemStack(Items.diamond, 1), 10.0F);
             GameRegistry.addSmelting(Principal.ambar, new ItemStack(Principal.cubo_de_ambar_fundido, 1), 10.0F);
             GameRegistry.addRecipe(new ItemStack(Principal.cubo_de_ambar_con_diamante, 1), new Object[] {"ddd","dcd","ddd",'c',Principal.cubo_de_ambar_fundido,'d',Principal.polvo_de_diamante});
