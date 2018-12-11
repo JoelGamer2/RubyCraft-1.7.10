@@ -196,11 +196,6 @@ public class Principal {
 	public static Item pantalones_ancestrales;
 	public static Item botas_ancestrales;
 	
-	public static int nivelcasco = 0;
-	public static int nivelpechera = 0;
-	public static int nivelpantalones = 0;
-	public static int nivelbotas = 0;
-	
 	
 	//Materiales  (nivel, durabilidad, eficiencia, daño, nivel encantamiento) Al daño puesto minecraft le suma 1 a la pala, 2 al pico, 3 al hacha y 4 a la espada.
 	
@@ -210,7 +205,7 @@ public class Principal {
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
 	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 496.0F, 45);
 	
-	public static final ItemArmor.ArmorMaterial armaduraancestral = EnumHelper.addArmorMaterial("armaduraancestral", 10000, new int[]{nivelcasco,nivelpechera,nivelpantalones,nivelbotas}, 45);
+	public static ItemArmor.ArmorMaterial armaduraancestral = EnumHelper.addArmorMaterial("armaduraancestral", 10000, new int[]{0,0,0,0}, 45);
 	
 	//Items Evento Navidad
 	

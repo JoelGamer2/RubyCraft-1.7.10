@@ -28,16 +28,6 @@ public class botas_ancestrales extends ItemArmor{
     	Encantamientos.encantar(stack, player, world, this, Enchantment.unbreaking, Principal.vial_de_sangre_rocosa);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.featherFalling, Principal.vial_de_sangre_selvatica);
     	
-    	if(player.inventory.hasItem(Principal.sangre_ancestral))
-    	{
-    		if (Principal.nivelbotas < 10 && world.isRemote)
-    		{
-    			Principal.nivelbotas ++;
-
-                player.inventory.consumeInventoryItem(Principal.sangre_ancestral); 
-    		}
-    	}
-    	
 	    return super.onItemRightClick(stack, world, player);
     }
     
@@ -56,7 +46,6 @@ public class botas_ancestrales extends ItemArmor{
     public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par) {
     	// TODO Auto-generated method stub
          lore.add(EnumChatFormatting.AQUA + "Item especial del evento de navidad");
-         lore.add(EnumChatFormatting.BLUE + "Nivel de armadura: " + Principal.nivelbotas);
 
     }
 
