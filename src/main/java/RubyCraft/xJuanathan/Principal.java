@@ -3,6 +3,10 @@ package RubyCraft.xJuanathan;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.AltarNavidad.altar;
 import RubyCraft.xJuanathan.AltarNavidad.altar_central;
+import RubyCraft.xJuanathan.Armaduras.botas_ancestrales;
+import RubyCraft.xJuanathan.Armaduras.casco_ancestral;
+import RubyCraft.xJuanathan.Armaduras.pantalones_ancestrales;
+import RubyCraft.xJuanathan.Armaduras.pechera_ancestral;
 import RubyCraft.xJuanathan.Armas.espada_ancestral;
 import RubyCraft.xJuanathan.Armas.espada_de_ambar;
 import RubyCraft.xJuanathan.Armas.espada_de_arqueologo;
@@ -85,6 +89,7 @@ import RubyCraft.xJuanathan.Items.punta_de_espada_de_hueso_fosilizado;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_roca_fosilizada;
 import RubyCraft.xJuanathan.Items.punta_de_espada_de_silex;
 import RubyCraft.xJuanathan.Items.roca_fosilizada_afilada;
+import RubyCraft.xJuanathan.Items.sangre_ancestral;
 import RubyCraft.xJuanathan.Items.silex;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_cenagosa;
 import RubyCraft.xJuanathan.Items.vial_de_sangre_de_hielo;
@@ -100,6 +105,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -183,6 +189,18 @@ public class Principal {
 	public static Item espada_ancestral;
 	
 	
+	//Armaduras
+	
+	public static Item casco_ancestral;
+	public static Item pechera_ancestral;
+	public static Item pantalones_ancestrales;
+	public static Item botas_ancestrales;
+	
+	public static int nivelcasco = 0;
+	public static int nivelpechera = 0;
+	public static int nivelpantalones = 0;
+	public static int nivelbotas = 0;
+	
 	
 	//Materiales  (nivel, durabilidad, eficiencia, daño, nivel encantamiento) Al daño puesto minecraft le suma 1 a la pala, 2 al pico, 3 al hacha y 4 a la espada.
 	
@@ -191,6 +209,8 @@ public class Principal {
 	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
 	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
 	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 496.0F, 45);
+	
+	public static final ItemArmor.ArmorMaterial armaduraancestral = EnumHelper.addArmorMaterial("armaduraancestral", 10000, new int[]{nivelcasco,nivelpechera,nivelpantalones,nivelbotas}, 45);
 	
 	//Items Evento Navidad
 	
@@ -258,6 +278,8 @@ public class Principal {
 	public static Item ambar_ancestral;
 	public static Item lingote_de_ambar_ancestral;
 	
+	public static Item sangre_ancestral;
+	
 	//CreativeTab Seleccion
 	
 	public static CreativeTabs Prueba;
@@ -295,11 +317,11 @@ public class Principal {
 		
 		Hielo_Glaciar_Adn = new Hielo_Glaciar_Adn(Material.ice).setBlockName("Hielo_Glaciar_Adn").setBlockTextureName(RubyCraft.modid+":Hielo_Glaciar_Adn").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Hielo_Glaciar_Adn, Hielo_Glaciar_Adn.getUnlocalizedName().substring(5));
-		Hielo_Glaciar_Adn.setHarvestLevel("pickaxe", 12);
+		Hielo_Glaciar_Adn.setHarvestLevel("pickaxe", 13);
 		
 		Hielo_Glaciar_Ambar = new Hielo_Glaciar_Ambar(Material.ice).setBlockName("Hielo_Glaciar_Ambar").setBlockTextureName(RubyCraft.modid+":Hielo_Glaciar_Ambar").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Hielo_Glaciar_Ambar, Hielo_Glaciar_Ambar.getUnlocalizedName().substring(5));
-		Hielo_Glaciar_Ambar.setHarvestLevel("pickaxe", 13);
+		Hielo_Glaciar_Ambar.setHarvestLevel("pickaxe", 12);
 		
 		Barro = new Barro(Material.sand).setBlockName("Barro").setBlockTextureName(RubyCraft.modid+":Barro").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro, Barro.getUnlocalizedName().substring(5));
@@ -315,11 +337,11 @@ public class Principal {
 		
 		Barro_Congelado_Adn = new Barro_Congelado_Adn(Material.rock).setBlockName("Barro_Congelado_Adn").setBlockTextureName(RubyCraft.modid+":Barro_Congelado_Adn").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro_Congelado_Adn, Barro_Congelado_Adn.getUnlocalizedName().substring(5));
-		Barro_Congelado_Adn.setHarvestLevel("pickaxe", 12);
+		Barro_Congelado_Adn.setHarvestLevel("pickaxe", 13);
 		
 		Barro_Congelado_Ambar = new Barro_Congelado_Ambar(Material.rock).setBlockName("Barro_Congelado_Ambar").setBlockTextureName(RubyCraft.modid+":Barro_Congelado_Ambar").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Barro_Congelado_Ambar, Barro_Congelado_Ambar.getUnlocalizedName().substring(5));
-		Barro_Congelado_Ambar.setHarvestLevel("pickaxe", 13);
+		Barro_Congelado_Ambar.setHarvestLevel("pickaxe", 12);
 		
 		Roca_Fosil = new Roca_Fosil(Material.rock).setBlockName("Roca_Fosil").setBlockTextureName(RubyCraft.modid+":Roca_Fosil").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Roca_Fosil, Roca_Fosil.getUnlocalizedName().substring(5));
@@ -331,11 +353,11 @@ public class Principal {
 		
 		Roca_Fosil_Adn = new Roca_Fosil_Adn(Material.rock).setBlockName("Roca_Fosil_Adn").setBlockTextureName(RubyCraft.modid+":Roca_Fosil_Adn").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Roca_Fosil_Adn, Roca_Fosil_Adn.getUnlocalizedName().substring(5));
-		Roca_Fosil_Adn.setHarvestLevel("pickaxe", 12);
+		Roca_Fosil_Adn.setHarvestLevel("pickaxe", 13);
 		
 		Roca_Fosil_Ambar = new Roca_Fosil_Ambar(Material.rock).setBlockName("Roca_Fosil_Ambar").setBlockTextureName(RubyCraft.modid+":Roca_Fosil_Ambar").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Roca_Fosil_Ambar, Roca_Fosil_Ambar.getUnlocalizedName().substring(5));
-		Roca_Fosil_Ambar.setHarvestLevel("pickaxe", 13);
+		Roca_Fosil_Ambar.setHarvestLevel("pickaxe", 12);
 		
 		Madera_Fosil = new Madera_Fosil(Material.wood).setBlockName("Madera_Fosil").setBlockTextureName(RubyCraft.modid+":Madera_Fosil").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Madera_Fosil, Madera_Fosil.getUnlocalizedName().substring(5));
@@ -347,11 +369,11 @@ public class Principal {
 		
 		Madera_Fosil_Adn = new Madera_Fosil_Adn(Material.wood).setBlockName("Madera_Fosil_Adn").setBlockTextureName(RubyCraft.modid+":Madera_Fosil_Adn").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Madera_Fosil_Adn, Madera_Fosil_Adn.getUnlocalizedName().substring(5));
-		Madera_Fosil_Adn.setHarvestLevel("axe", 12);
+		Madera_Fosil_Adn.setHarvestLevel("axe", 13);
 		
 		Madera_Fosil_Ambar = new Madera_Fosil_Ambar(Material.wood).setBlockName("Madera_Fosil_Ambar").setBlockTextureName(RubyCraft.modid+":Madera_Fosil_Ambar").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Madera_Fosil_Ambar, Madera_Fosil_Ambar.getUnlocalizedName().substring(5));
-		Madera_Fosil_Ambar.setHarvestLevel("axe", 13);
+		Madera_Fosil_Ambar.setHarvestLevel("axe", 12);
 		
 		flor_de_las_nieves = new flor_de_las_nieves(Material.plants).setBlockName("flor_de_las_nieves").setBlockTextureName(RubyCraft.modid+":flor_de_las_nieves").setCreativeTab(Prueba).setHardness(4.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(flor_de_las_nieves, flor_de_las_nieves.getUnlocalizedName().substring(5));
@@ -462,7 +484,21 @@ public class Principal {
 		
 		espada_ancestral = new espada_ancestral(espadaancestraltoolmaterial).setUnlocalizedName("espada_ancestral").setTextureName(RubyCraft.modid + ":espada_ancestral").setCreativeTab(Prueba);
 		GameRegistry.registerItem(espada_ancestral, espada_ancestral.getUnlocalizedName().substring(5));
-
+		
+		
+		//Armaduras
+		
+		casco_ancestral = new casco_ancestral(armaduraancestral, 0, 0).setUnlocalizedName("casco_ancestral").setTextureName(RubyCraft.modid + ":casco_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(casco_ancestral, casco_ancestral.getUnlocalizedName().substring(5));
+		
+		pechera_ancestral = new pechera_ancestral(armaduraancestral, 0, 1).setUnlocalizedName("pechera_ancestral").setTextureName(RubyCraft.modid + ":pechera_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(pechera_ancestral, pechera_ancestral.getUnlocalizedName().substring(5));
+		
+		pantalones_ancestrales = new pantalones_ancestrales(armaduraancestral, 0, 2).setUnlocalizedName("pantalones_ancestrales").setTextureName(RubyCraft.modid + ":pantalones_ancestrales").setCreativeTab(Prueba);
+		GameRegistry.registerItem(pantalones_ancestrales, pantalones_ancestrales.getUnlocalizedName().substring(5));
+		
+		botas_ancestrales = new botas_ancestrales(armaduraancestral, 0, 3).setUnlocalizedName("botas_ancestrales").setTextureName(RubyCraft.modid + ":botas_ancestrales").setCreativeTab(Prueba);
+		GameRegistry.registerItem(botas_ancestrales, botas_ancestrales.getUnlocalizedName().substring(5));
 		
 		
 		//Items evento Navidad
@@ -601,6 +637,9 @@ public class Principal {
 		
 		lingote_de_ambar_ancestral = new lingote_de_ambar_ancestral().setUnlocalizedName("lingote_de_ambar_ancestral").setTextureName(RubyCraft.modid + ":lingote_de_ambar_ancestral").setCreativeTab(Prueba);
 		GameRegistry.registerItem(lingote_de_ambar_ancestral, lingote_de_ambar_ancestral.getUnlocalizedName().substring(5));
+		
+		sangre_ancestral = new sangre_ancestral().setUnlocalizedName("sangre_ancestral").setTextureName(RubyCraft.modid + ":sangre_ancestral").setCreativeTab(Prueba);
+		GameRegistry.registerItem(sangre_ancestral, sangre_ancestral.getUnlocalizedName().substring(5));
 		
 	}
 	

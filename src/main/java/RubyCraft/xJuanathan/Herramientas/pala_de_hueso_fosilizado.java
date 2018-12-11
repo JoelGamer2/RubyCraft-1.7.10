@@ -1,11 +1,14 @@
 package RubyCraft.xJuanathan.Herramientas;
 
+import java.util.List;
+
 import RubyCraft.Bases.Encantamientos;
 import RubyCraft.xJuanathan.Principal;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class pala_de_hueso_fosilizado extends ItemSpade{
@@ -24,6 +27,14 @@ public class pala_de_hueso_fosilizado extends ItemSpade{
     	Encantamientos.encantar(stack, player, world, this, Enchantment.unbreaking, Principal.vial_de_sangre_rocosa);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.fortune, Principal.vial_de_sangre_selvatica);
 	    return super.onItemRightClick(stack, world, player);
+    }
+    
+    
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par) {
+    	// TODO Auto-generated method stub
+    	 lore.add(EnumChatFormatting.AQUA + "Item especial del evento de navidad");
+
     }
 
 }

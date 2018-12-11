@@ -15,8 +15,8 @@
 
 ---Hielo Glaciar Adn             Este bloque dropeara vial de sangre de hielo. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
-Estos bloques se generan en rios de biomas helados (FrozenRiver), apareciendo en la capa superior el hielo glaciar y debajo hielo glaciar con probabilidad de aparicion de
-hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+    Estos bloques se generan en rios de biomas helados (FrozenRiver), apareciendo en la capa superior el hielo glaciar y debajo hielo glaciar con probabilidad de aparicion de
+    hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
 ---Barro                         Este bloque al picar tendra una probabilidad de dropear el bloque de barro o dropear esencia del pantano segun el encantamiento de fortuna.
@@ -36,8 +36,8 @@ hielo glaciar hueso, hielo glaciar ambar y hielo glaciar adn, siendo el mas comu
                                  Al estar expuesto al sol se convertira en barro al pasar un dia en minecraft. Se podra picar con el pico de ambar.
 
 
-Estos bloques se generan en el bioma del pantano, apareciendo en la capa superior el barro y debajo el barro congelado con probabilidad de aparicion de 
-barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+    Estos bloques se generan en el bioma del pantano, apareciendo en la capa superior el barro y debajo el barro congelado con probabilidad de aparicion de 
+    barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
 ---Roca Fosil                    Este bloque al picar tendra una probabilidad de dropear el bloque de roca o dropear esencia de las montañas segun el encantamiento de fortuna.
@@ -52,8 +52,8 @@ barro congelado hueso, barro congelado ambar y barro congelado adn, siendo el ma
 
 ---Roca Fosil Adn                Este bloque dropeara vial de sangre de las montañas. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
-Estos bloques se generan en biomas de extreme hills, apareciendo betas de roca fosil entre la capa 70 y la 256, con probabilidad de aparicion de roca fosil hueso, 
-roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+    Estos bloques se generan en biomas de extreme hills, apareciendo betas de roca fosil entre la capa 70 y la 256, con probabilidad de aparicion de roca fosil hueso, 
+    roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
 ---Madera Fosil                  Este bloque al picar tendra una probabilidad de dropear el bloque de madera o dropear esencia del bosque segun el encantamiento de fortuna.
@@ -68,29 +68,49 @@ roca fosil ambar y roca fosil adn intercalados en la mena, siendo el mas comun e
 
 ---Madera Fosil Adn              Este bloque dropeara vial de sangre del bosque. Estara afectado por el encantamiento fortuna. Se podra picar con el pico de ambar.
 
-Estos bloques se generan en biomas de llanura (Plains), apareciendo en betas debajo de un roble oscuro gigante, apareciendo un bloque de madera fosilizada y ,dentro, con probabilidad
-de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
+    Estos bloques se generan en biomas de llanura (Plains), apareciendo en betas debajo de un roble oscuro gigante, apareciendo un bloque de madera fosilizada y ,dentro, con probabilidad
+    de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn, siendo el mas comun el de hueso, el segundo el de ambar y el mas raro de aparecer el de adn.
 
 
 ---Piedra ancestral              Este bloque al picar tendra una probabilidad de dropear el bloque de piedra o dropear esencia ancestral segun el encantamiento de fortuna.
                                  Con fortuna 0 la probabilidad sera de un 95% para el bloque y un 5% para la esencia, disminuyendo un 10% el bloque y aumentando un 10% la esencia con cada nivel de fortuna.
                                  Se podra picar con el pico de ambar.
                                  
----bloque de ambar ancestral        Sirve para craftear el lingote de ambar ancestral.
-
-                                 E E E
-           Mesa de crafteo ==>   E   E         E=ambar ancestral.       
-                                 E E E
+---Piedra ancestral sangrienta   Este bloque servirá para conseguir la piedra ancestral de poder.
+                                 Se crafteará con piedra ancestral y viales de sangre basicos.
+                                 
+---Piedra ancestral de poder     Este bloque servirá para conseguir la piedra ancestral esencial.
+                                 Se crafteará con piedra ancestral sangrienta y viales de sangre avanzados.
+                                 
+---Piedra ancestral esencial     Este bloque servirá para conseguir la piedra ancestral poseída.
+                                 Se crafteará con piedra ancestral sangrienta y esencias.
+                                 
+---Piedra ancestral poseída      Este bloque servira para conseguir el altar de invocacion.
+                                 Se crafteará con  piedra ancestral esencial y calaveras.
+                                 
+---bloque de ambar ancestral     Sirve para craftear el lingote de ambar ancestral.
+                                 Se crafteará con ambar ancestral
+                                 
+---Montón de fosiles             Sirve para conseguir fragmento de fósil.
 
 
 /////////////Items///////////////////////
+                                      
+---flor de las nieves                 Podra encontrarse en biomas helados.
 
+---flor del pantano                   Podra encontrarse en pantanos.
+ 
+---flor de las montañas               Podra encontrarse en alta montaña.
+
+---flor del bosque                    Podra encontrarse en bosques oscuros.
 
 ---fragmento de fosil                 Este item solamente servira para obtener 3 de polvo de hueso.
 
----hueso fosilizado                   Este item servira para obtener 10 de polvo de hueso o para hacer herramientas de hueso con las que poder picar los bloques de ambar.
+---Mango de herramientas              Este item sirve para craftear herramientas. Se craftea con madera de roble oscuro.
 
----ambar                              Este item servira para hacer herramientas de ambar con las que poder picar los bloques de adn. Tambien servira para hacer una armadura.
+---Mango de espada                    Este item servirá para craftear espadas. Se craftea con mango de herramientas, hierro y diamante.
+
+---ambar                              Este item servira para hacer herramientas de ambar con las que poder picar los bloques de adn.
 
 ---vial de sangre de hielo            Este item servira para obtener el vial de sangre glaciar.
 
@@ -100,13 +120,48 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---vial de sangre del bosque          Este item servira para obtener el vial de sangre selvatica.
 
----calavera yeti                      Este item servira, entre otras cosas, para invocar al jefe final.
+---vial de sangre glaciar             Este item se crafteara con vial de sangre de hielo, calavera yeti, flor de las nieves, catalizador de esencias y hielo glaciar. Stack maximo del item = 16.
+                 
+                                      Se podra usar principalmente para crafteos del altar de invocacion del jefe final. Al tomarlo dara ignifugo durante 10 minutos. 
+                                      Al ponerlo en herramientas proporcionara eficiencia, un nivel por cada vial usado con un maximo de 10.
+                                      En espadas proporcionara golpeo, un nivel por vial usado con un maximo de 10.
+                                      En armaduras proporciona proteccion, un nivel por vial usado con un máximo de 10.
+                                      Se usa teniendo el vial en el inventario, la espada o herramienta en la mano y dando click derecho.
+                                      
+---vial de sangre cenagosa            Este item se crafteara con vial de sangre del pantano, calavera troll, flor del pantano, catalizador de esencias y esencia del pantano. Stack maximo del item = 16.
+                 
+                                      Se podra usar principalmente para crafteos del altar de invocacion del jefe final. Al tomarlo dara respiracion acuatica durante 10 minutos.
+                                      Al ponerlo en herramientas proporcionara toque de seda.
+                                      Al ponerlo en espadas proporcionara irrompibilidad y perdicion de los artropodos, un nivel por vial usado con un maximo de 10.
+                                      En armaduras proporciona espinas, un nivel por vial usado con un máximo de 10.
+                                      Se usa teniendo el vial en el inventario, la espada o herramienta en la mano y dando click derecho.
+                                      
+---vial de sangre rocosa              Este item se crafteara con vial de sangre de las montañas, calavera gigante, flor de las montañas, catalizador de esencias y esencia de las montañas. Stack maximo del item = 16.
 
----calavera troll                     Este item servira, entre otras cosas, para invocar al jefe final.
+                                      Se podra usar principalmente para crafteos del altar de invocacion del jefe final. Al tomarlo dara fuerza durante 10 minutos. 
+                                      Al ponerlo en herramientas proporcionara irrompibilidad, un nivel por cada vial usado con un maximo de 10.
+                                      Al ponerlo en espadas proporcionara saqueo, un nivel por vial usado con un maximo de 10.
+                                      En armaduras proporciona irrompibilidad, un nivel por vial usado con un máximo de 10.
+                                      Se usa teniendo el vial en el inventario, la espada o herramienta en la mano y dando click derecho.
+                                      
+---vial de sangre selvatica           Este item se crafteara con vial de sangre del bosque, calavera elfo, flor del bosque, catalizador de esencias y esencia del bosque. Stack maximo del item = 16.
 
----calavera gigante                   Este item servira, entre otras cosas, para invocar al jefe final.
+                                      Se podra usar principalmente para crafteos del altar de invocacion del jefe final. Al tomarlo dara regeneracion durante 10 minutos.
+                                      Al ponerlo en herramientas proporcionara fortuna, un nivel por cada vial usado con un maximo de 10.
+                                      Al ponerlo en espadas proporcionara afilado, un nivel por vial usado con un maximo de 10.
+                                      En armaduras proporciona distintos encantamientos.
+                                      En casco proporciona oxigeno, en pechera y pantalones afinidad acuatica, y en botas caida de pluma, un nivel por vial usado con un máximo de 10.
+                                      Se usa teniendo el vial en el inventario, la espada o herramienta en la mano y dando click derecho.
 
----calavera elfo                      Este item servira, entre otras cosas, para invocar al jefe final.
+---hueso fosilizado                   Este item servira para obtener 10 de polvo de hueso o para hacer herramientas de hueso con las que poder picar los bloques de ambar.
+
+---calavera yeti                      Este item servira para crafteos del altar de invocacion del jefe final.
+
+---calavera troll                     Este item servira para crafteos del altar de invocacion del jefe final.
+
+---calavera gigante                   Este item servira para crafteos del altar de invocacion del jefe final.
+
+---calavera elfo                      Este item servira para crafteos del altar de invocacion del jefe final.
 
 ---esencia de los hielos.             Este item servira para obtener el catalizador de esencias, y el vial de sangre glaciar, entre otras cosas.
 
@@ -118,93 +173,24 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---esencia ancestral                  Este item sirve para craftear la espada ancestral.
 
----diamante activado                  Este item servira para obtener el catalizador de esencias.
-
-                          B  
-  Mesa de crafteo ==>   H D M         H=vial de sangre de hielo, M=vial de sangre de las montañas, P=vial de sangre del pantano, B=vial de sangre del bosque, D=diamante
-                          P 
+---diamante activado                  Este item servira para obtener el catalizador de esencias, y para el altar de invocación.
+                                      Se craftea con diamante y viales de sangre basicos
+                                      
+---diamante de poder                  Este item servira para obtener el altar central de invocacion.
+                                      Se crafteara con diamante activado y viales de sangre avanzados.
 
 ---catalizador de esencias            Este item servirá para obtener viales de sangre avanzados.
-
-                          B  
-  Mesa de crafteo ==>   H D M         H=esencia de los hielos, M=esencia de las montañas, P=esencia del pantano, B=esencia del bosque, D=diamante activado
-                          P  
-
----vial de sangre glaciar             Este item se crafteara con vial de sangre de hielo, calavera yeti, flor de las nieves, catalizador de esencias y hielo glaciar. Stack maximo del item = 16.
-
-                        E A E
-  Mesa de crafteo ==>   F C F         F=flor de las nieves, C=calavera yeti, V=vial de sangre de hielo, A=calatizador de esencias, E=esencia de los hielos.
-                        V V V
-                 
-                                      Se podra usar principalmente para craftear el altar central de invocacion del jefe final. Al tomarlo dara ignifugo durante 10 minutos. 
-                                      Al ponerselo a la armadura dara ignifugo, un nivel por cada vial usado con un maximo de 20.
-                                      Al ponerlo en herramientas proporcionara eficiencia, un nivel por cada vial usado con un maximo de 10.
-                                      En espadas proporcionara golpeo, un nivel por vial usado con un maximo de 10, y al golpear dara a los enemigos lentitud.
-                                      En arcos proporcionara retroceso, un nivel por vial usado con un maximo de 10.
-                                      
----vial de sangre cenagosa            Este item se crafteara con vial de sangre del pantano, calavera troll, flor del pantano, catalizador de esencias y esencia del pantano. Stack maximo del item = 16.
-
-                        E A E
-  Mesa de crafteo ==>   F C F         F=flor del pantano, C=calavera troll, V=vial de sangre del pantano, A=calatizador de esencias, E=esencia del pantano.
-                        V V V
-                 
-                                      Se podra usar principalmente para craftear el altar central de invocacion del jefe final. Al tomarlo dara respiracion acuatica durante 10 minutos.
-                                      Al ponerselo a la armadura dara oxigeno al casco y afinidad acuatica al resto, un nivel por cada vial usado con un maximo de 20.
-                                      Al ponerlo en herramientas proporcionara toque de seda.
-                                      Al ponerlo en espadas proporcionara irrompibilidad y perdicion de los artropodos, un nivel por vial usado con un maximo de 10, y al golpear dara a los enemigos veneno.
-                                      En arcos proporcionara irrompibilidad y fuego, un nivel por vial usado con un maximo de 10.
-                                      
----vial de sangre rocosa              Este item se crafteara con vial de sangre de las montañas, calavera gigante, flor de las montañas, catalizador de esencias y esencia de las montañas. Stack maximo del item = 16.
-
-                        E A E
-  Mesa de crafteo ==>   F C F         F=flor de las montañas, C=calavera gigante, V=vial de sangre de las montañas, A=calatizador de esencias, E=esencia de las montañas.
-                        V V V
-                 
-                                      Se podra usar principalmente para craftear el altar central de invocacion del jefe final. Al tomarlo dara fuerza durante 10 minutos. 
-                                      Al ponerselo a la armadura dara proteccion, un nivel por cada vial usado con un maximo de 20. 
-                                      Al ponerlo en herramientas proporcionara irrompibilidad, un nivel por cada vial usado con un maximo de 10.
-                                      Al ponerlo en espadas proporcionara saqueo, un nivel por vial usado con un maximo de 10, y al golpear con espada dara a los enemigos daño.
-                                      En arcos proporcionara poder, un nivel por vial usado con un maximo de 10.
-                                      
----vial de sangre selvatica           Este item se crafteara con vial de sangre del bosque, calavera elfo, flor del bosque, catalizador de esencias y esencia del bosque. Stack maximo del item = 16.
-
-                        E A E
-  Mesa de crafteo ==>   F C F         F=flor del bosque, C=calavera elfo, V=vial de sangre del bosque, A=calatizador de esencias, E=esencia del bosque.
-                        V V V
-                 
-                                      Se podra usar principalmente para craftear el altar central de invocacion del jefe final. Al tomarlo dara regeneracion durante 10 minutos. 
-                                      Al ponerselo a la armadura dara caida de pluma a las botas y espinas al resto, un nivel por cada vial usado con un maximo de 20.  
-                                      Al ponerlo en herramientas proporcionara fortuna, un nivel por cada vial usado con un maximo de 10.
-                                      Al ponerlo en espadas proporcionara afilado, un nivel por vial usado con un maximo de 10, y al golpear dara a los enemigos debilidad.
-                                      En arcos proporcionara infinidad.
-                                      
-                                      
----flor de las nieves                 Podra encontrarse en biomas helados.
-
----flor del pantano                   Podra encontrarse en pantanos.
- 
----flor de las montañas               Podra encontrarse en alta montaña.
-
----flor del bosque                    Podra encontrarse en bosques oscuros.
+                                      Se craftea con diamante activado y esencias.
 
 ---silex                              Servira para craftear herramientas de aprendiz de arqueologo. Se conseguira poniendo uno de roca y uno de grava en la mesa de crafteo. Dara un silex.
 
+---roca fosilizada afilada            Servirá para craftear herramientas de roca fosilizada. Se conseguirá poniendo dos de roca fosil en la mesa de crafteo. Dará una roca fosilizada afilada.
+
 ---hueso tallado                      Servirá para hacer herramientas de hueso fosilizado. Se conseguirá poniendo uno de hueso fosilizado y uno de piedra en la mesa de crafteo. Dará uno de hueso tallado.
-
----punta de espada de silex           Servirá para hacer la espada de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
-
----punta de espada de roca fosilizada Servirá para hacer la espada de roca fosilizada. Se consigue poniendo dos de roca fosilizada afilada en la mesa de crafteo. Dará una punta de roca fosilizada.
-
----punta de espada de hueso tallado   Servirá para hacer la espada de hueso. Se consigue poniendo dos de hueso tallado en la mesa de crafteo. Dará una punta de espada de hueso tallado.
 
 ---polvo de diamante                  Servirá para endurecer otros items. Se consigue poniendo uno de diamante en la mesa de crafteo. Dará 3 de polvo de diamante.
 
 ---Monton de polvo de diamante        Servirá para conseguir diamante. Cocinando un monton de diamante en el horno dará un diamante.
-
-                                  E E E 
-           Mesa de crafteo ==>    E   E          E=polvo de diamante
-                                  E E E
-
 
 ---cubo de ambar fundido              Servirá para crear ambar con diamante. Se conseguirá poniendo uno de ambar en el horno. Dará un cubo de ambar fundido.
 
@@ -215,51 +201,29 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 
 ---ambar endurecido                   Servirá para crear herramientas de ambar endurecido. Se conseguirá poniendo un cubo de ambar endurecido y un cubo de agua.
 
----roca fosilizada afilada            Servirá para craftear herramientas de roca fosilizada. Se conseguirá poniendo dos de roca fosil en la mesa de crafteo. Dará una roca fosilizada afilada.
-
 ---hilo de cuerda                     Sirve para craftear cuerda. Se consigue poniendo 3 de hilo en horizontal en el medio de la mesa de crafteo.
-
-                                   H 
-           Mesa de crafteo ==>     H           H=hilo        
-                                   H
 
 ---cuerda                             Sirve para craftear cuerda trenzada. Se consigue poniendo 3 de hilo de cuerda en horizontal en el medio de la mesa de crafteo.
 
-                                   H 
-           Mesa de crafteo ==>     H           H=hilo de cuerda         
-                                   H
+---cuerda trenzada                    Sirve para craftear herramientas de aprendiz de arqueologo. Se craftea con cuerda e hilo de cuerda.
 
----cuerda trenzada                    Sirve para craftear herramientas de aprendiz de arqueologo.
+---punta de espada de silex           Servirá para hacer la espada de arqueólogo. Se consigue poniendo dos de silex en la mesa de crafteo. Dará una punta de espada de silex.
 
-                                 C H C
-           Mesa de crafteo ==>   H C H         H=hilo de cuerda, C=cuerda.        
-                                 C H C
+---punta de espada de roca fosilizada Servirá para hacer la espada de roca fosilizada. Se consigue poniendo dos de roca fosilizada afilada en la mesa de crafteo. Dará una punta de roca fosilizada.
 
----ambar sangriento                   Sirve para craftear el ambar de poder.
+---punta de espada de hueso tallado   Servirá para hacer la espada de hueso. Se consigue poniendo dos de hueso tallado en la mesa de crafteo. Dará una punta de espada de hueso tallado.
 
-                                 P M H
-           Mesa de crafteo ==>   H A B         A=ambar, M=vial de sangre de la montaña, H=vial de sangre de hielo, B=vial de sangre del bosque, P=vial de sangre del pantano.       
-                                 B P M
+---ambar sangriento                   Sirve para craftear el ambar de poder. Se craftea con ambar y viales de sangre basicos.
 
----ambar de poder                    Sirve para craftear el ambar mistico.
+---ambar de poder                     Sirve para craftear el ambar mistico. Se craftea con ambar sangriento y viales de sangre avanzados
 
-                                 P M H
-           Mesa de crafteo ==>   H A B         A=ambar sangriento, M=vial de sangre rocosa, H=vial de sangre glaciar, B=vial de sangre selvatica, P=vial de sangre cenagosa.       
-                                 B P M
+---ambar místico                      Sirve para craftear el ambar ancestral. Se craftea con ambar de poder y esencias
 
----ambar místico                    Sirve para craftear el ambar ancestral.
+---ambar ancestral                    Sirve para craftear el bloque de ambar ancestral.Se craftea con ambar mistico y esencia ancestral.
 
-                                 P M H
-           Mesa de crafteo ==>   H A B         A=ambar de poder, M=esencia de las montañas, H=esencia de los hielos, B=esencia del bosque, P=esencia del pantano.       
-                                 B P M
+---lingote de ambar ancestral         Sirve para craftear la espada ancestral. Se consigue cocinando ambar ancestral en un horno. Dará un lingote de ambar ancestral por cada bloque de ambar ancestral.
 
----ambar ancestral                  Sirve para craftear el bloque de ambar ancestral.
-
-                                 E E E
-           Mesa de crafteo ==>   E A E         A=ambar místico, E=esencia ancestral.       
-                                 E E E
-                                 
----lingote de ambar ancestral       Sirve para craftear la espada ancestral. Se consigue cocinando ambar ancestral en un horno. Dará un lingote de ambar ancestral por cada bloque de ambar ancestral.
+---sangre ancestral                   Sirve para subir de nivel la armadura ancestral. Se craftea con viales de sangre avanzados, calaveras y lingote de ambar ancestral.
 
 
 
@@ -269,91 +233,38 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
 ---Herramientas de arqueologo                  Estas son las primeras herramientas que deberemos craftear para poder ir avanzando en el evento de navidad.
                                                Estaran formadas por: pico de arqueologo, hacha de arqueologo y pala de arqueologo.
                                                
-     ---pico de arqueologo                     Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
-                                            
-                                 S M S
-           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
-                                   P                                     
+   ---pico de arqueologo                       Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex.
 
    ---hacha de arqueologo                      Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
 
-                                 S M S
-           Mesa de crafteo ==>     C S         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
-                                   P 
-
    ---pala de arqueologo                       Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y silex. 
 
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=silex.         
-                                   P 
-              
-                                   
 ---Herramientas de roca fosilizada             Estas son las herramientas con las que podremos picar el mineral de hueso fosilizado para poder ir avanzando en el evento de navidad.
                                                Estaran formadas por: pico de roca fosilizada, hacha de roca fosilizada y pala de roca fosilizada.
                                                
      ---pico de roca fosilizada                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada.
-                                            
-                                 R M R
-           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
-                                   P                                     
+                                    
+     ---hacha de roca fosilizada               Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
 
-   ---hacha de roca fosilizada                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
-
-                                 R M R
-           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
-                                   P 
-
-   ---pala de roca fosilizada                  Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
-
-                                   R  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, R=roca fosilizada afilada.         
-                                   P 
-
-
+     ---pala de roca fosilizada                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y roca fosilizada afilada. 
 
 ---Herramientas de hueso fosilizado            Estas son las herramientas con las que podremos picar el mineral de ambar para poder ir avanzando en el evento de navidad.
                                                Estaran formadas por: pico de hueso fosilizado, hacha de hueso fosilizado y pala de hueso fosilizado.
                                                
      ---pico de hueso fosilizado               Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado.
-                                            
-                                 H M H
-           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
-                                   P                                     
+                                       
+     ---hacha de hueso fosilizado              Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
 
-   ---hacha de hueso fosilizado                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
-
-                                 H M H
-           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
-                                   P 
-
-   ---pala de hueso fosilizado                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
-
-                                   H  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, H=hueso fosilizado.         
-                                   P      
-
-
+     ---pala de hueso fosilizado               Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado. 
 
 ---Herramientas de ambar                       Estas son las herramientas con las que podremos picar el mineral de adn para poder ir avanzando en el evento de navidad.
                                                Estaran formadas por: pico de ambar, hacha de ambar y pala de ambar.
                                                
-     ---pico de ambar                          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y hueso fosilizado.
-                                            
-                                 A M A
-           Mesa de crafteo ==>     C           P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
-                                   P                                     
+     ---pico de ambar                          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar endurecido.
+                                     
+     ---hacha de ambar                         Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar endurecido. 
 
-   ---hacha de ambar                           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar. 
-
-                                 A M A
-           Mesa de crafteo ==>     C R         P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
-                                   P 
-
-   ---pala de ambar                            Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar. 
-
-                                   A  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, A=ambar.         
-                                   P                                    
+     ---pala de ambar                          Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y ambar endurecido. 
 
 
 
@@ -361,28 +272,43 @@ de aparicion la madera fosil hueso, la madera fosil ambar y la madera fosil adn,
     
     
 ---espada de arqueologo                      Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de silex. 
-
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de silex.         
-                                   P 
     
 ---espada de roca fosilizada                 Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de roca fosilizada. 
-
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de roca fosilizada.         
-                                   P 
                                    
 ---espada de hueso fosilizado                Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de hueso fosilizado. 
-
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de hueso fosilizado.         
-                                   P 
     
 ---espada de ambar                           Se crafteara con madera de roble oscuro, cuerda trenzada, palo, y punta de espada de ambar. 
+    
+---Espada ancestral                          Se crafteara con longote de ambar ancestral y mango de espada.
 
-                                   S  
-           Mesa de crafteo ==>   C M C         P=palo, C=cuerda trenzada, M=madera de roble oscuro, S=punta de espada de ambar.         
-                                   P 
+
+
+/////////////Armas///////////////////////
+
+---casco ancestral                           Se crafteara con bloques de ambar ancestral y un casco de diamante.
+
+---pechera ancestral                         Se crafteara con bloques de ambar ancestral y una pechera de diamante.
+
+---pantalones ancestrales                    Se crafteara con bloques de ambar ancestral y un pantalon de diamante.
+
+---botas ancestrales                         Se crafteara con bloques de ambar ancestral y unas botas de diamante.
+
+
+
+/////////////Altares///////////////////////
+    
+---Altar                                     Se usa para la invocación del boss final. Se crafteara con piedra ancestral poseida y diamante activado.
+
+---Altar central                             Se usa para la invocacion del boss final. Se crafteara con piedra ancestral poseida, diamante activado y diamante de poder.
+
+
+
+/////////////Trofeo de evento de navidad///////////////////////
+
+---Huevo de YetiLich                        Sirve para invocar al boss final, pero sin atributos, a modo de estatua. Tendrá 20 puntos de vida, y al golpearlo puede morir.
+                                            Lo dropeara el boss final.
+    
+    
     
     
     
