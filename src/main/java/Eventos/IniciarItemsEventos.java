@@ -222,8 +222,8 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.catalizador_de_esencias, 1), new Object[] {" b ","hdm"," p ",'b',Principal.esencia_del_bosque,'h',Principal.esencia_de_los_hielos,'d',Principal.diamante_activado,'m',Principal.esencia_de_las_montanas,'p',Principal.esencia_del_pantano});
 		
             GameRegistry.addRecipe(new ItemStack(Principal.polvo_de_diamante, 3), new Object[] {"h",'h',Items.diamond});
-            GameRegistry.addRecipe(new ItemStack(Items.diamond, 1), new Object[] {"h  ","  h"," h ",'h',Principal.monton_de_polvo_de_diamante});
-            GameRegistry.addRecipe(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new Object[] {"h  ","  h"," h ",'h',Principal.polvo_de_diamante});
+            GameRegistry.addRecipe(new ItemStack(Items.diamond, 1), new Object[] {"h h"," h ",'h',Principal.monton_de_polvo_de_diamante});
+            GameRegistry.addRecipe(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new Object[] {"h h"," h ",'h',Principal.polvo_de_diamante});
             GameRegistry.addSmelting(new ItemStack(Principal.monton_de_polvo_de_diamante, 1), new ItemStack(Items.diamond, 1), 10.0F);
             GameRegistry.addSmelting(Principal.ambar, new ItemStack(Principal.cubo_de_ambar_fundido, 1), 10.0F);
             GameRegistry.addRecipe(new ItemStack(Principal.cubo_de_ambar_con_diamante, 1), new Object[] {"ddd","dcd","ddd",'c',Principal.cubo_de_ambar_fundido,'d',Principal.polvo_de_diamante});
