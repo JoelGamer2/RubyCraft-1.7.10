@@ -691,6 +691,8 @@ item.ambar_mistico.name=Mystic amber
 item.ambar_ancestral.name=Ancestral amber
 item.lingote_de_ambar_ancestral.name=Ancestral amber ingot
 
+item.sangre_ancestral.name=Ancestral blood
+
 
 ////////////////////////////////////////////////////Herramientas
 
@@ -721,6 +723,15 @@ item.espada_de_hueso_fosilizado.name=Fossil bone sword
 item.espada_de_ambar.name=Amber sword
 
 item.espada_ancestral.name=Ancestral sword
+
+
+////////////////////////////////////////////////////Armaduras
+
+
+item.casco_ancestral.name=Ancestral helmet
+item.pechera_ancestral.name=Ancestral chestplate
+item.pantalones_ancestrales.name=Ancestral leggins
+item.botas_ancestrales.name=Ancestral boots
 
 
 

@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
-public class punta_de_espada_de_hueso_fosilizado extends Item{
+public class sangre_ancestral extends Item{
     
     
     @Override

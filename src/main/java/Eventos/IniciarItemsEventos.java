@@ -144,6 +144,11 @@ public class IniciarItemsEventos {
 			 Principal.piedra_ancestral_esencial.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.piedra_ancestral_poseida.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.diamante_de_poder.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.casco_ancestral.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.pechera_ancestral.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.pantalones_ancestrales.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.botas_ancestrales.setCreativeTab(RubyCraft.EventosTab);
+			 Principal.sangre_ancestral.setCreativeTab(RubyCraft.EventosTab);
 		}
 	}
 	
@@ -214,6 +219,7 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.cuerda_trenzada, 3), new Object[] {"chc","hch","chc",'c',Principal.cuerda,'h',Principal.hilo_de_cuerda});
            
             GameRegistry.addRecipe(new ItemStack(Principal.diamante_activado, 1), new Object[] {" b ","hdm"," p ",'b',Principal.vial_de_sangre_del_bosque,'h',Principal.vial_de_sangre_de_hielo,'d',Items.diamond,'m',Principal.vial_de_sangre_de_las_montanas,'p',Principal.vial_de_sangre_del_pantano});
+            GameRegistry.addRecipe(new ItemStack(Principal.diamante_de_poder, 1), new Object[] {" b ","hdm"," p ",'b',Principal.vial_de_sangre_selvatica,'h',Principal.vial_de_sangre_glaciar,'d',Principal.diamante_activado,'m',Principal.vial_de_sangre_rocosa,'p',Principal.vial_de_sangre_cenagosa});
             GameRegistry.addRecipe(new ItemStack(Principal.catalizador_de_esencias, 1), new Object[] {" b ","hdm"," p ",'b',Principal.esencia_del_bosque,'h',Principal.esencia_de_los_hielos,'d',Principal.diamante_activado,'m',Principal.esencia_de_las_montanas,'p',Principal.esencia_del_pantano});
 		
             GameRegistry.addRecipe(new ItemStack(Principal.polvo_de_diamante, 3), new Object[] {"h",'h',Items.diamond});
@@ -239,6 +245,13 @@ public class IniciarItemsEventos {
             GameRegistry.addRecipe(new ItemStack(Principal.piedra_ancestral_poseida, 1), new Object[] {"pmh","hab","bpm",'a',Principal.piedra_ancestral_esencial,'m',Principal.calavera_gigante,'h',Principal.calavera_yeti,'b',Principal.calavera_elfo,'p',Principal.calavera_troll});
             GameRegistry.addRecipe(new ItemStack(Principal.altar, 1), new Object[] {"ppp","dpd","ppp",'p',Principal.piedra_ancestral_poseida,'d',Principal.diamante_activado});
             GameRegistry.addRecipe(new ItemStack(Principal.altar_central, 1), new Object[] {"pap","dpd","ppp",'p',Principal.piedra_ancestral_poseida,'a',Principal.diamante_activado,'d',Principal.diamante_de_poder});
+		    
+            GameRegistry.addRecipe(new ItemStack(Principal.casco_ancestral, 1), new Object[] {"bbb","bab",'a',Items.diamond_helmet,'b',Principal.bloque_de_ambar_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.pechera_ancestral, 1), new Object[] {"bab","bbb","bbb",'a',Items.diamond_chestplate,'b',Principal.bloque_de_ambar_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.pantalones_ancestrales, 1), new Object[] {"bbb","bab","b b",'a',Items.diamond_leggings,'b',Principal.bloque_de_ambar_ancestral});
+            GameRegistry.addRecipe(new ItemStack(Principal.botas_ancestrales, 1), new Object[] {"b b","bab",'a',Items.diamond_boots,'b',Principal.bloque_de_ambar_ancestral});
+
+            GameRegistry.addRecipe(new ItemStack(Principal.sangre_ancestral, 1), new Object[] {"ymg","hlb","tpe",'l',Principal.lingote_de_ambar_ancestral,'m',Principal.vial_de_sangre_rocosa,'h',Principal.vial_de_sangre_glaciar,'b',Principal.vial_de_sangre_selvatica,'p',Principal.vial_de_sangre_cenagosa,'y',Principal.calavera_yeti,'g',Principal.calavera_gigante,'t',Principal.calavera_troll,'e',Principal.calavera_elfo});
 		}
 		
 	}

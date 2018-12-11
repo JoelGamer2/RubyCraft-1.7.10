@@ -110,8 +110,8 @@ public class Lich extends EntityMob implements IBossDisplayData {
 			this.dropItem(Items.diamond, 64);
 			this.entityDropItem(new ItemStack(Items.golden_apple, 1, 1), 16);
 		}
-		
 	}
+	
 	/**Returns the sounds of ambient for the mob**/
 	 protected String getLivingSound(){
 		    
