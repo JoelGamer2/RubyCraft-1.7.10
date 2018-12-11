@@ -508,7 +508,7 @@ public class herracraft{
 	GameRegistry.registerBlock(Altar_de_Noch, Altar_de_Noch.getUnlocalizedName().substring(5));
 	
 	Hielo_Supercongelado = new Hielo_Supercongelado(Material.ice).setBlockName("Hielo_Supercongelado").setBlockTextureName("rc:Herra/Hielo_Supercongelado").setHardness(0.7F).setResistance(0.1F);
-	GameRegistry.registerBlock(Hielo_Supercongelado, Hielo_Supercongelado.getUnlocalizedName().substring(5));
+//	GameRegistry.registerBlock(Hielo_Supercongelado, Hielo_Supercongelado.getUnlocalizedName().substring(5));
 	
 	
     //Items
@@ -690,7 +690,7 @@ public class herracraft{
     GameRegistry.registerItem(Lingote_del_Eden, Lingote_del_Eden.getUnlocalizedName().substring(5));
     
     Fragmento_de_Hielo_Supercongelado = new Fragmento_de_Hielo_Supercongelado().setUnlocalizedName("Fragmento_de_Hielo_Supercongelado").setTextureName("rc:Herra/Fragmento_de_Hielo_Supercongelado");
-    GameRegistry.registerItem(Fragmento_de_Hielo_Supercongelado, Fragmento_de_Hielo_Supercongelado.getUnlocalizedName().substring(5));
+   // GameRegistry.registerItem(Fragmento_de_Hielo_Supercongelado, Fragmento_de_Hielo_Supercongelado.getUnlocalizedName().substring(5));
     
     
     if(!RubyCraft.HalloWen) {

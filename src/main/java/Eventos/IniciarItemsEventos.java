@@ -77,7 +77,6 @@ public class IniciarItemsEventos {
 			 Principal.flor_del_bosque.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.piedra_ancestral.setCreativeTab(RubyCraft.EventosTab);	
 			 Principal.bloque_de_ambar_ancestral.setCreativeTab(RubyCraft.EventosTab);
-			 Principal.Fragmento_de_fosil.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.pico_de_arqueologo.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.hacha_de_arqueologo.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.pala_de_arqueologo.setCreativeTab(RubyCraft.EventosTab);
