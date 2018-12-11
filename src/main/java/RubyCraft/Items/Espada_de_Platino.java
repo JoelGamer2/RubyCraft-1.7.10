@@ -22,6 +22,8 @@ public class Espada_de_Platino extends ItemSword {
 
 	public Espada_de_Platino(ToolMaterial material) {
 		
+		
+		
 	super(material);
 	
 	}
@@ -32,6 +34,7 @@ public class Espada_de_Platino extends ItemSword {
 		if(!world.isRemote && player.isSneaking()){
 			if(player.inventory.hasItem(RubyCraft.Platino)){
 				NBTTagCompound nbt;
+				
 				 if (stack.hasTagCompound())
 			        {
 			            nbt = stack.getTagCompound();
@@ -45,12 +48,13 @@ public class Espada_de_Platino extends ItemSword {
 			        
 			        
 			        stack.setTagCompound(nbt);
-				if(!(nbt.getInteger("NivelPlatino") == 5)) {
+			        
+				if((nbt.getInteger("NivelPlatino") < 4)) {
 		
 					
 					 nbt.setInteger("NivelPlatino", nbt.getInteger("NivelPlatino")+1);
+					 player.inventory.consumeInventoryItem(RubyCraft.Platino);
 				}
-				player.inventory.consumeInventoryItem(RubyCraft.Platino);
 				/**
 				 * Este Switch lo que hace es testear porque numero va osea case: 1 = if(NivelNumerosEnteros==1){ } eso es lo que hace
 				 * este switch
@@ -58,48 +62,49 @@ public class Espada_de_Platino extends ItemSword {
 				switch (nbt.getInteger("NivelPlatino")) {
 				case 1:
 					System.out.println(Nivel);
-				    player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
-				    stack = new ItemStack(RubyCraft.Espada_de_Platino);
+				  //  player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
+				   // stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.sharpness, 3);
-					player.inventory.addItemStackToInventory(stack);
+					//player.inventory.addItemStackToInventory(stack);
 					
 					break;
 				case 2:
-				    player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
-					stack = new ItemStack(RubyCraft.Espada_de_Platino);
+				  //  player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
+					//stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.looting, 2);
-					player.inventory.addItemStackToInventory(stack);
+				//	player.inventory.addItemStackToInventory(stack);
 					
                     break;
 				case 3:
-					player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
-					stack = new ItemStack(RubyCraft.Espada_de_Platino);
+					//player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
+					//stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.fireAspect, 2);
-					player.inventory.addItemStackToInventory(stack);
+				//	player.inventory.addItemStackToInventory(stack);
 					
                     break;
 				case 4:
 					 if(player.inventory.hasItem(RubyCraft.varita) && player.inventory.hasItem(RubyCraft.amuleto)){
-					player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
+					//player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
 					player.inventory.consumeInventoryItem(RubyCraft.varita);
 					player.inventory.consumeInventoryItem(RubyCraft.amuleto);
-					stack = new ItemStack(RubyCraft.Espada_de_Platino);
+					//stack = new ItemStack(RubyCraft.Espada_de_Platino);
 					stack.addEnchantment(Enchantment.knockback, 2);
-				    player.inventory.addItemStackToInventory(stack);
+				//    player.inventory.addItemStackToInventory(stack);
+					player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles. Este es el Nivel:" + nbt.getInteger("NivelPlatino") + EnumChatFormatting.GOLD + " Para volver " + EnumChatFormatting.GOLD + "al 0 necesitas 1 de Ruby y 1 Plastico"));
 				  
 				   }else{
-					   player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
+					 //  player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
 					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + player.getDisplayName() + " Para subir a Nivel 4 Necesitas 1 " + EnumChatFormatting.RED + "Amuleto y 1 Varita"));
-					 nbt.setInteger("NivelPlatino", nbt.getInteger("NivelPlatino")-1);
+					   nbt.setInteger("NivelPlatino", nbt.getInteger("NivelPlatino")-1);
 				   }
-				break;
-				case 5:
-					player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
-					player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles este es el Nivel:" + nbt.getInteger("NivelPlatino") + EnumChatFormatting.GOLD + " Para volver " + EnumChatFormatting.GOLD + "al 0 necesitas 1 de Ruby y 1 Plastico"));
+				//break;
+				//case 5:
+					//player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino));
+					//player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " No Hay Mas Niveles. Este es el Nivel:" + nbt.getInteger("NivelPlatino") + EnumChatFormatting.GOLD + " Para volver " + EnumChatFormatting.GOLD + "al 0 necesitas 1 de Ruby y 1 Plastico"));
 			
 				}
 			}
-			 if(stack.getTagCompound().getInteger("NivelPlatino") == 5 && player.inventory.hasItem(RubyCraft.ruby) && player.inventory.hasItem(RubyCraft.Plastico)){
+			 if(stack.hasTagCompound() && stack.getTagCompound().getInteger("NivelPlatino") == 5 && player.inventory.hasItem(RubyCraft.ruby) && player.inventory.hasItem(RubyCraft.Plastico)){
 				
 				player.inventory.consumeInventoryItem(RubyCraft.Espada_de_Platino);
 				player.inventory.consumeInventoryItem(RubyCraft.ruby);
@@ -109,7 +114,7 @@ public class Espada_de_Platino extends ItemSword {
 				
 				stack.getTagCompound().setInteger("NivelPlatino", stack.getTagCompound().getInteger("NivelPlatino")+1);
 				player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GOLD + " El Item se a reseteado con el Nivel:" + stack.getTagCompound().getInteger("NivelPlatino")));
-			}		
+			 }
 		}
 		return stack;
 		}	
@@ -122,7 +127,7 @@ public class Espada_de_Platino extends ItemSword {
 	public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par){
 		if(stack.hasTagCompound() && stack.getTagCompound().hasKey("NivelPlatino")) {
 		lore.add(EnumChatFormatting.BLUE + "Las verdes son cosas que se ponen y las rojas que se eliminan");
-	lore.add(EnumChatFormatting.GOLD + "Nivel de la Espada:" + EnumChatFormatting.RED + " " + 0);
+	lore.add(EnumChatFormatting.GOLD + "Nivel de la Espada:" + EnumChatFormatting.RED + " " + stack.getTagCompound().getInteger("NivelPlatino"));
 	if(stack.getTagCompound().getInteger("NivelPlatino") == 1){
 		lore.add(EnumChatFormatting.GREEN + "Esta espada hace mas ataque Tiene Afilado 3");
          	}else if(stack.getTagCompound().getInteger("NivelPlatino") == 2){

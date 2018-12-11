@@ -107,6 +107,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class Principal {
@@ -196,16 +197,7 @@ public class Principal {
 	public static Item pantalones_ancestrales;
 	public static Item botas_ancestrales;
 	
-	
-	//Materiales  (nivel, durabilidad, eficiencia, daño, nivel encantamiento) Al daño puesto minecraft le suma 1 a la pala, 2 al pico, 3 al hacha y 4 a la espada.
-	
-	public static final Item.ToolMaterial arqueologotoolmaterial = EnumHelper.addToolMaterial("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45);       
-	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
-	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
-	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
-	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 496.0F, 45);
-	
-	public static ItemArmor.ArmorMaterial armaduraancestral = EnumHelper.addArmorMaterial("armaduraancestral", 10000, new int[]{0,0,0,0}, 45);
+	public static NBTTagCompound nbt;
 	
 	//Items Evento Navidad
 	
@@ -274,6 +266,17 @@ public class Principal {
 	public static Item lingote_de_ambar_ancestral;
 	
 	public static Item sangre_ancestral;
+	
+	
+	//Materiales  (nivel, durabilidad, eficiencia, daño, nivel encantamiento) Al daño puesto minecraft le suma 1 a la pala, 2 al pico, 3 al hacha y 4 a la espada.
+	
+	public static final Item.ToolMaterial arqueologotoolmaterial = EnumHelper.addToolMaterial("arqueologotoolmaterial", 10, 350, 6.0F, 2.0F, 45);       
+	public static final Item.ToolMaterial rocafosilidadtoolmaterial = EnumHelper.addToolMaterial("rocafosilidadtoolmaterial", 11, 700, 8.0F, 3.0F, 45); 
+	public static final Item.ToolMaterial huesofosiltoolmaterial = EnumHelper.addToolMaterial("huesofosiltoolmaterial", 12, 1200, 10.0F, 4.0F, 45);
+	public static final Item.ToolMaterial ambarfosiltoolmaterial = EnumHelper.addToolMaterial("ambarfosiltoolmaterial", 13, 1500, 12.0F, 5.0F, 45);
+	public static final Item.ToolMaterial espadaancestraltoolmaterial = EnumHelper.addToolMaterial("espadaancestraltoolmaterial", 14, 10000, 14.0F, 496.0F, 45);
+	
+	public static ItemArmor.ArmorMaterial armaduraancestral = EnumHelper.addArmorMaterial("armaduraancestral", 10000, new int[]{10,10,10,10}, 0);
 	
 	//CreativeTab Seleccion
 	

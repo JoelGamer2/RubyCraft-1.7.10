@@ -12,42 +12,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.EnumHelper;
 
 public class casco_ancestral extends ItemArmor{
 
-	public casco_ancestral(ArmorMaterial p_i45325_1_, int p_i45325_2_, int p_i45325_3_) {
-		super(p_i45325_1_, p_i45325_2_, p_i45325_3_);
+	public casco_ancestral(ArmorMaterial material, int p_i45325_2_, int p_i45325_3_) 
+	{
+		super(material, p_i45325_2_, p_i45325_3_);
 		// TODO Auto-generated constructor stub
 	}
-
 	
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) 
     {
-    	NBTTagCompound nbt;
-        if (stack.hasTagCompound())
-        {
-            nbt = stack.getTagCompound();
-        }
-        else
-        {
-            nbt = new NBTTagCompound();
-        }
-
-        
-        if (nbt.hasKey("Nivel") && player.inventory.hasItem(Principal.sangre_ancestral) && nbt.getInteger("Nivel")<10)
-        {
-            nbt.setInteger("Nivel", nbt.getInteger("Nivel") + 1);
-            Principal.armaduraancestral.values();
-            player.inventory.consumeInventoryItem(Principal.sangre_ancestral); 
-        }
-        else
-        {
-            nbt.setInteger("Nivel", nbt.getInteger("Nivel"));
-        }
-        
-        stack.setTagCompound(nbt);
         
     	Encantamientos.encantar(stack, player, world, this, Enchantment.protection, Principal.vial_de_sangre_glaciar);
     	Encantamientos.encantar(stack, player, world, this, Enchantment.thorns, Principal.vial_de_sangre_cenagosa);
@@ -72,22 +48,6 @@ public class casco_ancestral extends ItemArmor{
     public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par) {
     	// TODO Auto-generated method stub
     	 lore.add(EnumChatFormatting.AQUA + "Item especial del evento de navidad");
-
-         if (stack.hasTagCompound() && stack.getTagCompound().hasKey("Nivel"))
-         {
-             lore.add(EnumChatFormatting.BLUE + "Nivel de armadura: " + Integer.toString(stack.getTagCompound().getInteger("Nivel")));
-         }
-         
-         else
-         {
-        	 lore.add(EnumChatFormatting.BLUE + "Nivel de armadura: 0");
-         }
-    }
-    
-    @Override
-    public ArmorMaterial getArmorMaterial() {
-    	// TODO Auto-generated method stub
-    	return Principal.armaduraancestral;
     }
 
 }
