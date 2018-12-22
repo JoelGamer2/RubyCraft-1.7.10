@@ -11,8 +11,6 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
 import net.minecraft.client.Minecraft;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
@@ -52,6 +50,12 @@ public class Eventos_especiales {
 		event.player.addPotionEffect(new PotionEffect(23, 100, 255));
 		}
 	}
+		
+		//Aniversario evento
+		if(RubyCraft.Aniversario == true && !Iniciadosesion) {
+			Iniciadosesion = true;
+			event.player.addChatComponentMessage(new ChatComponentText("Aniversario" + Ver_fecha_calendario_usuario.ano));
+		}
 		//Navidad evento
 		if (RubyCraft.Navidad == true && !Iniciadosesion ) {
 			Iniciadosesion = true;

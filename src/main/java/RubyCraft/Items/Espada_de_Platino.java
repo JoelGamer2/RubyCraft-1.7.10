@@ -4,9 +4,7 @@ import java.util.List;
 
 import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Encantamientos;
-import RubyCraft.xJuanathan.Principal;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -14,7 +12,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.Constants.NBT;
 
 public class Espada_de_Platino extends ItemSword {
 

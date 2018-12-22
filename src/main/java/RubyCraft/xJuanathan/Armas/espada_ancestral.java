@@ -4,14 +4,12 @@ import java.util.List;
 
 import RubyCraft.Bases.Encantamientos;
 import RubyCraft.xJuanathan.Principal;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.event.AnvilUpdateEvent;
 
 public class espada_ancestral extends ItemSword{
 
