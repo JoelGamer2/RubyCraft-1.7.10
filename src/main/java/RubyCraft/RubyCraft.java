@@ -6,7 +6,7 @@ import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
-import HerraCraft.herracraft;
+import Eventos.Halloween.Entidades.BossParca;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
 import RubyCraft.Aldeas.Tradeos_Aldeanos;
@@ -105,7 +105,6 @@ import RubyCraft.Combustible_Iniciar.Combustible_Principal;
 import RubyCraft.Encantamientos.Botas_de_Velocidad;
 import RubyCraft.Encantamientos.Grebas_de_Regeneracion;
 import RubyCraft.Entidades.Entidades_Principal;
-import RubyCraft.Entidades.Mobs.BossParca;
 import RubyCraft.Eventos.Eventos_Principal;
 import RubyCraft.Eventos.trol;
 import RubyCraft.Generacion.Generacion_Principal;
@@ -509,7 +508,6 @@ public void Preinit(FMLPreInitializationEvent event){
 		cliente = true;
 	}
 	 	   
-	herracraft.preinit();
 	if(Control_de_Version.Navidad_Activar == true) {
 	
 			IniciarItemsEventos.Iniciartodo();
@@ -1135,7 +1133,6 @@ public void init(FMLInitializationEvent event){
 		
 	}
 	
-	herracraft.init();
 //Variado
 proxy.registerRenderThings();	  
 

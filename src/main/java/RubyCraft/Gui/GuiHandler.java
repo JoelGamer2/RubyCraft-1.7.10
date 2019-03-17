@@ -1,8 +1,5 @@
 package RubyCraft.Gui;
 
-import HerraCraft.herracraft;
-import HerraCraft.Registrar.ContainerMesadeAzula;
-import HerraCraft.Registrar.GuiMesadeAzula;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
 import RubyCraft.Gui.container.ContainerMesadeTrabajodeRuby;
@@ -51,9 +48,7 @@ public class GuiHandler implements IGuiHandler {
 		if(ID == RubyCraft.guiIDMesadetrabajodejungla){
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_Container_Mesa_de_trabajo_jungla(player.inventory, world, x, y, z) : null;
 			}
-		if(ID == herracraft.guiIDMesadeAzula){
-			return ID == herracraft.guiIDMesadeAzula && world.getBlock(x, y, z) == herracraft.Mesa_de_Azula ? new ContainerMesadeAzula(player.inventory, world, x, y, z) : null;
-			}
+		
 		return null;
 	}
  
@@ -88,9 +83,7 @@ public class GuiHandler implements IGuiHandler {
 		if(ID == RubyCraft.guiIDMesadetrabajodejungla) {
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_mesadetrabajodejungla(player.inventory, world, x, y, z) : null;
 		}
-		if(ID == herracraft.guiIDMesadeAzula) {
-			return ID == herracraft.guiIDMesadeAzula && world.getBlock(x, y, z) == herracraft.Mesa_de_Azula ? new GuiMesadeAzula(player.inventory, world, x, y, z) : null;
-		}
+		
 		return null;
 	}
 

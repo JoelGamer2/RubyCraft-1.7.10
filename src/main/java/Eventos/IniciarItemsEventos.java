@@ -1,6 +1,5 @@
 package Eventos;
 
-import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -124,7 +123,7 @@ public class IniciarItemsEventos {
 	public static void Hallowen() {
 		if(RubyCraft.HalloWen) {
 			
-			herracraft.Lingote_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+	/**		herracraft.Lingote_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
 			RubyCraft.bossparca.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
@@ -147,7 +146,7 @@ public class IniciarItemsEventos {
 			herracraft.Altar_de_Lick.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Altar_de_Noch.setCreativeTab(RubyCraft.EventosTab);
 			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
-			
+			**/
 		}
 	}
 	
@@ -157,7 +156,7 @@ public class IniciarItemsEventos {
 		
 		
 		if(RubyCraft.HalloWen) {
-			GameRegistry.addRecipe(new ItemStack(herracraft.Bloque_Demoniaco, 1), new Object[] { "aaa","aaa","aaa",'a',herracraft.Lingote_Demoniaco});
+			/**GameRegistry.addRecipe(new ItemStack(herracraft.Bloque_Demoniaco, 1), new Object[] { "aaa","aaa","aaa",'a',herracraft.Lingote_Demoniaco});
 			GameRegistry.addRecipe(new ItemStack(herracraft.Casco_Demoniaco, 1), new Object[]{"lll","l#l","###",'l',herracraft.Lingote_Demoniaco});
 			GameRegistry.addRecipe(new ItemStack(herracraft.Pechera_Demoniaca, 1), new Object[]{"l#l","lll","lll",'l',herracraft.Lingote_Demoniaco});
 			GameRegistry.addRecipe(new ItemStack(herracraft.Pantalones_Demoniacos, 1), new Object[]{"lll","l#l","l#l",'l',herracraft.Lingote_Demoniaco});
@@ -169,6 +168,7 @@ public class IniciarItemsEventos {
 			GameRegistry.addRecipe(new ItemStack(herracraft.Altar_de_Alejandro, 1), new Object[]{"nen","ede","nen",'n', Blocks.netherrack, 'e',Items.ender_pearl ,'d', Items.diamond});
 		    GameRegistry.addRecipe(new ItemStack(herracraft.Altar_de_JoelGamer2, 1), new Object[]{"nrn","rgr","nrn",'n', Blocks.netherrack, 'r',Items.redstone, 'g', Items.gold_ingot});
 		    GameRegistry.addRecipe(new ItemStack(herracraft.Invocador_Celestial, 1), new Object[] {"aaa","dmd","zzz",'a',herracraft.Azula,'d',Items.diamond,'z',RubyCraft.zafiro,'m',Items.flint_and_steel});
+		    **/
 		}
 		
 		

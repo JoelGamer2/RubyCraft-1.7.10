@@ -1,6 +1,5 @@
 package RubyCraft.Registrar;
 
-import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -67,7 +66,6 @@ public class Logros {
 		Es_Navidad = new Achievement("achievement.Es_Navidad", "Es_Navidad", 15, 7,Items.snowball, (Achievement)null).initIndependentStat().registerStat().setSpecial();
 		
 		Es_Hallowen = new Achievement("achievement.Es_Hallowen", "Es_Hallowen", 17,7, Blocks.pumpkin, (Achievement)null).initIndependentStat().registerStat().setSpecial();
-		Matar_Parca = new Achievement("achievement.Matar_Parca", "Matar_Parca", 17,9, herracraft.guadana_Tenebrosa, Es_Hallowen).registerStat().setSpecial();
 
 		
 		 AchievementPage.registerAchievementPage(new AchievementPage("RubyCraft", new Achievement[]{
@@ -98,7 +96,6 @@ public class Logros {
 				 Es_Navidad,
 				 
 				 Es_Hallowen,
-				 Matar_Parca,
 				 
 				 	 
 		 

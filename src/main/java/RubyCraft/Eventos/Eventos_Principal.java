@@ -1,7 +1,6 @@
 package RubyCraft.Eventos;
 
 import Eventos.Eventos_especiales;
-import HerraCraft.Registrar.Eventos;
 import RubyCraft.Teclas.Evento_Teclas;
 import cpw.mods.fml.common.FMLCommonHandler;
 
@@ -37,9 +36,6 @@ public class Eventos_Principal {
 		FMLCommonHandler.instance().bus().register(new MataParca());
 		
 	//	FMLCommonHandler.instance().bus().register(new QuitarVidaSiUranio());
-		
-		//Herracraft
-		Eventos.Iniciar();
 	}
 	
 }

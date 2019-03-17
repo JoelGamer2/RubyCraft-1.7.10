@@ -1,6 +1,5 @@
 package RubyCraft.Registrar;
 
-import HerraCraft.herracraft;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Cementos_Bases;
@@ -89,7 +88,6 @@ public class Crafteos {
     	Crafteos_Bases.Bloques(RubyCraft.Platino, RubyCraft.Bloque_de_Platino);
     	Crafteos_Bases.Bloques(RubyCraft.Aluminio, RubyCraft.Bloque_de_Aluminio);
     	Crafteos_Bases.Bloques(RubyCraft.Lingote_Galactico, RubyCraft.Bloque_Galactico);   
-    	Crafteos_Bases.Bloques(herracraft.Caca, RubyCraft.Bloquedecaca);
     	//Crafteo Cemento
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Negro, 0);
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Rojo, 1);
@@ -121,7 +119,6 @@ public class Crafteos {
         //Crafteos sin Formas Mesa(MineCraft)
     	
     	//DesCrafteos
-        GameRegistry.addShapelessRecipe(new ItemStack(herracraft.Caca, 9), new Object[]{RubyCraft.Bloquedecaca});
         GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Pepita_de_Hierro, 9), new Object[]{Items.iron_ingot});
         GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Lingote_Galactico , 9), new Object[]{RubyCraft.Bloque_Galactico});
     	GameRegistry.addShapelessRecipe(new ItemStack(RubyCraft.Cobre, 9), new Object[]{RubyCraft.Bloque_de_Cobre});

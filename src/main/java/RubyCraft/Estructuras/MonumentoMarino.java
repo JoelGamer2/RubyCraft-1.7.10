@@ -1,7 +1,6 @@
 package RubyCraft.Estructuras;
 import java.util.Random;
 
-import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -530,7 +529,7 @@ public boolean generate(World world, Random rand, int x, int y, int z) {
 	world.setBlock(x + 5, y + 2, z + 4, Blocks.iron_block, 0, 3);
 	world.setBlock(x + 6, y + 2, z + 4, Blocks.diamond_block, 0, 3);
 	world.setBlock(x + 7, y + 2, z + 4, RubyCraft.Bloquederuby, 0, 3);
-	world.setBlock(x + 8, y + 2, z + 4, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 8, y + 2, z + 4, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 9, y + 2, z + 4, Blocks.iron_block, 0, 3);
 	world.setBlock(x + 10, y + 2, z + 4, RubyCraft.Ladrillo_de_piedra_del_end, 0, 3);
 	world.setBlock(x + 11, y + 2, z + 4, RubyCraft.Andesita_Pulida, 0, 3);
@@ -562,7 +561,7 @@ public boolean generate(World world, Random rand, int x, int y, int z) {
 	world.setBlock(x + 7, y + 2, z + 6, Blocks.air, 0, 3);
 	world.setBlock(x + 8, y + 2, z + 6, Blocks.air, 0, 3);
 	world.setBlock(x + 9, y + 2, z + 6, Blocks.air, 0, 3);
-	world.setBlock(x + 10, y + 2, z + 6, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 10, y + 2, z + 6, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 11, y + 2, z + 6, RubyCraft.Andesita_Pulida, 0, 3);
 	world.setBlock(x + 12, y + 2, z + 6, Blocks.air, 0, 3);
 	world.setBlock(x + 13, y + 2, z + 6, Blocks.air, 0, 3);
@@ -585,13 +584,13 @@ public boolean generate(World world, Random rand, int x, int y, int z) {
 	world.setBlock(x + 1, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 2, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 3, y + 2, z + 8, RubyCraft.Andesita_Pulida, 0, 3);
-	world.setBlock(x + 4, y + 2, z + 8, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 4, y + 2, z + 8, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 5, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 6, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 7, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 8, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 9, y + 2, z + 8, Blocks.air, 0, 3);
-	world.setBlock(x + 10, y + 2, z + 8, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 10, y + 2, z + 8, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 11, y + 2, z + 8, RubyCraft.Andesita_Pulida, 0, 3);
 	world.setBlock(x + 12, y + 2, z + 8, Blocks.air, 0, 3);
 	world.setBlock(x + 13, y + 2, z + 8, Blocks.air, 0, 3);
@@ -617,9 +616,9 @@ public boolean generate(World world, Random rand, int x, int y, int z) {
 	world.setBlock(x + 3, y + 2, z + 10, RubyCraft.Andesita_Pulida, 0, 3);
 	world.setBlock(x + 4, y + 2, z + 10, RubyCraft.Ladrillo_de_piedra_del_end, 0, 3);
 	world.setBlock(x + 5, y + 2, z + 10, Blocks.iron_block, 0, 3);
-	world.setBlock(x + 6, y + 2, z + 10, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 6, y + 2, z + 10, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 7, y + 2, z + 10, RubyCraft.BloquedeZafiro, 0, 3);
-	world.setBlock(x + 8, y + 2, z + 10, herracraft.Bloque_de_Azucar, 0, 3);
+	world.setBlock(x + 8, y + 2, z + 10, RubyCraft.Bloque_de_azucar, 0, 3);
 	world.setBlock(x + 9, y + 2, z + 10, Blocks.iron_block, 0, 3);
 	world.setBlock(x + 10, y + 2, z + 10, RubyCraft.PilarPurpur, 0, 3);
 	world.setBlock(x + 11, y + 2, z + 10, RubyCraft.Andesita_Pulida, 0, 3);

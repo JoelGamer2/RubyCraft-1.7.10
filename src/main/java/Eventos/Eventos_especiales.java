@@ -1,11 +1,10 @@
 package Eventos;
 
-import HerraCraft.Generator_Boss;
+import Eventos.Halloween.Entidades.BossParca;
+import Eventos.Navidad.Entidades.Lich;
+import Eventos.Navidad.Entidades.YetiLich;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
-import RubyCraft.Entidades.Mobs.BossParca;
-import RubyCraft.Entidades.Mobs.Lich;
-import RubyCraft.Entidades.Mobs.YetiLich;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
@@ -118,9 +117,9 @@ public class Eventos_especiales {
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
 			BossParca.Activo = false;
 			Eventos_especiales.musica = false;
-			Generator_Boss.NombreJugador = " ";
-			event.world.setWorldTime(Generator_Boss.TiempodelMundo);
-			Generator_Boss.TiempodelMundo = 0;
+		//Generator_Boss.NombreJugador = " ";
+			//event.world.setWorldTime(Generator_Boss.TiempodelMundo);
+			//Generator_Boss.TiempodelMundo = 0;
 			Bloque_de_Diamante_Trol.Dano = 20.0F;
 			BossParca.Fase = 0;
 		} 
@@ -157,12 +156,12 @@ public class Eventos_especiales {
 
 			}
 
-			if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName()) && RubyCraft.HalloWen && !RubyCraft.Navidad) {
+		/**	if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName()) && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
 				Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE,1.0F);
 
 				musica = true;
-			          }
+			          }**/
 		         }
 	        }
           

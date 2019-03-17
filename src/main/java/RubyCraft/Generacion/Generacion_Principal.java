@@ -1,6 +1,5 @@
 package RubyCraft.Generacion;
 
-import HerraCraft.Generacion.Generacion_Mena_de_Azula;
 import RubyCraft.Estructuras.GenerarEstructuraPrincipal;
 import RubyCraft.Estructuras.generararboles;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -16,7 +15,6 @@ public class Generacion_Principal {
     	GameRegistry.registerWorldGenerator(new GenerarEstructuraPrincipal(), 100);
     	GameRegistry.registerWorldGenerator(new Generacion_Materiales_Preciosos(), 100);
     	GameRegistry.registerWorldGenerator(new generararboles(), 100);
-    	GameRegistry.registerWorldGenerator(new Generacion_Mena_de_Azula(), 0);
  
 	}
 	

@@ -1,6 +1,5 @@
 package Eventos;
 
-import HerraCraft.herracraft;
 import RubyCraft.RubyCraft;
 
 public class Cambiador_de_Texturas {
@@ -34,7 +33,7 @@ public class Cambiador_de_Texturas {
 		RubyCraft.Prismarina_oscura.setBlockTextureName(Navidad + "Prismarina_oscura");
 	    RubyCraft.Ladrillos_de_prismarina.setBlockTextureName(Navidad + "Ladrillos_de_prismarina");
 	    RubyCraft.Bloquepurpur.setBlockTextureName(Navidad + "Bloquepurpur");
-	    herracraft.Generator_Boss.setBlockTextureName(Navidad + "Generator_Boss");
+	  
 	    
 		
 	}
@@ -50,7 +49,6 @@ public class Cambiador_de_Texturas {
 	    RubyCraft.Prismarina_oscura.setBlockTextureName(normal + "Prismarina_oscura");
 		RubyCraft.Ladrillos_de_prismarina.setBlockTextureName(normal + "Ladrillos_de_prismarina");
 	    RubyCraft.Bloquepurpur.setBlockTextureName(normal + "Bloquepurpur");
-	    herracraft.Generator_Boss.setBlockTextureName("rc:Herra/Generator_Boss");
 		
 	}
 	
@@ -65,7 +63,6 @@ public class Cambiador_de_Texturas {
 	    RubyCraft.Prismarina_oscura.setBlockTextureName(HalloWen + "Prismarina_oscura");
 		RubyCraft.Ladrillos_de_prismarina.setBlockTextureName(HalloWen + "Ladrillos_de_prismarina");
 	    RubyCraft.Bloquepurpur.setBlockTextureName(HalloWen + "Bloquepurpur");
-	    herracraft.Generator_Boss.setBlockTextureName(HalloWen + "Generator_Boss");
 
 	
 	}
