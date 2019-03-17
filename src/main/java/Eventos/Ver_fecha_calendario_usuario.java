@@ -73,15 +73,15 @@ public class Ver_fecha_calendario_usuario {
 	
 	public static void iniciar() {
 		
-		//Testear Navidad
+		
 			Calendar calendar = Calendar.getInstance();
-          
+          //Testear aniversario
 			if(calendar.get(2) + 1 == 3 && calendar.get(5) >= 13 && calendar.get(5) <= 20) {
 				RubyCraft.Aniversario = true;
 				ano = calendar.get(calendar.YEAR);
 				ano = ano - 2017;
 			}
-			
+			//Testear Navidad
 		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
 		       if(RubyCraft.cliente) {

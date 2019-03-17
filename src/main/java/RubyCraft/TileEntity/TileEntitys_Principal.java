@@ -1,8 +1,8 @@
 package RubyCraft.TileEntity;
 
+import Eventos.Navidad.TileEntity.TileEntityAltar;
+import Eventos.Navidad.TileEntity.TileEntityAltarCentral;
 import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltarCentral;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TileEntitys_Principal {

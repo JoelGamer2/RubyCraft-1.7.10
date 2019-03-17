@@ -1,5 +1,11 @@
 package RubyCraft.Proxy;
 
+import Eventos.Navidad.RenderModel.AltarCentral_Item;
+import Eventos.Navidad.RenderModel.AltarCentral_Renderizado_Textura;
+import Eventos.Navidad.RenderModel.Altar_Renderizado_Item;
+import Eventos.Navidad.RenderModel.Altar_Renderizado_Textura;
+import Eventos.Navidad.TileEntity.TileEntityAltar;
+import Eventos.Navidad.TileEntity.TileEntityAltarCentral;
 import HerraCraft.Entidades.Render.HerobrineRenderModel;
 import HerraCraft.Entidades.Render.JoelGamer2Render;
 import HerraCraft.Entidades.Render.MiguelperezRender;
@@ -68,12 +74,6 @@ import RubyCraft.TileEntity.Render.ItemRenderCofredeRuby;
 import RubyCraft.TileEntity.Render.Mesa_de_Ruby_Item_Renderer;
 import RubyCraft.TileEntity.Render.Mesa_de_Zafiro_Item_Renderer;
 import RubyCraft.xJuanathan.Principal;
-import RubyCraft.xJuanathan.RenderModel.AltarCentral_Item;
-import RubyCraft.xJuanathan.RenderModel.AltarCentral_Renderizado_Textura;
-import RubyCraft.xJuanathan.RenderModel.Altar_Renderizado_Item;
-import RubyCraft.xJuanathan.RenderModel.Altar_Renderizado_Textura;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltar;
-import RubyCraft.xJuanathan.TileEntity.TileEntityAltarCentral;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;

@@ -19,38 +19,7 @@ public class IniciarItemsEventos {
 	}
 	
 	public static void Navidad() {
-		
-	}
-	
-	
-	public static void Hallowen() {
-		if(RubyCraft.HalloWen) {
-			
-			herracraft.Lingote_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
-			RubyCraft.bossparca.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Casco_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Pechera_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Pantalones_Demoniacos.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Botas_Demoniacas.setCreativeTab(RubyCraft.EventosTab);	
-			herracraft.Bloque_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.guadana_Tenebrosa.setCreativeTab(RubyCraft.EventosTab);	
-			herracraft.Altar_de_JoelGamer2.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Iratxe.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Alejandro.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Wither_Storm.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Sans.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Miguelperez.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Herobrine.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Entity303.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Jeb.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Lick.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Altar_de_Noch.setCreativeTab(RubyCraft.EventosTab);
-			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
-			
-		}else if(RubyCraft.Navidad) {
+		if(RubyCraft.Navidad) {
 
 			 Principal.altar.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.altar_central.setCreativeTab(RubyCraft.EventosTab);
@@ -148,6 +117,37 @@ public class IniciarItemsEventos {
 			 Principal.pantalones_ancestrales.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.botas_ancestrales.setCreativeTab(RubyCraft.EventosTab);
 			 Principal.sangre_ancestral.setCreativeTab(RubyCraft.EventosTab);
+		}
+	}
+	
+	
+	public static void Hallowen() {
+		if(RubyCraft.HalloWen) {
+			
+			herracraft.Lingote_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Generator_Boss.setCreativeTab(RubyCraft.EventosTab);
+			RubyCraft.bossparca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Espada_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Casco_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Pechera_Demoniaca.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Pantalones_Demoniacos.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Botas_Demoniacas.setCreativeTab(RubyCraft.EventosTab);	
+			herracraft.Bloque_Demoniaco.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.guadana_Tenebrosa.setCreativeTab(RubyCraft.EventosTab);	
+			herracraft.Altar_de_JoelGamer2.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Iratxe.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Alejandro.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Wither_Storm.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Sans.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Miguelperez.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Herobrine.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Entity303.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Jeb.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Lick.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Altar_de_Noch.setCreativeTab(RubyCraft.EventosTab);
+			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
+			
 		}
 	}
 	
