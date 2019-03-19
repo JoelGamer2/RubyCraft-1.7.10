@@ -25,6 +25,7 @@ public class Verificar_Fecha {
 	public static boolean inicia = true;	
 	public static boolean HalloWen = false;
 	public static boolean Navidad = false;
+	public static boolean Verano = false;
 	
 	public static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
 
@@ -33,8 +34,8 @@ public static boolean URLNOVALIDAERROR = false;
 	
 	
 	public static void iniciar() {
-		//IniciarVerificador();
-		iniciareventosinserver();
+		IniciarVerificador();
+		//iniciareventosinserver();
 		
 	}
 	
@@ -110,6 +111,10 @@ public static boolean URLNOVALIDAERROR = false;
 				dout.writeUTF("Navidad");
 				dout.flush();
 				Iniciado = true;
+			}else if(Verano == true && !Iniciado) {
+				dout.writeUTF("Verano");
+				dout.flush();
+				Iniciado = true;
 			}
 			
 			msgin = din.readUTF();
@@ -147,7 +152,13 @@ public static boolean URLNOVALIDAERROR = false;
 				if(RubyCraft.cliente) {
 		    		Cambiador_de_Texturas.Texturas();
 		    		}
-			     }		
+			     }else if(Verano == true && msgin.equals("true")) {
+			    	 RubyCraft.Verano = true;
+			    	 IniciarItemsEventos.Iniciartodo();
+			    	 inicia = false;
+			     }else if(Verano == true && msgin.equals("false")) {
+			    	 inicia = false;
+			     }
 
 			}
 			
@@ -158,6 +169,7 @@ public static boolean URLNOVALIDAERROR = false;
 		RubyCraft.HalloWen = false;
 		Navidad = false;
 		HalloWen = false;
+		Verano = false;
 		Cambiador_de_Texturas.Texturas();
 		RubyCraft.logger.error("Se ha producido un error al Intentar conectarse con el Servidor para Verficar el Posible evento error:" + e);
 		

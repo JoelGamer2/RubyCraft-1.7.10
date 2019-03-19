@@ -14,6 +14,7 @@ public class IniciarItemsEventos {
 	public static void Iniciartodo() {
 		Navidad();
 		Hallowen();
+		Verano();
 		Crafteos();
 	}
 	
@@ -150,10 +151,16 @@ public class IniciarItemsEventos {
 		}
 	}
 	
-	
+	public static void Verano() {
+		if(RubyCraft.Verano) {
+			
+		}
+	}
 	
 	public static void Crafteos() {
-		
+           if(RubyCraft.Verano) {
+			
+		}
 		
 		if(RubyCraft.HalloWen) {
 			/**GameRegistry.addRecipe(new ItemStack(herracraft.Bloque_Demoniaco, 1), new Object[] { "aaa","aaa","aaa",'a',herracraft.Lingote_Demoniaco});

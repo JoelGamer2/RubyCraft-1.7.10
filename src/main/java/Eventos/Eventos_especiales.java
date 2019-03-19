@@ -59,10 +59,13 @@ public class Eventos_especiales {
 		if (RubyCraft.Navidad == true && !Iniciadosesion ) {
 			Iniciadosesion = true;
 			event.player.addStat(Logros.Es_Navidad, 1);
+			Iniciadosesion = true;
 		}
 
 		
-		
+		if(RubyCraft.Verano && !Iniciadosesion) {
+			event.player.addChatComponentMessage(new ChatComponentText("Verano loco" + " " + RubyCraft.Verano));
+		}
 		//Halloween evento 
 		
 		if(RubyCraft.HalloWen == true && !Iniciadosesion) {

@@ -20,6 +20,8 @@ public class EventosTab extends CreativeTabs {
 	 		   return Item.getItemFromBlock(Blocks.pumpkin);
 	 		}else if(RubyCraft.Navidad) {
 	 			return Item.getItemFromBlock(Blocks.snow);
+	 		}else if(RubyCraft.Verano){
+	 			return Items.water_bucket;
 	 		}else {
 	 			return Items.diamond;
 	 		}

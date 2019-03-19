@@ -21,6 +21,10 @@ public class Ver_fecha_calendario_usuario {
 	public static int ANavidad;
 	public static int MesNavidad;
 	
+	public static int IVerano;
+	public static int AVerano;
+	public static int MesVerano;
+	
 	public static int ano;
 	public static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
 
@@ -48,6 +52,12 @@ public class Ver_fecha_calendario_usuario {
 					String ANavidad = scanner.nextLine();
 					String MesNavidad = scanner.nextLine();
 					
+					String hueco8 = scanner.nextLine();
+					
+					String IVerano = scanner.nextLine();
+					String AVerano = scanner.nextLine();
+					String MesVerano = scanner.nextLine();
+					
 					Ver_fecha_calendario_usuario.IHalloween = Integer.parseInt(IHalloween);
 					Ver_fecha_calendario_usuario.AHalloween = Integer.parseInt(AHalloween);
 					Ver_fecha_calendario_usuario.MesHalloween = Integer.parseInt(MesHalloween);
@@ -55,6 +65,10 @@ public class Ver_fecha_calendario_usuario {
 					Ver_fecha_calendario_usuario.INavidad = Integer.parseInt(INavidad);
 					Ver_fecha_calendario_usuario.ANavidad = Integer.parseInt(ANavidad);
 					Ver_fecha_calendario_usuario.MesNavidad = Integer.parseInt(MesNavidad);
+					
+					Ver_fecha_calendario_usuario.IVerano = Integer.parseInt(IVerano);
+					Ver_fecha_calendario_usuario.AVerano = Integer.parseInt(AVerano);
+					Ver_fecha_calendario_usuario.MesVerano = Integer.parseInt(MesVerano);
 					scanner.close();
 					iniciar();
 				} catch (MalformedURLException e) {
@@ -75,12 +89,26 @@ public class Ver_fecha_calendario_usuario {
 		
 		
 			Calendar calendar = Calendar.getInstance();
+			
+			//Testear Verano
+	    	if(calendar.get(2) + 1 == MesVerano && calendar.get(5) >= IVerano && calendar.get(5) <= AVerano){
+	    		Verificar_Fecha.Verano = true;
+	    		 if(RubyCraft.cliente) {
+		  		       Verificar_Fecha.iniciar();
+		  		       }else if(!RubyCraft.cliente) {
+				    	   RubyCraft.Verano = true;
+							IniciarItemsEventos.Iniciartodo();
+				    	  
+				    	   
+				       }
+	    	}
+
           //Testear aniversario
-			if(calendar.get(2) + 1 == 3 && calendar.get(5) >= 13 && calendar.get(5) <= 20) {
+		/**	if(calendar.get(2) + 1 == 3 && calendar.get(5) >= 13 && calendar.get(5) <= 20) {
 				RubyCraft.Aniversario = true;
 				ano = calendar.get(calendar.YEAR);
 				ano = ano - 2017;
-			}
+			}**/
 			//Testear Navidad
 		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
