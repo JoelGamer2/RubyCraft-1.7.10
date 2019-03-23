@@ -7,6 +7,7 @@ import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
 import Eventos.Halloween.Entidades.BossParca;
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
 import RubyCraft.Aldeas.Tradeos_Aldeanos;
@@ -535,6 +536,7 @@ Cementos_Bases.Iniciar();
 
 modChecker = new BuscadordeMods();
 modChecker.Mensaje();
+Clase_Principal_Evento_Verano.preinit();
 Principal.preinit();
 Generacion_Principal.InicicializarGeneraciones();
 		

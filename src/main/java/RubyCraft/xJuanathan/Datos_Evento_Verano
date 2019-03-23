@@ -2,10 +2,8 @@
 
 /////////////bloques///////////////////////
 
-Bloque de aquamarina.
+--Bloque de aguamarina.
 
-   Generación: Bosques y llanuras. Mena mínima de 2 y máxima de 8.
-   Obtención: Pico de 
-   Dropeo: 1 cristal de aquamarina. 
-   
-   
+    Generación: Bosques y llanuras. Mena mínima de 2 y máxima de 8. Altura desde la 0 hasta la 20.
+    Obtención: Pico de 
+    Dropeo: 1 cristal de aguamarina. Tendrá un random cuando el pico tenga fortuna. Si se pica con toque de seda, dará también el cristal de aguamarina.
