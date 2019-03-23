@@ -452,6 +452,8 @@ public static Block Transformador_de_Losas_a_Bloques;
 
 public static final int guiIdMesaEscaleraZafiro = 4;
 
+public static final int guiIdLibro = 21;
+
 //TileEntitys
 
 public static Block Cofre_de_Ruby;
