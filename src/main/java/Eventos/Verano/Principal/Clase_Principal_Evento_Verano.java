@@ -1,19 +1,10 @@
 package Eventos.Verano.Principal;
 
-import Eventos.Navidad.Items.Fragmento_de_fosil;
 import Eventos.Verano.Items.Libro_Evento_Verano;
 import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.common.util.EnumHelper;
 
 public class Clase_Principal_Evento_Verano 
 {
