@@ -3,6 +3,7 @@ package RubyCraft.xJuanathan;
 import org.lwjgl.opengl.GL11;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Bases.texturabotones;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -65,8 +66,7 @@ public class GuiLibro extends GuiContainer{
 		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + 118, (this.height/2) + 63,  0x000000);
 	}
 	
-	
-	
+
 	@Override
 	public void initGui() 
 	{
@@ -75,8 +75,8 @@ public class GuiLibro extends GuiContainer{
 		int centroX = this.width/2;
 		int centroY = this.height/2;
 		
-		this.buttonList.add(this.siguiente = new GuiButton(0, centroX - 30, centroY + 80, 20, 10, "siguiente")); //Parametros de los botones (id, x, y, width, height, text)
-		this.buttonList.add(this.atras = new GuiButton(1, centroX + 30, centroY + 80, 20, 10, "atras"));
+		this.buttonList.add(this.siguiente = new texturabotones(0, centroX + 30, centroY + 80, "siguiente", "e.png", 60, 20)); //Parametros de los botones (id, x, y, width, height, text)
+		this.buttonList.add(this.atras = new texturabotones(1, centroX - 60, centroY + 80, "atras","e.png", 40, 20));
 	}
 	
 	
