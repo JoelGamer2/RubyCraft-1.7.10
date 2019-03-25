@@ -357,6 +357,10 @@ tile.Bloque_Reforzado_Tier_4.name=Reforzated Block Tier IV
 tile.Bloque_Reforzado_Tier_5.name=Reforzated Block Tier V
 tile.bloque_del_crea_caminos.name=Floor Creater Block
 
+
+//-------------------------Libro-------------------------------//
+boton.siguiente.name=next
+boton.atras.name=behind
 //-------------------------Juanathan---------------------------//
 
 ////////////////////////////////////////////////////Bloques
