@@ -51,7 +51,7 @@ public class GuiLibro extends GuiContainer{
 	        this.mc.getTextureManager().bindTexture(Textura);
 		}
 		
-		else if(paginas==1)
+		else if(paginas>=1)
 		{
 			this.mc.getTextureManager().bindTexture(Textura2);
 		}
