@@ -360,7 +360,7 @@ tile.bloque_del_crea_caminos.name=Floor Creater Block
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=next
-boton.atras.name=behind
+boton.atras.name=back
 //-------------------------Juanathan---------------------------//
 
 ////////////////////////////////////////////////////Bloques
