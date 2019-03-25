@@ -357,6 +357,10 @@ tile.Bloque_Reforzado_Tier_4.name=Bloque Reforzado Tier IV
 tile.Bloque_Reforzado_Tier_5.name=Bloque Reforzado Tier V
 tile.bloque_del_crea_caminos.name=Bloque del crea caminos
 
+
+//-------------------------Libro-------------------------------//
+boton.siguiente.name=siguiente
+boton.atras.name=atras
 //-------------------------Juanathan---------------------------//
 
 ////////////////////////////////////////////////////Bloques

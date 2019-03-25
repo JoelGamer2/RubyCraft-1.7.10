@@ -75,8 +75,8 @@ public class GuiLibro extends GuiContainer{
 		int centroX = this.width/2;
 		int centroY = this.height/2;
 		
-		this.buttonList.add(this.siguiente = new texturabotones(0, centroX + 30, centroY + 80, "siguiente", "e.png", 60, 20)); //Parametros de los botones (id, x, y, width, height, text)
-		this.buttonList.add(this.atras = new texturabotones(1, centroX - 60, centroY + 80, "atras","e.png", 40, 20));
+		this.buttonList.add(this.siguiente = new texturabotones(0, centroX + 30, centroY + 80, StatCollector.translateToLocal("boton.siguiente.name"), "e.png", 60, 20)); //Parametros de los botones (id, x, y, width, height, text)
+		this.buttonList.add(this.atras = new texturabotones(1, centroX - 60, centroY + 80, StatCollector.translateToLocal("boton.atras.name"),"e.png", 40, 20));
 	}
 	
 	
