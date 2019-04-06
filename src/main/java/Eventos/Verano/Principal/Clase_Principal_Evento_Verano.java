@@ -65,7 +65,7 @@ public class Clase_Principal_Evento_Verano
 		
 		//Plantas
 		
-		Planta_de_algodon = new Planta_de_algodon(Material.plants).setBlockName("Planta_de_algodon").setBlockTextureName(RubyCraft.modid+":Planta_de_algodon").setCreativeTab(Tab).setHardness(2.0F).setResistance(3.0F);
+		Planta_de_algodon = new Planta_de_algodon().setBlockName("Planta_de_algodon").setCreativeTab(Tab).setResistance(3.0F);
 		GameRegistry.registerBlock(Planta_de_algodon, Planta_de_algodon.getUnlocalizedName().substring(5));
 		Planta_de_algodon.setHarvestLevel("shovel", 2);
 		

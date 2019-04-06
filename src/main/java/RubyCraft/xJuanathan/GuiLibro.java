@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class GuiLibro extends GuiContainer{
 	
 
-    public static int X = 256;
+    public static int X = 258;
 	public static  int Y = 256;
 	private static boolean activo = false;
 	public static int paginas = 0;

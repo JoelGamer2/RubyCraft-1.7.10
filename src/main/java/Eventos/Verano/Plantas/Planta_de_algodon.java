@@ -1,13 +1,60 @@
 package Eventos.Verano.Plantas;
 
-import RubyCraft.Bases.Flores;
-import net.minecraft.block.material.Material;
+import java.util.Random;
 
-public class Planta_de_algodon extends Flores{
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
+import RubyCraft.RubyCraft;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockCrops;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 
-	public Planta_de_algodon(Material material) 
-	{
-		super(material);
+public class Planta_de_algodon extends BlockCrops {
+
+	@SideOnly(Side.CLIENT)
+	private IIcon[] iconarray;
+
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconregister) {
+
+		this.iconarray = new IIcon[4];
+
+		for (int i = 0; i < this.iconarray.length; i++) {
+			this.iconarray[i] = iconregister
+					.registerIcon(RubyCraft.modid + ":Eventos/Verano/" + this.getUnlocalizedName().substring(5) + (i + 1));
+		}
+
+	}
+
+	@Override
+	public IIcon getIcon(int side, int metadata) {
+		if (metadata < 7) {
+			if (metadata == 6) {
+				metadata = 5;
+			}
+			return this.iconarray[metadata >> 1];
+		}
+		return this.iconarray[3];
+	}
+
+	@Override
+	public int quantityDropped(int meta, int fortune, Random random) {
+
+		return 1;
+	}
+
+	protected Item func_149865_P() {
+		return Clase_Principal_Evento_Verano.Algodon;
+	}
+
+	@Override
+	protected Item func_149866_i() {
+
+		return Clase_Principal_Evento_Verano.Semilla_Algodon;
 	}
 
 }
