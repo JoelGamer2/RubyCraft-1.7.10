@@ -98,7 +98,6 @@ import Eventos.Navidad.Items.vial_de_sangre_del_pantano;
 import Eventos.Navidad.Items.vial_de_sangre_glaciar;
 import Eventos.Navidad.Items.vial_de_sangre_rocosa;
 import Eventos.Navidad.Items.vial_de_sangre_selvatica;
-import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

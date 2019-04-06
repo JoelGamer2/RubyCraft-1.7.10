@@ -8,10 +8,8 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.IBlockAccess;
 
 public class Planta_de_algodon extends BlockCrops {
 
@@ -56,5 +54,26 @@ public class Planta_de_algodon extends BlockCrops {
 
 		return Clase_Principal_Evento_Verano.Semilla_Algodon;
 	}
+	
+	public boolean isOpaqueCube()
+    {
+        return false;
+    }
+
+    /**
+     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+     */
+    public boolean renderAsNormalBlock()
+    {
+        return false;
+    }
+
+    /**
+     * The type of render function that is called for this block
+     */
+    public int getRenderType()
+    {
+        return 1;
+    } 
 
 }

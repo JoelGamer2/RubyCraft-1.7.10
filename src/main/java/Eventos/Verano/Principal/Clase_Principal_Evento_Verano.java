@@ -1,22 +1,19 @@
 package Eventos.Verano.Principal;
 
-import Eventos.Navidad.Bloques.flor_de_las_montanas;
 import Eventos.Verano.Items.Algodon;
 import Eventos.Verano.Items.Libro_Evento_Verano;
+import Eventos.Verano.Plantas.Algodon_Salvaje;
 import Eventos.Verano.Plantas.Planta_de_algodon;
 import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 public class Clase_Principal_Evento_Verano 
 {
@@ -32,6 +29,7 @@ public class Clase_Principal_Evento_Verano
 	//Plantas
 	
 	public static Block Planta_de_algodon;
+	public static Block Algodon_Salvaje;
 	
 	//Semillas
 	
@@ -51,27 +49,41 @@ public class Clase_Principal_Evento_Verano
 		
 	public static void preinit() 
 	{
-		Tab = RubyCraft.Rubycrafttab;
+		//Tab = RubyCraft.Rubycrafttab;
+		
+		if (RubyCraft.Verano)
+		{
+			Tab = RubyCraft.EventosTab;
+		}
+		
+		else 
+		{
+			Tab = RubyCraft.Rubycrafttab;
+		}
 		
 		//Bloques
 		
 		//Items
 		
-		Libro_Evento_Verano = new Libro_Evento_Verano().setUnlocalizedName("Libro_Evento_Verano").setTextureName(RubyCraft.modid+":Libro_Cerrado").setCreativeTab(Tab);
+		Libro_Evento_Verano = new Libro_Evento_Verano().setUnlocalizedName("Libro_Evento_Verano").setTextureName(RubyCraft.modid+":Eventos/Evento_Verano/Libro_Cerrado").setCreativeTab(Tab);
 		GameRegistry.registerItem(Libro_Evento_Verano, Libro_Evento_Verano.getUnlocalizedName().substring(5));
 		
-		Algodon = new Algodon().setUnlocalizedName("Algodon").setTextureName(RubyCraft.modid+":Algodon").setCreativeTab(Tab);
+		Algodon = new Algodon().setUnlocalizedName("Algodon").setTextureName(RubyCraft.modid+":Eventos/Evento_Verano/Algodon").setCreativeTab(Tab);
 		GameRegistry.registerItem(Algodon, Algodon.getUnlocalizedName().substring(5));
 		
 		//Plantas
 		
-		Planta_de_algodon = new Planta_de_algodon().setBlockName("Planta_de_algodon").setCreativeTab(Tab).setResistance(3.0F);
+		Planta_de_algodon = new Planta_de_algodon().setBlockName("Planta_de_algodon").setResistance(3.0F);
 		GameRegistry.registerBlock(Planta_de_algodon, Planta_de_algodon.getUnlocalizedName().substring(5));
 		Planta_de_algodon.setHarvestLevel("shovel", 2);
 		
+		Algodon_Salvaje = new Algodon_Salvaje(Material.plants).setBlockName("Algodon_Salvaje").setBlockTextureName(RubyCraft.modid+":Eventos/Verano/Planta_de_algodon4").setHardness(0.1F).setResistance(3.0F);
+		GameRegistry.registerBlock(Algodon_Salvaje, Algodon_Salvaje.getUnlocalizedName().substring(5));
+		Algodon_Salvaje.setHarvestLevel("axe", 2);
+		
 		//Semillas
 		
-		Semilla_Algodon = new ItemSeeds(Planta_de_algodon, Blocks.farmland).setUnlocalizedName("Semilla_Algodon").setTextureName(RubyCraft.modid+":Semilla_Algodon").setCreativeTab(Tab);
+		Semilla_Algodon = new ItemSeeds(Planta_de_algodon, Blocks.farmland).setUnlocalizedName("Semilla_Algodon").setTextureName(RubyCraft.modid+":Eventos/Evento_Verano/Semilla_Algodon").setCreativeTab(Tab);
 		GameRegistry.registerItem(Semilla_Algodon, Semilla_Algodon.getUnlocalizedName().substring(5));
 		
 		//Herramientas
