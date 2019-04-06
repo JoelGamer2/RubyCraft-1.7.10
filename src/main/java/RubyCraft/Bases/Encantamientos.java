@@ -14,10 +14,13 @@ public class Encantamientos {
 	
 	public static void Borrar_Encantamientos(Enchantment enchantment, ItemStack itemStack) {
 		NBTTagList enchantmentTagList = itemStack.getEnchantmentTagList();
-		if (enchantmentTagList != null) { // If the ItemStack has an enchantment tag list
-			for (int i = 0; i < enchantmentTagList.tagCount(); i++) { // Iterate through the list
+		if (enchantmentTagList != null) // If the ItemStack has an enchantment tag list
+		{ 
+			for (int i = 0; i < enchantmentTagList.tagCount(); i++) // Iterate through the list
+			{ 
 				NBTTagCompound enchantmentTag = enchantmentTagList.getCompoundTagAt(i); // Get the individual enchantment tag
-				if (enchantmentTag.getShort("id") == enchantment.effectId) { // If the enchantment tag is the Enchantment to remove,
+				if (enchantmentTag.getShort("id") == enchantment.effectId)  // If the enchantment tag is the Enchantment to remove,
+				{
 					enchantmentTagList.removeTag(i); // Remove it
 					break;
 				}
@@ -34,12 +37,15 @@ public class Encantamientos {
         if(player.inventory.hasItem(vial)) {
 
             int j = EnchantmentHelper.getEnchantmentLevel(encantamiento.effectId, stack);
-            if(j < 10) {
-            if(!(j == 0)) {
-                Borrar_Encantamientos(encantamiento, stack);
-            }
-            stack.addEnchantment(encantamiento, j + 1);
-            player.inventory.consumeInventoryItem(vial); 
+            if(j < 10) 
+            {
+            	if(!(j == 0)) 
+            	{
+            		Borrar_Encantamientos(encantamiento, stack);
+            	}
+            	
+            	stack.addEnchantment(encantamiento, j + 1);
+            	player.inventory.consumeInventoryItem(vial); 
             }
         }
 

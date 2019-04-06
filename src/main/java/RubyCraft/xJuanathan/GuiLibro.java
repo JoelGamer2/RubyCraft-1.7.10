@@ -15,13 +15,13 @@ public class GuiLibro extends GuiContainer{
 	
 
     public static int X = 256;
-	public static  int Y = 255;
+	public static  int Y = 256;
 	private static boolean activo = false;
 	public static int paginas = 0;
 	public GuiButton atras;
 	public GuiButton siguiente;
-	public static ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/gui/bestiary.png");
-	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/bestiary2.png");
+	public static ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Libro_Abierto.png");
+	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Libro_Abierto.png");
 
 
 	
@@ -38,7 +38,7 @@ public class GuiLibro extends GuiContainer{
 	
 	
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) 
+	protected void drawGuiContainerBackgroundLayer(float valor, int alto, int ancho) 
 	{
 		int centroX = this.width/2;
 		int centroY = this.height/2;
@@ -56,16 +56,16 @@ public class GuiLibro extends GuiContainer{
 			this.mc.getTextureManager().bindTexture(Textura2);
 		}
 		
-	    int k = (this.width/2)-(X/2);
-	    int l = (this.height - this.ySize) / 2;
+	    int k = (this.width/2)-((X/2)+3);
+	    int l = (this.height/2) - (Y/2);
 	    
 	    this.drawTexturedModalRect(k, l, 0, 0, X, Y);
 
 	    String paginase = Integer.toString(paginas);
 	       
-		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + 118, (this.height/2) + 63,  0x000000);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + 128, (this.height/2) + 28,  0x000000);
 	}
-	
+
 
 	@Override
 	public void initGui() 
@@ -82,16 +82,16 @@ public class GuiLibro extends GuiContainer{
 	
 	
 	@Override
-	protected void actionPerformed(GuiButton b) 
+	protected void actionPerformed(GuiButton boton) 
 	{
-		if(b.enabled)
+		if(boton.enabled)
 		{
-			if(b.id == 0) 
+			if(boton.id == 0) 
 			{
 				paginas ++;
 	        }
 		
-			if(b.id == 1) 
+			if(boton.id == 1) 
 			{
 				if(!(paginas == 0)) 
 				{
@@ -100,9 +100,9 @@ public class GuiLibro extends GuiContainer{
 			}
 		}
 		
-		super.actionPerformed(b);
+		super.actionPerformed(boton);
 	}
-	    
+	
 	
 	@Override
 	public void onGuiClosed() 
