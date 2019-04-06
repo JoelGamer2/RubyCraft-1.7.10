@@ -507,6 +507,10 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(Control_de_Version.Navidad_Activar == true) {
 		Navidad = true;
 	}
+	
+	if(Control_de_Version.Verano_Activar) {
+		Verano = true;
+	}
 	BossParca.Activo = false;
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
@@ -517,6 +521,12 @@ public void Preinit(FMLPreInitializationEvent event){
 			IniciarItemsEventos.Iniciartodo();
 			
 	}
+	
+	if(Control_de_Version.Verano_Activar == true) {
+		
+		IniciarItemsEventos.Iniciartodo();
+		
+}
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();
 	}
