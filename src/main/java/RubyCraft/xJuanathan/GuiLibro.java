@@ -46,6 +46,7 @@ public class GuiLibro extends GuiContainer{
 		
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		
+		
 		if(paginas==0) 
 		{
 	        this.mc.getTextureManager().bindTexture(Textura);

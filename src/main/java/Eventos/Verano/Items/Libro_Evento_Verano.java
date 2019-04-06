@@ -46,6 +46,7 @@ public class Libro_Evento_Verano extends Item{
         	paginas.setInteger("Paginas", 0);
         }
 		
+		
         stack.setTagCompound(paginas);
 		
 		super.onCreated(stack, world, player);

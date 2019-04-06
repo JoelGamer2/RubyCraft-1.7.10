@@ -55,6 +55,7 @@ public class Clase_Principal_Evento_Verano
 	{
 		GameRegistry.addRecipe(new ItemStack(Clase_Principal_Evento_Verano.Libro_Evento_Verano, 1), new Object[] {"h",'h',Items.apple});
 		GameRegistry.addRecipe(new ItemStack(Clase_Principal_Evento_Verano.Libro_Evento_Verano, 1), new Object[] {"h",'h',Clase_Principal_Evento_Verano.Libro_Evento_Verano,'p',Items.paper});
+		
     }
 	
 	
