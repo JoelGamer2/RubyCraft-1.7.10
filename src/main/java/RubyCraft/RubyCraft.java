@@ -1131,6 +1131,7 @@ BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
 @EventHandler
 public void init(FMLInitializationEvent event){
 	Principal.init();
+	Clase_Principal_Evento_Verano.init();
 	
 	if(Navidad || HalloWen && !RubyCraft.cliente) {
 		
@@ -1159,6 +1160,7 @@ if(VersionTrol == false){
 @EventHandler
 public void PostLoad(FMLPostInitializationEvent Posevent){
     Principal.postinit();
+    Clase_Principal_Evento_Verano.postinit();
 	WorldType RUBYWORLDTYPE = new WorldTypeRuby(3, "Ruby"); 
 		
 	//Variado
