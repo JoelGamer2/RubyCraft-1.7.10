@@ -1,6 +1,7 @@
 package Eventos.Verano.Principal;
 
 import Eventos.Navidad.Bloques.flor_de_las_montanas;
+import Eventos.Verano.Items.Algodon;
 import Eventos.Verano.Items.Libro_Evento_Verano;
 import Eventos.Verano.Plantas.Planta_de_algodon;
 import RubyCraft.RubyCraft;
@@ -13,6 +14,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -25,9 +27,15 @@ public class Clase_Principal_Evento_Verano
 	
 	public static Item Libro_Evento_Verano;
 	
+	public static Item Algodon;
+	
 	//Plantas
 	
 	public static Block Planta_de_algodon;
+	
+	//Semillas
+	
+	public static Item Semilla_Algodon;
 	
 	//Herramientas
 	
@@ -52,11 +60,19 @@ public class Clase_Principal_Evento_Verano
 		Libro_Evento_Verano = new Libro_Evento_Verano().setUnlocalizedName("Libro_Evento_Verano").setTextureName(RubyCraft.modid+":Libro_Cerrado").setCreativeTab(Tab);
 		GameRegistry.registerItem(Libro_Evento_Verano, Libro_Evento_Verano.getUnlocalizedName().substring(5));
 		
+		Algodon = new Algodon().setUnlocalizedName("Algodon").setTextureName(RubyCraft.modid+":Algodon").setCreativeTab(Tab);
+		GameRegistry.registerItem(Algodon, Algodon.getUnlocalizedName().substring(5));
+		
 		//Plantas
 		
 		Planta_de_algodon = new Planta_de_algodon(Material.plants).setBlockName("Planta_de_algodon").setBlockTextureName(RubyCraft.modid+":Planta_de_algodon").setCreativeTab(Tab).setHardness(2.0F).setResistance(3.0F);
 		GameRegistry.registerBlock(Planta_de_algodon, Planta_de_algodon.getUnlocalizedName().substring(5));
 		Planta_de_algodon.setHarvestLevel("shovel", 2);
+		
+		//Semillas
+		
+		Semilla_Algodon = new ItemSeeds(Planta_de_algodon, Blocks.farmland).setUnlocalizedName("Semilla_Algodon").setTextureName(RubyCraft.modid+":Semilla_Algodon").setCreativeTab(Tab);
+		GameRegistry.registerItem(Semilla_Algodon, Semilla_Algodon.getUnlocalizedName().substring(5));
 		
 		//Herramientas
 		
