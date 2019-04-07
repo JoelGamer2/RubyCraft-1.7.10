@@ -47,7 +47,7 @@ public class Generacion_Plantas implements IWorldGenerator{
      		int zRand = chunkZ * 16 + rand.nextInt(16);
      		int yRand = world.getHeightValue(xRand, zRand) -1;
      		
-     		if(world.getBiomeGenForCoords(xRand, zRand) == bioma && /**yRand > 10 &&**/ world.getBlock(xRand, yRand, zRand) == Blocks.grass) 
+     		if(world.getBiomeGenForCoords(xRand, zRand) == bioma && yRand > 10 && world.getBlock(xRand, yRand, zRand) == Blocks.grass) 
      		{
      			world.setBlock(xRand, yRand, zRand, Blocks.grass);
      			world.setBlock(xRand, yRand +1, zRand, Clase_Principal_Evento_Verano.Algodon_Salvaje);
