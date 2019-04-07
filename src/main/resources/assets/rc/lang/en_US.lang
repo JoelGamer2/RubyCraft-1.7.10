@@ -361,6 +361,35 @@ tile.bloque_del_crea_caminos.name=Floor Creater Block
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=next
 boton.atras.name=back
+
+//-------------------------Evento verano-----------------------//
+
+////////////////////Items
+
+item.Documento_Perdido.name=Lost document
+item.Libro_Evento_Verano.name=Summer event book
+item.Algodon.name=Cotton
+item.Semilla_Algodon.name=Cotton seed
+item.Hilo_de_algodon.name=Cotton thread
+item.Cuero_Curtido.name=Tanned leather
+item.Silex.name=Silex
+item.Tablilla.name=clapboard
+item.Tapa_Libro.name=Book cover
+item.Pergamino.name=parchment
+
+///////////////////Bloques
+
+//////////////////Plantas
+
+tile.Planta_de_algodon.name=Cotton plant
+tile.Algodon_Salvaje=Wild Cotton
+
+//////////////////Armas
+
+/////////////////Armaduras
+
+////////////////Herramientas
+
 //-------------------------Juanathan---------------------------//
 
 ////////////////////////////////////////////////////Bloques

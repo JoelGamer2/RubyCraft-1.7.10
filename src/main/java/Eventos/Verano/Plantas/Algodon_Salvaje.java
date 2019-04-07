@@ -16,12 +16,32 @@ public class Algodon_Salvaje extends Flores{
 	}
 	
 	@Override
-	public Item getItemDropped(int p_149650_1_, Random rand, int p_149650_3_) 
+	public Item getItemDropped(int a, Random rand, int b) 
 	{
 		if (RubyCraft.Verano)
 		{
-			return Clase_Principal_Evento_Verano.Semilla_Algodon;
+			int probabilidad;
+			
+			probabilidad = rand.nextInt(100);
+			
+			System.out.println("Dropeo: " + probabilidad);
+			
+			if (probabilidad <= 20)
+			{
+				return Clase_Principal_Evento_Verano.Semilla_Algodon;
+			}
+			
+			else if (probabilidad >= 15)
+			{
+				return Clase_Principal_Evento_Verano.Algodon;
+			}
+			
+			else
+			{
+				return null;
+			}
 		}
+		
 		else 
 		{
 			return null;

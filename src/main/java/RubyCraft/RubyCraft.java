@@ -455,6 +455,8 @@ public static final int guiIdMesaEscaleraZafiro = 4;
 
 public static final int guiIdLibro = 21;
 
+public static final int guiIdDocumento = 100;
+
 //TileEntitys
 
 public static Block Cofre_de_Ruby;

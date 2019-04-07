@@ -1,9 +1,68 @@
 
 
-/////////////bloques///////////////////////
+-----------------bloques-----------------
 
 --Bloque de aguamarina.
 
     Generación: Bosques y llanuras. Mena mínima de 2 y máxima de 8. Altura desde la 0 hasta la 20.
     Obtención: Pico de 
     Dropeo: 1 cristal de aguamarina. Tendrá un random cuando el pico tenga fortuna. Si se pica con toque de seda, dará también el cristal de aguamarina.
+    
+    
+-----------------items-----------------
+
+--Libro del evento de verano.
+
+    Obtención: En la mesa de crafteo con 3 de hilo de algodon arriba, dos tapas de libro y un pergamino en el medio y 3 de tinte verde lima abajo. 
+               Al principio no estara completo y necesitará de otros items para ir ampliando su contenido.
+    Uso. Servira como guia sobre todo lo que incluye el evento de verano.
+    
+--Semilla de algodon.
+
+    Obtencion: De la planta de algodon salvaje o del cultivo de algodon. El dropeo sera random, pudiendo dar hasta 4 semillas.
+    Uso: Se utilizará para cultivar la planta de algodon.
+
+--Algodon.
+
+    Obtencion: De la planta de algodon salvaje o del cultivo de algodon. El dropeo será random, pudiendo dar hasta 4 algodones.
+    Uso: Se utilizará para obtener hilo de algodon, para vendas curativas y para fabricar una armadura especial del evento de verano.
+
+--Hilo de algodon.
+
+    Obtencion: En la mesa de crafteo con 9 items de algodon.
+    Uso: Se utilizara para unir las paginas del libro del evento de verano. También se usará para fabricar una armadura especial del evento de verano.
+    
+--Silex
+
+    Obtencion: En la mesa de crafteo con 2 de piedra.
+    Uso: Servirá para fabricar cuero curtido.
+    
+--Cuero curtido
+
+    Obtencion: En la mesa de crafteo con 8 de cuero y 1 de silex en el medio.
+    Uso: Servira para Obtener el libro del evento de verano.
+    
+--Tablilla
+
+    Obtencion: En la mesa de crafteo con 2 de madera de roble y silex
+    Uso: Servira para craftear la tapa del libro de verano.
+    
+--Pergamino
+
+    Obtencion: En la mesa de crafteo con 8 de silex y 1 de cuero curtido.
+    Uso: Servira para ampliar el contenido del libro del evento de verano.
+    
+
+-----------------Plantas-----------------
+
+--Algodon salvaje.
+
+    Generacion: Esta planta saldra en biomas de llanuras.
+    Obtencion: Se podra romper con la mano.
+    Dropeo: Podra dar el item de algodon, la semilla de algodon o incluso los dos a la vez. La cantidad será random, pudiendo dar hasta 4 items, ya sea algodon, semilla o mezcla de los dos.
+    
+--Planta de algodon.
+
+    Generacion: Esta planta se cultivará en tierra de cultivo normal, igual que los cultivos de minecraft vanilla. Le afecta el polvo de hueso.
+    Obtencion: Se podra romper con la mano.
+    Dropeo: Dará el item de algodon y la semilla de algodon.

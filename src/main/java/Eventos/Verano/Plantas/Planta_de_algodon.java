@@ -40,18 +40,19 @@ public class Planta_de_algodon extends BlockCrops {
 	}
 
 	@Override
-	public int quantityDropped(int meta, int fortune, Random random) {
-
+	public int quantityDropped(int meta, int fortune, Random random) 
+	{
 		return 1;
 	}
 
-	protected Item func_149865_P() {
+	protected Item func_149865_P() 
+	{
 		return Clase_Principal_Evento_Verano.Algodon;
 	}
 
 	@Override
-	protected Item func_149866_i() {
-
+	protected Item func_149866_i() 
+	{
 		return Clase_Principal_Evento_Verano.Semilla_Algodon;
 	}
 	

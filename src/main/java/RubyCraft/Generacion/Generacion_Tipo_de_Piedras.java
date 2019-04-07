@@ -2,7 +2,6 @@ package RubyCraft.Generacion;
 
 import java.util.Random;
 
-import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -59,7 +58,6 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
         generarflores(world, rand, x, z, 1, Principal.flor_del_Pantano, Blocks.air, BiomeGenBase.swampland);
         generarflores(world, rand, x, z, 1, Principal.flor_de_las_montanas, Blocks.air, BiomeGenBase.extremeHills);
         generarflores(world, rand, x, z, 1, Principal.flor_del_bosque, Blocks.air, BiomeGenBase.forest);
-        generarPlantas(world, rand, x, z, 1, Clase_Principal_Evento_Verano.Algodon_Salvaje, Blocks.grass, BiomeGenBase.plains);
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generatein){
@@ -103,28 +101,6 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
 
      		
      		
-     	}
-     }
-    
-    public void generarPlantas(World world, Random rand, int chunkX, int chunkZ, int chance, Block block, Block  generatein, BiomeGenBase bioma)
-    {
-        int probrand = rand.nextInt(10);
-     	
-     	WorldGenMinable gen = new WorldGenMinable(block, 5, generatein);
-     	WorldGenMinable gencesped = new WorldGenMinable(Blocks.grass, 5, Blocks.dirt);
-
-     	
-     	if(probrand <= 3) 
-     	{
-     		int xRand = chunkX * 16 + rand.nextInt(16);
-     		int zRand = chunkZ * 16 + rand.nextInt(16);
-     		int yRand = world.getHeightValue(xRand, zRand) -1;
-     		
-     		if(world.getBiomeGenForCoords(xRand, zRand) == bioma && /**yRand > 10 &&**/ world.getBlock(xRand, yRand, zRand) == Blocks.grass) 
-     		{
-     			world.setBlock(xRand, yRand, zRand, Blocks.grass);
-     			world.setBlock(xRand, yRand +1, zRand, Clase_Principal_Evento_Verano.Algodon_Salvaje);
-     		}
      	}
      }
     

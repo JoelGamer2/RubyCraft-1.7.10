@@ -3,7 +3,6 @@ package Eventos.Navidad.Entidades;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

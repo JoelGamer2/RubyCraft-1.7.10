@@ -13,6 +13,7 @@ import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_acacia;
 import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_jungla;
 import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_robleoscuro;
 import RubyCraft.xJuanathan.ContainerLibro;
+import RubyCraft.xJuanathan.GuiDocumentoPerdido;
 import RubyCraft.xJuanathan.GuiLibro;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
@@ -58,6 +59,20 @@ public class GuiHandler implements IGuiHandler {
 			if (stack != null)
 			{
 				if (stack.getItem() == Clase_Principal_Evento_Verano.Libro_Evento_Verano)
+				{
+					
+					return new ContainerLibro(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}
+		
+		if (ID == RubyCraft.guiIdDocumento)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Documento_Perdido)
 				{
 					
 					return new ContainerLibro(player.inventory, world, z, z, z);		
@@ -112,6 +127,21 @@ public class GuiHandler implements IGuiHandler {
 				}
 			}
 		}
+		
+		if (ID == RubyCraft.guiIdDocumento)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Documento_Perdido)
+				{
+					
+					return new GuiDocumentoPerdido(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}
+		
 		return null;
 		}
 	}

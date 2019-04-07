@@ -361,6 +361,35 @@ tile.bloque_del_crea_caminos.name=Bloque del crea caminos
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=siguiente
 boton.atras.name=atras
+
+//-------------------------Evento verano-----------------------//
+
+////////////////////Items
+
+item.Documento_Perdido.name=Documento perdido
+item.Libro_Evento_Verano.name=Libro del evento de verano
+item.Algodon.name=Algodon
+item.Semilla_Algodon.name=Semilla de algodon
+item.Hilo_de_algodon.name=Hilo de algodon
+item.Cuero_Curtido.name=Cuero curtido
+item.Silex.name=Silex
+item.Tablilla.name=Tablilla
+item.Tapa_Libro.name=Tapa de libro
+item.Pergamino.name=Pergamino
+
+///////////////////Bloques
+
+//////////////////Plantas
+
+tile.Planta_de_algodon.name=Planta de algodon
+tile.Algodon_Salvaje=Algodon salvaje
+
+//////////////////Armas
+
+/////////////////Armaduras
+
+////////////////Herramientas
+
 //-------------------------Juanathan---------------------------//
 
 ////////////////////////////////////////////////////Bloques
