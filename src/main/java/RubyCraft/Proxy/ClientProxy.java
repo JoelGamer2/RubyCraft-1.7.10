@@ -15,6 +15,8 @@ import Eventos.Navidad.RenderModel.Altar_Renderizado_Item;
 import Eventos.Navidad.RenderModel.Altar_Renderizado_Textura;
 import Eventos.Navidad.TileEntity.TileEntityAltar;
 import Eventos.Navidad.TileEntity.TileEntityAltarCentral;
+import Eventos.Verano.Entidades.Elemental_de_Agua;
+import Eventos.Verano.Entidades.Render.Render_Elemental_de_agua;
 import RubyCraft.RubyCraft;
 import RubyCraft.Encantamientos.Encantamiento_MineCraft_Objetos;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
@@ -83,7 +85,7 @@ public class ClientProxy extends ServerProxy {
 	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new RenderModelYetiLich(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(YetiLichEstatua.class, new RenderYetiLichestatua(new RenderModelYetiLich(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(Lich.class, new RenderLich(new ModelBiped(), 0));
-
+        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua.class, new Render_Elemental_de_agua(new ModelBiped(), 0));
 		//TileEntity Render
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCofredeRuby.class, new CofredeRubyRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.Cofre_de_Ruby), new ItemRenderCofredeRuby());

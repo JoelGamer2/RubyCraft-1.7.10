@@ -12,6 +12,9 @@
 "Logros_especiales":{"sounds":[{"name":"Logros_especiales","stream":true}],"category":"block"},
 "golpebossparca":{"sounds":[{"name":"golpebossparca","stream":true}],"category":"ambient"},
 "ambientebossparca":{"sounds":[{"name":"ambientebossparca","stream":true}],"category":"ambient"},
-"muertebossparca":{"sounds":[{"name":"muertebossparca","stream":true}],"category":"ambient"}
+"muertebossparca":{"sounds":[{"name":"muertebossparca","stream":true}],"category":"ambient"},
+"elemental_pegar":{"sounds":[{"name":"elemental_pegar","stream":true}],"category":"ambient"},
+"elemental_morir":{"sounds":[{"name":"elemental_morir","stream":true}],"category":"ambient"},
+"elemental_ambiente":{"sounds":[{"name":"elemental_ambiente","stream":true}],"category":"ambient"}
 
 }

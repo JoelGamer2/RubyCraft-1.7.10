@@ -10,9 +10,9 @@ public class Flores extends Block{
 	public Flores(Material material) {
 		super(material);
 		
-		this.setStepSound(this.soundTypeGrass);
+		this.setStepSound(this.soundTypeGrass); //Pone el sonido a la flor 
 	}
-	/**Pone la caja de colisiones visual en su sitio**/
+	/**Pone la caja de colisiones visual en su sitio, este es solo en lo visual**/
 	@Override
 	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
 	
@@ -20,8 +20,7 @@ public class Flores extends Block{
 	}
 	
 	/**
-     * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
-     * cleared to be reused)
+     *Define la caja de colisiones con la que el jugador colisionara
      */
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
     {
@@ -29,7 +28,7 @@ public class Flores extends Block{
     }
     
     
-    /**Detecta donde se puede colocar el bloque solo se podra colocar en material tipo hierba y tierra**/
+    /**Detecta donde puede estar la flor puesta**/
     @Override
  public boolean canBlockStay(World world, int x, int y, int z) {
  	
@@ -39,12 +38,13 @@ public class Flores extends Block{
  	   return false;
  	   }
  }
+    /**Define donde podra poner el jugador la flor**/
     @Override
     public boolean canPlaceBlockAt(World world, int x, int y, int z)
      {
          return !super.canPlaceBlockAt(world, x, y, z) ? false : this.canBlockStay(world, x, y, z);
      }
-    
+    /**Detecta cuando el bloque vecino se actualiza para actualizar esta flor**/
      @Override
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
     {
@@ -53,14 +53,14 @@ public class Flores extends Block{
             world.func_147480_a(x, y, z, true);
         }
     }
-    
+    /**Define la flor como un bloque no opaco**/
     public boolean isOpaqueCube()
     {
         return false;
     }
 
     /**
-     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+     * Define que el bloque no se renderiza de la manera normal que lo hacen los demas
      */
     public boolean renderAsNormalBlock()
     {
@@ -68,7 +68,7 @@ public class Flores extends Block{
     }
 
     /**
-     * The type of render function that is called for this block
+     * Determina el tipo de render que usara la flor
      */
     public int getRenderType()
     {

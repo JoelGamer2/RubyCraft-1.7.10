@@ -4,6 +4,7 @@ import Eventos.Halloween.Entidades.BossParca;
 import Eventos.Navidad.Entidades.Lich;
 import Eventos.Navidad.Entidades.YetiLich;
 import Eventos.Navidad.Entidades.YetiLichEstatua;
+import Eventos.Verano.Entidades.Elemental_de_Agua;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
@@ -34,7 +35,7 @@ public class Entidades_Principal {
 		createEntitySinHuevo(BossParca.class, "Parca");
 		createEntitySinHuevo(YetiLich.class, "YetiLichR");
 		createEntitySinHuevo(Lich.class, "LichR");
-		
+		createEntitySinHuevo(Elemental_de_Agua.class, "Elemental_de_Agua_RU");
 		//Entidades Normales
 		createEntity(AlienMob.class, "AlienR", 0x6B6B6B, 0x00FF1D);
 		createEntity(AlejandroMob.class, "Alejandro", 0x0280FF, 0x0C00FF);
