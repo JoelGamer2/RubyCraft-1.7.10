@@ -7,6 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
+import RubyCraft.RubyCraft;
 
 public class generararboles implements IWorldGenerator{
 
@@ -19,15 +20,16 @@ public class generararboles implements IWorldGenerator{
 		}
 	}
 
-	public void generateOverworld(World world,Random rand, int x, int z){
-		//generateOre(block,                world, rand, x, z, min, max, chance, minY, maxY, generateIn);
+	public void generateOverworld(World world,Random rand, int x, int z)
+	{
+		//generateOre(block,world, rand, x, z, min, max, chance, minY, maxY, generateIn);
+		
     	generatetree(world, rand, x,z,1);
     	
-    	
-    	generatetreegrande(world, rand, x, z, 1);
-    	
-    	
-    	
+    	if(RubyCraft.Navidad)
+    	{
+    		generatetreegrande(world, rand, x, z, 1);
+    	}
     }
     
     public void generatetree(World world, Random rand, int chunkX, int chunkZ, int chance){

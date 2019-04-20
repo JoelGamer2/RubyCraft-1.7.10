@@ -48,16 +48,20 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	generateOre(RubyCraft.Andesita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Diorita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Granito, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
-    	generateOreLadodelava(Principal.piedra_ancestral, world, rand, x, z, 2, 9, 15, 2, 8, Blocks.stone);
+    	
+    	if (RubyCraft.Navidad)
+    	{
+    		generateOreLadodelava(Principal.piedra_ancestral, world, rand, x, z, 2, 9, 15, 2, 8, Blocks.stone);
 
-        generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
-        generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
-        generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
+    		generarrocas(Principal.Roca_Fosil, world, rand, x, z, 20, 40, 40, 70, 256, Blocks.stone);
+    		generarbarro(Principal.Barro, world, rand, x, z, 20, 40, 40, 60, 90, Blocks.water);
+    		generarhielo(Principal.Hielo_Glaciar, world, rand, x, z, 20, 40, 40, 63, 63, Blocks.ice);
         
-        generarflores(world, rand, x, z, 1, Principal.flor_de_las_nieves, Blocks.snow_layer, BiomeGenBase.icePlains);
-        generarflores(world, rand, x, z, 1, Principal.flor_del_Pantano, Blocks.air, BiomeGenBase.swampland);
-        generarflores(world, rand, x, z, 1, Principal.flor_de_las_montanas, Blocks.air, BiomeGenBase.extremeHills);
-        generarflores(world, rand, x, z, 1, Principal.flor_del_bosque, Blocks.air, BiomeGenBase.forest);
+    		generarflores(world, rand, x, z, 1, Principal.flor_de_las_nieves, Blocks.snow_layer, BiomeGenBase.icePlains);
+    		generarflores(world, rand, x, z, 1, Principal.flor_del_Pantano, Blocks.air, BiomeGenBase.swampland);
+    		generarflores(world, rand, x, z, 1, Principal.flor_de_las_montanas, Blocks.air, BiomeGenBase.extremeHills);
+    		generarflores(world, rand, x, z, 1, Principal.flor_del_bosque, Blocks.air, BiomeGenBase.forest);
+    	}
     }
     
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generatein){

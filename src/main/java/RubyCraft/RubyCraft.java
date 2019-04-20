@@ -6,6 +6,7 @@ import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
+import Eventos.A.Libros.IniciarGui;
 import Eventos.Halloween.Entidades.BossParca;
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
@@ -453,10 +454,6 @@ public static Block Transformador_de_Losas_a_Bloques;
 
 public static final int guiIdMesaEscaleraZafiro = 4;
 
-public static final int guiIdLibro = 21;
-
-public static final int guiIdDocumento = 100;
-
 //TileEntitys
 
 public static Block Cofre_de_Ruby;
@@ -553,6 +550,8 @@ Principal.preinit();
 Generacion_Principal.InicicializarGeneraciones();
 		
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+
+NetworkRegistry.INSTANCE.registerGuiHandler(this, new IniciarGui());
 
 MinecraftForge.EVENT_BUS.register(new DropeoMobsHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());

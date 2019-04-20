@@ -5,11 +5,16 @@
 --Bloque de aguamarina.
 
     Generación: Bosques y llanuras. Mena mínima de 2 y máxima de 8. Altura desde la 0 hasta la 20.
-    Obtención: Pico de 
+    Obtención: Pico de silex.
     Dropeo: 1 cristal de aguamarina. Tendrá un random cuando el pico tenga fortuna. Si se pica con toque de seda, dará también el cristal de aguamarina.
     
     
 -----------------items-----------------
+
+--Documento Perdido.
+
+    Obtencion: Se dará al jugador al entrar a la partida.
+    Uso: Servira de guia inicial para craftear el libro del evento de verano.
 
 --Libro del evento de verano.
 
@@ -52,6 +57,31 @@
     Obtencion: En la mesa de crafteo con 8 de silex y 1 de cuero curtido.
     Uso: Servira para ampliar el contenido del libro del evento de verano.
     
+--Aguamarina Azul
+
+    Obtencion: De la mena de Aguamarina.
+    Uso: 
+    
+--Aguamarina Azul oscuro
+
+    Obtencion: De la mena de Aguamarina.
+    Uso:
+    
+---Aguamarina Verde
+
+    Obtencion: De la mena de Aguamarina.
+    Uso:
+    
+--Aguamarina Amarilla
+
+    Obtencion: De la mena de Aguamarina.
+    Uso:
+    
+--Aguamarina Transparente
+
+    Obtencion: De la mena de Aguamarina.
+    Uso:
+    
 
 -----------------Plantas-----------------
 
@@ -66,3 +96,60 @@
     Generacion: Esta planta se cultivará en tierra de cultivo normal, igual que los cultivos de minecraft vanilla. Le afecta el polvo de hueso.
     Obtencion: Se podra romper con la mano.
     Dropeo: Dará el item de algodon y la semilla de algodon.
+    
+
+-----------------Herramientas-----------------
+
+--Pico de silex
+
+    Obtencion: Se crafteara con dos palos de madera y tres de silex.
+    Uso: Servira para picar la mena de Aguamarina.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

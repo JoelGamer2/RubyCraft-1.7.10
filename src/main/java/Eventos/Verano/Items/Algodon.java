@@ -6,13 +6,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 
 public class Algodon extends Item{
 	
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par) 
 	{
-    	 lore.add(EnumChatFormatting.AQUA + "Item especial del evento de verano");
+		lore.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("lore.EventoVerano.name"));
     }
-
 }

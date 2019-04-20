@@ -1,9 +1,8 @@
-package RubyCraft.xJuanathan;
+package Eventos.A.Libros;
 
 import org.lwjgl.opengl.GL11;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Bases.texturabotones;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -21,7 +20,7 @@ public class GuiDocumentoPerdido extends GuiContainer{
 	public GuiButton atras;
 	public GuiButton siguiente;
 	public static ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Documento_Perdido.png");
-	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Libro_Abierto.png");
+	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Documento_Perdido.png");
 
 
 	
@@ -42,6 +41,18 @@ public class GuiDocumentoPerdido extends GuiContainer{
 	{
 		int centroX = this.width/2;
 		int centroY = this.height/2;
+		
+		int posX = 0;
+		
+		if (paginas < 10)
+		{
+			posX = 100;
+		}
+		
+		else
+		{
+			posX = 94;
+		}
 		
 		
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -64,7 +75,7 @@ public class GuiDocumentoPerdido extends GuiContainer{
 
 	    String paginase = Integer.toString(paginas);
 	       
-		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + 128, (this.height/2) + 28,  0x000000);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + posX, (this.height/2) + 78,  0x000000);
 	}
 
 
@@ -75,6 +86,9 @@ public class GuiDocumentoPerdido extends GuiContainer{
 		
 		int centroX = this.width/2;
 		int centroY = this.height/2;
+		
+		this.buttonList.add(this.siguiente = new texturabotones(0, centroX + 30, centroY + 80, StatCollector.translateToLocal("boton.siguiente.name"), "e.png", 60, 20)); //Parametros de los botones (id, x, y, width, height, text)
+		this.buttonList.add(this.atras = new texturabotones(1, centroX - 60, centroY + 80, StatCollector.translateToLocal("boton.atras.name"),"e.png", 40, 20));
 	}
 	
 	

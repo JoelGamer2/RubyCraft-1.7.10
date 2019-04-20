@@ -1,9 +1,8 @@
-package RubyCraft.xJuanathan;
+package Eventos.A.Libros;
 
 import org.lwjgl.opengl.GL11;
 
 import RubyCraft.RubyCraft;
-import RubyCraft.Bases.texturabotones;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -22,6 +21,7 @@ public class GuiLibro extends GuiContainer{
 	public GuiButton siguiente;
 	public static ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Libro_Abierto.png");
 	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Libro_Abierto.png");
+	public static ResourceLocation Textura3 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Documento_Perdido.png");
 
 
 	
@@ -42,6 +42,18 @@ public class GuiLibro extends GuiContainer{
 	{
 		int centroX = this.width/2;
 		int centroY = this.height/2;
+		
+		int posX = 0;
+		
+		if (paginas < 10)
+		{
+			posX = 108;
+		}
+		
+		else
+		{
+			posX = 102;
+		}
 		
 		
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -64,7 +76,7 @@ public class GuiLibro extends GuiContainer{
 
 	    String paginase = Integer.toString(paginas);
 	       
-		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + 128, (this.height/2) + 28,  0x000000);
+		this.fontRendererObj.drawString(paginase, (this.width/2) + posX, (this.height/2) + 92,  0x000000);
 	}
 
 
@@ -108,7 +120,7 @@ public class GuiLibro extends GuiContainer{
 	@Override
 	public void onGuiClosed() 
 	{
-		activo = false;
+		//activo = false;
 		paginas = 0;
 		super.onGuiClosed();
 	}

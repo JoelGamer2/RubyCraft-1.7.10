@@ -364,6 +364,10 @@ boton.atras.name=atras
 
 //-------------------------Evento verano-----------------------//
 
+////////////////////Lore
+
+lore.EventoVerano.name=Item especial del evento de verano
+
 ////////////////////Items
 
 item.Documento_Perdido.name=Documento perdido
@@ -376,8 +380,15 @@ item.Silex.name=Silex
 item.Tablilla.name=Tablilla
 item.Tapa_Libro.name=Tapa de libro
 item.Pergamino.name=Pergamino
+item.Aguamarina_Azul.name=Aguamarina Azul
+item.Aguamarina_AzulOscuro.name=Aguamarina Azul oscuro
+item.Aguamarina_Verde.name=Aguamarina Verde
+item.Aguamarina_Amarilla.name=Aguamarina Amarilla
+item.Aguamarina_Transparente.name=Aguamarina Transparente
 
 ///////////////////Bloques
+
+tile.Aguamarina.name?Aguamarina
 
 //////////////////Plantas
 
@@ -389,6 +400,8 @@ tile.Algodon_Salvaje=Algodon salvaje
 /////////////////Armaduras
 
 ////////////////Herramientas
+
+item.Pico_de_silex.name=Pico de silex
 
 //-------------------------Juanathan---------------------------//
 

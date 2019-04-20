@@ -8,12 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 
-public class Hilo_de_algodon extends Item{
+public class Aguamarina_AzulOscuro extends Item{
 	
 	@Override
     public void addInformation(ItemStack stack, EntityPlayer player, List lore, boolean par) 
 	{
 		lore.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("lore.EventoVerano.name"));
     }
-
 }

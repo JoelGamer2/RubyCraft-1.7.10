@@ -364,6 +364,10 @@ boton.atras.name=back
 
 //-------------------------Evento verano-----------------------//
 
+////////////////////Lore
+
+lore.EventoVerano.name=Special item of the summer event
+
 ////////////////////Items
 
 item.Documento_Perdido.name=Lost document
@@ -376,8 +380,15 @@ item.Silex.name=Silex
 item.Tablilla.name=clapboard
 item.Tapa_Libro.name=Book cover
 item.Pergamino.name=parchment
+item.Aguamarina_Azul.name=Blue Aquamarine
+item.Aguamarina_AzulOscuro.name=Dark blue Aquamarine
+item.Aguamarina_Verde.name=Green Aquamarine
+item.Aguamarina_Amarilla.name=Yellow Aquamarine
+item.Aguamarina_Transparente.name=Transparent Aquamarine
 
 ///////////////////Bloques
+
+tile.Aguamarina.name=Aquamarine
 
 //////////////////Plantas
 
@@ -389,6 +400,8 @@ tile.Algodon_Salvaje=Wild Cotton
 /////////////////Armaduras
 
 ////////////////Herramientas
+
+item.Pico_de_silex.name=Silex Pickaxe
 
 //-------------------------Juanathan---------------------------//
 

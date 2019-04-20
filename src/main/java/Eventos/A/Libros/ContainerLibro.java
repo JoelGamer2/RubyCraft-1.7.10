@@ -1,4 +1,4 @@
-package RubyCraft.xJuanathan;
+package Eventos.A.Libros;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
