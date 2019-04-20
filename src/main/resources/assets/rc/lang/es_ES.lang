@@ -397,6 +397,12 @@ tile.Algodon_Salvaje=Algodon salvaje
 
 //////////////////Armas
 
+item.Espada_de_Aguamarina_Azul.name=Espada de Aguamarina azul
+item.Espada_de_Aguamarina_Amarilla.name=Espada de Aguamarina amarilla
+item.Espada_de_Aguamarina_Verde.name=Espada de Aguamarina verde
+item.Espada_de_Aguamarina_AzulOscuro.name=Espada de Aguamarina azul oscuro
+item.Espada_de_Aguamarina_Transparente.name=Espada de Aguamarina transparente
+
 /////////////////Armaduras
 
 ////////////////Herramientas

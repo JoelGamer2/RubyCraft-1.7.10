@@ -1,8 +1,14 @@
 package Eventos.Verano.Principal;
 
 import Eventos.A.Libros.IniciarGui;
+import Eventos.Navidad.Armas.espada_ancestral;
 import Eventos.Navidad.Bloques.Hielo_Glaciar;
 import Eventos.Navidad.Herramientas.pico_de_arqueologo;
+import Eventos.Verano.Armas.Espada_de_Aguamarina_Amarilla;
+import Eventos.Verano.Armas.Espada_de_Aguamarina_Azul;
+import Eventos.Verano.Armas.Espada_de_Aguamarina_AzulOscuro;
+import Eventos.Verano.Armas.Espada_de_Aguamarina_Transparente;
+import Eventos.Verano.Armas.Espada_de_Aguamarina_Verde;
 import Eventos.Verano.Bloques.Aguamarina;
 import Eventos.Verano.Generacion.Generacion_Principal_Verano;
 import Eventos.Verano.Herramientas.Pico_de_silex;
@@ -59,9 +65,9 @@ public class Clase_Principal_Evento_Verano
 	public static Item Silex;
 	
 	public static Item Aguamarina_Azul;
-	public static Item Aguamarina_AzulOscuro;
 	public static Item Aguamarina_Amarilla;
 	public static Item Aguamarina_Verde;
+	public static Item Aguamarina_AzulOscuro;
 	public static Item Aguamarina_Transparente;
 	
 	//Plantas
@@ -79,11 +85,22 @@ public class Clase_Principal_Evento_Verano
 	
 	//Armas
 	
+	public static Item Espada_de_Aguamarina_Azul;
+	public static Item Espada_de_Aguamarina_Amarilla;
+	public static Item Espada_de_Aguamarina_Verde;
+	public static Item Espada_de_Aguamarina_AzulOscuro;
+	public static Item Espada_de_Aguamarina_Transparente;
+	
 	//Armaduras
 	
 	//Materiales (nivel, durabilidad, eficiencia, daño, nivel encantamiento) Al daño puesto minecraft le suma 1 a la pala, 2 al pico, 3 al hacha y 4 a la espada.
 	
-	public static final Item.ToolMaterial silextoolmaterial = EnumHelper.addToolMaterial("silextoolmaterial", 20, 350, 6.0F, 2.0F, 45);
+	public static final Item.ToolMaterial SilexMaterial = EnumHelper.addToolMaterial("silextoolmaterial", 20, 350, 6.0F, 2.0F, 45);
+	public static final Item.ToolMaterial AguamarinaAzul = EnumHelper.addToolMaterial("silextoolmaterial", 20, 500, 6.0F, 6.0F, 45);
+	public static final Item.ToolMaterial AguamarinaAmarilla = EnumHelper.addToolMaterial("silextoolmaterial", 20, 750, 6.0F, 16.0F, 45);
+	public static final Item.ToolMaterial AguamarinaVerde = EnumHelper.addToolMaterial("silextoolmaterial", 20, 1500, 6.0F, 26.0F, 45);
+	public static final Item.ToolMaterial AguamarinaAzulOscuro = EnumHelper.addToolMaterial("silextoolmaterial", 20, 3000, 6.0F, 46.0F, 45);
+	public static final Item.ToolMaterial AguamarinaTransparente = EnumHelper.addToolMaterial("silextoolmaterial", 20, 10000, 6.0F, 96.0F, 45);
 	
 	//CreativeTab
 	
@@ -176,10 +193,25 @@ public class Clase_Principal_Evento_Verano
 		
 		//Herramientas
 		
-		Pico_de_silex = new Pico_de_silex(silextoolmaterial).setUnlocalizedName("Pico_de_silex").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Pico_de_silex").setCreativeTab(Tab);
+		Pico_de_silex = new Pico_de_silex(SilexMaterial).setUnlocalizedName("Pico_de_silex").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Pico_de_silex").setCreativeTab(Tab);
 		GameRegistry.registerItem(Pico_de_silex, Pico_de_silex.getUnlocalizedName().substring(5));
 		
 		//Armas
+		
+		Espada_de_Aguamarina_Azul = new Espada_de_Aguamarina_Azul(AguamarinaAzul).setUnlocalizedName("Espada_de_Aguamarina_Azul").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_Azul").setCreativeTab(Tab);
+		GameRegistry.registerItem(Espada_de_Aguamarina_Azul, Espada_de_Aguamarina_Azul.getUnlocalizedName().substring(5));
+		
+		Espada_de_Aguamarina_Amarilla = new Espada_de_Aguamarina_Amarilla(AguamarinaAmarilla).setUnlocalizedName("Espada_de_Aguamarina_Amarilla").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_Amarilla").setCreativeTab(Tab);
+		GameRegistry.registerItem(Espada_de_Aguamarina_Amarilla, Espada_de_Aguamarina_Amarilla.getUnlocalizedName().substring(5));
+		
+		Espada_de_Aguamarina_Verde = new Espada_de_Aguamarina_Verde(AguamarinaVerde).setUnlocalizedName("Espada_de_Aguamarina_Verde").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_Verde").setCreativeTab(Tab);
+		GameRegistry.registerItem(Espada_de_Aguamarina_Verde, Espada_de_Aguamarina_Verde.getUnlocalizedName().substring(5));
+		
+		Espada_de_Aguamarina_AzulOscuro = new Espada_de_Aguamarina_AzulOscuro(AguamarinaAzulOscuro).setUnlocalizedName("Espada_de_Aguamarina_AzulOscuro").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_AzulOscuro").setCreativeTab(Tab);
+		GameRegistry.registerItem(Espada_de_Aguamarina_AzulOscuro, Espada_de_Aguamarina_AzulOscuro.getUnlocalizedName().substring(5));
+		
+		Espada_de_Aguamarina_Transparente = new Espada_de_Aguamarina_Transparente(AguamarinaTransparente).setUnlocalizedName("Espada_de_Aguamarina_Transparente").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_Transparente").setCreativeTab(Tab);
+		GameRegistry.registerItem(Espada_de_Aguamarina_Transparente, Espada_de_Aguamarina_Transparente.getUnlocalizedName().substring(5));
 		
 		//Armaduras
 	}

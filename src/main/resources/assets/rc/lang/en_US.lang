@@ -397,6 +397,12 @@ tile.Algodon_Salvaje=Wild Cotton
 
 //////////////////Armas
 
+item.Espada_de_Aguamarina_Azul.name=Blue Aquamarine Sword
+item.Espada_de_Aguamarina_Amarilla.name=Yellow Aquamarine Sword
+item.Espada_de_Aguamarina_Verde.name=Green Aquamarine Sword
+item.Espada_de_Aguamarina_AzulOscuro.name=Dark Blue Aquamarine Sword
+item.Espara_de_Aguamarina_Transparente.name=Transparente Aquamarine Sword
+
 /////////////////Armaduras
 
 ////////////////Herramientas
