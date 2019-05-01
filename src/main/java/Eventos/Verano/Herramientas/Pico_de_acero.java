@@ -3,6 +3,7 @@ package Eventos.Verano.Herramientas;
 import java.util.List;
 import java.util.Random;
 
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Encantamientos;
 import RubyCraft.xJuanathan.Principal;
@@ -14,9 +15,9 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
-public class Pico_de_silex extends ItemPickaxe{
+public class Pico_de_acero extends ItemPickaxe{
 
-	public Pico_de_silex(ToolMaterial p_i45347_1_) 
+	public Pico_de_acero(ToolMaterial p_i45347_1_) 
 	{
 		super(p_i45347_1_);
 	}
@@ -26,6 +27,11 @@ public class Pico_de_silex extends ItemPickaxe{
 	{
 		lore.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("lore.EventoVerano.name"));
     }
+	
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+	return Clase_Principal_Evento_Verano.Lingote_de_Acero == par2ItemStack.getItem()? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+	}
 	
 	@Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) 

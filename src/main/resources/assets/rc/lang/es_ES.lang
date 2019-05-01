@@ -385,10 +385,29 @@ item.Aguamarina_AzulOscuro.name=Aguamarina Azul oscuro
 item.Aguamarina_Verde.name=Aguamarina Verde
 item.Aguamarina_Amarilla.name=Aguamarina Amarilla
 item.Aguamarina_Transparente.name=Aguamarina Transparente
+item.Hierro_Fundido.name=Hierro fundido
+item.Hierro_Fundido_con_Carbon.name=Hierro fundido con carbon
+item.Acero_Fundido.name=Acero fundido
+item.Lingote_de_Acero.name=Lingote de acero
+item.Acero_Fundido_con_Aguamarina_Azul.name=Acero fundido con Aguamarina azul
+item.Acero_Fundido_con_Aguamarina_Amarilla.name=Acero fundido con Aguamarina amarilla
+item.Acero_Fundido_con_Aguamarina_Verde.name=Acero fundido con Aguamarina verde
+item.Acero_Fundido_con_Aguamarina_AzulOscuro.name=Acero fundido con Aguamarina azul oscuro
+item.Acero_Fundido_con_Aguamarina_Transparente.name=Acero fundido con Aguamarina transparente
+item.Aguamarina_Azul_Fundida.name=Aguamarina azul fundida
+item.Aguamarina_Amarilla_Fundida.name=Aguamarina amarilla fundida
+item.Aguamarina_Verde_Fundida.name=Aguamarina verde fundida
+item.Aguamarina_AzulOscuro_Fundida.name=Aguamarina azul oscuro fundida
+item.Aguamarina_Transparente_Fundida.name=Aguamarina transparente fundida
+item.Lingote_de_Aguamarina_Azul.name=Lingote de Aguamarina azul
+item.Lingote_de_Aguamarina_Amarilla.name=Lingote de Aguamarina amarilla
+item.Lingote_de_Aguamarina_Verde.name=Lingote de Aguamarina verde
+item.Lingote_de_Aguamarina_AzulOscuro.name=Lingote de Aguamarina azul oscuro
+item.Lingote_de_Aguamarina_Transparente.name=Lingote de Aguamarina transparente
 
 ///////////////////Bloques
 
-tile.Aguamarina.name?Aguamarina
+tile.Aguamarina.name=Aguamarina
 
 //////////////////Plantas
 
@@ -407,7 +426,7 @@ item.Espada_de_Aguamarina_Transparente.name=Espada de Aguamarina transparente
 
 ////////////////Herramientas
 
-item.Pico_de_silex.name=Pico de silex
+item.Pico_de_acero.name=Pico de acero
 
 //-------------------------Juanathan---------------------------//
 

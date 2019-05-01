@@ -385,6 +385,25 @@ item.Aguamarina_AzulOscuro.name=Dark blue Aquamarine
 item.Aguamarina_Verde.name=Green Aquamarine
 item.Aguamarina_Amarilla.name=Yellow Aquamarine
 item.Aguamarina_Transparente.name=Transparent Aquamarine
+item.Hierro_Fundido.name=Molten iron
+item.Hierro_Fundido_con_Carbon.name=Molten iron-coal
+item.Acero_Fundido.name=Molten steel
+item.Lingote_de_Acero.name=Steel ingot
+item.Acero_Fundido_con_Aguamarina_Azul.name=Molten Steel-Blue Aquamarine
+item.Acero_Fundido_con_Aguamarina_Amarilla.name=Molten Steel-yellow Aquamarine
+item.Acero_Fundido_con_Aguamarina_Verde.name=Molten Steel-Green Aquamarine
+item.Acero_Fundido_con_Aguamarina_AzulOscuro.name=Molten Steel-Dark Blue Aquamarine
+item.Acero_Fundido_con_Aguamarina_Transparente.name=Molten Steel-Transparent Aquamarine
+item.Aguamarina_Azul_Fundida.name=Molten Blue Aquamarine
+item.Aguamarina_Amarilla_Fundida.name=Molten Yellow Aquamarine
+item.Aguamarina_Verde_Fundida.name=Molten Green Aquamarine
+item.Aguamarina_AzulOscuro_Fundida.name=Molten Dark Blue Aquamarine
+item.Aguamarina_Transparente_Fundida.name=Molten Transparent Aquamarine
+item.Lingote_de_Aguamarina_Azul.name=Blue Aquamarine ingot
+item.Lingote_de_Aguamarina_Amarilla.name=Yellow Aquamarine ingot
+item.Lingote_de_Aguamarina_Verde.name=Green Aquamarine ingot
+item.Lingote_de_Aguamarina_AzulOscuro.name=Dark Blue Aquamarine ingot
+item.Lingote_de_Aguamarina_Transparente.name=Transparent Aquamarine ingot
 
 ///////////////////Bloques
 
@@ -407,7 +426,7 @@ item.Espara_de_Aguamarina_Transparente.name=Transparente Aquamarine Sword
 
 ////////////////Herramientas
 
-item.Pico_de_silex.name=Silex Pickaxe
+item.Pico_de_acero.name=Steel Pickaxe
 
 //-------------------------Juanathan---------------------------//
 

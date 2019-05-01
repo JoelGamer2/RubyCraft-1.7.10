@@ -82,6 +82,26 @@
     Obtencion: De la mena de Aguamarina.
     Uso:
     
+--Hierro fundido.
+
+    Obtencion: En el horno, cocinando uno de hierro.
+    Uso: Craftear hiuerro fundido con carbon.
+
+--Hierro fundido con carbon.
+
+    Obtencion: En la mesa de crafteo, con uno de hierro fundido y 8 de carbon.
+    Uso: Craftear Acero fundido.
+    
+--Acero fundido.
+
+    Obtencion: En el horno, cocinando uno de Hierro fundido con carbon.
+    Uso: Craftear Lingote de acero.
+    
+--Lingote de acero
+
+    Obtencion: En la mesa de crafteo, con 9 de agua y uno de acero fundido.
+    Uso: Craftear armas, herramientas y armaduras de acero.
+    
 
 -----------------Plantas-----------------
 
@@ -100,10 +120,22 @@
 
 -----------------Herramientas-----------------
 
---Pico de silex
+--Pico de acero
 
-    Obtencion: Se crafteara con dos palos de madera y tres de silex.
+    Obtencion: Se crafteara con dos palos de madera y tres de lingote de acero.
     Uso: Servira para picar la mena de Aguamarina.
+    
+-----------------Armas-----------------
+
+--Espada de Aguamarina azul
+
+--Espada de Aguamarina amarilla
+
+--Espada de Aguamarina verde
+
+--Espada de Aguamarina azul oscuro
+
+--Espada de Aguamarina transparente
 
 
 

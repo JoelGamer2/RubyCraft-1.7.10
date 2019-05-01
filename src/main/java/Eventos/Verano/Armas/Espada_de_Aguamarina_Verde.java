@@ -2,6 +2,7 @@ package Eventos.Verano.Armas;
 
 import java.util.List;
 
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -21,4 +22,9 @@ public class Espada_de_Aguamarina_Verde extends ItemSword{
 	{
 		lore.add(EnumChatFormatting.AQUA + StatCollector.translateToLocal("lore.EventoVerano.name"));
     }
+	
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+	return Clase_Principal_Evento_Verano.Aguamarina_Verde == par2ItemStack.getItem()? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+	}
 }
