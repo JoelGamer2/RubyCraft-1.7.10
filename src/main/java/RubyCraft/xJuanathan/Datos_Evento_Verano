@@ -22,6 +22,10 @@
                Al principio no estara completo y necesitará de otros items para ir ampliando su contenido.
     Uso. Servira como guia sobre todo lo que incluye el evento de verano.
     
+    
+                       ------------------------------------------------------------------
+                       
+    
 --Semilla de algodon.
 
     Obtencion: De la planta de algodon salvaje o del cultivo de algodon. El dropeo sera random, pudiendo dar hasta 4 semillas.
@@ -36,6 +40,10 @@
 
     Obtencion: En la mesa de crafteo con 9 items de algodon.
     Uso: Se utilizara para unir las paginas del libro del evento de verano. También se usará para fabricar una armadura especial del evento de verano.
+    
+    
+                       ------------------------------------------------------------------
+                       
     
 --Silex
 
@@ -57,30 +65,38 @@
     Obtencion: En la mesa de crafteo con 8 de silex y 1 de cuero curtido.
     Uso: Servira para ampliar el contenido del libro del evento de verano.
     
+    
+                       ------------------------------------------------------------------
+                       
+    
 --Aguamarina Azul
 
     Obtencion: De la mena de Aguamarina.
-    Uso: 
-    
---Aguamarina Azul oscuro
-
-    Obtencion: De la mena de Aguamarina.
-    Uso:
-    
----Aguamarina Verde
-
-    Obtencion: De la mena de Aguamarina.
-    Uso:
+    Uso: Craftear Acero fundido con Aguamarina azul.
     
 --Aguamarina Amarilla
 
     Obtencion: De la mena de Aguamarina.
-    Uso:
+    Uso: Craftear Acero fundido con Aguamarina amarilla.
+    
+---Aguamarina Verde
+
+    Obtencion: De la mena de Aguamarina.
+    Uso: Craftear Acero fundido con Aguamarina verde.
+    
+--Aguamarina Azul oscuro
+
+    Obtencion: De la mena de Aguamarina.
+    Uso: Craftear Acero fundido con Aguamarina azul oscuro.
     
 --Aguamarina Transparente
 
     Obtencion: De la mena de Aguamarina.
-    Uso:
+    Uso: Craftear Acero fundido con Aguamarina transparente.
+    
+    
+                       ------------------------------------------------------------------
+                       
     
 --Hierro fundido.
 
@@ -97,12 +113,99 @@
     Obtencion: En el horno, cocinando uno de Hierro fundido con carbon.
     Uso: Craftear Lingote de acero.
     
---Lingote de acero
+--Lingote de acero.
 
     Obtencion: En la mesa de crafteo, con 9 de agua y uno de acero fundido.
     Uso: Craftear armas, herramientas y armaduras de acero.
     
+    
+                       ------------------------------------------------------------------
+                       
+    
+--Acero Fundido con Aguamarina Azul.
 
+    Obtencion: En la mesa de crafteo con uno de acero fundido y 8 de Aguamarina azul.
+    Uso: Craftear Aguamarina azul fundida.
+    
+--Acero Fundido con Aguamarina Amarilla.
+
+    Obtencion: En la mesa de crafteo con uno de acero fundido y 8 de Aguamarina amarilla.
+    Uso: Craftear Aguamarina amarilla fundida.
+    
+--Acero Fundido con Aguamarina Verde.
+
+    Obtencion: En la mesa de crafteo con uno de acero fundido y 8 de Aguamarina verde.
+    Uso: Craftear Aguamarina verde fundida.
+    
+--Acero Fundido con Aguamarina AzulOscuro.
+
+    Obtencion: En la mesa de crafteo con uno de acero fundido y 8 de Aguamarina azul oscuro.
+    Uso: Craftear Aguamarina azul oscuro fundida.
+    
+--Acero Fundido con Aguamarina Transparente.
+
+    Obtencion: En la mesa de crafteo con uno de acero fundido y 8 de Aguamarina transparente.
+    Uso: Craftear Aguamarina transparente fundida.
+    
+    
+                       ------------------------------------------------------------------
+                       
+    
+--Aguamarina Azul Fundida.
+
+    Obtencion: En el horno cocinando Acero fundido con Aguamarina azul.
+    Uso: Craftear el lingote de Aguamarina azul.
+    
+--Aguamarina Amarilla Fundida.
+
+    Obtencion: En el horno cocinando Acero fundido con Aguamarina amarilla.
+    Uso: Craftear el lingote de Aguamarina amarilla.
+    
+--Aguamarina Verde Fundida.
+
+    Obtencion: En el horno cocinando Acero fundido con Aguamarina verde.
+    Uso: Craftear el lingote de Aguamarina verde.
+    
+--Aguamarina AzulOscuro Fundida.
+
+    Obtencion: En el horno cocinando Acero fundido con Aguamarina azul oscuro.
+    Uso: Craftear el lingote de Aguamarina azul oscuro.
+    
+--Aguamarina Transparente Fundida.
+
+    Obtencion: En el horno con uno de Acero fundido con Aguamarina transparente.
+    Uso: Craftear el lingote de Aguamarina transparente.
+
+
+                       ------------------------------------------------------------------
+                       
+                       
+--Lingote de Aguamarina Azul.
+
+    Obtencion: En la mesa de crafteo con uno de aguamarina azul fundida y 8 de agua.
+    Uso: Craftear herramientas, armas y armaduras de Aguamarina azul.
+    
+--Lingote de Aguamarina Amarilla.
+
+    Obtencion: En la mesa de crafteo con uno de aguamarina amarilla fundida y 8 de agua.
+    Uso: Craftear herramientas, armas y armaduras de Aguamarina amarilla.
+    
+--Lingote de Aguamarina Verde.
+
+    Obtencion: En la mesa de crafteo con uno de aguamarina verde fundida y 8 de agua.
+    Uso: Craftear herramientas, armas y armaduras de Aguamarina verde.
+    
+--Lingote de Aguamarina AzulOscuro.
+
+    Obtencion: En la mesa de crafteo con uno de aguamarina azul oscuro fundida y 8 de agua.
+    Uso: Craftear herramientas, armas y armaduras de Aguamarina azul oscuro.
+    
+--Lingote de Aguamarina Transparente.
+
+    Obtencion: En la mesa de crafteo con uno de aguamarina transparente fundida y 8 de agua.
+    Uso: Craftear herramientas, armas y armaduras de Aguamarina transparente.
+    
+    
 -----------------Plantas-----------------
 
 --Algodon salvaje.
@@ -120,22 +223,38 @@
 
 -----------------Herramientas-----------------
 
---Pico de acero
+--Pico de acero.
 
     Obtencion: Se crafteara con dos palos de madera y tres de lingote de acero.
     Uso: Servira para picar la mena de Aguamarina.
     
+    
 -----------------Armas-----------------
 
---Espada de Aguamarina azul
+--Espada de Aguamarina azul.
 
---Espada de Aguamarina amarilla
+    Obtencion: Se crafteara con un palo y dos lingotes de Aguamarina azul.
+    Propiedades: Tendra durabilidad 500 y 10 de daño. Se podra encantar con piedras imbuidas de poder hasta nivel 10.
 
---Espada de Aguamarina verde
+--Espada de Aguamarina amarilla.
 
---Espada de Aguamarina azul oscuro
+    Obtencion: Se crafteara con un palo y dos lingotes de Aguamarina amarilla.
+    Propiedades: Tendra durabilidad 750 y 20 de daño. Se podra encantar con piedras imbuidas de poder hasta nivel 10.
 
---Espada de Aguamarina transparente
+--Espada de Aguamarina verde.
+
+    Obtencion: Se crafteara con un palo y dos lingotes de Aguamarina verde.
+    Propiedades: Tendra durabilidad 1500 y 30 de daño. Se podra encantar con piedras imbuidas de poder hasta nivel 10.
+
+--Espada de Aguamarina azul oscuro.
+
+    Obtencion: Se crafteara con un palo y dos lingotes de Aguamarina azul oscuro.
+    Propiedades: Tendra durabilidad 3000 y 50 de daño. Se podra encantar con piedras imbuidas de poder hasta nivel 10.
+
+--Espada de Aguamarina transparente.
+
+    Obtencion: Se crafteara con un palo y dos lingotes de Aguamarina transparente.
+    Propiedades: Tendra durabilidad 10000 y 100 de daño. Se podra encantar con piedras imbuidas de poder hasta nivel 10.
 
 
 
