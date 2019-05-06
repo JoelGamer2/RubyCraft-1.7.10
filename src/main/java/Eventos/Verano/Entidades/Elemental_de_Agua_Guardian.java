@@ -94,12 +94,12 @@ public class Elemental_de_Agua_Guardian extends EntityMob implements IBossDispla
 	    	World world = worldObj;
 
 	    	
-
+/**
 	        super.onLivingUpdate();
 	       if(RubyCraft.cliente) {
 	          BossStatus.setBossStatus(this, true);
 	          BossStatus.statusBarTime = 10;
-          }
+          }**/
 	     
 	    }                          
 	           

@@ -94,12 +94,12 @@ public class Elemental_de_Tierra_Soldado extends EntityMob implements IBossDispl
 	    	World world = worldObj;
 
 	    	
-
+/**
 	        super.onLivingUpdate();
 	       if(RubyCraft.cliente) {
 	          BossStatus.setBossStatus(this, true);
 	          BossStatus.statusBarTime = 10;
-          }
+          }**/
 	     
 	    }                          
 	           
