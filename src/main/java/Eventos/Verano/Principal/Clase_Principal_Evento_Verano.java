@@ -1,11 +1,5 @@
 package Eventos.Verano.Principal;
 
-import java.util.List;
-
-import Eventos.A.Libros.IniciarGui;
-import Eventos.Navidad.Armas.espada_ancestral;
-import Eventos.Navidad.Bloques.Hielo_Glaciar;
-import Eventos.Navidad.Herramientas.pico_de_arqueologo;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_Amarilla;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_Azul;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_AzulOscuro;
@@ -50,12 +44,10 @@ import Eventos.Verano.Items.Tapa_Libro;
 import Eventos.Verano.Plantas.Algodon_Salvaje;
 import Eventos.Verano.Plantas.Planta_de_algodon;
 import RubyCraft.RubyCraft;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;

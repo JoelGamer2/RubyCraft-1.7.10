@@ -1,7 +1,6 @@
 package Eventos.Verano.Entidades;
 
 import RubyCraft.RubyCraft;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -9,12 +8,12 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class Elemental_de_Agua extends EntityMob implements IBossDisplayData {
+public class Elemental_de_Tierra_Guardian extends EntityMob implements IBossDisplayData {
 
 	public static int Fase = 0;
 	private static int tick;
 	public static boolean Activo;
-	public Elemental_de_Agua(World world) {
+	public Elemental_de_Tierra_Guardian(World world) {
 		super(world);
 		     
 	 this.setSize(0.6F, 1.9F);
@@ -54,7 +53,7 @@ public class Elemental_de_Agua extends EntityMob implements IBossDisplayData {
 	/**Returns the sounds of ambient for the mob**/
 	 protected String getLivingSound(){
 		    
-	        return RubyCraft.modid + ":elemental_ambiente";
+	        return RubyCraft.modid + ":elemental_ambiented";
 	        
 	    }
 	 
@@ -64,7 +63,7 @@ public class Elemental_de_Agua extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getHurtSound(){
 	    
-	      return RubyCraft.modid + ":elemental_pegar";
+	      return RubyCraft.modid + ":elemental_pegadr";
 	        
 	    }
 
@@ -73,7 +72,7 @@ public class Elemental_de_Agua extends EntityMob implements IBossDisplayData {
 	     */
 	    protected String getDeathSound(){
 	    
-	        return RubyCraft.modid + ":elemental_morir";
+	        return RubyCraft.modid + ":elemental_moridr";
 	        
 	    }	 
 	    
@@ -87,12 +86,12 @@ public class Elemental_de_Agua extends EntityMob implements IBossDisplayData {
 	   
 	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){	
+	    	tick ++;
 	    //	Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(tick + ""));
 	    	double x = this.posX;
 	    	double y = this.posY;
 	    	double z = this.posZ;
 	    	World world = worldObj;
-	    	
 
 	    	
 

@@ -15,8 +15,17 @@ import Eventos.Navidad.RenderModel.Altar_Renderizado_Item;
 import Eventos.Navidad.RenderModel.Altar_Renderizado_Textura;
 import Eventos.Navidad.TileEntity.TileEntityAltar;
 import Eventos.Navidad.TileEntity.TileEntityAltarCentral;
-import Eventos.Verano.Entidades.Elemental_de_Agua;
-import Eventos.Verano.Entidades.Render.Render_Elemental_de_agua;
+import Eventos.Verano.Entidades.Elemental_de_Agua_Guardian;
+import Eventos.Verano.Entidades.Elemental_de_Agua_Soldado;
+import Eventos.Verano.Entidades.Elemental_de_Tierra_Guardian;
+import Eventos.Verano.Entidades.Elemental_de_Tierra_Soldado;
+import Eventos.Verano.Entidades.Render.Render_Elemental_de_Tierra_guardian;
+import Eventos.Verano.Entidades.Render.Render_Elemental_de_Tierra_soldado;
+import Eventos.Verano.Entidades.Render.Render_Elemental_de_agua_guardian;
+import Eventos.Verano.Entidades.Render.Render_Elemental_de_agua_soldado;
+import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_Tierra_guardian_Modelo;
+import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_guardian_Modelo;
+import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_soldado_Modelo;
 import RubyCraft.RubyCraft;
 import RubyCraft.Encantamientos.Encantamiento_MineCraft_Objetos;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
@@ -85,8 +94,11 @@ public class ClientProxy extends ServerProxy {
 	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new RenderModelYetiLich(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(YetiLichEstatua.class, new RenderYetiLichestatua(new RenderModelYetiLich(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(Lich.class, new RenderLich(new ModelBiped(), 0));
-        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua.class, new Render_Elemental_de_agua(new ModelBiped(), 0));
-		//TileEntity Render
+        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua_Guardian.class, new Render_Elemental_de_agua_guardian(new Elemental_de_agua_guardian_Modelo(), 0));
+        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua_Soldado.class, new Render_Elemental_de_agua_soldado(new Elemental_de_agua_soldado_Modelo(), 0));
+        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Tierra_Guardian.class, new Render_Elemental_de_Tierra_guardian(new Elemental_de_Tierra_guardian_Modelo(), 0));
+        RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Tierra_Soldado.class, new Render_Elemental_de_Tierra_soldado(new Elemental_de_Tierra_guardian_Modelo(), 0));
+        //TileEntity Render
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCofredeRuby.class, new CofredeRubyRender());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RubyCraft.Cofre_de_Ruby), new ItemRenderCofredeRuby());
 		

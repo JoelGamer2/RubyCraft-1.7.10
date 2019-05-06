@@ -1,9 +1,5 @@
 package RubyCraft.Gui;
 
-import Eventos.A.Libros.ContainerLibro;
-import Eventos.A.Libros.GuiDocumentoPerdido;
-import Eventos.A.Libros.GuiLibro;
-import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
 import RubyCraft.Gui.container.ContainerMesadeTrabajodeRuby;
@@ -17,7 +13,6 @@ import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_jungla;
 import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_robleoscuro;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 

@@ -3,13 +3,11 @@ package Eventos.Verano.Generacion;
 import java.util.Random;
 
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
-import RubyCraft.xJuanathan.Principal;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 

@@ -1,18 +1,12 @@
 package Eventos.Verano.Bloques;
 
-import java.util.List;
 import java.util.Random;
 
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
-import RubyCraft.xJuanathan.Principal;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
 
 public class Aguamarina extends Block{
 

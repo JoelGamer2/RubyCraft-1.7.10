@@ -6,7 +6,6 @@ import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 

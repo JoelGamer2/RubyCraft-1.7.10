@@ -1,6 +1,5 @@
 package Eventos;
 
-import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
