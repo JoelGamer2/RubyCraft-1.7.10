@@ -101,6 +101,8 @@ public class Ver_fecha_calendario_usuario {
 				    	  
 				    	   
 				       }
+	    	}else {
+	    		IniciarItemsEventos.Iniciartodo();
 	    	}
 
           //Testear aniversario

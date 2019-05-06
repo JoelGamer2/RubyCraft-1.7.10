@@ -545,10 +545,10 @@ Cementos_Bases.Iniciar();
 
 modChecker = new BuscadordeMods();
 modChecker.Mensaje();
-Clase_Principal_Evento_Verano.preinit();
 Principal.preinit();
 Generacion_Principal.InicicializarGeneraciones();
-		
+
+
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new IniciarGui());
@@ -556,8 +556,6 @@ NetworkRegistry.INSTANCE.registerGuiHandler(this, new IniciarGui());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());
 Teclas_Principal.Iniciar();	
-
-
 //Herramientas
 Picoderuby = new picoderuby(rubyToolMaterial).setUnlocalizedName("Picoderuby").setTextureName(modid + ":Picoderuby").setCreativeTab(Rubycrafttab);
 Hachaderuby = new hachaderuby(rubyToolMaterial).setUnlocalizedName("Hachaderuby").setTextureName(modid + ":hacha_de_ruby").setCreativeTab(Rubycrafttab);
@@ -1137,6 +1135,7 @@ Escaleras_Principal.Variado();
 Registrar_Biomas.Registrar();
 
 BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
+Clase_Principal_Evento_Verano.preinit();
 }
 
 @EventHandler

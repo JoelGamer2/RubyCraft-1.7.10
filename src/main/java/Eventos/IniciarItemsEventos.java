@@ -10,7 +10,6 @@ import net.minecraft.item.ItemStack;
 public class IniciarItemsEventos {
 
 
-
 	public static void Iniciartodo() 
 	{
 		Navidad();
@@ -156,10 +155,11 @@ public class IniciarItemsEventos {
 	
 	public static void Verano() 
 	{
-		if(RubyCraft.Verano) 
-		{
-			
-		}
+		//if(RubyCraft.Verano) 
+		//{
+			  
+			  
+		//}
 	}
 	
 	public static void Crafteos() 
