@@ -8,6 +8,7 @@ import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
 import Eventos.A.Libros.IniciarGui;
 import Eventos.Halloween.Entidades.BossParca;
+import Eventos.Verano.Generacion.Generar_Enemigos_por_Mineo;
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
@@ -555,6 +556,10 @@ NetworkRegistry.INSTANCE.registerGuiHandler(this, new IniciarGui());
 
 MinecraftForge.EVENT_BUS.register(new DropeoMobsHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());
+
+
+MinecraftForge.EVENT_BUS.register(new Generar_Enemigos_por_Mineo());
+
 Teclas_Principal.Iniciar();	
 //Herramientas
 Picoderuby = new picoderuby(rubyToolMaterial).setUnlocalizedName("Picoderuby").setTextureName(modid + ":Picoderuby").setCreativeTab(Rubycrafttab);

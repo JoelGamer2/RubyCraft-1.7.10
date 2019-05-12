@@ -17,7 +17,6 @@ public class Elemental_de_Agua_Guardian extends EntityMob implements IBossDispla
 		     
 	 this.setSize(0.6F, 1.9F);
 	 this.stepHeight = 1.0F; 
-	 
 	}
 	public static void reiniciarsiespacifico() {
 		 resetear();
