@@ -1,5 +1,6 @@
 package Eventos;
 
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -152,21 +153,72 @@ public class IniciarItemsEventos {
 			herracraft.Invocador_Celestial.setCreativeTab(RubyCraft.EventosTab);
 		}
 	}*/
+	//POR SI NO SE CAMBIA LA TAB
+	public static void Verano_PostInit() {
+		
+	}
 	
 	public static void Verano() 
 	{
-		//if(RubyCraft.Verano) 
-		//{
+		if(RubyCraft.Verano) 
+		{
 			  
-			  
-		//}
+			
+		}
 	}
 	
 	public static void Crafteos() 
 	{
 		if(RubyCraft.Verano) 
         {
-			
+			Clase_Principal_Evento_Verano.Aguamarina.setCreativeTab(RubyCraft.EventosTab);
+		    Clase_Principal_Evento_Verano.Documento_Perdido.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Cuero_Curtido.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Tablilla.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Pergamino.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Tapa_Libro.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Libro_Evento_Verano.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Algodon.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Hilo_de_algodon.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Vendaje.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Silex.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Azul.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Amarilla.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Verde.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_AzulOscuro.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Hierro_Fundido.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Hierro_Fundido_con_Carbon.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Acero.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido_con_Aguamarina_Azul.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido_con_Aguamarina_Amarilla.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido_con_Aguamarina_Verde.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido_con_Aguamarina_AzulOscuro.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Acero_Fundido_con_Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Azul_Fundida.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Amarilla_Fundida.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Verde_Fundida.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_AzulOscuro_Fundida.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Aguamarina_Transparente_Fundida.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Aguamarina_Azul.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Aguamarina_Amarilla.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Aguamarina_Verde.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Aguamarina_AzulOscuro.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Lingote_de_Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);	
+			//Plantas
+			Clase_Principal_Evento_Verano.Planta_de_algodon.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Algodon_Salvaje.setCreativeTab(RubyCraft.EventosTab);
+			//Semillas
+			Clase_Principal_Evento_Verano.Semilla_Algodon.setCreativeTab(RubyCraft.EventosTab);
+			//Herramientas
+		    Clase_Principal_Evento_Verano.Pico_de_acero.setCreativeTab(RubyCraft.EventosTab);
+			//Armas
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Azul.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Amarilla.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Verde.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_AzulOscuro.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);
 		}
 		
 		/*if(RubyCraft.HalloWen) 

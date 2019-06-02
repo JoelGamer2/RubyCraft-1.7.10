@@ -258,11 +258,11 @@ public class Elemental_de_agua_guardian_Modelo extends ModelBase
   
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
   {
-	  this.Cuerpo1.rotateAngleX = f4 / (180F / (float)Math.PI);
+	 /** this.Cuerpo1.rotateAngleX = f4 / (180F / (float)Math.PI);
 	  this.BrazoD1.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 2.0F * f1 * 0.5F;
 	  this.BrazoI1.rotateAngleX = -MathHelper.cos(f * 0.6662F) * 2.0F * f1 * 0.5F;
 	  this.BrazoD1.rotateAngleZ = 0.0F;
-	  this.BrazoI1.rotateAngleZ = 0.0F;
+	  this.BrazoI1.rotateAngleZ = 0.0F;**/
 	  /*this.PiernaDerecha.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
 	  this.PiernaIzquierda.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
 	  this.PiernaDerecha.rotateAngleY = 0.0F;

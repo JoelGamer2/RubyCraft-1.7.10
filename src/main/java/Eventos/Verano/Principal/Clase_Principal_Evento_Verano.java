@@ -1,5 +1,6 @@
 package Eventos.Verano.Principal;
 
+import Eventos.IniciarItemsEventos;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_Amarilla;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_Azul;
 import Eventos.Verano.Armas.Espada_de_Aguamarina_AzulOscuro;
@@ -316,7 +317,8 @@ public class Clase_Principal_Evento_Verano
 		
 		Espada_de_Aguamarina_Transparente = new Espada_de_Aguamarina_Transparente(AguamarinaTransparente).setUnlocalizedName("Espada_de_Aguamarina_Transparente").setTextureName(RubyCraft.modid + ":Eventos/Evento_Verano/Espada_de_Aguamarina_Transparente").setCreativeTab(Tab);
 		GameRegistry.registerItem(Espada_de_Aguamarina_Transparente, Espada_de_Aguamarina_Transparente.getUnlocalizedName().substring(5));
-		
+		IniciarItemsEventos.Verano_PostInit();
+
 		//Armaduras
 	}
 	

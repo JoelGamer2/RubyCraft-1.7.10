@@ -1,68 +1,44 @@
 package Eventos.Verano.Entidades;
 
-import RubyCraft.RubyCraft;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class Elemental_de_Agua_Soldado extends EntityMob implements IBossDisplayData {
+public class Elemental_de_Agua_Soldado extends EntityMob {
 
-	public static int Fase = 0;
-	private static int tick;
-	public static boolean Activo;
 	public Elemental_de_Agua_Soldado(World world) {
 		super(world);
 		     
 	 this.setSize(0.6F, 1.9F);
-	 this.stepHeight = 1.0F; 
+	 this.stepHeight = 2.0F; 
 	 
 	}
-	public static void reiniciarsiespacifico() {
-		 resetear();
-		 Fase = 0;
 
-	 }
-	protected void applyEntityAttributes(){	
-		Activo = true;
-		 Fase = 1;
-		 resetear();
-		 super.applyEntityAttributes();
-	     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
-		 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1D);
-		 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);	
-		 
-		 }
-	/**Comunica cuando el mob muere**/
-	@Override
-	public void onDeath(DamageSource damage) {
-		Fase = 0;
-		Activo = false;
-     	 this.experienceValue = 5000;
-		resetear();
-      
-      
-	}
-	
-	private static void resetear() {
-		tick = 0;
-	}
-	
-	/**Returns the sounds of ambient for the mob**/
-	 protected String getLivingSound(){
+	protected void applyEntityAttributes(){
 		    
-	        return RubyCraft.modid + ":elemental_ambiente";
+	 super.applyEntityAttributes();
+     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(30.0D);
+	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.30000001192092896D);
+	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(7.0D);
+		    }
+	
+	 protected String getLivingSound(){
+	    
+	        return "mob.endermen.iddle";
 	        
 	    }
 	 
+	 protected boolean isAIEnabled(){
+	    
+	        return false;
+	    }
 	 
 	    /**
 	     * Returns the sound this mob makes when it is hurt.
 	     */
 	    protected String getHurtSound(){
 	    
-	      return RubyCraft.modid + ":elemental_pegar";
+	      return "mob.endermen.hidt";
 	        
 	    }
 
@@ -71,35 +47,9 @@ public class Elemental_de_Agua_Soldado extends EntityMob implements IBossDisplay
 	     */
 	    protected String getDeathSound(){
 	    
-	        return RubyCraft.modid + ":elemental_morir";
+	        return "mob.endermen.deatdh";
 	        
-	    }	 
-	    
-	    /**Activa la AI personalalizada**/
-	    public boolean isAIEnabled(){
-		    
-	        return false;
 	    }
 	    
-	 
 	   
-	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
-	    public void onLivingUpdate(){	
-	    	tick ++;
-	    //	Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(tick + ""));
-	    	double x = this.posX;
-	    	double y = this.posY;
-	    	double z = this.posZ;
-	    	World world = worldObj;
-
-	    	
-/**
-	        super.onLivingUpdate();
-	       if(RubyCraft.cliente) {
-	          BossStatus.setBossStatus(this, true);
-	          BossStatus.statusBarTime = 10;
-          }**/
-	     
-	    }                          
-	           
-	    }    
+}

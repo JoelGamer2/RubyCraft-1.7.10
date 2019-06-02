@@ -502,6 +502,7 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
+	Clase_Principal_Evento_Verano.preinit();
 	Ver_fecha_calendario_usuario.VerFechasEventos();
     Verificar_Fecha.VerIpePuerto();
 	if(Control_de_Version.Navidad_Activar == true) {
@@ -515,18 +516,9 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
 	}
-	 	   
-	if(Control_de_Version.Navidad_Activar == true) {
 	
-			IniciarItemsEventos.Iniciartodo();
-			
-	}
 	
-	if(Control_de_Version.Verano_Activar == true) {
-		
-		IniciarItemsEventos.Iniciartodo();
-		
-}
+	
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();
 	}
@@ -550,6 +542,18 @@ Principal.preinit();
 Generacion_Principal.InicicializarGeneraciones();
 
 
+ 
+if(Control_de_Version.Navidad_Activar == true) {
+
+		IniciarItemsEventos.Iniciartodo();
+		
+}
+
+if(Control_de_Version.Verano_Activar == true) {
+	
+	IniciarItemsEventos.Iniciartodo();
+	
+}
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 NetworkRegistry.INSTANCE.registerGuiHandler(this, new IniciarGui());
@@ -1140,9 +1144,8 @@ Escaleras_Principal.Variado();
 Registrar_Biomas.Registrar();
 
 BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
-Clase_Principal_Evento_Verano.preinit();
-}
 
+}
 @EventHandler
 public void init(FMLInitializationEvent event){
 	Principal.init();
