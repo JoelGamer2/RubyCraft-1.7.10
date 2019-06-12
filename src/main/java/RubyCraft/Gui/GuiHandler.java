@@ -1,5 +1,9 @@
 package RubyCraft.Gui;
 
+import Eventos.A.Libros.ContainerLibro;
+import Eventos.A.Libros.GuiDocumentoPerdido;
+import Eventos.A.Libros.GuiLibro;
+import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
 import RubyCraft.Gui.container.ContainerMesadeTrabajodeRuby;
@@ -13,6 +17,7 @@ import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_jungla;
 import RubyCraft.Gui.container.gui_Container_Mesa_de_trabajo_robleoscuro;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -49,6 +54,34 @@ public class GuiHandler implements IGuiHandler {
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_Container_Mesa_de_trabajo_jungla(player.inventory, world, x, y, z) : null;
 			}
 		
+		
+		if (ID == Clase_Principal_Evento_Verano.guiIdLibro)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Libro_Evento_Verano)
+				{
+					
+					return new ContainerLibro(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}
+		
+		if (ID == Clase_Principal_Evento_Verano.guiIdDocumento)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Documento_Perdido)
+				{
+					
+					return new ContainerLibro(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}
 		return null;
 	}
  
@@ -84,6 +117,34 @@ public class GuiHandler implements IGuiHandler {
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_mesadetrabajodejungla(player.inventory, world, x, y, z) : null;
 		}
 		
+		
+		if (ID == Clase_Principal_Evento_Verano.guiIdLibro)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Libro_Evento_Verano)
+				{
+					
+					return new GuiLibro(player.inventory, world, z, z, z);		
+				}
+			}
+		}
+		
+		if (ID == Clase_Principal_Evento_Verano.guiIdDocumento)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == Clase_Principal_Evento_Verano.Documento_Perdido)
+				{
+					
+					return new GuiDocumentoPerdido(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}
 		return null;
 		}
+	
 	}

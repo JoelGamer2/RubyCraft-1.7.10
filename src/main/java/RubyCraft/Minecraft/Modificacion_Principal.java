@@ -1,6 +1,5 @@
 package RubyCraft.Minecraft;
 
-import Eventos.IniciarItemsEventos;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 

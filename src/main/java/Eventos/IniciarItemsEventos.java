@@ -1,6 +1,5 @@
 package Eventos;
 
-import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.RubyCraft;
 import RubyCraft.xJuanathan.Principal;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -171,7 +170,7 @@ public class IniciarItemsEventos {
 	{
 		if(RubyCraft.Verano) 
         {
-			Clase_Principal_Evento_Verano.Aguamarina.setCreativeTab(RubyCraft.EventosTab);
+			/**Clase_Principal_Evento_Verano.Aguamarina.setCreativeTab(RubyCraft.EventosTab);
 		    Clase_Principal_Evento_Verano.Documento_Perdido.setCreativeTab(RubyCraft.EventosTab);
 			Clase_Principal_Evento_Verano.Cuero_Curtido.setCreativeTab(RubyCraft.EventosTab);
 			Clase_Principal_Evento_Verano.Tablilla.setCreativeTab(RubyCraft.EventosTab);
@@ -218,7 +217,7 @@ public class IniciarItemsEventos {
 			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Amarilla.setCreativeTab(RubyCraft.EventosTab);
 			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Verde.setCreativeTab(RubyCraft.EventosTab);
 			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_AzulOscuro.setCreativeTab(RubyCraft.EventosTab);
-			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);
+			Clase_Principal_Evento_Verano.Espada_de_Aguamarina_Transparente.setCreativeTab(RubyCraft.EventosTab);**/
 		}
 		
 		/*if(RubyCraft.HalloWen) 
