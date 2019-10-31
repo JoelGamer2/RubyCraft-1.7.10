@@ -6,6 +6,7 @@
 "records.moviemientonaranja":{"sounds":[{"name":"records.moviemientonaranja","stream":true}],"category":"record"},
 "sonido_Pasto":{"sounds":[{"name":"sonido_Pasto","stream":true}],"category":"block"},
 "records.PpapLong":{"sounds":[{"name":"records.PpapLong","stream":true}],"category":"record"},
+"records.palacioeterno":{"sounds":[{"name":"records.palacioeterno","stream":true}],"category":"record"},
 "Hechizo":{"sounds":[{"name":"Hechizo","stream":true}],"category":"block"},
 "Error":{"sounds":[{"name":"Error","stream":true}],"category":"block"},
 "totem":{"sounds":[{"name":"totem","stream":true}],"category":"block"},

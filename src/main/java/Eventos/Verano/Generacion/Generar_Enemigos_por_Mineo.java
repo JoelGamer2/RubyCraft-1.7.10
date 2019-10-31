@@ -9,7 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 public class Generar_Enemigos_por_Mineo {
-
+	
 	@SubscribeEvent
 	public void EnemigosAleatorios(HarvestDropsEvent event)
 	{

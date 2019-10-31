@@ -11,6 +11,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
@@ -19,6 +20,22 @@ public class MesadeTrabajodeZafiro extends BlockContainer {
 	public static Block blockID;
 	@SideOnly(Side.CLIENT)
 	private IIcon MesadeTrabajodeZafiroArriba;
+	
+	
+	@Override
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
+	
+		return AxisAlignedBB.getBoundingBox(x, y, z, x+1, y+0.937, z+1);
+	}
+	
+	/**
+     *Define la caja de colisiones con la que el jugador colisionara
+     */
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
+    {
+        return AxisAlignedBB.getBoundingBox(x, y, z, x+1, y+0.937, z+1);
+    }
+    
 	
 	public MesadeTrabajodeZafiro() {
 		super(Material.wood);

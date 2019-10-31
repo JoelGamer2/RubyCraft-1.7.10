@@ -287,6 +287,7 @@ public class RubyCraft {
  public static Item TrapAdvenureMusicLevel1;
  public static Item moviemientonaranja;
  public static Item bossparca;
+ public static Item palacioeterno;
  
  //Herramientas 
  public static Item Hachaderuby;
@@ -793,6 +794,9 @@ GameRegistry.registerItem(moviemientonaranja,moviemientonaranja.getUnlocalizedNa
 
 bossparca = new CancionesBase("bossparca").setUnlocalizedName("bossparca");
 GameRegistry.registerItem(bossparca, bossparca.getUnlocalizedName().substring(5));
+
+palacioeterno = new CancionesBase("palacioeterno").setUnlocalizedName("palacioeterno");
+GameRegistry.registerItem(palacioeterno, palacioeterno.getUnlocalizedName().substring(5));
 
 //Bloques
 	
