@@ -356,7 +356,16 @@ tile.Bloque_Reforzado_Tier_3.name=Bloque Reforzado Tier III
 tile.Bloque_Reforzado_Tier_4.name=Bloque Reforzado Tier IV
 tile.Bloque_Reforzado_Tier_5.name=Bloque Reforzado Tier V
 tile.bloque_del_crea_caminos.name=Bloque del crea caminos
-
+tile.coral_rojo.name=Coral Rojo
+tile.coral_rojo_muerto.name=Coral Rojo Muerto
+tile.coral_azul.name=Coral Azul
+tile.coral_amarillo.name=Coral Amarillo
+tile.coral_rosa.name=Coral Rosa
+tile.coral_morado.name=Coral Morado
+tile.coral_azul_muerto.name=Coral Azul Muerto
+tile.coral_amarillo_muerto.name=Coral Amarillo Muerto
+tile.coral_rosa_muerto.name=Coral Rosa Muerto
+tile.coral_morado_muerto.name=Coral Morado Muerto
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=siguiente

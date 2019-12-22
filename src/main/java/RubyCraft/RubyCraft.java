@@ -96,6 +96,16 @@ import RubyCraft.Bloques.bloquederuby;
 import RubyCraft.Bloques.bloquedeuranio;
 import RubyCraft.Bloques.bloqueluminiscente;
 import RubyCraft.Bloques.bloquepurpur;
+import RubyCraft.Bloques.coral_amarillo;
+import RubyCraft.Bloques.coral_amarillo_muerto;
+import RubyCraft.Bloques.coral_azul;
+import RubyCraft.Bloques.coral_azul_muerto;
+import RubyCraft.Bloques.coral_morado;
+import RubyCraft.Bloques.coral_morado_muerto;
+import RubyCraft.Bloques.coral_rojo;
+import RubyCraft.Bloques.coral_rojo_muerto;
+import RubyCraft.Bloques.coral_rosa;
+import RubyCraft.Bloques.coral_rosa_muerto;
 import RubyCraft.Bloques.linterna_de_mar;
 import RubyCraft.Bloques.maderaverde;
 import RubyCraft.Bloques.magma;
@@ -415,7 +425,18 @@ public static Block Bloque_Reforzado_Tier_3;
 public static Block Bloque_Reforzado_Tier_4;
 public static Block Bloque_Reforzado_Tier_5;
 public static Block bloque_del_crea_caminos;
-	
+public static Block coral_rojo;
+public static Block coral_azul;
+public static Block coral_amarillo;
+public static Block coral_rosa;
+public static Block coral_morado;
+public static Block coral_rojo_muerto;
+public static Block coral_azul_muerto;
+public static Block coral_amarillo_muerto;
+public static Block coral_rosa_muerto;
+public static Block coral_morado_muerto;
+
+
 
 //mesa de Crafteo
 public static Block Mesa_de_trabajo_de_acacia;
@@ -1079,6 +1100,40 @@ Bloque_Reforzado_Tier_5.setHarvestLevel("pickaxe", 3);
 
 bloque_del_crea_caminos = new bloque_del_crea_caminos(Material.rock).setBlockName("bloque_del_crea_caminos").setBlockTextureName(modid + ":bloque_del_crea_caminos").setCreativeTab(Rubycrafttab).setBlockUnbreakable().setResistance(Float.MAX_VALUE);
 GameRegistry.registerBlock(bloque_del_crea_caminos, bloque_del_crea_caminos.getUnlocalizedName().substring(5));
+
+coral_rojo = new coral_rojo(Material.cloth).setBlockName("coral_rojo").setBlockTextureName(modid + ":coral_rojo").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
+GameRegistry.registerBlock(coral_rojo, coral_rojo.getUnlocalizedName().substring(5));
+
+coral_rojo_muerto = new coral_rojo_muerto(Material.cloth).setBlockName("coral_rojo_muerto").setBlockTextureName(modid + ":coral_rojo_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
+GameRegistry.registerBlock(coral_rojo_muerto, coral_rojo_muerto.getUnlocalizedName().substring(5));
+
+
+coral_azul = new coral_azul(Material.cloth).setBlockName("coral_azul").setBlockTextureName(modid + ":coral_azul").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
+GameRegistry.registerBlock(coral_azul, coral_azul.getUnlocalizedName().substring(5));
+
+coral_azul_muerto = new coral_azul_muerto(Material.cloth).setBlockName("coral_azul_muerto").setBlockTextureName(modid + ":coral_azul_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
+GameRegistry.registerBlock(coral_azul_muerto, coral_azul_muerto.getUnlocalizedName().substring(5));
+
+
+coral_amarillo = new coral_amarillo(Material.cloth).setBlockName("coral_amarillo").setBlockTextureName(modid + ":coral_amarillo").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
+GameRegistry.registerBlock(coral_amarillo, coral_amarillo.getUnlocalizedName().substring(5));
+
+coral_amarillo_muerto = new coral_amarillo_muerto(Material.cloth).setBlockName("coral_amarillo_muerto").setBlockTextureName(modid + ":coral_amarillo_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
+GameRegistry.registerBlock(coral_amarillo_muerto, coral_amarillo_muerto.getUnlocalizedName().substring(5));
+
+
+coral_rosa = new coral_rosa(Material.cloth).setBlockName("coral_rosa").setBlockTextureName(modid + ":coral_rosa").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
+GameRegistry.registerBlock(coral_rosa, coral_rosa.getUnlocalizedName().substring(5));
+
+coral_rosa_muerto = new coral_rosa_muerto(Material.cloth).setBlockName("coral_rosa_muerto").setBlockTextureName(modid + ":coral_rosa_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
+GameRegistry.registerBlock(coral_rosa_muerto, coral_rosa_muerto.getUnlocalizedName().substring(5));
+
+coral_morado = new coral_morado(Material.cloth).setBlockName("coral_morado").setBlockTextureName(modid + ":coral_morado").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
+GameRegistry.registerBlock(coral_morado, coral_morado.getUnlocalizedName().substring(5));
+
+coral_morado_muerto = new coral_morado_muerto(Material.cloth).setBlockName("coral_morado_muerto").setBlockTextureName(modid + ":coral_morado_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
+GameRegistry.registerBlock(coral_morado_muerto, coral_morado_muerto.getUnlocalizedName().substring(5));
+
 
 //Maquinas
 
