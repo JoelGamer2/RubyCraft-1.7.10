@@ -165,6 +165,8 @@ item.Azada_de_cobre.name=Azada de Cobre
 item.Tijeras_de_cobre.name=Tijeras de Cobre
 item.Palo_Morado.name=Palo Morado
 item.CreaCaminos.name=Crea Caminos
+item.alga.name=Alga
+item.alga_seca.name=Alga seca
 
 item.CanciondeSansDisco.name=Disco de musica
 item.CanciondeSansDisco.desc=Megalovania
@@ -366,6 +368,7 @@ tile.coral_azul_muerto.name=Coral Azul Muerto
 tile.coral_amarillo_muerto.name=Coral Amarillo Muerto
 tile.coral_rosa_muerto.name=Coral Rosa Muerto
 tile.coral_morado_muerto.name=Coral Morado Muerto
+tile.bloque_de_alga.name=Bloque de alga seca
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=siguiente

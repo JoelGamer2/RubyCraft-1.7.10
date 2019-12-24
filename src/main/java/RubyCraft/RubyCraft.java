@@ -89,6 +89,7 @@ import RubyCraft.Bloques.PilarPurpur;
 import RubyCraft.Bloques.PistonSlimeBase;
 import RubyCraft.Bloques.Piston_de_Slime_Cabeza;
 import RubyCraft.Bloques.Prismarina_oscura;
+import RubyCraft.Bloques.bloque_de_alga;
 import RubyCraft.Bloques.bloque_del_crea_caminos;
 import RubyCraft.Bloques.bloquedeZafiro;
 import RubyCraft.Bloques.bloquedecaca;
@@ -172,6 +173,7 @@ import RubyCraft.Items.Tijeras_de_zafiro;
 import RubyCraft.Items.Totem_de_la_no_muerte;
 import RubyCraft.Items.Uranio;
 import RubyCraft.Items.Zafiro;
+import RubyCraft.Items.alga;
 import RubyCraft.Items.azadadezafiro;
 import RubyCraft.Items.cristal_de_prismarina;
 import RubyCraft.Items.espada_de_cobre;
@@ -289,6 +291,8 @@ public class RubyCraft {
  public static Item Moldes_para_cofres;
  public static Item Palo_Morado;
  public static Item CreaCaminos;
+ public static Item alga;
+ public static Item alga_seca;
  
  //Discos
 
@@ -435,7 +439,7 @@ public static Block coral_azul_muerto;
 public static Block coral_amarillo_muerto;
 public static Block coral_rosa_muerto;
 public static Block coral_morado_muerto;
-
+public static Block bloque_de_alga;
 
 
 //mesa de Crafteo
@@ -735,7 +739,13 @@ GameRegistry.registerItem( Frutapurpur,  Frutapurpur.getUnlocalizedName().substr
 
 Huevo_frito = new ItemFood(5, 0.6F, true).setUnlocalizedName("Huevo_frito").setCreativeTab(Rubycrafttab).setTextureName(modid + ":Huevo_frito");
 GameRegistry.registerItem(Huevo_frito, Huevo_frito.getUnlocalizedName().substring(5));
-	
+
+alga_seca = new ItemFood(1, 0.3F, false).setUnlocalizedName("alga_seca").setCreativeTab(Rubycrafttab).setTextureName(modid+ ":alga_seca");
+GameRegistry.registerItem(alga_seca, alga_seca.getUnlocalizedName().substring(5));
+
+alga = new alga().setUnlocalizedName("alga").setCreativeTab(Rubycrafttab).setTextureName(modid + ":alga");
+GameRegistry.registerItem(alga, alga.getUnlocalizedName().substring(5));
+
 Granada_de_Ruby = new Granada_de_Ruby().setUnlocalizedName("Granada_de_Ruby").setTextureName(modid + ":Granada_de_Ruby").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(Granada_de_Ruby, Granada_de_Ruby.getUnlocalizedName().substring(5));
 	
@@ -1107,20 +1117,17 @@ GameRegistry.registerBlock(coral_rojo, coral_rojo.getUnlocalizedName().substring
 coral_rojo_muerto = new coral_rojo_muerto(Material.cloth).setBlockName("coral_rojo_muerto").setBlockTextureName(modid + ":coral_rojo_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
 GameRegistry.registerBlock(coral_rojo_muerto, coral_rojo_muerto.getUnlocalizedName().substring(5));
 
-
 coral_azul = new coral_azul(Material.cloth).setBlockName("coral_azul").setBlockTextureName(modid + ":coral_azul").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
 GameRegistry.registerBlock(coral_azul, coral_azul.getUnlocalizedName().substring(5));
 
 coral_azul_muerto = new coral_azul_muerto(Material.cloth).setBlockName("coral_azul_muerto").setBlockTextureName(modid + ":coral_azul_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
 GameRegistry.registerBlock(coral_azul_muerto, coral_azul_muerto.getUnlocalizedName().substring(5));
 
-
 coral_amarillo = new coral_amarillo(Material.cloth).setBlockName("coral_amarillo").setBlockTextureName(modid + ":coral_amarillo").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
 GameRegistry.registerBlock(coral_amarillo, coral_amarillo.getUnlocalizedName().substring(5));
 
 coral_amarillo_muerto = new coral_amarillo_muerto(Material.cloth).setBlockName("coral_amarillo_muerto").setBlockTextureName(modid + ":coral_amarillo_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
 GameRegistry.registerBlock(coral_amarillo_muerto, coral_amarillo_muerto.getUnlocalizedName().substring(5));
-
 
 coral_rosa = new coral_rosa(Material.cloth).setBlockName("coral_rosa").setBlockTextureName(modid + ":coral_rosa").setCreativeTab(Rubycrafttab).setHardness(1.5F).setResistance(1.5F);
 GameRegistry.registerBlock(coral_rosa, coral_rosa.getUnlocalizedName().substring(5));
@@ -1134,6 +1141,8 @@ GameRegistry.registerBlock(coral_morado, coral_morado.getUnlocalizedName().subst
 coral_morado_muerto = new coral_morado_muerto(Material.cloth).setBlockName("coral_morado_muerto").setBlockTextureName(modid + ":coral_morado_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
 GameRegistry.registerBlock(coral_morado_muerto, coral_morado_muerto.getUnlocalizedName().substring(5));
 
+bloque_de_alga = new bloque_de_alga(Material.cloth).setBlockName("bloque_de_alga").setBlockTextureName(modid + ":bloque_de_alga").setCreativeTab(Rubycrafttab).setHardness(0.9F).setResistance(0.9F);
+GameRegistry.registerBlock(bloque_de_alga, bloque_de_alga.getUnlocalizedName().substring(5));
 
 //Maquinas
 

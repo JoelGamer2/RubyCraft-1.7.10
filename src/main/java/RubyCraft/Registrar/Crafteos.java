@@ -88,6 +88,7 @@ public class Crafteos {
     	Crafteos_Bases.Bloques(RubyCraft.Platino, RubyCraft.Bloque_de_Platino);
     	Crafteos_Bases.Bloques(RubyCraft.Aluminio, RubyCraft.Bloque_de_Aluminio);
     	Crafteos_Bases.Bloques(RubyCraft.Lingote_Galactico, RubyCraft.Bloque_Galactico);   
+    	Crafteos_Bases.Bloques(RubyCraft.alga_seca, RubyCraft.bloque_de_alga);
     	//Crafteo Cemento
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Negro, 0);
     	Crafteos_Bases.Crafteo_Polvo_de_Cemento(Cementos_Bases.Polvo_de_Cemento_Rojo, 1);
@@ -181,6 +182,7 @@ public class Crafteos {
     	GameRegistry.addSmelting(RubyCraft.Mena_de_Platino, new ItemStack(RubyCraft.Platino, 1), 40.0F);
     	GameRegistry.addSmelting(RubyCraft.Mena_de_Aluminio, new ItemStack(RubyCraft.Aluminio, 1), 10.0F);
     	GameRegistry.addSmelting(Items.egg, new ItemStack(RubyCraft.Huevo_frito, 1), 10.0F);
+    	GameRegistry.addSmelting(RubyCraft.alga, new ItemStack(RubyCraft.alga_seca), 0.5F);
     	
     	}
 	public static void IniciarCrafteosMesadeRuby(){

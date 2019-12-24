@@ -165,6 +165,8 @@ item.Azada_de_cobre.name=Copper Hoe
 item.Tijeras_de_cobre.name=Copper Shears
 item.Palo_Morado.name=Purple Stick
 item.CreaCaminos.name=Flor Creater
+item.alga.name=seawee
+item.alga_seca.name=Dry seawee
 
 item.CanciondeSansDisco.name=Music disc
 item.CanciondeSansDisco.desc=Megalovania
@@ -356,17 +358,17 @@ tile.Bloque_Reforzado_Tier_3.name=Reforzated Block Tier III
 tile.Bloque_Reforzado_Tier_4.name=Reforzated Block Tier IV
 tile.Bloque_Reforzado_Tier_5.name=Reforzated Block Tier V
 tile.bloque_del_crea_caminos.name=Floor Creater Block
-tile.coral_rojo.name=Red kelpt
-tile.coral_rojo_muerto.name=Died Red Kelpt
-tile.coral_azul.name=Blue Kelpt
-tile.coral_amarillo.name=Yellow Kelpt
-tile.coral_rosa.name=Pink Kelpt
-tile.coral_morado.name=Purple Kelpt
-tile.coral_azul_muerto.name=Died Blue Kelpt
-tile.coral_amarillo_muerto.name=Died Yellow Kelpt
-tile.coral_rosa_muerto.name=Died Pink Kelpt
-tile.coral_morado_muerto.name=Died Purple Kelpt
-
+tile.coral_rojo.name=Red kelp
+tile.coral_rojo_muerto.name=Died Red Kelp
+tile.coral_azul.name=Blue Kelp
+tile.coral_amarillo.name=Yellow Kelp
+tile.coral_rosa.name=Pink Kelp
+tile.coral_morado.name=Purple Kelp
+tile.coral_azul_muerto.name=Died Blue Kelp
+tile.coral_amarillo_muerto.name=Died Yellow Kelp
+tile.coral_rosa_muerto.name=Died Pink Kelp
+tile.coral_morado_muerto.name=Died Purple Kelp
+tile.bloque_de_alga.name=Dried Kelp Block
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=next

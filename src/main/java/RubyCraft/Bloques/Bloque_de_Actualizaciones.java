@@ -10,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.event.ClickEvent;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
@@ -42,7 +43,7 @@ public class Bloque_de_Actualizaciones extends Block{
 	
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int q, float a, float b, float c){
 		if (world.isRemote && !player.isSneaking()){
-		 
+			
 			if(!RubyCraft.version.equals(UltimaVersion) && !Control_de_Version.Version_de_desarrolador){
 				
 				Buscar_Actualizaciones.MirarActualizaciones();

@@ -49,6 +49,13 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     	generateOre(RubyCraft.Diorita, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	generateOre(RubyCraft.Granito, world, rand, x, z, 20, 21, 25, 8, 60, Blocks.stone);
     	
+    	generarbloquesenagua(world, rand, x, z, RubyCraft.coral_amarillo, Blocks.water, BiomeGenBase.ocean);
+		generarbloquesenagua(world, rand, x, z, RubyCraft.coral_rojo, Blocks.water, BiomeGenBase.ocean);
+		generarbloquesenagua(world, rand, x, z, RubyCraft.coral_morado, Blocks.water, BiomeGenBase.ocean);
+		generarbloquesenagua(world, rand, x, z, RubyCraft.coral_azul, Blocks.water, BiomeGenBase.ocean);
+		generarbloquesenagua(world, rand, x, z, RubyCraft.coral_rosa, Blocks.water, BiomeGenBase.ocean);
+
+    	
     	if (RubyCraft.Navidad)
     	{
     		generateOreLadodelava(Principal.piedra_ancestral, world, rand, x, z, 2, 9, 15, 2, 8, Blocks.stone);
@@ -61,9 +68,46 @@ public class Generacion_Tipo_de_Piedras implements IWorldGenerator{
     		generarflores(world, rand, x, z, 1, Principal.flor_del_Pantano, Blocks.air, BiomeGenBase.swampland);
     		generarflores(world, rand, x, z, 1, Principal.flor_de_las_montanas, Blocks.air, BiomeGenBase.extremeHills);
     		generarflores(world, rand, x, z, 1, Principal.flor_del_bosque, Blocks.air, BiomeGenBase.forest);
+    		
+    		
+
+    		
     	}
     }
     
+	 public void generarbloquesenagua(World world, Random rand, int chunkX, int chunkZ, Block block, Block  generatein, BiomeGenBase bioma){
+		  int probrand = rand.nextInt(100);
+	     	
+	     	 WorldGenMinable gen = new WorldGenMinable(block, 5, generatein);
+	     	if(probrand  <= 5) {
+	     		int xRand = chunkX * 16 + rand.nextInt(16);
+	     		int zRand = chunkZ * 16 + rand.nextInt(16);
+	     		int yRand = world.getHeightValue(xRand, zRand) - 3;
+	     		if(world.getBiomeGenForCoords(xRand, zRand) == bioma && yRand > 10 && world.getBlock(xRand, yRand, zRand) == Blocks.water) {
+	     			
+	     			int ybase = yRand - (14 + probrand);
+                   world.setBlock(xRand+1, ybase, zRand, block);
+	        		world.setBlock(xRand-1, ybase, zRand, block);
+	        		world.setBlock(xRand, ybase, zRand+1, block);
+	        		world.setBlock(xRand, ybase, zRand-1, block);
+	        		world.setBlock(xRand, ybase+1, zRand, block);
+	        		world.setBlock(xRand, ybase+2, zRand, block);
+	        		world.setBlock(xRand, ybase+3, zRand, block);
+	        		world.setBlock(xRand, ybase+4, zRand, block);
+	        		world.setBlock(xRand+1, ybase+3, zRand, block);
+	        		world.setBlock(xRand-1, ybase+3, zRand, block);
+	        		world.setBlock(xRand, ybase+3, zRand+1, block);
+	        		world.setBlock(xRand, ybase+3, zRand-1, block);
+	        		world.setBlock(xRand, ybase, zRand, block);
+
+	     		}
+
+	     		
+	     		
+	     	}
+	     }
+	    
+	
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generatein){
     	int vienSize = minVienSize + random.nextInt(maxVienSize - minVienSize);
     	int heightRange = maxY - minY;
