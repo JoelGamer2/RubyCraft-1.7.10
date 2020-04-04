@@ -8,12 +8,14 @@ import Eventos.Verano.Entidades.Elemental_de_Agua_Guardian;
 import Eventos.Verano.Entidades.Elemental_de_Agua_Soldado;
 import Eventos.Verano.Entidades.Elemental_de_Tierra_Guardian;
 import Eventos.Verano.Entidades.Elemental_de_Tierra_Soldado;
+import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
 import RubyCraft.Entidades.Granadas.EntidadGranda_de_Uranio;
 import RubyCraft.Entidades.Mobs.AlejandroMob;
 import RubyCraft.Entidades.Mobs.AlienMob;
+import RubyCraft.Entidades.Mobs.Entityprueba;
 import RubyCraft.Entidades.Mobs.HombreCerdo;
 import RubyCraft.Entidades.Mobs.Invocador;
 import RubyCraft.Entidades.Mobs.Iratxe;
@@ -52,6 +54,13 @@ public class Entidades_Principal {
 		createEntity(Jose.class, "Joseoscar1", 0xFFBB7C, 0xFF1C58);
 		createEntity(Patxis.class, "PatxisGamer", 0xFF0008, 0xFF9B49);
 		createEntity(YetiLichEstatua.class, "YetiLichRE", 0x000000, 0x195D42);
+		
+		
+		if(Control_de_Version.Version_de_desarrolador) {
+			
+			createEntity(Entityprueba.class, "RPrueba", 0x173766, 0xB86421);
+			
+		}
 	}
 	
 	private static void createEntity(Class entityClass, String entityName, int ColordeFondo, int ColordeLosPuntos) {

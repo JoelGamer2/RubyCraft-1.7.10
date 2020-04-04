@@ -26,6 +26,7 @@ import Eventos.Verano.Entidades.Render.Render_Elemental_de_agua_soldado;
 import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_Tierra_guardian_Modelo;
 import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_guardian_Modelo;
 import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_soldado_Modelo;
+import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import RubyCraft.Encantamientos.Encantamiento_MineCraft_Objetos;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
@@ -33,6 +34,7 @@ import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
 import RubyCraft.Entidades.Granadas.EntidadGranda_de_Uranio;
 import RubyCraft.Entidades.Mobs.AlejandroMob;
 import RubyCraft.Entidades.Mobs.AlienMob;
+import RubyCraft.Entidades.Mobs.Entityprueba;
 import RubyCraft.Entidades.Mobs.HombreCerdo;
 import RubyCraft.Entidades.Mobs.HombreCerdorender;
 import RubyCraft.Entidades.Mobs.Invocador;
@@ -41,6 +43,7 @@ import RubyCraft.Entidades.Mobs.Jose;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.RenderAlejandroMob;
 import RubyCraft.Entidades.Mobs.RenderAlienMob;
+import RubyCraft.Entidades.Mobs.RenderEntityPrueba;
 import RubyCraft.Entidades.Mobs.RenderInvocadorMob;
 import RubyCraft.Entidades.Mobs.RenderIratxeMob;
 import RubyCraft.Entidades.Mobs.RenderJoseMob;
@@ -118,6 +121,12 @@ public class ClientProxy extends ServerProxy {
 		FMLCommonHandler.instance().bus().register(new Encantamiento_MineCraft_Objetos(Minecraft.getMinecraft()));
 		FMLCommonHandler.instance().bus().register(new Mods_Encantamientos(Minecraft.getMinecraft()));
 			
+		if(Control_de_Version.Version_de_desarrolador) {
+			
+			RenderingRegistry.registerEntityRenderingHandler(Entityprueba.class, new RenderEntityPrueba(new ModelBiped(), 0));
+
+			
+		}
 		
 		
 		

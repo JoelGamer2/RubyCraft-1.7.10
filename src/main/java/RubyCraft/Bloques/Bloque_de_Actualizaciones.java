@@ -96,6 +96,11 @@ public class Bloque_de_Actualizaciones extends Block{
         }
     }
 	
+  
+    public static void tuputamdre() {
+    	
+    	
+    }
    
 	  /**
      * If this returns true, then comparators facing away from this block will use the value from

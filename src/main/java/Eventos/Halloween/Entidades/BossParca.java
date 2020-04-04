@@ -202,9 +202,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    /**Lista de mobs random para la Fase 1 del boss**/
 	    public static String[] Mobs = { 
 	               
-	            "Tank",
 	            "Skeleton",
-	            "Herobrine",
 	            "AlienR",
 	            "Zombie",
    
