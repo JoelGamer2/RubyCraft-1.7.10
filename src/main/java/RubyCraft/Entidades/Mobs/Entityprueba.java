@@ -107,7 +107,7 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
            	
            	 numero_jugadores = jugadores_en_rago_local.size();
            	jugador_pasado_filtro_local.addChatComponentMessage(new ChatComponentText(Integer.toString(numero_jugadores)));
-           	 dropeos(jugador_pasado_filtro_local);
+           	 dropeos(jugador_pasado_filtro_local.getDisplayName());
            		
            	
                
@@ -120,16 +120,21 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 	 
 }
 	/**Comunica que item dropeara**/
-	private void dropeos(EntityPlayer player) {
-		if(!player.worldObj.isRemote) {
-		int cantidadgenerado = numero_jugadores;
+	private void dropeos(String nombre) {
+		
+		EntityPlayer player = worldObj.getPlayerEntityByName(nombre);
+
+		if(!worldObj.isRemote) {
+			
+	    	 
+	
 		
 		 Random generator2 = new Random(); 
          int nSelection = generator2.nextInt(Posibleddrops.length); 
          String droprandom = Posibleddrops[nSelection]; 
          
         	if(!solo_1){
-        	cantidadgenerado--;
+        	
                solo_1 = true;
         
 		
@@ -154,9 +159,9 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 					    Fase = -1;
 						tick = 0;
 						solo_1 = false;
-			 
         	}
-	}
+        	
+	   }
 	}
 	/** Posibles drops con cantidad random**/
 	public static String[] Posibleddrops = { 
