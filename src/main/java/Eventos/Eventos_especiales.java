@@ -5,6 +5,7 @@ import Eventos.Navidad.Entidades.Lich;
 import Eventos.Navidad.Entidades.YetiLich;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
+import RubyCraft.Entidades.Mobs.Entityprueba;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
@@ -118,6 +119,17 @@ public class Eventos_especiales {
 	@SubscribeEvent
 	public void onworldtick(WorldTickEvent event) {
 	
+		
+		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && Entityprueba.Activo) {
+			Entityprueba.tick=0;
+			Entityprueba.Fase=-1;
+			Entityprueba.Activo=false;
+
+			
+		}
+		
+		
+		
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
 			BossParca.Activo = false;
 			Eventos_especiales.musica = false;

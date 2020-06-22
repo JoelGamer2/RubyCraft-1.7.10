@@ -1,12 +1,16 @@
 package RubyCraft.Entidades.Mobs;
 
-import java.util.Random;
 
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
 import Eventos.Eventos_especiales;
 import Eventos.Navidad.Entidades.Lich;
 import RubyCraft.RubyCraft;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
@@ -15,15 +19,19 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
+
 public class Entityprueba extends EntityMob implements IBossDisplayData {
 
-	
+	 
+	public static List Jugadores_en_rango;
+	public static int numero_jugadores;
 	public static int tick = 0;
 	public static boolean Activo = false;
 	public static int Fase = -1;
@@ -40,10 +48,9 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 	public static int Ticks_Max_Fase3= 6000;
 	
 	public static int Ticks_Min_Fase4= Ticks_Max_Fase3 + 1;
-	public static int Ticks_Max_Fase4= 60000;
-
+	public static int Ticks_Max_Fase4= 60000;	
 	public static boolean solo_1 = false;
-	
+	public static String[] Jugador_rango_filtro_nombres;
 	public Entityprueba(World world) {
 		super(world);
 		     
@@ -87,44 +94,76 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 	    Fase = -1;
 		tick = 0;
 	
-	
 		super.onDeath(p_70645_1_);
 
-	 dropeos();
+		//DETECTAR JUGADORES EN AREA DE 10x10x10
+  	  
+               List jugadores_en_rago_local = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX - 2, this.posY - 2, this.posZ - 2, this.posX + 2, this.posY + 2, this.posZ + 2));
+               Jugadores_en_rango = jugadores_en_rago_local;
+            
+               if(!(Jugadores_en_rango.size()==0)) {
+               for (int i = 0; i <= Jugadores_en_rango.size() - 1; i++) {
+           		EntityPlayer jugador_pasado_filtro_local = (EntityPlayer) Jugadores_en_rango.get(i);
+           	
+           	 numero_jugadores = jugadores_en_rago_local.size();
+           	jugador_pasado_filtro_local.addChatComponentMessage(new ChatComponentText(Integer.toString(numero_jugadores)));
+           	 dropeos(jugador_pasado_filtro_local);
+           		
+           	
+               
+             }
+  	  }
+              
+               
+		
+
 	 
 }
 	/**Comunica que item dropeara**/
-	private void dropeos() {
+	private void dropeos(EntityPlayer player) {
+		if(!player.worldObj.isRemote) {
+		int cantidadgenerado = numero_jugadores;
 		
-			
-		/** Random generator2 = new Random(); 
-         int nSelection = generator2.nextInt(Mobs.length); 
-         String droprandom = Posibleddrops[nSelection]; **/
-         if(!solo_1) {
-        	 solo_1= true;
-		 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
-		        EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-		        player.addChatComponentMessage(new ChatComponentText("murio"));
-			 
-					player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Totem_de_la_no_muerte));
+		 Random generator2 = new Random(); 
+         int nSelection = generator2.nextInt(Posibleddrops.length); 
+         String droprandom = Posibleddrops[nSelection]; 
+         
+        	if(!solo_1){
+        	cantidadgenerado--;
+               solo_1 = true;
+        
+		
+		      
+        	 player.addChatComponentMessage(new ChatComponentText("murio"));
+		        if(droprandom.equalsIgnoreCase("ruby")) {
+		        	
+		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.ruby, cantidad_a_generar(8)));
+		        	
+		        }else if(droprandom.equalsIgnoreCase("zafiro")){
+		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.zafiro, cantidad_a_generar(10)));
+
+		        }else if(droprandom.equalsIgnoreCase("pan_de_calabaza")) {
+		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Pandecalabaza, cantidad_a_generar(34)));
+
+		        }else if(droprandom.equalsIgnoreCase("espada_de_platino")) {
+		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Espada_de_Platino, cantidad_a_generar(1)));
+
+		        }
+		    
 					   Activo = false;
 					    Fase = -1;
 						tick = 0;
-					
-			}
-         }
-	
+						solo_1 = false;
+			 
+        	}
 	}
-	
+	}
 	/** Posibles drops con cantidad random**/
 	public static String[] Posibleddrops = { 
-            
-            "guadana",
-            "lingote_demoniaco",
-            "ruby",
-            "zafiro",
-            "azula",
-            "platino",
+          "ruby",
+          "zafiro",
+          "pan_de_calabaza",
+          "espada_de_platino"
             
     };
 	
@@ -189,6 +228,7 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 		    	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
 	                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
 	                 player.addChatComponentMessage(new ChatComponentText("SOLO PUEDE HABER UN BOSS ACTIVO" + tick));
+	                 
 		    	 }
 		    	 
 
@@ -197,16 +237,13 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 		    }
 	    	return super.onSpawnWithEgg(p_110161_1_);
 	    }
-	    @Override
-	    public boolean getCanSpawnHere() {
-	    	if(Activo) {
-	    	return false;
-	    	}else {
-	    		return true;
-	    	}
-	    }
+	   
+	    
 	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
-	    public void onLivingUpdate(){    	
+	    public void onLivingUpdate(){ 
+	    	
+      	//	 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Jugador_rango_filtro_nombres + ""));
+
  // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
 	    	double x = this.posX;
 	    	double y = this.posY;
@@ -221,6 +258,11 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 		    	 Activo= true;
 
 	            tick ++;
+	            
+	           
+	          
+		    	 
+	            
 	            System.out.println(tick + "los putos ticks del puto boss joel");
 	            if(tick == Ticks_Min_Fase1) {
 	            	Fase = 1;
@@ -232,6 +274,13 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 	            	Fase = 2;
 	   	    	 cambiar_De_fase(2, true, null);
 
+	            }
+	            
+	            if(tick==Ticks_Min_Fase3) {
+	            	
+	            	Fase = 3;
+	            	cambiar_De_fase(3, true, null);
+	            	
 	            }
 	       }
 	     /**Fase 1 Spawnea bichos random 4 veces**/
@@ -265,7 +314,7 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 			// worldObj.spawnEntityInWorld(mob);
 	        	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
 	                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-	                 player.playSound("random.fizz", 1.0F, 1.0F);
+	           //      player.playSound("random.fizz", 1.0F, 1.0F);
 	        	 }
 	        	
 	        	
@@ -276,10 +325,25 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 	               
 	           }else if(!(tick >= Ticks_Max_Fase2) && !(tick <=Ticks_Min_Fase2)) {
 	        	   
+	           }else if(!(tick >= Ticks_Max_Fase3) && !(tick <=Ticks_Min_Fase3)) {
+	        	   
 	           }
           }
 	    }
 	    
+	    
+	    public int cantidad_a_generar(int cantidad_maxima) {
+	    	int cantidadgenerado=0;
+	    	 
+       	 Random cantidad = new Random(); 
+       	 cantidadgenerado = cantidad.nextInt(cantidad_maxima);
+       	 
+       	 if(cantidadgenerado == 0) {
+       	  cantidadgenerado ++;
+       	 }
+		return cantidadgenerado;
+	    	
+	    }
 	    
 	    public static void cambiar_De_fase(int fase, boolean sonido, String nombresonido_default) {
 	    	if(nombresonido_default==null) {

@@ -22,6 +22,7 @@ import RubyCraft.Entidades.Mobs.Iratxe;
 import RubyCraft.Entidades.Mobs.Jose;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.Shulker;
+import RubyCraft.Items.Ruby;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 
@@ -56,7 +57,7 @@ public class Entidades_Principal {
 		createEntity(YetiLichEstatua.class, "YetiLichRE", 0x000000, 0x195D42);
 		
 		
-		if(Control_de_Version.Version_de_desarrolador) {
+		if(Control_de_Version.Version_de_desarrolador&& RubyCraft.cliente) {
 			
 			createEntity(Entityprueba.class, "RPrueba", 0x173766, 0xB86421);
 			
