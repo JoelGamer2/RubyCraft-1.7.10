@@ -21,10 +21,17 @@ public class TestearActualizaciones {
 	public static String Mensaje2 = "";
 	public static String Mensaje3 = "";
 	public static String ChangeLog = "";
-
+    public static boolean activo = false;
 	
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event){
+		if(Buscar_Actualizaciones.HayNuevaVersion() && Buscar_Actualizaciones.mysql && !activo) {
+			Mensaje1 = mysql.mensajes[0];
+			Mensaje2 = mysql.mensajes[1];
+			Mensaje3 = mysql.mensajes[2];
+			UltimaVersion = mysql.mensajes[3];
+			ChangeLog = mysql.mensajes[4];
+		}
 		if(Control_de_Version.Version_de_desarrolador == false && Buscar_Actualizaciones.HayNuevaVersion() && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null){
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Hay Una Nueva Version Disponible: " + EnumChatFormatting.RED + UltimaVersion));
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":Logros_especiales", 1.0F, 1.0F);
@@ -39,12 +46,13 @@ public class TestearActualizaciones {
 			url.getChatStyle().setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ChangeLog));
 			Minecraft.getMinecraft().thePlayer.addChatMessage(url);
 			Iniciadosesion = true;
-			
+			activo = true;
 		}else if(Control_de_Version.Version_de_desarrolador == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
 			
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Cuidado esta es la DeveloperBuild " + EnumChatFormatting.GOLD + "puede ocurrir muchos bugs Version: " + EnumChatFormatting.RED + RubyCraft.version + EnumChatFormatting.RED + " INDEV"));
 
 			Iniciadosesion = true;
+			activo = true;
 		}
 	}
 	

@@ -2,29 +2,23 @@ package RubyCraft.Entidades.Mobs;
 
 
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-import Eventos.Eventos_especiales;
-import Eventos.Navidad.Entidades.Lich;
-import RubyCraft.RubyCraft;
 
+import RubyCraft.RubyCraft;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 
 public class Entityprueba extends EntityMob implements IBossDisplayData {

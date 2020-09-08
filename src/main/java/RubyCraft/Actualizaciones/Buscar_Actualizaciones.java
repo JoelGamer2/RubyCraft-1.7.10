@@ -13,9 +13,27 @@ public class Buscar_Actualizaciones {
 	private static final String Actualizacion_Url = "https://www.dropbox.com/s/fan0ya9zg5m10y9/RubyCraft-Updates.txt?raw=1";
 	private static boolean NuevaVersion = false;
 	public static  boolean URLNOVALIDA = false;
-	
-	
+    public static boolean mysql = true;
+	public static String version_ultima = "";
 	public static void MirarActualizaciones(){
+		
+		
+		if(!mysql) {
+			Buscar_drop();
+		}else {
+			try {
+				new mysql().iniciar(1);
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+			
+		}
+	
+	
+	
+	
+	public static void Buscar_drop(){
 		new Thread("Actualizaciones"){
 			
 			public void run(){

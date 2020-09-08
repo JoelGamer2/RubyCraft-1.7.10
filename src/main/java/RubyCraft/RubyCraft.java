@@ -1225,10 +1225,8 @@ public void init(FMLInitializationEvent event){
 	
 //Variado
 proxy.registerRenderThings();	  
-
-FMLCommonHandler.instance().bus().register(new TestearActualizaciones());
 FMLCommonHandler.instance().bus().register(new trol());
-
+FMLCommonHandler.instance().bus().register(new TestearActualizaciones());
  Logros.Iniciar();
 if(VersionTrol == false){
 	Crafteos.IniciarPrincipal();

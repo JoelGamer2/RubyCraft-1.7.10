@@ -22,7 +22,6 @@ import RubyCraft.Entidades.Mobs.Iratxe;
 import RubyCraft.Entidades.Mobs.Jose;
 import RubyCraft.Entidades.Mobs.Patxis;
 import RubyCraft.Entidades.Mobs.Shulker;
-import RubyCraft.Items.Ruby;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 
