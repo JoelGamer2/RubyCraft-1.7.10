@@ -1,6 +1,8 @@
 package RubyCraft.Actualizaciones;
 
 
+import java.util.UUID;
+
 import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -22,7 +24,8 @@ public class TestearActualizaciones {
 	public static String Mensaje3 = "";
 	public static String ChangeLog = "";
     public static boolean activo = false;
-	
+	public static String nombre = "";
+	public static UUID uuid;
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event){
 		if(Buscar_Actualizaciones.HayNuevaVersion() && Buscar_Actualizaciones.mysql && !activo) {
@@ -31,8 +34,15 @@ public class TestearActualizaciones {
 			Mensaje3 = mysql.mensajes[2];
 			UltimaVersion = mysql.mensajes[3];
 			ChangeLog = mysql.mensajes[4];
+			
+			
 		}
 		if(Control_de_Version.Version_de_desarrolador == false && Buscar_Actualizaciones.HayNuevaVersion() && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null){
+			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
+			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
+			mysql_registro(uuid, nombre);
+		    
+		
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Hay Una Nueva Version Disponible: " + EnumChatFormatting.RED + UltimaVersion));
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":Logros_especiales", 1.0F, 1.0F);
 
@@ -48,11 +58,29 @@ public class TestearActualizaciones {
 			Iniciadosesion = true;
 			activo = true;
 		}else if(Control_de_Version.Version_de_desarrolador == true && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
-			
+		
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Cuidado esta es la DeveloperBuild " + EnumChatFormatting.GOLD + "puede ocurrir muchos bugs Version: " + EnumChatFormatting.RED + RubyCraft.version + EnumChatFormatting.RED + " INDEV"));
-
+			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
+			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
+			mysql_registro(uuid, nombre);
 			Iniciadosesion = true;
 			activo = true;
+		}else if(!Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+			
+			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
+			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
+			mysql_registro(uuid, nombre);
+			Iniciadosesion = true;
+			activo = true;
+		}
+	}
+	
+	public static void mysql_registro(UUID uuid, String nombre) {
+		try {
+			new otro_mysql().iniciar(nombre,uuid);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
