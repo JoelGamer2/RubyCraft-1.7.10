@@ -527,7 +527,7 @@ public static boolean Dia_de_Los_Inocentes = false;
 public static boolean cliente = false;
 @EventHandler
 public void Preinit(FMLPreInitializationEvent event){
-	Clase_Principal_Evento_Verano.preinit();
+
 	Ver_fecha_calendario_usuario.VerFechasEventos();
     Verificar_Fecha.VerIpePuerto();
 	if(Control_de_Version.Navidad_Activar == true) {
@@ -1214,6 +1214,7 @@ BiomeManager.addSpawnBiome(Registrar_Biomas.RubyBioma);
 }
 @EventHandler
 public void init(FMLInitializationEvent event){
+	Clase_Principal_Evento_Verano.preinit();
 	Clase_Principal_Evento_Verano.init();
 	Principal.init();
 	

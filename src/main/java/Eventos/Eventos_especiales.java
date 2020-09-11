@@ -65,7 +65,7 @@ public class Eventos_especiales {
 
 		
 		if(RubyCraft.Verano && !Iniciadosesion) {
-			event.player.addChatComponentMessage(new ChatComponentText("Hacer logro verano:" + " " + RubyCraft.Verano));
+			event.player.addStat(Logros.Es_verano, 1);
 			Iniciadosesion = true;
 		}
 		//Halloween evento 

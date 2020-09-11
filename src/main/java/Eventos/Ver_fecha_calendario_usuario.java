@@ -93,11 +93,12 @@ public class Ver_fecha_calendario_usuario {
 			//Testear Verano
 	    	if(calendar.get(2) + 1 == MesVerano && calendar.get(5) >= IVerano && calendar.get(5) <= AVerano){
 	    		Verificar_Fecha.Verano = true;
+	    		RubyCraft.Verano = true;
 	    		 if(RubyCraft.cliente) {
 		  		       Verificar_Fecha.iniciar();
 		  		       }else if(!RubyCraft.cliente) {
 				    	   RubyCraft.Verano = true;
-							IniciarItemsEventos.Iniciartodo();
+							
 				    	  
 				    	   
 				       }

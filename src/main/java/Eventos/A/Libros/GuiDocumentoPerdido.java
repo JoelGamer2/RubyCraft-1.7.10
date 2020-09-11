@@ -3,9 +3,13 @@ package Eventos.A.Libros;
 import org.lwjgl.opengl.GL11;
 
 import RubyCraft.RubyCraft;
+import net.minecraft.block.Block;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
@@ -21,6 +25,7 @@ public class GuiDocumentoPerdido extends GuiContainer{
 	public GuiButton siguiente;
 	public static ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Documento_Perdido.png");
 	public static ResourceLocation Textura2 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Documento_Perdido.png");
+	public static ResourceLocation Textura3 = new ResourceLocation(RubyCraft.modid + ":textures/gui/GUI_Evento_Verano/Aluminio.png");
 
 
 	
@@ -71,13 +76,26 @@ public class GuiDocumentoPerdido extends GuiContainer{
 	    int k = (this.width/2)-((X/2)+3);
 	    int l = (this.height/2) - (Y/2);
 	    
+	 
 	    this.drawTexturedModalRect(k, l, 0, 0, X, Y);
 
 	    String paginase = Integer.toString(paginas);
-	       
+	  
+
 		this.fontRendererObj.drawString(StatCollector.translateToLocal(paginase), (this.width/2) + posX, (this.height/2) + 78,  0x000000);
 	}
 
+	
+	public void render_bloques(int posx, int posy, int anchura, int altura, Block bloque, Item item) {
+		
+		    this.mc.getTextureManager().bindTexture(TextureMap.locationBlocksTexture);
+		    IIcon icon = Item.getItemFromBlock(bloque).getIconFromDamage(0);
+		    GL11.glEnable(GL11.GL_BLEND);
+		    this.drawTexturedModelRectFromIcon(posx, posy, icon, altura, anchura);
+		    GL11.glDisable(GL11.GL_BLEND);
+		
+		
+	}
 
 	@Override
 	public void initGui() 

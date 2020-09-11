@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 import RubyCraft.RubyCraft;
+import RubyCraft.Items.Ruby;
 import RubyCraft.Registrar.Crafteos;
 
 public class Verificar_Fecha {
@@ -34,8 +35,8 @@ public static boolean URLNOVALIDAERROR = false;
 	
 	
 	public static void iniciar() {
-		IniciarVerificador();
-		//iniciareventosinserver();
+		//IniciarVerificador();
+		iniciareventosinserver();
 		
 	}
 	
@@ -54,6 +55,13 @@ public static boolean URLNOVALIDAERROR = false;
 			Crafteos.IniciarCrafteosHallowen();
 			IniciarItemsEventos.Iniciartodo();
 			if(RubyCraft.cliente == true) {
+				Cambiador_de_Texturas.Texturas();
+			}
+		}else if(Verano == true) {
+			RubyCraft.Verano = true;
+			
+			
+			if(RubyCraft.cliente) {
 				Cambiador_de_Texturas.Texturas();
 			}
 		}

@@ -36,6 +36,8 @@ public class Logros {
      
     public static Achievement Es_Hallowen;
     public static Achievement Matar_Parca; 
+    
+    public static Achievement Es_verano;
 	
 	public static void Iniciar(){
 		
@@ -67,6 +69,7 @@ public class Logros {
 		
 		Es_Hallowen = new Achievement("achievement.Es_Hallowen", "Es_Hallowen", 17,7, Blocks.pumpkin, (Achievement)null).initIndependentStat().registerStat().setSpecial();
 
+		Es_verano = new Achievement("achievement.Es_verano", "Es_Verano", 19, 7, Items.water_bucket, (Achievement)null).initIndependentStat().registerStat().setSpecial();
 		
 		 AchievementPage.registerAchievementPage(new AchievementPage("RubyCraft", new Achievement[]{
 				 MinaRuby, 
@@ -97,6 +100,7 @@ public class Logros {
 				 
 				 Es_Hallowen,
 				 
+				 Es_verano,
 				 	 
 		 
 		 }));
