@@ -85,6 +85,7 @@ import RubyCraft.Bloques.Mena_de_Ruby_end;
 import RubyCraft.Bloques.Mena_de_Zafiro;
 import RubyCraft.Bloques.Mena_de_Zafiroend;
 import RubyCraft.Bloques.Mesa_de_Trabajo_de_Zafiro_Basica;
+import RubyCraft.Bloques.Mesa_de_Trabajo_de_Zafiro_Basica_item_block;
 import RubyCraft.Bloques.PilarPurpur;
 import RubyCraft.Bloques.PistonSlimeBase;
 import RubyCraft.Bloques.Piston_de_Slime_Cabeza;
@@ -150,6 +151,7 @@ import RubyCraft.Items.Granada_de_Zafiro;
 import RubyCraft.Items.Hacha_de_Platino;
 import RubyCraft.Items.Hacha_de_cobre;
 import RubyCraft.Items.Hachadezafiro;
+import RubyCraft.Items.Libro_de_recetas;
 import RubyCraft.Items.Lingote_Galactico;
 import RubyCraft.Items.Manzana_de_diamante;
 import RubyCraft.Items.Moldes_para_cofres;
@@ -354,6 +356,9 @@ public static Item PetodePlatino;
 public static Item pantacasdePlatino;
 public static Item botasdePlatino;
 
+//Libros
+public static Item Libro_de_recetas;
+
 //Bloques 
 public static Block Bloquederuby;
 public static Block Bloqueluminiscente;
@@ -479,7 +484,7 @@ public static final int guiIDTransformadorLosisl = 3;
 public static Block Transformador_de_Losas_a_Bloques;
 
 public static final int guiIdMesaEscaleraZafiro = 4;
-
+public static final int guiId_Libro_de_recetas = 30;
 //TileEntitys
 
 public static Block Cofre_de_Ruby;
@@ -586,7 +591,7 @@ MinecraftForge.EVENT_BUS.register(new DropeoMobsHandler());
 MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());
 
 
-MinecraftForge.EVENT_BUS.register(new Generar_Enemigos_por_Mineo());
+//MinecraftForge.EVENT_BUS.register(new Generar_Enemigos_por_Mineo());
 
 Teclas_Principal.Iniciar();	
 //Herramientas
@@ -809,6 +814,11 @@ GameRegistry.registerItem(Palo_Morado, Palo_Morado.getUnlocalizedName().substrin
 CreaCaminos = new CreaCaminos().setUnlocalizedName("CreaCaminos").setTextureName(modid + ":CreaCaminos").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(CreaCaminos, CreaCaminos.getUnlocalizedName().substring(5));
 
+//Libros
+
+Libro_de_recetas = new Libro_de_recetas().setUnlocalizedName("Libro_de_recetas").setTextureName(modid + ":Libro_de_recetas").setCreativeTab(Rubycrafttab);
+GameRegistry.registerItem(Libro_de_recetas, Libro_de_recetas.getUnlocalizedName().substring(5));
+
 //Discos
 
 CanciondeSansDisco = new CancionesBase("sans").setUnlocalizedName("CanciondeSansDisco").setCreativeTab(Rubycrafttab);
@@ -1027,7 +1037,7 @@ GameRegistry.registerBlock(Bloque_de_Pasto, Bloque_de_Pasto.getUnlocalizedName()
 Bloque_de_Pasto.setHarvestLevel("sholve", 1);
 
 Mesa_de_Trabajo_de_Zafiro_Basica = new Mesa_de_Trabajo_de_Zafiro_Basica(Material.wood).setBlockName("Mesa_de_Trabajo_de_Zafiro_Basica").setBlockTextureName(modid + ":Mesa_de_Trabajo_de_Zafiro_Basica").setCreativeTab(Rubycrafttab).setHardness(0.3F);
-GameRegistry.registerBlock(Mesa_de_Trabajo_de_Zafiro_Basica, Mesa_de_Trabajo_de_Zafiro_Basica.getUnlocalizedName().substring(5));
+GameRegistry.registerBlock(Mesa_de_Trabajo_de_Zafiro_Basica, Mesa_de_Trabajo_de_Zafiro_Basica_item_block.class, Mesa_de_Trabajo_de_Zafiro_Basica.getUnlocalizedName().substring(5));
 
 Ladrillo_de_Infrapiedra = new Ladrillo_de_Infrapiedra(Material.rock).setBlockName("Ladrillo_de_Infrapiedra").setBlockTextureName(modid + ":Ladrillo_de_Infrapiedra").setCreativeTab(Rubycrafttab).setHardness(0.5F);
 GameRegistry.registerBlock(Ladrillo_de_Infrapiedra, Ladrillo_de_Infrapiedra.getUnlocalizedName().substring(5));

@@ -170,6 +170,8 @@ item.CreaCaminos.name=Flor Creater
 item.alga.name=seawee
 item.alga_seca.name=Dry seawee
 
+item.Libro_de_recetas.name=Crafting Recipes Helper book
+
 item.CanciondeSansDisco.name=Music disc
 item.CanciondeSansDisco.desc=Megalovania
 item.PPAP_Long_Version.name=Music disc

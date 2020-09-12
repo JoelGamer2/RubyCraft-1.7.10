@@ -1,4 +1,4 @@
-package Eventos.A.Libros;
+package Eventos.Verano.Libros;
 
 import org.lwjgl.opengl.GL11;
 

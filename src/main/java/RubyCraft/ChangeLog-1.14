@@ -1,0 +1,19 @@
+Cambios en esta Version 1.14:
+--CAMBIOS
+La varita ahora solo tiene un uso y un dialogo de informacion al poner el raton ecima.
+La mesa de Zafiro basica tiene un dialogo de informacion explicando su uso.
+Se a arreglado un error el cual hacia que el evento de verano no se activase correctamente.
+Se a arreglado un error el cual hacia que el evento de Navidad se activara en fechas incorrectas.
+Se an añadido mas funciones internas de conectividad.
+Se a corregido un error el cual hacia que el nuevo libro de recetas no funcionara correctamente en servidores.
+Se a corregido un error el cual hacia que la espada de platino no guardara la NbttagCompound de manera correcta.
+Se a corregido un error el cual hacia que el Libro de recetas no guardara la NbttagCompound de manera correcta.
+Se a cambiado como funciona internamente el sistema de detectar nuevas actualizaciones.
+--AÑADIDO
+Nuevo Libro de recetas en el cual puedes ver los crafteos de las mesas del mod
+Nueva generacion de los corales :) en el oceano
+Nuevo boss en modo experimental
+
+
+--ELIMINADO
+Se ha eliminado todos los crafteos de las armaduras/herramientas/items de platino ya que mas adelante seran totalmente renovados

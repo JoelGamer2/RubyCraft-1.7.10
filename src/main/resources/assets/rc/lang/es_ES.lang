@@ -170,6 +170,8 @@ item.CreaCaminos.name=Crea Caminos
 item.alga.name=Alga
 item.alga_seca.name=Alga seca
 
+item.Libro_de_recetas.name=Libro de recetas
+
 item.CanciondeSansDisco.name=Disco de musica
 item.CanciondeSansDisco.desc=Megalovania
 item.PPAP_Long_Version.name=Disco de musica

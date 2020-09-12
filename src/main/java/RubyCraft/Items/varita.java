@@ -1,11 +1,14 @@
 package RubyCraft.Items;
 
+import java.util.List;
+
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
@@ -15,6 +18,7 @@ public class varita extends ItemHoe {
 	public varita(ToolMaterial material) {
 		super(material);
 		this.setMaxStackSize(1);
+		this.setMaxDamage(1);
 	}
 	/**
      * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return
@@ -36,7 +40,7 @@ public class varita extends ItemHoe {
 
             if (event.getResult() == Result.ALLOW)
             {
-                itemstack.damageItem(1, player);
+                itemstack.damageItem(2, player);
                 return true;
             }
 
@@ -54,7 +58,7 @@ public class varita extends ItemHoe {
                 else
                 {
                     world.setBlock(x, y, z, block1);
-                    itemstack.damageItem(1, player);
+                    itemstack.damageItem(2, player);
                     return true;
                 }
             }
@@ -65,6 +69,14 @@ public class varita extends ItemHoe {
         }
     }
 
+    @Override
+    public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List list, boolean p_77624_4_) {
+    	
+    	list.add(EnumChatFormatting.DARK_RED + "Solo Tiene 1 Uso");
+    	list.add(EnumChatFormatting.GREEN + "Puede convertir una mesa de zafiro basica en una avanzada");
+    	super.addInformation(p_77624_1_, p_77624_2_, list, p_77624_4_);
+    }
+    
     /**
      * Returns True is the item is renderer in full 3D when hold.
      */

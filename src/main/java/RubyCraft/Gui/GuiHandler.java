@@ -1,8 +1,8 @@
 package RubyCraft.Gui;
 
-import Eventos.A.Libros.ContainerLibro;
-import Eventos.A.Libros.GuiDocumentoPerdido;
-import Eventos.A.Libros.GuiLibro;
+import Eventos.Verano.Libros.ContainerLibro;
+import Eventos.Verano.Libros.GuiDocumentoPerdido;
+import Eventos.Verano.Libros.GuiLibro;
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Escaleras_Principal;
 import RubyCraft.RubyCraft;
@@ -54,6 +54,22 @@ public class GuiHandler implements IGuiHandler {
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_Container_Mesa_de_trabajo_jungla(player.inventory, world, x, y, z) : null;
 			}
 		
+	/**	
+		if (ID == RubyCraft.guiId_Libro_de_recetas)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == RubyCraft.Libro_de_recetas)
+				{
+					
+					return new ContainerLibro(player.inventory, world, z, z, z);		
+				}
+			}
+			
+		}**/
+		
+		//EVENTO VERANO
 		
 		if (ID == Clase_Principal_Evento_Verano.guiIdLibro)
 		{
@@ -117,6 +133,21 @@ public class GuiHandler implements IGuiHandler {
 			return ID == RubyCraft.guiIDMesadetrabajodejungla && world.getBlock(x, y, z) == RubyCraft.Mesa_de_trabajo_de_jungla ? new gui_mesadetrabajodejungla(player.inventory, world, x, y, z) : null;
 		}
 		
+		
+		if (ID == RubyCraft.guiId_Libro_de_recetas)
+		{
+			ItemStack stack = player.getHeldItem();
+			if (stack != null)
+			{
+				if (stack.getItem() == RubyCraft.Libro_de_recetas)
+				{
+					
+					return new GuiLibro_recetas(player.inventory, world, z, z, z);		
+				}
+			}
+		}
+		
+		//EVENTO VERANO
 		
 		if (ID == Clase_Principal_Evento_Verano.guiIdLibro)
 		{

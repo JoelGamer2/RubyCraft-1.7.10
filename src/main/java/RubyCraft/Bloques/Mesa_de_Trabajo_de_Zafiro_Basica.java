@@ -9,5 +9,6 @@ public class Mesa_de_Trabajo_de_Zafiro_Basica extends Block {
 		super(material);
 		
 	}
-
+	
+	
 }

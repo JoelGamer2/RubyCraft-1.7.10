@@ -1,4 +1,4 @@
-package Eventos.A.Libros;
+package Eventos.Verano.Libros;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
