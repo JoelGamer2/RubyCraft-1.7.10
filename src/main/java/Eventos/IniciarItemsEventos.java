@@ -122,7 +122,7 @@ public class IniciarItemsEventos {
 	}
 	
 	
-	/*public static void Hallowen() 
+	/*public static void Hallowen()                  ay que volver a hacer el evento de hallowen
 	{
 		if(RubyCraft.HalloWen) 
 		{

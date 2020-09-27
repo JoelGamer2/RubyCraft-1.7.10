@@ -66,6 +66,7 @@ public class Crafteos {
 		GameRegistry.addRecipe(new ItemStack(RubyCraft.Tijera_de_ruby, 1), new Object[]{"o  "," o ",'o', RubyCraft.ruby});
 		GameRegistry.addRecipe(new ItemStack(RubyCraft.Tijeras_de_zafiro, 1), new Object[]{"o  "," o ",'o', RubyCraft.zafiro});
 	    GameRegistry.addRecipe(new ItemStack(RubyCraft.Bloque_de_Actualizaciones, 1), new Object[]{"oro","dcd","oro",'o', Items.gold_ingot,'r',Items.redstone,'d',Items.diamond,'c',Items.comparator});	
+	    GameRegistry.addRecipe(new ItemStack(RubyCraft.Libro_de_recetas, 1), new Object[] {"lr",'l',Items.book,'r',RubyCraft.ruby});
 	    
 		//Mesas de Trabajo Vanilla
         GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1), new Object[]{"mm","mm",'m',new ItemStack(Blocks.planks, 1, 0)});
@@ -224,18 +225,25 @@ public class Crafteos {
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Mesa_De_Conjuraciones, 1), new Object[]{"cppu","varv","vzav","uppc",'c',RubyCraft.Bloquedecaca,'p',RubyCraft.Plastico,'v',RubyCraft.varita,'a',RubyCraft.anillo,'u',RubyCraft.uranio,'z',RubyCraft.zafiro,'r',RubyCraft.ruby});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Cofre_de_Ruby, 2), new Object[]{"mrrm","rmcr","rcmr","mrrm",'m',RubyCraft.Moldes_para_cofres,'r',RubyCraft.ruby,'c',Blocks.chest});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.Moldes_para_cofres, 2), new Object[]{"hpph","phcp","pchp","hpph",'h',Items.iron_ingot,'p',RubyCraft.Pepita_de_Hierro,'c',Blocks.chest});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pala_de_Platino, 1), new Object[] {"pp","xx","xx","xx",'p',RubyCraft.Platino,'x',RubyCraft.Palo_Morado});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pico_de_Platino, 1), new Object[] {"pppp"," xx "," xx "," xx ",'p',RubyCraft.Platino,'x',RubyCraft.Palo_Morado});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Hacha_de_Platino, 1), new Object[] {"ppp ","pxx "," xx "," xx ",'p',RubyCraft.Platino,'x',RubyCraft.Palo_Morado});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Espada_de_Platino, 1), new Object[] {" pp "," pp "," xx "," xx ",'p',RubyCraft.Platino,'x',RubyCraft.Palo_Morado});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Azada_de_Platino, 1), new Object[] {"ppp "," xx "," xx "," xx ",'p',RubyCraft.Platino,'x',RubyCraft.Palo_Morado});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Tijeras_de_Platino, 1), new Object[] {"p   "," p  ",'p',RubyCraft.Platino});
+
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.cascodePlatino, 1), new Object[] {"pppp","p  p","p  p",'p',RubyCraft.Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.PetodePlatino, 1), new Object[] {"p  p","pppp","pppp","pppp",'p',RubyCraft.Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.pantacasdePlatino, 1), new Object[] {"pppp","p  p","p  p","p  p",'p',RubyCraft.Platino});
+         Registros.addRecipeZafiro(new ItemStack(RubyCraft.botasdePlatino, 1), new Object[] {"p  p","p  p","p  p","pppp",'p',RubyCraft.Platino});
+
+
          /**
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.PetodePlatino, 1), new Object []{"b  b","bzzb","bppb","bppb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.BloquedeZafiro,'p',RubyCraft.Platino});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.pantacasdePlatino, 1), new Object[]{"bzzb","r  r","b  b","b  b",'b',RubyCraft.Bloque_de_Platino,'r',RubyCraft.Bloquederuby,'z',RubyCraft.BloquedeZafiro});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.cascodePlatino, 1), new Object[]{"bbbb","a  a","b  b","####",'b',RubyCraft.Bloque_de_Platino,'a',RubyCraft.amuleto});
          Registros.addRecipeZafiro(new ItemStack(RubyCraft.botasdePlatino, 1), new Object[]{"####","b  b","b  b","bpzb",'b',RubyCraft.Bloque_de_Platino,'z',RubyCraft.zafiro,'p',RubyCraft.Platino});    
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pico_de_Platino, 1), new Object[] {"pppp"," vv "," vv "," vv ",'p',RubyCraft.Bloque_de_Platino,'v',RubyCraft.varita});
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Espada_de_Platino, 1), new Object[] {"pp","pp","pp","vv",'v',RubyCraft.varita,'p',RubyCraft.Bloque_de_Platino});
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Hacha_de_Platino, 1), new Object[] {" ppp"," vvp"," vv "," vv ",'v',RubyCraft.varita,'p',RubyCraft.Bloque_de_Platino});
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Pala_de_Platino, 1), new Object[] {" pp "," vv "," vv "," vv ",'v',RubyCraft.varita,'p',RubyCraft.Bloque_de_Platino});
-         Registros.addRecipeZafiro(new ItemStack(RubyCraft.Azada_de_Platino, 1), new Object[] {" ppp"," vv "," vv "," vv ",'v',RubyCraft.varita,'p',RubyCraft.Bloque_de_Platino});
-         Registros.addShapelessRecipeZafiro(new ItemStack(RubyCraft.Tijeras_de_Platino, 1), new Object[] {RubyCraft.Bloque_de_Platino,RubyCraft.Bloque_de_Platino});**/
-
+**/
       }
     public static void IniciarCrafteosTransformadoraBloques(){
     	

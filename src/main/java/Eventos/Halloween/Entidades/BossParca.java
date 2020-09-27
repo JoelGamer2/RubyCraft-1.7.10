@@ -5,6 +5,7 @@ import java.util.Random;
 import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,6 +13,7 @@ import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
@@ -60,9 +62,19 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 
 				
 			}
+	 
+	 if( RubyCraft.cliente) {
+		 if(!Activo){
+		          
+		        
+		          Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE,1.0F);
+		 	 }
+	 }
 	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
 	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	 tick = 0;
+	
+	 
 	 Activo = true;
 	 Fase = 1;
 	 xrandomtp = 0;
@@ -76,7 +88,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	 chat1 = false;
 	 chat2 = false;
 	 chat3 = false;
-		 }
+	}
 	
 	/**Comunica cuando el mob muere**/
 	@Override
@@ -257,95 +269,128 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    
 	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
 	    public void onLivingUpdate(){
- // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
-	    	double x = this.posX;
-	    	double y = this.posY;
-	    	double z = this.posZ;
-	    	World world = worldObj;
-	        super.onLivingUpdate();
-	       if(RubyCraft.cliente) {
-	          BossStatus.setBossStatus(this, true);
-	        //  Particulas(x, y, z);
-	     } 
-	       if(!(Fase == 0)) {
-	            tick ++;
-	       }
-	     /**Fase 1 Spawnea bichos random 4 veces**/
-	     if(Fase == 1) { 
-	    	 
-	       if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
-	      double xrandomgenerado = 0;
-	      double yrandomgenerado = 0;
-	      double zrandomgenerado = 0;
-	    
-	     Random xrandom = new Random(); 
-	     xrandomgenerado = xrandom.nextInt(6);
-	     
-	     Random yrandom = new Random(); 
-	     yrandomgenerado = yrandom.nextInt(3);
-	     
-	     Random zrandom = new Random(); 
-	     zrandomgenerado = zrandom.nextInt(6);
-	
-	     //System.out.println(xrandomgenerado);
-	     //System.out.println(yrandomgenerado);
-	     //System.out.println(zrandomgenerado);
-	     
-	     Random generator = new Random(); 
-         int nSelection = generator.nextInt(Mobs.length); 
-         String Mobrandom = Mobs[nSelection]; 
-	     
-	         Entity mob = EntityList.createEntityByName(Mobrandom, this.worldObj);
-	         mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z);
-	         if(!world.isRemote) {
-			 worldObj.spawnEntityInWorld(mob);
-	         }
-	       }else if(tick > 600 && Fase == 1) {
-		    	 Fase = 2;
-		    	 tick = 0;
-		    	 
-		     } 
-	       
-	      /**Fase 2 se tepea random 4 veces**/
-	        }else if(Fase == 2) {
-	        	
-	        	if(tick > 400 && !(Tp_hechos == 4)) {
-					 
-					 Tp_hechos ++;
-					 tick = 0; 
-				    }
-	        	
-	        	
-	        	if(tick == 140 || tick == 300 && Tp_hechos < 5) {
-		    	 Random xrandomt = new Random(); 
-			     xrandomtp= xrandomt.nextInt(10);
-			     
-			     Random zrandomt = new Random(); 
-			     zrandomtp = zrandomt.nextInt(10);
-		    	 if(!world.isRemote) {
-		    		
-				 this.setPosition(x - xrandomtp , y, z - zrandomtp);
-				 world.updateEntity(this);
-				 
-				 
-		    	 }
-		    	    }else if( tick > 700 && Fase == 2) {
-		    		      Fase = 3;
-		    		      tick = 0; 	
-		    	 }
-	        	/**Fase 3 Quita vida al jugador y se cura el**/
-	        }else if(Fase == 3) {   	
-	        	if(tick == 200) {
-	        		this.heal(1.0F);
-                    activarchupaalmas = true;    
-                    /**DESACTIVA EL CONTADOR PORQUE YA NO HAY MAS FASES**/
-	        	}else if(tick > 600) {
-	        		
-	        		Fase = 0;
-	        		tick = 0;
-	        		activarchupaalmas = false;
-	        	}
- 
-	       }
+	    	Eventos_especiales.chupa_almas = activarchupaalmas;
+	    	 // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
+	    		    	double x = this.posX;
+	    		    	double y = this.posY;
+	    		    	double z = this.posZ;
+	    		    	World world = worldObj;
+	    		        super.onLivingUpdate();
+	    		       if(RubyCraft.cliente) {
+	    		          BossStatus.setBossStatus(this, true);
+	    		        //  Particulas(x, y, z);
+	    		     } 
+	    		       if(!(Fase == 0)) {
+	    		    	  RubyCraft.logger.info(tick);
+	    		    	  
+	    		            tick ++;
+	    		            
+	    		    	   
+	    		          //  Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(tick + " "));
+	    		       }
+	    		     /**Fase 1 Spawnea bichos random 4 veces**/
+	    		     if(Fase == 1) { 
+	    	 if(RubyCraft.cliente && !chat1){
+	    		             
+	    		             
+	    		 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase1));
+	    						chat1=true;
+
+	    		    	 }
+
+	    		       if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
+	    		      double xrandomgenerado = 0;
+	    		      double yrandomgenerado = 0;
+	    		      double zrandomgenerado = 0;
+	    		    
+	    		     Random xrandom = new Random(); 
+	    		     xrandomgenerado = xrandom.nextInt(6);
+	    		     
+	    		     Random yrandom = new Random(); 
+	    		     yrandomgenerado = yrandom.nextInt(3);
+	    		     
+	    		     Random zrandom = new Random(); 
+	    		     zrandomgenerado = zrandom.nextInt(6);
+	    		
+	    		     //System.out.println(xrandomgenerado);
+	    		     //System.out.println(yrandomgenerado);
+	    		     //System.out.println(zrandomgenerado);
+	    		     
+	    		     Random generator = new Random(); 
+	    	         int nSelection = generator.nextInt(Mobs.length); 
+	    	         String Mobrandom = Mobs[nSelection]; 
+	    		     
+	    		         Entity mob = EntityList.createEntityByName(Mobrandom, this.worldObj);
+	    		         mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z);
+	    		         if(!world.isRemote) {
+	    				 worldObj.spawnEntityInWorld(mob);
+	    		         }
+	    		       }else if(tick > 600 && Fase == 1) {
+	    			    	 Fase = 2;
+	    			    	 tick = 0;
+	    			    	 
+	    			     } 
+	    		       
+	    		      /**Fase 2 se tepea random 4 veces**/
+	    		        }else if(Fase == 2) {
+	    		        	
+	    		        	 if(RubyCraft.cliente && !this.chat2){
+	    			             
+	    			            
+	    		        		 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase2));
+	    							chat2=true;
+
+	    			    	 }
+	    		        	
+	    		        	if(tick > 400 && !(Tp_hechos == 4)) {
+	    						 
+	    						 Tp_hechos ++;
+	    						 tick = 0; 
+	    					    }
+	    		        	
+	    		        	
+	    		        	if(tick == 140 || tick == 300 && Tp_hechos < 5) {
+	    			    	 Random xrandomt = new Random(); 
+	    				     xrandomtp= xrandomt.nextInt(10);
+	    				     
+	    				     Random zrandomt = new Random(); 
+	    				     zrandomtp = zrandomt.nextInt(10);
+	    			    	 if(!world.isRemote) {
+	    			    		
+	    					 this.setPosition(x - xrandomtp , y, z - zrandomtp);
+	    					 world.updateEntity(this);
+	    					 
+	    					 
+	    			    	 }
+	    			    	    }else if( tick > 700 && Fase == 2) {
+	    			    		      Fase = 3;
+	    			    		      tick = 0; 	
+	    			    	 }
+	    		        	/**Fase 3 Quita vida al jugador y se cura el**/
+	    		        }else if(Fase == 3) {   	
+	    		        	
+	    		        	if( RubyCraft.cliente && !this.chat3){
+	    			             
+	    			             
+	    		        		Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase3));
+	    							chat3=true;
+
+	    			    	 }
+	    		        	
+	    		        	if(tick == 200) {
+	    		        		this.heal(0.1F);
+	    	                    activarchupaalmas = true;    
+	    		        	
+	    	   						
+	    	   		    	 /**DESACTIVA EL CONTADOR PORQUE YA NO HAY MAS FASES**/
+	    	        	}  else if(tick > 600) {
+	    	        		
+	    	        		Fase = 0;
+	    	        		tick = 0;
+	    	        		activarchupaalmas = false;
+	    	        	
+
+	    	               }
+	    		        }           
 	  }
 }

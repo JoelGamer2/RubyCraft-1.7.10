@@ -34,7 +34,7 @@ public class AlienMob extends EntityMob {
 	 
 	 protected boolean isAIEnabled(){
 	    
-	        return true;
+	        return false;
 	    }
 	 
 	    /**

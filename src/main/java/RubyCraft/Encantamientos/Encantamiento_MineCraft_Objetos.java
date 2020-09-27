@@ -20,6 +20,8 @@ public class Encantamiento_MineCraft_Objetos {
 	
 	@SubscribeEvent
 	public void onPlayerTickEvent(PlayerTickEvent event){
+		
+		
 		if(event.player.getCurrentArmor(0)!= null){
 		     ItemStack botas = event.player.getCurrentArmor(0);
 		     
@@ -38,20 +40,7 @@ public class Encantamiento_MineCraft_Objetos {
 					event.player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 50, j - 1));
 				}
 			}
-	     }if(event.player.inventory.hasItem(RubyCraft.uranio) && event.player.getCurrentArmor(0) != null && event.player.getCurrentArmor(1) != null && event.player.getCurrentArmor(2) != null && event.player.getCurrentArmor(3) != null){
-				ItemStack botasuranio = event.player.getCurrentArmor(0);
-				ItemStack grebasuranio = event.player.getCurrentArmor(1);
-				ItemStack pecherauranio = event.player.getCurrentArmor(2);
-				ItemStack cascouranio = event.player.getCurrentArmor(3);
-			if(botasuranio.getItem() == RubyCraft.botasdeUranio && grebasuranio.getItem() == RubyCraft.PantacasdeUranio && pecherauranio.getItem() == RubyCraft.PetodeUranio && cascouranio.getItem() == RubyCraft.cascodeUranio){
-				event.player.removePotionEffect(Potion.poison.id);
-				
-			}else if(event.player.inventory.hasItem(RubyCraft.uranio)){
-				
-				event.player.addPotionEffect(new PotionEffect(Potion.poison.id, 180, 2));
-			}
-			
-	}
+	     }
 	
   }
 }

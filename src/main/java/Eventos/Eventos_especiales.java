@@ -1,16 +1,18 @@
 package Eventos;
 
+import java.math.BigDecimal;
+
 import Eventos.Halloween.Entidades.BossParca;
 import Eventos.Navidad.Entidades.Lich;
 import Eventos.Navidad.Entidades.YetiLich;
 import RubyCraft.RubyCraft;
 import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
-import RubyCraft.Entidades.Mobs.Entityprueba;
 import RubyCraft.Registrar.Logros;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.WorldTickEvent;
-import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
@@ -27,9 +29,51 @@ public class Eventos_especiales {
 	public static String ParcaFase2 = Parcanombre + "La parca huye de los humanos";
 	public static String ParcaFase3 = Parcanombre + "La parca Chupa las almas";
 	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage().setDamageBypassesArmor();
+	public static boolean chupa_almas;
+	private static BigDecimal Redondeo_por_troncamiento(double x,int numberofDecimals)
+	{
+	       if ( x > 0) {
+	           return new BigDecimal(String.valueOf(x)).setScale(numberofDecimals, BigDecimal.ROUND_FLOOR);
+	       } else {
+	           return new BigDecimal(String.valueOf(x)).setScale(numberofDecimals, BigDecimal.ROUND_CEILING);
+	       }
+	}
+	
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		
+		if(chupa_almas) {
+		if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.EASY)) {
+			event.player.attackEntityFrom(Laparcasellevotualma, 0.5f);
+			}
+			if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.NORMAL)) {
+				event.player.attackEntityFrom(Laparcasellevotualma, 0.8f);
+				}
+			if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.HARD)) {
+				event.player.attackEntityFrom(Laparcasellevotualma, 1.0f);
+				}
+		}
+		//Detecta cuando el jugador muere y pone el mensaje en el chat diciendole las coordenadas
+		if(event.player.isDead && event.player.worldObj.isRemote) {
+			
+		event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.BLUE + event.player.getDisplayName() + EnumChatFormatting.GOLD + " Has Muerto en:" + EnumChatFormatting.GREEN + " X:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posX, 2) + EnumChatFormatting.GREEN + " ,Y:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posY-1, 0) + " " + EnumChatFormatting.GREEN + ",Z:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posZ, 2)  + " "+EnumChatFormatting.GOLD +"Dimension:" + EnumChatFormatting.BLUE + event.player.dimension));
+
+			
+		}
+		if(RubyCraft.cliente) {
+			if(event.player instanceof EntityPlayerMP){
+				
+				EntityPlayerMP player = (EntityPlayerMP) event.player;
+				
+				if(player.func_147099_x().hasAchievementUnlocked(Logros.Es_Navidad) && player.func_147099_x().hasAchievementUnlocked(Logros.Es_verano) && player.func_147099_x().hasAchievementUnlocked(Logros.Es_Hallowen) && !player.func_147099_x().hasAchievementUnlocked(Logros.Juega_todos_los_eventos)) {
+					
+					event.player.addStat(Logros.Juega_todos_los_eventos, 1);
+					event.player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Platino, 10));
+					event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GREEN + "Por jugar a todos los eventos del juego se te a " + EnumChatFormatting.GREEN + "dado 10 de platino"));
+					
+				}
+				
+			}
+			}
 	//event.player.addChatComponentMessage(new ChatComponentText(YetiLich.Fase + ""));
 		
 		/**if(Control_de_Version.Version_de_desarrolador && event.player.inventory.hasItemStack(new ItemStack(RubyCraft.bloque_del_crea_caminos, 1))) {
@@ -68,6 +112,8 @@ public class Eventos_especiales {
 			event.player.addStat(Logros.Es_verano, 1);
 			Iniciadosesion = true;
 		}
+		
+		
 		//Halloween evento 
 		
 		if(RubyCraft.HalloWen == true && !Iniciadosesion) {
@@ -75,7 +121,7 @@ public class Eventos_especiales {
 			event.player.addStat(Logros.Es_Hallowen, 1);
 			
 		}
-		
+		/**
 		if(BossParca.Activo) {
 			if (BossParca.Fase == 3 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
@@ -111,7 +157,7 @@ public class Eventos_especiales {
 				musica = true;
 			}
 		
-	}
+	}**/
 }
 	
 	
@@ -120,14 +166,14 @@ public class Eventos_especiales {
 	public void onworldtick(WorldTickEvent event) {
 	
 		
-		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && Entityprueba.Activo) {
+		/**if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && Entityprueba.Activo) {
 			Entityprueba.tick=0;
 			Entityprueba.Fase=-1;
 			Entityprueba.Activo=false;
 
 			
 		}
-		
+		**/
 		
 		
 		if(event.world.difficultySetting == EnumDifficulty.PEACEFUL && BossParca.Activo && RubyCraft.HalloWen) {
@@ -151,6 +197,7 @@ public class Eventos_especiales {
 		
 		
 		//Halloween evento 
+		/**
 		if(BossParca.Activo) {
 		if (RubyCraft.cliente == true && Minecraft.getMinecraft().currentScreen == null) {
 
@@ -158,28 +205,28 @@ public class Eventos_especiales {
 				BossParca.chat1 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase1));
 
-			}
+					}
 
 			if (!BossParca.chat2 && BossParca.Fase == 2 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 				BossParca.chat2 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase2));
 
-			}
+					}
 
 			if (!BossParca.chat3 && BossParca.Fase == 3 && BossParca.Activo && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 				BossParca.chat3 = true;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(ParcaFase3));
-
+				
 			}
 
-		/**	if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName()) && RubyCraft.HalloWen && !RubyCraft.Navidad) {
+		if (BossParca.Activo && !musica && !(Generator_Boss.NombreJugador == Minecraft.getMinecraft().thePlayer.getDisplayName()) && RubyCraft.HalloWen && !RubyCraft.Navidad) {
 
 				Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE,1.0F);
 
 				musica = true;
-			          }**/
+			          }
 		         }
-	        }
+	  }**/
           
 	}
 	

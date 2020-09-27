@@ -6,8 +6,8 @@ import net.minecraft.block.BlockStairs;
 public class Escalera_Base extends BlockStairs{
 
 
-    public Escalera_Base(Block obsidian, int par3) {
-    	super(obsidian, par3);	
+    public Escalera_Base(Block RubyCraft, int par3) {
+    	super(RubyCraft, par3);	
 		 this.setLightOpacity(-999999);
 	}
 

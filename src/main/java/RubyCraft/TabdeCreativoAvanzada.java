@@ -15,7 +15,7 @@ public class TabdeCreativoAvanzada extends CreativeTabs {
 	public Item getTabIconItem() {
 		
 		   return Item.getItemFromBlock(RubyCraft.MesadeTrabajodeRuby);
-		   
+		
 	}
 
 	@Override

@@ -313,7 +313,11 @@ public class Entityprueba extends EntityMob implements IBossDisplayData {
 			// worldObj.spawnEntityInWorld(mob);
 	        	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
 	                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-	           //      player.playSound("random.fizz", 1.0F, 1.0F);
+	           
+	                 player.setHealth(player.getMaxHealth()-2.0f);
+	                 if(rand.nextInt(10) ==1) {
+	                 this.setPosition(player.posX, player.posY+2, player.posZ);
+	                 }
 	        	 }
 	        	
 	        	

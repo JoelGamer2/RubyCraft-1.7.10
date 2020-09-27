@@ -112,6 +112,7 @@ public class Ver_fecha_calendario_usuario {
 				ano = calendar.get(calendar.YEAR);
 				ano = ano - 2017;
 			}**/
+	    	
 			//Testear Navidad
 		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad && Control_de_Version.Navidad_Activar == false){
 		       Verificar_Fecha.Navidad = true;
@@ -120,11 +121,9 @@ public class Ver_fecha_calendario_usuario {
 		       }else if(!RubyCraft.cliente) {
 		    	   RubyCraft.Navidad = true;
 					Crafteos.IniciarCrafteosNavidad();
-						 IniciarItemsEventos.Iniciartodo();
-						 
+						 IniciarItemsEventos.Iniciartodo();				 
 		    	   
-		       }
-		       
+		       } 
 		      //Testear el Dia de Los Inocentes
 	    		if(calendar.get(2) + 1 == 12 && calendar.get(5) == 28){
 	    			Crafteos.IniciarCrafteosDiadelosInocentes();
@@ -140,9 +139,7 @@ public class Ver_fecha_calendario_usuario {
 		  		       }else if(!RubyCraft.cliente) {
 				    	   RubyCraft.HalloWen = true;
 							Crafteos.IniciarCrafteosHallowen();
-							IniciarItemsEventos.Iniciartodo();
-				    	  
-				    	   
+							IniciarItemsEventos.Iniciartodo();    	   
 				       }
 		    	
 		    	}else{
@@ -166,7 +163,6 @@ public class Ver_fecha_calendario_usuario {
 		    		}
 		    	}
 		    } 
-		
 	}
 	
 }

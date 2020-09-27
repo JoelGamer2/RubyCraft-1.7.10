@@ -12,13 +12,11 @@ public class RenderBossparca extends RenderLiving {
 	private static final ResourceLocation Textura = new ResourceLocation(RubyCraft.modid + ":textures/entity/Eventos/BossParca.png");
 	
 	public RenderBossparca(ModelBase mod, float f) {
-		super(mod, f);
-		
+		super(mod, f);	
 	}
 
 	protected ResourceLocation getEntityTexture(BossParca entity){
 		return Textura;
-		
 	}
 	
 	protected ResourceLocation getEntityTexture(Entity entity){

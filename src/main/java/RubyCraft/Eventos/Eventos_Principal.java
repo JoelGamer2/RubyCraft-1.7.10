@@ -1,6 +1,7 @@
 package RubyCraft.Eventos;
 
 import Eventos.Eventos_especiales;
+import RubyCraft.RubyCraft;
 import RubyCraft.Teclas.Evento_Teclas;
 import cpw.mods.fml.common.FMLCommonHandler;
 
@@ -26,8 +27,9 @@ public class Eventos_Principal {
 		
 		FMLCommonHandler.instance().bus().register(new ConsigueUranio());
 		
+		if(RubyCraft.cliente) {
 		FMLCommonHandler.instance().bus().register(new Evento_Teclas());
-		
+		}
 		FMLCommonHandler.instance().bus().register(new CrafteaMesadeConjuraciones());
 		
 		FMLCommonHandler.instance().bus().register(new Totem());
@@ -36,7 +38,7 @@ public class Eventos_Principal {
 		FMLCommonHandler.instance().bus().register(new MataParca());
 		
 		
-	//	FMLCommonHandler.instance().bus().register(new QuitarVidaSiUranio());
+		FMLCommonHandler.instance().bus().register(new QuitarVidaSiUranio());
 		
 	
   }

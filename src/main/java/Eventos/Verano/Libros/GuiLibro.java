@@ -27,7 +27,7 @@ public class GuiLibro extends GuiContainer{
 	
 	public GuiLibro(InventoryPlayer inv, World world, int x, int y, int z)
     {
-        super(new ContainerLibro(inv, world, x, y, z));
+        super(new ContainerLibro());
     }
 	
 	

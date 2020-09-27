@@ -51,6 +51,8 @@ achievement.Es_Verano=Es verano wiii!
 achievement.Es_Verano.desc=Juega con RubyCraft en Verano
 achievement.Matar_Parca=Parca aniquilada
 achievement.Matar_Parca.desc=Mata una parca en Halloween
+achievement.Juega_todos_los_eventos=Juega todo yupiii!
+achievement.Juega_todos_los_eventos.desc=Juega a todos los eventos de Temporada de RubyCraft
 
 enchantment.Botas_de_Velocidad=Botas de Velocidad
 enchantment.Grebas_de_Regeneracion=Grebas de Regeneracion
@@ -69,7 +71,7 @@ gui.Mesa_de_Platino.name=Mesa de Platino
 gui.NavidadConvertidor.name=Feliz Navidad
 
 CategoriaTecla.RubyCraft.name=RubyCraft
-Tecla.Prueba.name=Prueba
+Tecla.Ver_updates.name=Ver updates
 
 generator.Ruby=Generacion Ruby
 
@@ -182,6 +184,8 @@ item.moviemientonaranja.name=Disco de musica
 item.moviemientonaranja.desc=Movimiento Naranja
 item.bossparca.name=Disco de musica
 item.bossparca.desc=Musica Boss Parca
+item.palacioeterno.name=Disco de musica
+item.palacioeterno.desc=SoundTrack de la raid del wow Palacio eterno
 
 tile.Escalera_de_Diorita_Pulida.name=Escalera de Diorita Pulida
 tile.Escalera_de_Granito_Pulido.name=Escalera de Granito Pulido
@@ -239,6 +243,9 @@ tile.Escalera_Cemento_Endurecido_Gris.name=Escalera de Cemento Gris
 tile.Escalera_Cemento_Endurecido_Gris_Oscuro.name=Escalera de Cemento Gris Oscuro
 tile.Escalera_de_tronco_de_madera_verde.name=Escalera de Tronco de Madera Verde
 tile.Escalera_de_trondo_de_madera_azul.name=Escalera de Tronco de Madera Azul
+tile.Escalera_Bloque_de_cobre.name=Escalera de Cobre
+tile.Escalera_de_platino.name=Escalera de Platino
+tile.Escalera_de_Ladrillo_de_piedra_del_end.name=Escalera de Ladrillo de piedra del end
 
 tile.Bloquederuby.name=Bloque de Ruby
 tile.Bloqueluminiscente.name=Bloque Luminiscente
@@ -258,7 +265,7 @@ tile.Ladrillos_de_prismarina.name=Ladrillos de Prismarina
 tile.linterna_de_mar.name=Linterna de Mar
 tile.Bloque_de_verruga.name=Bloque de Verruga Avisal
 tile.Bloque_de_Blaze.name=Bloque de Blaze
-tile.end_stone.name=Ladrillo de Piedra del End
+tile.Ladrillo_de_piedra_del_end.name=Ladrillo de Piedra del End
 tile.Bloque_de_azucar.name=Bloque de Azucar
 tile.Cuarzo_azul.name=Cuarzo Azul
 tile.Cuarzo_verde.name=Cuarzo Verde
@@ -373,6 +380,7 @@ tile.coral_amarillo_muerto.name=Coral Amarillo Muerto
 tile.coral_rosa_muerto.name=Coral Rosa Muerto
 tile.coral_morado_muerto.name=Coral Morado Muerto
 tile.bloque_de_alga.name=Bloque de alga seca
+tile.Hojas_verdiles.name=Hojas verdiles
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=siguiente
@@ -428,7 +436,7 @@ tile.Aguamarina.name=Aguamarina
 //////////////////Plantas
 
 tile.Planta_de_algodon.name=Planta de algodon
-tile.Algodon_Salvaje=Algodon salvaje
+tile.Algodon_Salvaje.name=Algodon salvaje
 
 //////////////////Armas
 

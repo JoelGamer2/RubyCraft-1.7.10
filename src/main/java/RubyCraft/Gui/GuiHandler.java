@@ -1,6 +1,5 @@
 package RubyCraft.Gui;
 
-import Eventos.Verano.Libros.ContainerLibro;
 import Eventos.Verano.Libros.GuiDocumentoPerdido;
 import Eventos.Verano.Libros.GuiLibro;
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
@@ -68,7 +67,7 @@ public class GuiHandler implements IGuiHandler {
 			}
 			
 		}**/
-		
+		/**
 		//EVENTO VERANO
 		
 		if (ID == Clase_Principal_Evento_Verano.guiIdLibro)
@@ -97,7 +96,7 @@ public class GuiHandler implements IGuiHandler {
 				}
 			}
 			
-		}
+		}**/
 		return null;
 	}
  

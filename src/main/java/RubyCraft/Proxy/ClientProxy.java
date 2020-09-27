@@ -9,6 +9,7 @@ import Eventos.Navidad.Entidades.Render.RenderLich;
 import Eventos.Navidad.Entidades.Render.RenderYetiLich;
 import Eventos.Navidad.Entidades.Render.RenderYetiLichestatua;
 import Eventos.Navidad.Entidades.Render.Modelo.RenderModelYetiLich;
+import Eventos.Navidad.Entidades.Render.Modelo.RenderModeloYetiLichEstatua;
 import Eventos.Navidad.RenderModel.AltarCentral_Item;
 import Eventos.Navidad.RenderModel.AltarCentral_Renderizado_Textura;
 import Eventos.Navidad.RenderModel.Altar_Renderizado_Item;
@@ -95,7 +96,7 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerEntityRenderingHandler(Patxis.class, new RenderPatxisMob(new PatxisRenderModel(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(BossParca.class, new RenderBossparca(new ModelBiped(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(YetiLich.class, new RenderYetiLich(new RenderModelYetiLich(), 0));
-	    RenderingRegistry.registerEntityRenderingHandler(YetiLichEstatua.class, new RenderYetiLichestatua(new RenderModelYetiLich(), 0));
+	    RenderingRegistry.registerEntityRenderingHandler(YetiLichEstatua.class, new RenderYetiLichestatua(new RenderModeloYetiLichEstatua(), 0));
 	    RenderingRegistry.registerEntityRenderingHandler(Lich.class, new RenderLich(new ModelBiped(), 0));
         RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua_Guardian.class, new Render_Elemental_de_agua_guardian(new Elemental_de_agua_guardian_Modelo(), 0));
         RenderingRegistry.registerEntityRenderingHandler(Elemental_de_Agua_Soldado.class, new Render_Elemental_de_agua_soldado(new Elemental_de_agua_soldado_Modelo(), 0));

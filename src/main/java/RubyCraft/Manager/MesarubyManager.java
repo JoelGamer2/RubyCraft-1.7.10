@@ -11,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.world.World;
@@ -37,6 +38,7 @@ public class MesarubyManager
         recipes = new ArrayList();
         //Con Forma
     
+       this.recipes.addAll(CraftingManager.getInstance().getRecipeList()); //Añade los crafteos de la mesa del vanilla
         
         //Recipe Sorter
         Collections.sort(this.recipes, new MesadeRubyRecipeSorter(this));

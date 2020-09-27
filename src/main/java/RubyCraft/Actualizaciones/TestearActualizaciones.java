@@ -4,6 +4,7 @@ package RubyCraft.Actualizaciones;
 import java.util.UUID;
 
 import RubyCraft.Control_de_Version;
+import RubyCraft.Errores;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
@@ -79,8 +80,8 @@ public class TestearActualizaciones {
 		try {
 			new otro_mysql().iniciar(nombre,uuid);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			Errores.errores(Minecraft.getMinecraft(), TestearActualizaciones.class.toString(), e.toString(), false);
 		}
 	}
 	

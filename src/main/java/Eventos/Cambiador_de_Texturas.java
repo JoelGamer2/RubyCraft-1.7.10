@@ -33,9 +33,7 @@ public class Cambiador_de_Texturas {
 		RubyCraft.Prismarina_oscura.setBlockTextureName(Navidad + "Prismarina_oscura");
 	    RubyCraft.Ladrillos_de_prismarina.setBlockTextureName(Navidad + "Ladrillos_de_prismarina");
 	    RubyCraft.Bloquepurpur.setBlockTextureName(Navidad + "Bloquepurpur");
-	  
-	    
-		
+
 	}
 	
 	public static void Texturas_Normales(){
@@ -64,7 +62,6 @@ public class Cambiador_de_Texturas {
 		RubyCraft.Ladrillos_de_prismarina.setBlockTextureName(HalloWen + "Ladrillos_de_prismarina");
 	    RubyCraft.Bloquepurpur.setBlockTextureName(HalloWen + "Bloquepurpur");
 
-	
 	}
 	
 }

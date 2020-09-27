@@ -6,8 +6,6 @@ import Eventos.EventosTab;
 import Eventos.IniciarItemsEventos;
 import Eventos.Ver_fecha_calendario_usuario;
 import Eventos.Verificar_Fecha;
-import Eventos.Halloween.Entidades.BossParca;
-import Eventos.Verano.Generacion.Generar_Enemigos_por_Mineo;
 import Eventos.Verano.Principal.Clase_Principal_Evento_Verano;
 import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Actualizaciones.TestearActualizaciones;
@@ -67,6 +65,7 @@ import RubyCraft.Bloques.Diorita_Pulida;
 import RubyCraft.Bloques.Generar_Dragon;
 import RubyCraft.Bloques.Granito;
 import RubyCraft.Bloques.Granito_Pulido;
+import RubyCraft.Bloques.Hojas_verdiles;
 import RubyCraft.Bloques.Ladrillo_Marino;
 import RubyCraft.Bloques.Ladrillo_de_Andesita;
 import RubyCraft.Bloques.Ladrillo_de_Diorita;
@@ -445,7 +444,7 @@ public static Block coral_amarillo_muerto;
 public static Block coral_rosa_muerto;
 public static Block coral_morado_muerto;
 public static Block bloque_de_alga;
-
+public static Block Hojas_verdiles;
 
 //mesa de Crafteo
 public static Block Mesa_de_trabajo_de_acacia;
@@ -542,9 +541,11 @@ public void Preinit(FMLPreInitializationEvent event){
 	if(Control_de_Version.Verano_Activar) {
 		Verano = true;
 	}
-	BossParca.Activo = false;
+	
 	if(event.getSide()==Side.CLIENT) {
 		cliente = true;
+	}else {
+		cliente = false;
 	}
 	
 	
@@ -592,8 +593,9 @@ MinecraftForge.EVENT_BUS.register(new DropeoMobsIntegracionHandler());
 
 
 //MinecraftForge.EVENT_BUS.register(new Generar_Enemigos_por_Mineo());
-
-Teclas_Principal.Iniciar();	
+if(RubyCraft.cliente) {
+Teclas_Principal.Iniciar();
+}
 //Herramientas
 Picoderuby = new picoderuby(rubyToolMaterial).setUnlocalizedName("Picoderuby").setTextureName(modid + ":Picoderuby").setCreativeTab(Rubycrafttab);
 Hachaderuby = new hachaderuby(rubyToolMaterial).setUnlocalizedName("Hachaderuby").setTextureName(modid + ":hacha_de_ruby").setCreativeTab(Rubycrafttab);
@@ -836,7 +838,7 @@ GameRegistry.registerItem(moviemientonaranja,moviemientonaranja.getUnlocalizedNa
 bossparca = new CancionesBase("bossparca").setUnlocalizedName("bossparca");
 GameRegistry.registerItem(bossparca, bossparca.getUnlocalizedName().substring(5));
 
-palacioeterno = new CancionesBase("palacioeterno").setUnlocalizedName("palacioeterno");
+palacioeterno = new CancionesBase("palacioeterno").setUnlocalizedName("palacioeterno").setCreativeTab(Rubycrafttab);
 GameRegistry.registerItem(palacioeterno, palacioeterno.getUnlocalizedName().substring(5));
 
 //Bloques
@@ -917,7 +919,7 @@ GameRegistry.registerBlock(Bloque_de_Blaze, Bloque_de_Blaze.getUnlocalizedName()
 Bloque_de_Blaze.setHarvestLevel("pickaxe", 2);
 Bloque_de_Blaze.setLightLevel(299999999999999.0F);
 	
-Ladrillo_de_piedra_del_end = new Ladrillo_de_piedra_del_end(Material.rock).setBlockName("Ladrillo_de_piedra_del_end").setBlockTextureName(modid + ":Ladrillo_de_piedra_del_end").setCreativeTab(Rubycrafttab).setHardness(0.6F);
+Ladrillo_de_piedra_del_end = new Ladrillo_de_piedra_del_end(Material.rock).setBlockName("Ladrillo_de_piedra_del_end").setBlockTextureName(modid + ":Ladrillo_de_piedra_del_end").setCreativeTab(Rubycrafttab).setHardness(0.6F).setResistance(0.8F);
 GameRegistry.registerBlock(Ladrillo_de_piedra_del_end, Ladrillo_de_piedra_del_end.getUnlocalizedName().substring(5));
 
 Bloque_de_azucar = new Bloque_de_azucar(Material.rock).setBlockName("Bloque_de_azucar").setBlockTextureName(modid + ":Bloque_de_azucar").setCreativeTab(Rubycrafttab).setHardness(0.8F);
@@ -1042,7 +1044,7 @@ GameRegistry.registerBlock(Mesa_de_Trabajo_de_Zafiro_Basica, Mesa_de_Trabajo_de_
 Ladrillo_de_Infrapiedra = new Ladrillo_de_Infrapiedra(Material.rock).setBlockName("Ladrillo_de_Infrapiedra").setBlockTextureName(modid + ":Ladrillo_de_Infrapiedra").setCreativeTab(Rubycrafttab).setHardness(0.5F);
 GameRegistry.registerBlock(Ladrillo_de_Infrapiedra, Ladrillo_de_Infrapiedra.getUnlocalizedName().substring(5));
 
-Bloque_de_Cobre = new Bloque_de_Cobre(Material.iron).setBlockName("Bloque_de_Cobre").setBlockTextureName(modid + ":Bloque_de_Cobre").setCreativeTab(Rubycrafttab).setHardness(3.0F);
+Bloque_de_Cobre = new Bloque_de_Cobre(Material.iron).setBlockName("Bloque_de_Cobre").setBlockTextureName(modid + ":Bloque_de_Cobre").setCreativeTab(Rubycrafttab).setHardness(3.0F).setResistance(3.0F);
 GameRegistry.registerBlock(Bloque_de_Cobre, Bloque_de_Cobre.getUnlocalizedName().substring(5));
 Bloque_de_Cobre.setHarvestLevel("pickaxe", 1);
 
@@ -1050,7 +1052,7 @@ Bloque_de_Aluminio = new Bloque_de_Aluminio(Material.iron).setBlockName("Bloque_
 GameRegistry.registerBlock(Bloque_de_Aluminio, Bloque_de_Aluminio.getUnlocalizedName().substring(5));
 Bloque_de_Aluminio.setHarvestLevel("pickaxe", 1);
 
-Bloque_de_Platino = new Bloque_de_Platino(Material.iron).setBlockName("Bloque_de_Platino").setBlockTextureName(modid + ":Bloque_de_Platino").setCreativeTab(Rubycrafttab).setHardness(3.0F);
+Bloque_de_Platino = new Bloque_de_Platino(Material.iron).setBlockName("Bloque_de_Platino").setBlockTextureName(modid + ":Bloque_de_Platino").setCreativeTab(Rubycrafttab).setHardness(13.0F).setResistance(13.0F);
 GameRegistry.registerBlock(Bloque_de_Platino, Bloque_de_Platino.getUnlocalizedName().substring(5));
 Bloque_de_Platino.setHarvestLevel("pickaxe", 2);
 
@@ -1151,8 +1153,11 @@ GameRegistry.registerBlock(coral_morado, coral_morado.getUnlocalizedName().subst
 coral_morado_muerto = new coral_morado_muerto(Material.cloth).setBlockName("coral_morado_muerto").setBlockTextureName(modid + ":coral_morado_muerto").setCreativeTab(Rubycrafttab).setHardness(1.0F).setResistance(1.0F);
 GameRegistry.registerBlock(coral_morado_muerto, coral_morado_muerto.getUnlocalizedName().substring(5));
 
-bloque_de_alga = new bloque_de_alga(Material.cloth).setBlockName("bloque_de_alga").setBlockTextureName(modid + ":bloque_de_alga").setCreativeTab(Rubycrafttab).setHardness(0.9F).setResistance(0.9F);
+bloque_de_alga = new bloque_de_alga(Material.cloth).setBlockName ("bloque_de_alga").setBlockTextureName(modid + ":bloque_de_alga").setCreativeTab(Rubycrafttab).setHardness(0.9F).setResistance(0.9F);
 GameRegistry.registerBlock(bloque_de_alga, bloque_de_alga.getUnlocalizedName().substring(5));
+
+Hojas_verdiles = new Hojas_verdiles(Material.leaves,true).setBlockName("Hojas_verdiles").setBlockTextureName(modid + ":Hojas_verdiles").setCreativeTab(Rubycrafttab).setHardness(0.4F).setResistance(0.4F);
+GameRegistry.registerBlock(Hojas_verdiles, Hojas_verdiles.getUnlocalizedName().substring(5));
 
 //Maquinas
 

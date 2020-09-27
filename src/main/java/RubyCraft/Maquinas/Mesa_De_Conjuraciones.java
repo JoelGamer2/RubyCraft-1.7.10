@@ -25,8 +25,7 @@ public class Mesa_De_Conjuraciones extends Block {
 	public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int q, float a, float b, float c){	
 		if(player.isSneaking() && RubyCraft.Dia_de_Los_Inocentes && world.isRemote){
 			player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Ten cuidado Hoy es el dia de los Santos inocentes Hoy es el dia donde cosas de este mod cambiaran para hacerte inocentadas y esto ya estaba previsto xD espero que te lo pases muy bien el dia de hoy"));
-
-			
+		
 		  }else if(!player.isSneaking()){
 		
 			

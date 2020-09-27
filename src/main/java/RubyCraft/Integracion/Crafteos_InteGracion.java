@@ -11,27 +11,18 @@ public class Crafteos_InteGracion {
 		
 		}
 		public static void CrafteoMesaNormal(){
-			
 		
-				
-				
 		  }	
 	
 	public static void IntegracionMesadeRuby(){
-			
-		
-		
-		
+
 	}
 	
 	public static void IntegracionMesadeZafiro(){
-		
-		
-		
+
 	}
 	
 public static void IntegracionTransformadordeLosasaBloques(){
-		
-	
+
    }
 }

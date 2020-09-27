@@ -5,6 +5,7 @@ import java.awt.Color;
 import RubyCraft.Entidades.Mobs.AlienMob;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.entity.monster.EntityCaveSpider;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntitySlime;
@@ -34,7 +35,7 @@ public class BiomeGenRuby extends BiomeGenBase {
         this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityCreeper.class, 100, 4, 4));
         this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntitySlime.class, 100, 4, 4));
         this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(AlienMob.class, 100, 7 , 7));
-        
+        this.spawnableCaveCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityCaveSpider.class, 10, 7, 7));
 		
 		
 		this.topBlock = Blocks.grass;

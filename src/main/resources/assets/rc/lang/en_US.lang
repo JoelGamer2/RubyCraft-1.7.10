@@ -51,6 +51,8 @@ achievement.Es_Verano=Is Summer! :D
 achievement.Es_Verano.desc=Play RubyCraft in Summer
 achievement.Matar_Parca=The parca is dead...
 achievement.Matar_Parca.desc=Kill the Parca in Halloween
+achievement.Juega_todos_los_eventos=Play all yupii!
+achievement.Juega_todos_los_eventos.desc=Play all seasonal events of RubyCraft
 
 enchantment.Botas_de_Velocidad=Speed Boots
 enchantment.Grebas_de_Regeneracion=Regeneration Leggins
@@ -69,7 +71,7 @@ gui.Mesa_de_Platino.name=Platinum Table
 gui.NavidadConvertidor.name=Happy Crishmas
 
 CategoriaTecla.RubyCraft.name=RubyCraft
-Tecla.Sans.name=Test
+Tecla.Ver_updates.name=Show Update
 
 generator.Ruby=Ruby Generation
 
@@ -182,6 +184,8 @@ item.moviemientonaranja.name=Music disc
 item.moviemientonaranja.desc=Orange Movement
 item.bossparca.name=Disco de musica
 item.bossparca.desc=Musica Boss Parca
+item.palacioeterno.name=Music disc
+item.palacioeterno.desc=SoundTrack of the Ethernal Palace raid of Wow game
 
 tile.Escalera_de_Diorita_Pulida.name=Polished Diorite Stair
 tile.Escalera_de_Granito_Pulido.name=Polished Granite Stair
@@ -239,6 +243,9 @@ tile.Escalera_Cemento_Endurecido_Gris.name=Griss Concrete Stair
 tile.Escalera_Cemento_Endurecido_Gris_Oscuro.name=Dark Griss Concrete Stair
 tile.Escalera_de_tronco_de_madera_verde.name=Green Log Stair
 tile.Escalera_de_trondo_de_madera_azul.name=Blue Log Stair
+tile.Escalera_Bloque_de_cobre.name=Copper Stair
+tile.Escalera_de_platino.name=Platinum Stair
+tile.Escalera_de_Ladrillo_de_piedra_del_end.name=End Brick Stair
 
 tile.Bloquederuby.name=Ruby Block
 tile.Bloqueluminiscente.name=Luminiscent Block 
@@ -373,6 +380,7 @@ tile.coral_amarillo_muerto.name=Died Yellow Kelp
 tile.coral_rosa_muerto.name=Died Pink Kelp
 tile.coral_morado_muerto.name=Died Purple Kelp
 tile.bloque_de_alga.name=Dried Kelp Block
+tile.Hojas_verdiles.name=Green Leaves
 
 //-------------------------Libro-------------------------------//
 boton.siguiente.name=next
@@ -428,7 +436,7 @@ tile.Aguamarina.name=Aquamarine
 //////////////////Plantas
 
 tile.Planta_de_algodon.name=Cotton plant
-tile.Algodon_Salvaje=Wild Cotton
+tile.Algodon_Salvaje.name=Wild Cotton
 
 //////////////////Armas
 

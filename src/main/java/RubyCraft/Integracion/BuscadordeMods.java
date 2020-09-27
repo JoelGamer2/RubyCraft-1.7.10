@@ -9,8 +9,6 @@ public class BuscadordeMods {
 	public BuscadordeMods() {
 		
 	//	this.isOriginsLoaded = Loader.isModLoaded("or");
-		
-		
 	}
 	
 	public static void Mensaje(){

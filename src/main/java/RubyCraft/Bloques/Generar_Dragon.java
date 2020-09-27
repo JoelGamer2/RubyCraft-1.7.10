@@ -17,12 +17,12 @@ public class Generar_Dragon extends Block {
 	}
 	
 	public boolean onBlockActivated(World world, int x ,int y , int z, EntityPlayer player, int q, float a, float b ,float c){
-		if(!player.isSneaking()){
+		if(!player.isSneaking() && player.dimension == 1){
 		  if(world.getBlock(x, y + 1, z) == Blocks.dragon_egg){
 			  world.setBlock(x, y + 1, z, Blocks.air);
 			    world.setBlock(x, y, z, Blocks.air);
 			    if(!world.isRemote) {
-			    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + "El " + EnumChatFormatting.RED + "Dragon " + EnumChatFormatting.GREEN + "Generado con Exito"));
+			    player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GREEN + "El " + EnumChatFormatting.RED + "Dragon " + EnumChatFormatting.GREEN + "Generado con Exito"));
 			    }
 			    	  EntityDragon Dragon = new EntityDragon(world);
 	                   Dragon.setPosition(x, y + 10, z);
@@ -30,8 +30,11 @@ public class Generar_Dragon extends Block {
 	                   world.spawnEntityInWorld(Dragon);
 	                   }
 			    }else if(!world.isRemote){
-					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.RED + player.getDisplayName() + " Necesitas poner un huevo de Dragon " + EnumChatFormatting.RED + "arriba"));
+					   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.RED + player.getDisplayName() + " Necesitas poner un huevo de Dragon " + EnumChatFormatting.RED + "arriba"));
 			    }
+		  }else if(!(player.dimension==1) && !world.isRemote) {
+			   player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "]" + EnumChatFormatting.GREEN + " Solo se puede generar el dragon en la dimension: " + EnumChatFormatting.RED + "The end"));
+
 		  }
 		
 		return true;

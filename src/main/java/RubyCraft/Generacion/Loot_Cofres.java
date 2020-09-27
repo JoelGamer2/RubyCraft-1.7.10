@@ -12,6 +12,8 @@ public class Loot_Cofres {
 		ChestGenHooks.getInfo(ChestGenHooks.BONUS_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(RubyCraft.ruby), 1  ,5 , 5));
 		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(RubyCraft.Platino), 1, 10, 4));
 		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(RubyCraft.zafiro), 1, 3, 2));
+		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(RubyCraft.Totem_de_la_no_muerte), 1, 1, 1));
+		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(RubyCraft.alga), 1, 3, 2));
 		//ChestGenHooks.getInfo(ChestGenHooks.CATEGORY).addItem(new WeightedRandomChestContent(new ItemStack(YourItem), Min, Max, Rarity))		
 	}
 

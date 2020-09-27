@@ -13,6 +13,7 @@ public class Combustible_Principal {
 	    GameRegistry.registerFuelHandler(new CombustibleTroncoAzul());
 	    GameRegistry.registerFuelHandler(new CombustibleTroncoVerde());
 	    GameRegistry.registerFuelHandler(new CombustibleMagma());
+	    GameRegistry.registerFuelHandler(new Combustible_uranio());
 	    
 	    //No Combustibles
 	 	GameRegistry.registerFuelHandler(new NoCombustibleMesaRuby());

@@ -83,6 +83,9 @@ public class Escaleras_Principal {
 	public static Block Escalera_de_Bloque_Reforzado_Tier_V;
 	public static Block Escalera_de_tronco_de_madera_verde;
 	public static Block Escalera_de_trondo_de_madera_azul;
+	public static Block Escalera_Bloque_de_cobre;
+	public static Block Escalera_de_platino;
+	public static Block Escalera_de_Ladrillo_de_piedra_del_end;
 	
 	public static Block Escalera_Cemento_Endurecido_Negro;
 	public static Block Escalera_Cemento_Endurecido_Naranja;
@@ -164,9 +167,9 @@ public class Escaleras_Principal {
 		Escalera_Cemento_Endurecido_Gris_Oscuro = new Escalera_Base(Cementos_Bases.Cemento_Endurecido_Gris_Oscuro, 0).setBlockName("Escalera_Cemento_Endurecido_Gris_Oscuro");
 		Escalera_de_tronco_de_madera_verde = new Escalera_Base(RubyCraft.troncoverde, 0).setBlockName("Escalera_de_tronco_de_madera_verde");
 		Escalera_de_trondo_de_madera_azul = new Escalera_Base(RubyCraft.tronco_Azul, 0).setBlockName("Escalera_de_trondo_de_madera_azul");
-
-		
-		
+		Escalera_Bloque_de_cobre = new Escalera_Base(RubyCraft.Bloque_de_Cobre, 0).setBlockName("Escalera_Bloque_de_cobre");
+		Escalera_de_platino = new Escalera_Base(RubyCraft.Bloque_de_Platino, 0).setBlockName("Escalera_de_platino");
+		Escalera_de_Ladrillo_de_piedra_del_end = new Escalera_Base(RubyCraft.Ladrillo_de_piedra_del_end, 0).setBlockName("Escalera_de_Ladrillo_de_piedra_del_end");
 		
 	}
 	
@@ -228,7 +231,10 @@ public class Escaleras_Principal {
 		RegitrarEscalera(Escalera_Cemento_Endurecido_Gris_Oscuro, 1.0F, 2.0F, 2);
 		RegitrarEscalera(Escalera_de_tronco_de_madera_verde, 1.0F, 0.5F, 1);
 		RegitrarEscalera(Escalera_de_trondo_de_madera_azul, 1.0F, 0.5F, 1);
-        
+		RegitrarEscalera(Escalera_Bloque_de_cobre, 3.0F, 3.0F, 1);
+		RegitrarEscalera(Escalera_de_platino, 13.0F, 13.0F, 2);
+        RegitrarEscalera(Escalera_de_Ladrillo_de_piedra_del_end, 0.6F, 0.8F, 1);
+		
 	}
 	
 	public static void RegistrarCrafteos(){
@@ -288,6 +294,9 @@ public class Escaleras_Principal {
 		Crafteos(Escalera_Cemento_Endurecido_Gris_Oscuro, Cementos_Bases.Cemento_Endurecido_Gris_Oscuro);
 		Crafteos(Escalera_de_tronco_de_madera_verde, RubyCraft.troncoverde);
 		Crafteos(Escalera_de_trondo_de_madera_azul, RubyCraft.tronco_Azul);
+		Crafteos(Escalera_Bloque_de_cobre, RubyCraft.Bloque_de_Cobre);
+		Crafteos(Escalera_de_platino, RubyCraft.Bloque_de_Platino);
+		Crafteos(Escalera_de_Ladrillo_de_piedra_del_end, RubyCraft.Ladrillo_de_piedra_del_end);
 		
 	}
 	

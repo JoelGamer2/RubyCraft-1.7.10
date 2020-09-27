@@ -38,6 +38,8 @@ public class Logros {
     public static Achievement Matar_Parca; 
     
     public static Achievement Es_verano;
+    
+    public static Achievement Juega_todos_los_eventos;
 	
 	public static void Iniciar(){
 		
@@ -55,7 +57,7 @@ public class Logros {
 		CrafteaEspadaZafiro = new Achievement("achievement.CrafteaEspadaZafiro", "CrafteaEspadaZafiro", 9, 8, RubyCraft.Espadadezafiro, CrafteaMesadeZafiro).registerStat();
 		CubretedeZafiros = new Achievement("achievement.Cubremedezafiros", "Cubremedezafiros", 8, 9, RubyCraft.PetodeZafiro, CrafteaMesadeZafiro).registerStat();
 		
-		RevolucionMob = new Achievement("achievement.RevolucionMob", "RevolucionMob", 14, 0, RubyCraft.ruby, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		RevolucionMob = new Achievement("achievement.RevolucionMob", "RevolucionMob", 14, 4, RubyCraft.ruby, (Achievement)null).initIndependentStat().registerStat().setSpecial();
 		
 		ConsigueUranio = new Achievement("achievement.ConsigueUranio", "ConsigueUranio", 11, 5, RubyCraft.uranio, (Achievement)null).initIndependentStat().registerStat();	    
 		
@@ -65,12 +67,13 @@ public class Logros {
 		Amigos_Para_Siempre = new Achievement("achievement.Amigos_Para_Siempre", "Amigos_Para_Siempre", 12, 6, RubyCraft.Totem_de_la_no_muerte, (Achievement)null).initIndependentStat().registerStat().setSpecial();	
 		Siendo_Troleado = new Achievement("achievement.Siendo_Troleado", "Siendo_Troleado", 13, 7, RubyCraft.Bloque_de_Diamante_Trol, Amigos_Para_Siempre).registerStat();
 		
-		Es_Navidad = new Achievement("achievement.Es_Navidad", "Es_Navidad", 15, 7,Items.snowball, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		Es_Navidad = new Achievement("achievement.Es_Navidad", "Es_Navidad", 15, 7,Items.snowball, (Achievement)null).initIndependentStat().registerStat();
 		
-		Es_Hallowen = new Achievement("achievement.Es_Hallowen", "Es_Hallowen", 17,7, Blocks.pumpkin, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		Es_Hallowen = new Achievement("achievement.Es_Hallowen", "Es_Hallowen", 17,7, Blocks.pumpkin, (Achievement)null).initIndependentStat().registerStat();
 
-		Es_verano = new Achievement("achievement.Es_verano", "Es_Verano", 19, 7, Items.water_bucket, (Achievement)null).initIndependentStat().registerStat().setSpecial();
+		Es_verano = new Achievement("achievement.Es_verano", "Es_Verano", 19, 7, Items.water_bucket, (Achievement)null).initIndependentStat().registerStat();
 		
+		Juega_todos_los_eventos = new Achievement("achievement.Juega_todos_los_eventos", "Juega_todos_los_eventos", 17, 9, RubyCraft.Aliento_del_Dragon ,(Achievement)null).initIndependentStat().registerStat().setSpecial();
 		 AchievementPage.registerAchievementPage(new AchievementPage("RubyCraft", new Achievement[]{
 				 MinaRuby, 
 				 HazBloqueDeRuby, 
@@ -101,6 +104,8 @@ public class Logros {
 				 Es_Hallowen,
 				 
 				 Es_verano,
+				 
+				 Juega_todos_los_eventos,
 				 	 
 		 
 		 }));
