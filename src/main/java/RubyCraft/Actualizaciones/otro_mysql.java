@@ -35,7 +35,7 @@ public class otro_mysql {
 		port = 3306;
 		database = "Version_mods";
 		username = "Programas";
-		password = "no la sabras nunca xD obvio";
+		password = "j";
 		table = "Jugadores";
 
 		try {

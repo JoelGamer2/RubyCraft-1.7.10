@@ -547,9 +547,6 @@ public void Preinit(FMLPreInitializationEvent event){
 	}else {
 		cliente = false;
 	}
-	
-	
-	
 	if(RubyCraft.VersionTrol && !Navidad) {
 		VersionTrolActivar();
 	}

@@ -66,7 +66,7 @@ public class TestearActualizaciones {
 			mysql_registro(uuid, nombre);
 			Iniciadosesion = true;
 			activo = true;
-		}else if(!Iniciadosesion && Minecraft.getMinecraft().currentScreen == null) {
+		}else if(!Iniciadosesion && Minecraft.getMinecraft().currentScreen == null && Buscar_Actualizaciones.mysql) {
 			
 			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
 			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();

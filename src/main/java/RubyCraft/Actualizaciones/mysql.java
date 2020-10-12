@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.TimeZone;
+import java.util.UUID;
 
 import RubyCraft.RubyCraft;
 
@@ -34,7 +35,7 @@ public class mysql {
 		port = 3306;
 		database = "Version_mods";
 		username = "Programas";
-		password = "private_compiled";
+		password = "d";
 		table = "Versiones";
 
 		try {
@@ -51,8 +52,8 @@ public class mysql {
 						DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port  + "/" + this.database +"?serverTimezone="+TimeZone.getDefault().getID(),
 								this.username, this.password));
 				
-				 
-				 
+				
+				
 				 mensajes[0]=getStringFromTable("Texto_1", id);
 				 mensajes[1]=getStringFromTable("Texto_2", id);
 				 mensajes[2]=getStringFromTable("Texto_3", id);
@@ -65,13 +66,13 @@ public class mysql {
 					RubyCraft.logger.info( mensajes[0]);
 					RubyCraft.logger.info( mensajes[1]);
 					RubyCraft.logger.info( mensajes[2]);
-					
+				
 				 }
 				 /**COJE EL VALOR DE LA BASE DE DATOS DE CUANTA GENTE SE CONECTO AL MOD LE SUMA 1 Y ACTUALIZA EL VALOR DENTRO DE LA BASE DE DATOS**/
 				     String conexiones = getStringFromTable("Conexiones", id);
 			          int resultado = Integer.parseInt(conexiones) +1;
 			        actualizar_string("Conexiones", Integer.toString(resultado), id);
-			     
+			       
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -85,6 +86,54 @@ public class mysql {
 	}
 
 	
+	
+	public boolean playerExists(UUID uuid) {
+		 
+		try {
+			PreparedStatement statement = getConnection()
+					.prepareStatement("SELECT * FROM " + "Jugadores" + " WHERE UUID=?");
+			statement.setString(1, uuid.toString());
+
+			ResultSet results = statement.executeQuery();
+			if (results.next()) {
+				System.out.println("NOMBRE ENCONTRADO");
+				return true;
+			}
+			 System.out.println("Player NOT Found");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		
+	  }
+		return false;
+	}
+
+public  void createPlayer(final UUID uuid, String nombre) {
+	
+	try {
+		PreparedStatement statement = this.getConnection()
+				.prepareStatement("SELECT * FROM " + "Jugadores" + " WHERE UUID=?");
+		statement.setString(1, uuid.toString());
+		ResultSet results = statement.executeQuery();
+		results.next();
+		System.out.print(1);
+		if (!playerExists(uuid)) {
+			PreparedStatement insert = this.getConnection()
+					.prepareStatement("INSERT INTO " + "Jugadores" + " (NOMBRE,UUID) VALUES (?,?)");
+			insert.setString(2, uuid.toString());
+			insert.setString(1, nombre);
+			insert.executeUpdate();
+
+			System.out.println("Player Inserted");
+		
+	}
+
+	}catch (Exception e) {
+		
+	}
+
+}
+
 	
 	
 	public void actualizar_string(String tabla, String valor, int id)  {
@@ -117,6 +166,8 @@ public String getStringFromTable(String tabla, int id) {
 		}
 	}
 	
+
+
 	public Connection getConnection() {
 		return connection;
 	}

@@ -29,7 +29,7 @@ import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_guardian_Modelo;
 import Eventos.Verano.Entidades.Render.Modelo.Elemental_de_agua_soldado_Modelo;
 import RubyCraft.Control_de_Version;
 import RubyCraft.RubyCraft;
-import RubyCraft.Encantamientos.Encantamiento_MineCraft_Objetos;
+import RubyCraft.Encantamientos.Ecantamientos_evento;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Ruby;
 import RubyCraft.Entidades.Granadas.EntidadGranada_de_Zafiro;
 import RubyCraft.Entidades.Granadas.EntidadGranda_de_Uranio;
@@ -119,7 +119,7 @@ public class ClientProxy extends ServerProxy {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(Principal.altar_central), new AltarCentral_Item(new TileEntityAltarCentral(), new AltarCentral_Renderizado_Textura()));
 		
         //Variado
-		FMLCommonHandler.instance().bus().register(new Encantamiento_MineCraft_Objetos(Minecraft.getMinecraft()));
+		FMLCommonHandler.instance().bus().register(new Ecantamientos_evento(Minecraft.getMinecraft()));
 		FMLCommonHandler.instance().bus().register(new Mods_Encantamientos(Minecraft.getMinecraft()));
 			
 		if(Control_de_Version.Version_de_desarrolador) {
