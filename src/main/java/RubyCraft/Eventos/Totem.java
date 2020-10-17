@@ -12,7 +12,7 @@ public class Totem {
 	 @SubscribeEvent
 	 public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 			 if(event.player.inventory.hasItem(RubyCraft.Totem_de_la_no_muerte) && event.player.getHealth() < 6.0F){
-				 event.player.playSound(RubyCraft.modid + ":totem", 1.0F, 1.0F);
+				 event.player.worldObj.playSoundAtEntity(event.player, RubyCraft.modid + ":totem", Float.MAX_VALUE, 1.0F);
 				 event.player.heal(event.player.getMaxHealth());
 				    event.player.inventory.consumeInventoryItem(RubyCraft.Totem_de_la_no_muerte); 
 	            		event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GREEN + event.player.getDisplayName() + EnumChatFormatting.BLUE + " " + "Te e Salvado la Vida Amigo : - )"));

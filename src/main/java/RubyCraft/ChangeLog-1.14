@@ -23,6 +23,7 @@ Ahora la escalera de bloque de diamante trol se comporta tal cual se compañero b
 Ahora el Generador del Dragon solo se puede usar en la dimension del End y mejoras en los mensajes del mismo.
 Se a cambiado el fondo del Menu principal.
 Se esta cambiado el boos de la parca y corrigiendo bastantes errores con ella.
+Se a corregido un error el cual hacia que el totem de la no muerte al activarse en "servidores" no sonara el sonido correspondiente.
 Ahora los encantamientos del mod afectan a todas las armaduras.
 --AÑADIDO
 Nuevo Libro de recetas en el cual puedes ver los crafteos de las mesas del mod.
@@ -40,5 +41,6 @@ Ahora en el bioma de ruby pueden aparecer en las cuevas arañas de cueva.
 Nuevas hojas del arbol verde.
 Ahora al morir se te mostrara las coordenadas de tu muerte.
 Añadido los creafteos de la espada,pala,pico,hacha,azada,tijera,casco,grebas,pechera,botas de platino en la mesa de zafiro.
+Añadido un teleport random en el bloque de enderpeal.
 --ELIMINADO
 Se ha eliminado todos los crafteos de las armaduras/herramientas/items de platino ya que mas adelante seran totalmente renovados.

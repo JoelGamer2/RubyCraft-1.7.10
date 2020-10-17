@@ -1,7 +1,14 @@
 package RubyCraft.Escaleras;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 
 public class Escalera_de_Perla_de_Ender extends BlockStairs{
 
@@ -20,5 +27,5 @@ public class Escalera_de_Perla_de_Ender extends BlockStairs{
     public boolean renderAsNormalBlock(){
         return false;
     }	
-    
+   
 }

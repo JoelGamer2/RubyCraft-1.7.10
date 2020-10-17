@@ -293,7 +293,7 @@ public class BossParca extends EntityMob implements IBossDisplayData {
 	    	 if(RubyCraft.cliente && !chat1){
 	    		             
 	    		             
-	    		 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase1));
+	    		
 	    						chat1=true;
 
 	    		    	 }
