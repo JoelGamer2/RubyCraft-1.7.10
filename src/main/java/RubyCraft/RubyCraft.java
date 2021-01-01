@@ -510,9 +510,9 @@ public static final Item.ToolMaterial NadaMaterial = EnumHelper.addToolMaterial(
 public static final Item.ToolMaterial PlatinoMaterial = EnumHelper.addToolMaterial("PlatinoMaterial", 6, 4000, 45.0F, 10.0F, 45);
 public static final Item.ToolMaterial CobreMaterial = EnumHelper.addToolMaterial("CobreMaterial", 2, 500, 15.0F, 2.0F, 45);
 
-public static final ItemArmor.ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmorMaterial", 3000, new int[]{4,5,4,4}, 45);	   
-public static final ItemArmor.ArmorMaterial ZafiroArmorMaterial = EnumHelper.addArmorMaterial("ZafiroArmorMaterial", 2000, new int[]{5,6,7,2}, 45);	
-public static final ItemArmor.ArmorMaterial UranioArmorMaterial = EnumHelper.addArmorMaterial("UranioArmorMaterial", 1000, new int[]{3,5,3,1}, 45);
+public static final ItemArmor.ArmorMaterial RubyArmorMaterial = EnumHelper.addArmorMaterial("RubyArmorMaterial", 150, new int[]{4,4,3,3}, 45);	   
+public static final ItemArmor.ArmorMaterial ZafiroArmorMaterial = EnumHelper.addArmorMaterial("ZafiroArmorMaterial", 190, new int[]{4,7,7,3}, 45);	
+public static final ItemArmor.ArmorMaterial UranioArmorMaterial = EnumHelper.addArmorMaterial("UranioArmorMaterial", 70, new int[]{3,5,3,1}, 45);
 public static final ItemArmor.ArmorMaterial ElytraArmor = EnumHelper.addArmorMaterial("ElytraArmor", 320, new int[]{1,1,1,1}, 45);
 public static final ItemArmor.ArmorMaterial PlatinoArmor = EnumHelper.addArmorMaterial("PlatinoArmor", 4000, new int[]{5,5,5,5}, 45);
 
