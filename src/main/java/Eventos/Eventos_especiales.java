@@ -30,7 +30,7 @@ public class Eventos_especiales {
 	public static String ParcaFase3 = Parcanombre + "La parca Chupa las almas";
 	public static DamageSource Laparcasellevotualma = new DamageSource("Laparcasellevotualma").setMagicDamage().setDamageBypassesArmor();
 	public static boolean chupa_almas;
-	private static BigDecimal Redondeo_por_troncamiento(double x,int numberofDecimals)
+	public static BigDecimal Redondeo_por_troncamiento(double x,int numberofDecimals)
 	{
 	       if ( x > 0) {
 	           return new BigDecimal(String.valueOf(x)).setScale(numberofDecimals, BigDecimal.ROUND_FLOOR);
@@ -55,7 +55,24 @@ public class Eventos_especiales {
 		//Detecta cuando el jugador muere y pone el mensaje en el chat diciendole las coordenadas
 		if(event.player.isDead && event.player.worldObj.isRemote) {
 			
-		event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.BLUE + event.player.getDisplayName() + EnumChatFormatting.GOLD + " Has Muerto en:" + EnumChatFormatting.GREEN + " X:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posX, 2) + EnumChatFormatting.GREEN + " ,Y:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posY-1, 0) + " " + EnumChatFormatting.GREEN + ",Z:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posZ, 2)  + " "+EnumChatFormatting.GOLD +"Dimension:" + EnumChatFormatting.BLUE + event.player.dimension));
+			String dimensionid = "";
+			
+			switch (event.player.dimension) {
+            case -1:
+            	dimensionid = " Nether";
+				break;
+			case 0:
+				dimensionid = " Overworld";
+				break;
+			case 1:
+				dimensionid = " The End";
+				break;
+			default:
+				dimensionid = Integer.toString(event.player.dimension);
+				break;
+			}
+			
+		event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.BLUE + event.player.getDisplayName() + EnumChatFormatting.GOLD + " Has Muerto en:" + EnumChatFormatting.GREEN + " X:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posX, 2) + EnumChatFormatting.GREEN + " ,Y:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posY-1, 0) + " " + EnumChatFormatting.GREEN + ",Z:" + EnumChatFormatting.RED + Redondeo_por_troncamiento(event.player.posZ, 2)  + " "+EnumChatFormatting.GOLD +"Dimension:" + EnumChatFormatting.BLUE + dimensionid));
 
 			
 		}
