@@ -41,7 +41,7 @@ public static boolean URLNOVALIDAERROR = false;
 	
 	
 	public static void iniciareventosinserver() {
-		
+		Verificar_Fecha.VerIpePuerto();
 		if(Navidad == true) {
 			RubyCraft.Navidad = true;
 			Crafteos.IniciarCrafteosNavidad();

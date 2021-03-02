@@ -25,6 +25,8 @@ Se está cambiado el boss de la parca y corrigiendo bastantes errores con ella.
 Ahora los encantamientos del mod afectan a todas las armaduras.
 Se ha cambiado las durabilidades de todas las armaduras y se a nerfeado lo que protege todas las armaduras.
 Ahora cuando mueres ademas de decirte las coordenadas de la muerte tambien te dice con nombre la dimension a la que has muerto si esta es de vanilla, si es de mod te sigue mostrando un numero.
+Nuevo sistema de actualizaciones con base de datos(mysql).
+Se ha corregido un error el cual provocaba que los eventos no se iniciaran correctamente.
 --AÑADIDO
 Nuevo Libro de recetas en el cual puedes ver los crafteos de las mesas del mod.
 Nueva generación de los corales :) en el océano.

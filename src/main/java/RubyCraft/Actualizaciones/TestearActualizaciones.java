@@ -6,6 +6,7 @@ import java.util.UUID;
 import RubyCraft.Control_de_Version;
 import RubyCraft.Errores;
 import RubyCraft.RubyCraft;
+import RubyCraft.Bloques.Bloque_de_Actualizaciones;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraft.client.Minecraft;
@@ -26,7 +27,6 @@ public class TestearActualizaciones {
 	public static String ChangeLog = "";
     public static boolean activo = false;
 	public static String nombre = "";
-	public static UUID uuid;
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event){
 		if(Buscar_Actualizaciones.HayNuevaVersion() && Buscar_Actualizaciones.mysql && !activo) {
@@ -37,13 +37,12 @@ public class TestearActualizaciones {
 			ChangeLog = mysql.mensajes[4];
 			
 			
+			
+			
 		}
 		if(Control_de_Version.Version_de_desarrolador == false && Buscar_Actualizaciones.HayNuevaVersion() && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null){
 			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
-			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
-			mysql_registro(uuid, nombre);
-		    
-		
+		  
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Hay Una Nueva Version Disponible: " + EnumChatFormatting.RED + UltimaVersion));
 			 Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":Logros_especiales", 1.0F, 1.0F);
 
@@ -62,27 +61,16 @@ public class TestearActualizaciones {
 		
 			Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Cuidado esta es la DeveloperBuild " + EnumChatFormatting.GOLD + "puede ocurrir muchos bugs Version: " + EnumChatFormatting.RED + RubyCraft.version + EnumChatFormatting.RED + " INDEV"));
 			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
-			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
-			mysql_registro(uuid, nombre);
 			Iniciadosesion = true;
 			activo = true;
 		}else if(!Iniciadosesion && Minecraft.getMinecraft().currentScreen == null && Buscar_Actualizaciones.mysql) {
 			
 			nombre = Minecraft.getMinecraft().thePlayer.getDisplayName();
-			uuid = Minecraft.getMinecraft().thePlayer.getUniqueID();
-			mysql_registro(uuid, nombre);
 			Iniciadosesion = true;
 			activo = true;
 		}
 	}
 	
-	public static void mysql_registro(UUID uuid, String nombre) {
-		try {
-			new otro_mysql().iniciar(nombre,uuid);
-		} catch (Exception e) {
-			e.printStackTrace();
-			Errores.errores(Minecraft.getMinecraft(), TestearActualizaciones.class.toString(), e.toString(), false);
-		}
-	}
+	
 	
 }

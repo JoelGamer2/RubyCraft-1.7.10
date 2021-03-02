@@ -24,7 +24,7 @@ public class Evento_Teclas {
 				EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 				if(!RubyCraft.version.equals(Bloque_de_Actualizaciones.UltimaVersion) && !Control_de_Version.Version_de_desarrolador){
 					
-					Buscar_Actualizaciones.MirarActualizaciones();
+					Buscar_Actualizaciones.MirarActualizaciones(false);
 					
 					Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Hay Una Nueva Version Disponible: " + EnumChatFormatting.RED + Bloque_de_Actualizaciones.UltimaVersion));
 					Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD +Bloque_de_Actualizaciones.Mensaje1));
@@ -44,7 +44,7 @@ public class Evento_Teclas {
 				  }else if(RubyCraft.version.equals(Bloque_de_Actualizaciones.UltimaVersion) && !Control_de_Version.Version_de_desarrolador){
 					
 					Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Estas en la Version:" + EnumChatFormatting.GREEN + RubyCraft.version + EnumChatFormatting.GOLD + " La Ultima " + EnumChatFormatting.GOLD + "Version es la:" + EnumChatFormatting.RED + Bloque_de_Actualizaciones.UltimaVersion));
-					Buscar_Actualizaciones.MirarActualizaciones();
+					Buscar_Actualizaciones.MirarActualizaciones(false);
 				}
 				
 			}

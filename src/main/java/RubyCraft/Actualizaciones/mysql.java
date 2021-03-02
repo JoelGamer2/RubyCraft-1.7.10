@@ -8,17 +8,21 @@ import java.sql.SQLException;
 import java.util.TimeZone;
 import java.util.UUID;
 
+import Eventos.Verificar_Fecha;
 import RubyCraft.RubyCraft;
+import RubyCraft.Bases.Cosas_random_utiles;
+import RubyCraft.Bases.Descodificar;
+import RubyCraft.Bloques.Bloque_de_Actualizaciones;
 
 public class mysql {
 
 	private Connection connection;
-	public String host, database, username, password, table;
+	public String host, database, password, username, table;
 	public int port;
 	public static String[] mensajes = {"","","","",""};
-	 public  static void iniciar(int id) throws Exception{ 
+	 public  static void iniciar(int id,boolean conexiones) throws Exception{ 
 		
-		new mysql().mysqlSetup(id);
+		new mysql().mysqlSetup(id,conexiones);
 		
 	 }
 	 
@@ -29,13 +33,13 @@ public class mysql {
 		 new mysql().actualizar_string(tabla, valor, uuid);
 	 }
 	 **/
-	public void mysqlSetup(int id) {
+	public void mysqlSetup(int id, boolean conexiones_v) {
 		
-		host = "rubycraftmod.ddns.net";
-		port = 3306;
-		database = "Version_mods";
-		username = "Programas";
-		password = "d";
+		host = Verificar_Fecha.ip;
+		port = Verificar_Fecha.puerto;
+		database = "Mods";
+		username = "mod";
+		password = Descodificar.password("072065075111052079066081088108057097119073120068", "110","101");
 		table = "Versiones";
 
 		try {
@@ -45,7 +49,8 @@ public class mysql {
 					return;
 				} 
 
-				Class.forName("com.mysql.jdbc.Driver");
+			//	Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				
 
 				setConnection(
@@ -53,10 +58,19 @@ public class mysql {
 								this.username, this.password));
 				
 				
-				
+			
 				 mensajes[0]=getStringFromTable("Texto_1", id);
+				 
+				 if(!getStringFromTable("Texto_2", id).equalsIgnoreCase("none")) {
 				 mensajes[1]=getStringFromTable("Texto_2", id);
+				 }else {
+					 TestearActualizaciones.Mensaje2a = false;
+				 }
+				 if(!getStringFromTable("Texto_3", id).equalsIgnoreCase("none")) {
 				 mensajes[2]=getStringFromTable("Texto_3", id);
+				 }else {
+					 TestearActualizaciones.Mensaje3a = false;
+				 }
 				 mensajes[3]=getStringFromTable("Version_Mod", id);
 				 mensajes[4]=getStringFromTable("Changelog", id);
 		       
@@ -66,13 +80,22 @@ public class mysql {
 					RubyCraft.logger.info( mensajes[0]);
 					RubyCraft.logger.info( mensajes[1]);
 					RubyCraft.logger.info( mensajes[2]);
+					
+					Bloque_de_Actualizaciones.Mensaje1 =mensajes[0];
+					Bloque_de_Actualizaciones.Mensaje2 =mensajes[1];
+					Bloque_de_Actualizaciones.Mensaje3 =mensajes[2];
+					Bloque_de_Actualizaciones.UltimaVersion=mensajes[3];
+					Bloque_de_Actualizaciones.changeLog =mensajes[4];
+					
 				
 				 }
 				 /**COJE EL VALOR DE LA BASE DE DATOS DE CUANTA GENTE SE CONECTO AL MOD LE SUMA 1 Y ACTUALIZA EL VALOR DENTRO DE LA BASE DE DATOS**/
+				 if(conexiones_v) {
 				     String conexiones = getStringFromTable("Conexiones", id);
 			          int resultado = Integer.parseInt(conexiones) +1;
 			        actualizar_string("Conexiones", Integer.toString(resultado), id);
-			       
+				 }
+			       this.connection.close();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

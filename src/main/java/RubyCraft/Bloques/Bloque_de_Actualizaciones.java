@@ -44,8 +44,11 @@ public class Bloque_de_Actualizaciones extends Block{
 		if (world.isRemote && !player.isSneaking()){
 			
 			if(!RubyCraft.version.equals(UltimaVersion) && !Control_de_Version.Version_de_desarrolador){
-				
-				Buscar_Actualizaciones.MirarActualizaciones();
+				try {
+				Buscar_Actualizaciones.MirarActualizaciones(false);
+				}catch (Exception e) {
+					// TODO: handle exception
+				}
 				actualizacion = 15;
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Hay Una Nueva Version Disponible: " + EnumChatFormatting.RED + UltimaVersion));
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Mensaje1));
@@ -65,7 +68,11 @@ public class Bloque_de_Actualizaciones extends Block{
 			  }else if(RubyCraft.version.equals(UltimaVersion) && !Control_de_Version.Version_de_desarrolador){
 				
 				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + Minecraft.getMinecraft().thePlayer.getDisplayName() + " Estas en la Version:" + EnumChatFormatting.GREEN + RubyCraft.version + EnumChatFormatting.GOLD + " La Ultima " + EnumChatFormatting.GOLD + "Version es la:" + EnumChatFormatting.RED + UltimaVersion));
-				Buscar_Actualizaciones.MirarActualizaciones();
+				try {
+					Buscar_Actualizaciones.MirarActualizaciones(false);
+					}catch (Exception e) {
+						// TODO: handle exception
+					}
 			}
 			
 			

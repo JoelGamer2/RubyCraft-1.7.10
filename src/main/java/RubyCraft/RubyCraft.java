@@ -554,7 +554,6 @@ Control_de_Version.Iniciar_todo();
 
 if(Control_de_Version.Version_de_desarrolador == false) {
 Verificar_Fecha.VerIpePuerto();
-Buscar_Actualizaciones.MirarActualizaciones();
 }
 BuscarVersionTrol.MirarVersionTrol();
 Eliminar_Crafteos.IniciarEliminarCrafteos();
@@ -1261,7 +1260,7 @@ public void PostLoad(FMLPostInitializationEvent Posevent){
 	//Variado
 	Modificacion_Principal.PostInit();
 	
-	
+	Buscar_Actualizaciones.MirarActualizaciones(true);
 	
 	}
 
