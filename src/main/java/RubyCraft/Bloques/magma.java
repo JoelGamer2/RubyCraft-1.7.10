@@ -2,12 +2,15 @@ package RubyCraft.Bloques;
 
 import java.util.Random;
 
+import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
@@ -54,10 +57,12 @@ public class magma extends Block {
 	    public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity)
 	    {
 	    	
-	        entity.attackEntityFrom(RubyCraft.Magma, 1.0F);
+	        if(!entity.isSneaking()) {
+	        entity.attackEntityFrom(RubyCraft.Magma, 1F);
+	        }
 	    }
 	    
-	    
+	   
 	  
 	    
 	    /**

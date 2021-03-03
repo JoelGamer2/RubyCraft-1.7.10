@@ -1,11 +1,11 @@
-death.attack.Magma=%1$s a descubierto que el suelo era Lava.
-death.attack.Magma.player=%1$s a entrado a una Zona Peligrosa por Culpa de %2$s.
+death.attack.Magma=%1$s ha descubierto que el suelo era Lava.
+death.attack.Magma.player=%1$s ha entrado a una Zona Peligrosa por Culpa de %2$s.
 death.attack.Troleo=%1$s a Muerto por descuidarse.
 death.attack.Troleo.player=%$s a Sido Troleado Por %2$s.
-death.attack.RadioActividad=%1$s a Muerto por Tener demasiada RadioActividad.
-death.attack.RadioActividad.player=%$s a Muerto por Radioactividad pero le Troleo %2$s.
-death.attack.Laparcasellevotualma=La parca se llevo el alma de %1$s
-death.attack.Laparcasellevotualma.player=%$s a Muerto por que la parca se llevo su alma pero le ayudo a morir %2$s.
+death.attack.RadioActividad=%1$s a Muerto por Tener demasiada Radioactividad.
+death.attack.RadioActividad.player=%$s a Muerto por Radioactividad, pero le Troleo %2$s.
+death.attack.Laparcasellevotualma=La parca se llevó el alma de %1$s
+death.attack.Laparcasellevotualma.player=%$s a Muerto porque la parca se llevó su alma, pero le ayudo a morir %2$s.
 
 achievement.MinaRuby=Mina Ruby
 achievement.MinaRuby.desc=Mina Una Mena de Ruby con un pico de Hierro

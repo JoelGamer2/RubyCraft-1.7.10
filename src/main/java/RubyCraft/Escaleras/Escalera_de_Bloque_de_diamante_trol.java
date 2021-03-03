@@ -28,14 +28,8 @@ public class Escalera_de_Bloque_de_diamante_trol extends BlockStairs{
     
     @Override
     public void onEntityWalking(World world, int x, int y, int z,Entity entity) {
-    	
-	if(entity instanceof EntityPlayer){
-			
-		EntityPlayer player = (EntityPlayer) entity;
-			
-			player.attackEntityFrom(Bloque_de_Diamante_Trol.MensajedeMuerte, Float.MAX_VALUE);
-			
-	}
+  
+			entity.attackEntityFrom(Bloque_de_Diamante_Trol.MensajedeMuerte, Float.MAX_VALUE);
 	
     	super.onEntityWalking(world, x, y, z, entity);
     }
@@ -43,13 +37,7 @@ public class Escalera_de_Bloque_de_diamante_trol extends BlockStairs{
     @Override
     public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
     	
-    	if(entity instanceof EntityPlayer){
-			
-    		EntityPlayer player = (EntityPlayer) entity;
-    	
-    		player.attackEntityFrom(Bloque_de_Diamante_Trol.MensajedeMuerte, Float.MAX_VALUE);
-    		
-    	}
+    		entity.attackEntityFrom(Bloque_de_Diamante_Trol.MensajedeMuerte, Float.MAX_VALUE);
     	
     	super.onEntityCollidedWithBlock(world, x, y, z, entity);
     }
