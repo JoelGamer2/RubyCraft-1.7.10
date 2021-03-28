@@ -1,5 +1,6 @@
 package RubyCraft.Actualizaciones;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,6 +14,7 @@ import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Cosas_random_utiles;
 import RubyCraft.Bases.Descodificar;
 import RubyCraft.Bloques.Bloque_de_Actualizaciones;
+import net.minecraft.client.Minecraft;
 
 public class mysql {
 
@@ -43,7 +45,7 @@ public class mysql {
 		table = "Versiones";
 
 		try {
-
+			
 			synchronized (this) {
 				if (getConnection() != null && !getConnection().isClosed()) {
 					return;
@@ -52,12 +54,10 @@ public class mysql {
 			//	Class.forName("com.mysql.jdbc.Driver");
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				
-
+		
 				setConnection(
 						DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port  + "/" + this.database +"?serverTimezone="+TimeZone.getDefault().getID(),
 								this.username, this.password));
-				
-				
 			
 				 mensajes[0]=getStringFromTable("Texto_1", id);
 				 
@@ -90,11 +90,16 @@ public class mysql {
 				
 				 }
 				 /**COJE EL VALOR DE LA BASE DE DATOS DE CUANTA GENTE SE CONECTO AL MOD LE SUMA 1 Y ACTUALIZA EL VALOR DENTRO DE LA BASE DE DATOS**/
-				 if(conexiones_v) {
-				     String conexiones = getStringFromTable("Conexiones", id);
+				 if(conexiones_v && RubyCraft.cliente) {
+				     String conexiones = getStringFromTable("Conexiones_Cliente", id);
 			          int resultado = Integer.parseInt(conexiones) +1;
-			        actualizar_string("Conexiones", Integer.toString(resultado), id);
-				 }
+			        actualizar_string("Conexiones_Cliente", Integer.toString(resultado), id);
+				 }else if(conexiones_v && !RubyCraft.cliente) {
+					     String conexiones = getStringFromTable("Conexiones_Servidores", id);
+				          int resultado = Integer.parseInt(conexiones) +1;
+				        actualizar_string("Conexiones_Servidores", Integer.toString(resultado), id);
+					 }
+				 
 			       this.connection.close();
 			}
 		} catch (SQLException e) {

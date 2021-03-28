@@ -33,7 +33,7 @@ public class BloquedeEnderPearld extends Bloque_con_faro{
 		
 		if(!world.isRemote) {
 		
-			player.addChatComponentMessage(new ChatComponentText((EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + player.getDisplayName() + " Has sido teleportado aleatoriamente a " + EnumChatFormatting.GOLD + "una distancia de: " + Eventos_especiales.Redondeo_por_troncamiento(Cosas_random_utiles.calcular_distancia_entre_2_puntos(x, y, z, x_Rand, y_Rand, z_Rand), 1) + "bloques")));
+			player.addChatComponentMessage(new ChatComponentText((EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + player.getDisplayName() + " Has sido teleportado aleatoriamente a " + EnumChatFormatting.GOLD + "una distancia de: " + Eventos_especiales.Redondeo_por_troncamiento(Cosas_random_utiles.calcular_distancia_entre_2_puntos(x, y, z, x_Rand, y_Rand, z_Rand), 1) + " bloques")));
 			
 			world.playSoundAtEntity(player, "mob.endermen.portal", Float.MAX_VALUE, 1.0F);
 		
