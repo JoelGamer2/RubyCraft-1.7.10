@@ -2,6 +2,9 @@ package RubyCraft.Bloques;
 
 import RubyCraft.Bases.Bloque_con_faro;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.World;
 
 public class Bloque_de_Blaze extends Bloque_con_faro {
 
@@ -12,5 +15,4 @@ public class Bloque_de_Blaze extends Bloque_con_faro {
 		this.setStepSound(this.soundTypeGlass);
 	
 	}
-	        
 }

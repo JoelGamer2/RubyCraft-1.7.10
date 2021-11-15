@@ -3,12 +3,11 @@ package RubyCraft.Bloques;
 import java.util.Random;
 
 import Eventos.Eventos_especiales;
-import RubyCraft.RubyCraft;
 import RubyCraft.Bases.Bloque_con_faro;
 import RubyCraft.Bases.Cosas_random_utiles;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
@@ -36,6 +35,7 @@ public class BloquedeEnderPearld extends Bloque_con_faro{
 			player.addChatComponentMessage(new ChatComponentText((EnumChatFormatting.GRAY + "[" + EnumChatFormatting.GREEN + "RubyCraft" + EnumChatFormatting.GRAY + "] " + EnumChatFormatting.GOLD + player.getDisplayName() + " Has sido teleportado aleatoriamente a " + EnumChatFormatting.GOLD + "una distancia de: " + Eventos_especiales.Redondeo_por_troncamiento(Cosas_random_utiles.calcular_distancia_entre_2_puntos(x, y, z, x_Rand, y_Rand, z_Rand), 1) + " bloques")));
 			
 			world.playSoundAtEntity(player, "mob.endermen.portal", Float.MAX_VALUE, 1.0F);
+			world.setBlock(x,y,z, Blocks.air);
 		
 		}
 		

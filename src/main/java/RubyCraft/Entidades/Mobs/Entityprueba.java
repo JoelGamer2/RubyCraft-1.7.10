@@ -1,366 +1,399 @@
 package RubyCraft.Entidades.Mobs;
 
-
-
-import java.util.List;
 import java.util.Random;
 
+import Eventos.Eventos_especiales;
 import RubyCraft.RubyCraft;
+import RubyCraft.Bloques.Bloque_de_Diamante_Trol;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.IEntityLivingData;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.BossStatus;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
-
 public class Entityprueba extends EntityMob implements IBossDisplayData {
 
-	 
-	public static List Jugadores_en_rango;
-	public static int numero_jugadores;
+
 	public static int tick = 0;
+	public static int tickparticulas = 0;
 	public static boolean Activo = false;
-	public static int Fase = -1;
-	
-	
-	
-	public static int Ticks_Min_Fase1= 50;
-	public static int Ticks_Max_Fase1= 1000;
-	
-	public static int Ticks_Min_Fase2= Ticks_Max_Fase1 + 1;
-	public static int Ticks_Max_Fase2= 2000;
-	
-	public static int Ticks_Min_Fase3= Ticks_Max_Fase2 + 1;
-	public static int Ticks_Max_Fase3= 6000;
-	
-	public static int Ticks_Min_Fase4= Ticks_Max_Fase3 + 1;
-	public static int Ticks_Max_Fase4= 60000;	
-	public static boolean solo_1 = false;
-	public static String[] Jugador_rango_filtro_nombres;
+	public static int Tp_hechos = 0;
+	public static boolean activarchupaalmas = false;
+	public static int Fase = 0;
+
+	public static boolean chat1 = false;
+	public static boolean chat2 = false;
+	public static boolean chat3 = false;
+
+	public static double xrandomtp = 0;
+	public static  double zrandomtp = 0;
+	public static int cantidadgenerado = 0;
 	public Entityprueba(World world) {
 		super(world);
-		     
-	 this.setSize(0.6F, 1.9F);
-	 this.stepHeight = 1.0F; 
-	 
+
+		this.setSize(0.6F, 1.9F);
+		this.stepHeight = 1.0F;
+
 	}
 
 	protected void applyEntityAttributes(){
-		
-	 super.applyEntityAttributes();
-	 if(worldObj.difficultySetting == EnumDifficulty.EASY) {
-			
-	    this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
 
-			
-			}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
-				
-			     this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
+		super.applyEntityAttributes();
+		if(worldObj.difficultySetting == EnumDifficulty.EASY) {
 
-				
-			}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+			this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1000.0D);
 
-			 this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1.0D);
 
-				
-			}
-	 this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
-	 this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
-	 if(Fase==-1) {
-	 tick = 0;
-	 solo_1=false;
-	 Activo = false;
+		}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
+
+			this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(2000.0D);
+
+
+		}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+
+			this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000.0D);
+
+
 		}
-		 }
-	
+
+		if( RubyCraft.cliente) {
+			if(!Activo){
+
+
+				Minecraft.getMinecraft().thePlayer.playSound(RubyCraft.modid + ":records.bossparca", Float.MAX_VALUE,1.0F);
+			}
+		}
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(2.1D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
+		tick = 0;
+
+
+		Activo = true;
+		Fase = 1;
+		xrandomtp = 0;
+		zrandomtp = 0;
+		Tp_hechos = 0;
+		Bloque_de_Diamante_Trol.Dano = 0.0F;
+		activarchupaalmas = false;
+		cantidadgenerado = 0;
+
+
+		chat1 = false;
+		chat2 = false;
+		chat3 = false;
+	}
+
 	/**Comunica cuando el mob muere**/
 	@Override
-	public void onDeath(DamageSource p_70645_1_) {
-	    Activo = false;
-	    Fase = -1;
-		tick = 0;
-	
-		super.onDeath(p_70645_1_);
-
-		//DETECTAR JUGADORES EN AREA DE 10x10x10
-  	  
-               List jugadores_en_rago_local = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.posX - 2, this.posY - 2, this.posZ - 2, this.posX + 2, this.posY + 2, this.posZ + 2));
-               Jugadores_en_rango = jugadores_en_rago_local;
-            
-               if(!(Jugadores_en_rango.size()==0)) {
-               for (int i = 0; i <= Jugadores_en_rango.size() - 1; i++) {
-           		EntityPlayer jugador_pasado_filtro_local = (EntityPlayer) Jugadores_en_rango.get(i);
-           	
-           	 numero_jugadores = jugadores_en_rago_local.size();
-           	jugador_pasado_filtro_local.addChatComponentMessage(new ChatComponentText(Integer.toString(numero_jugadores)));
-           	 dropeos(jugador_pasado_filtro_local.getDisplayName());
-           		
-           	
-               
-             }
-  	  }
-              
-               
-		
-
-	 
-}
-	/**Comunica que item dropeara**/
-	private void dropeos(String nombre) {
-		
-		EntityPlayer player = worldObj.getPlayerEntityByName(nombre);
-
-		if(!worldObj.isRemote) {
-			
-	    	 
-	
-		
-		 Random generator2 = new Random(); 
-         int nSelection = generator2.nextInt(Posibleddrops.length); 
-         String droprandom = Posibleddrops[nSelection]; 
-         
-        	if(!solo_1){
-        	
-               solo_1 = true;
-        
-		
-		      
-        	 player.addChatComponentMessage(new ChatComponentText("murio"));
-		        if(droprandom.equalsIgnoreCase("ruby")) {
-		        	
-		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.ruby, cantidad_a_generar(8)));
-		        	
-		        }else if(droprandom.equalsIgnoreCase("zafiro")){
-		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.zafiro, cantidad_a_generar(10)));
-
-		        }else if(droprandom.equalsIgnoreCase("pan_de_calabaza")) {
-		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Pandecalabaza, cantidad_a_generar(34)));
-
-		        }else if(droprandom.equalsIgnoreCase("espada_de_platino")) {
-		        	player.inventory.addItemStackToInventory(new ItemStack(RubyCraft.Espada_de_Platino, cantidad_a_generar(1)));
-
-		        }
-		    
-					   Activo = false;
-					    Fase = -1;
-						tick = 0;
-						solo_1 = false;
-        	}
-        	
-	   }
+	public void onDeath(DamageSource damage) {
+		Activo = false;
+		Eventos_especiales.musica = false;
+		//Generator_Boss.NombreJugador = " ";
+		//worldObj.setWorldTime(Generator_Boss.TiempodelMundo);
+		//Generator_Boss.TiempodelMundo = 0;
+		Bloque_de_Diamante_Trol.Dano = 20.0F;
+		Fase = 0;
+		dropeos();
 	}
+
+
+
+	/**Comunica que item dropeara**/
+	private void dropeos() {
+
+		if(worldObj.difficultySetting == EnumDifficulty.EASY) {
+
+			//	this.dropItem(herracraft.Lingote_Demoniaco, 2);
+			this.dropItem(RubyCraft.bossparca, 1);
+
+		}else if(worldObj.difficultySetting == EnumDifficulty.NORMAL) {
+
+			//	this.dropItem(herracraft.Lingote_Demoniaco, 4);
+			this.dropItem(RubyCraft.bossparca, 1);
+
+		}else if(worldObj.difficultySetting == EnumDifficulty.HARD) {
+
+			//this.dropItem(herracraft.Lingote_Demoniaco, 6);
+			this.dropItem(RubyCraft.bossparca, 1);
+
+		}
+
+		Random generator2 = new Random();
+		int nSelection = generator2.nextInt(Mobs.length);
+		String droprandom = Posibleddrops[nSelection];
+
+		if(!droprandom.equalsIgnoreCase("guadana")) {
+
+			Random cantidad = new Random();
+			cantidadgenerado = cantidad.nextInt(4);
+
+			if(cantidadgenerado == 0) {
+				cantidadgenerado ++;
+			}
+
+		}
+
+		if(droprandom.equalsIgnoreCase("guadana")) {
+
+			//	 this.dropItem(herracraft.guadana_Tenebrosa, 1);
+
+		}else if(droprandom.equalsIgnoreCase("lingote_demoniaco")) {
+
+			//  	 this.dropItem(herracraft.Lingote_Demoniaco, cantidadgenerado);
+
+		}else if(droprandom.equalsIgnoreCase("ruby")) {
+
+			this.dropItem(RubyCraft.ruby, cantidadgenerado);
+
+		} else if(droprandom.equalsIgnoreCase("zafiro")) {
+
+			this.dropItem(RubyCraft.zafiro, cantidadgenerado);
+
+		} else if(droprandom.equalsIgnoreCase("platino")) {
+
+			this.dropItem(RubyCraft.Platino, cantidadgenerado);
+
+		} else if(droprandom.equalsIgnoreCase("azula")) {
+
+			// 	 this.dropItem(herracraft.Azula, cantidadgenerado);
+
+		}
+	}
+
 	/** Posibles drops con cantidad random**/
-	public static String[] Posibleddrops = { 
-          "ruby",
-          "zafiro",
-          "pan_de_calabaza",
-          "espada_de_platino"
-            
-    };
-	
+	public static String[] Posibleddrops = {
+
+			"guadana",
+			"lingote_demoniaco",
+			"ruby",
+			"zafiro",
+			"azula",
+			"platino",
+
+	};
+
 	/**Returns the sounds of ambient for the mob**/
-	 protected String getLivingSound(){
-		    
-	        return RubyCraft.modid + ":ambientebossparca";
-	        
-	    }
-	 
-	 
-	    /**
-	     * Returns the sound this mob makes when it is hurt.
-	     */
-	    protected String getHurtSound(){
-	    
-	      return RubyCraft.modid + ":golpebossparca";
-	        
-	    }
+	protected String getLivingSound(){
 
-	    /**
-	     * Returns the sound this mob makes on death.
-	     */
-	    protected String getDeathSound(){
-	    
-	        return RubyCraft.modid + ":muertebossparca";
-	        
-	    }	 
-	    
-	    /**Activa la AI personalalizada**/
-	    public boolean isAIEnabled(){
-		    
-	        return false;
-	    }
-	    
-	    /**Lista de mobs random para la Fase 1 del boss**/
-	    public static String[] Mobs = { 
-	               
-	            "Skeleton",
-	            "AlienR",
-	            "Zombie",
-   
-	    };
-	    
-	    
-	    	
-	    @Override
-	    protected int getExperiencePoints(EntityPlayer player) {
-	    	// TODO Auto-generated method stub
-	    	return 20;
-	    }
-       
-	    @Override
-	    public IEntityLivingData onSpawnWithEgg(IEntityLivingData p_110161_1_) {
-	    	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
-                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-                 player.addChatComponentMessage(new ChatComponentText(Integer.toString(Fase) + Activo));
-	    	 }
-	    	if(Activo) {
-	    		
-		    	this.setDead();
-		    	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
-	                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-	                 player.addChatComponentMessage(new ChatComponentText("SOLO PUEDE HABER UN BOSS ACTIVO" + tick));
-	                 
-		    	 }
-		    	 
+		return RubyCraft.modid + ":ambientebossparca";
 
-		    }else {
-		    	tick=0;
-		    }
-	    	return super.onSpawnWithEgg(p_110161_1_);
-	    }
-	   
-	    
-	    /**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
-	    public void onLivingUpdate(){ 
-	    	
-      	//	 Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Jugador_rango_filtro_nombres + ""));
+	}
 
- // System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);	    	
-	    	double x = this.posX;
-	    	double y = this.posY;
-	    	double z = this.posZ;
-	    	World world = worldObj;
-	        super.onLivingUpdate();
-	       if(RubyCraft.cliente) {
-	          BossStatus.setBossStatus(this, true);
-	        //  Particulas(x, y, z);
-	     } 
-	       if(!(Fase == 0)) {
-		    	 Activo= true;
 
-	            tick ++;
-	            
-	           
-	          
-		    	 
-	            
-	            System.out.println(tick + "los putos ticks del puto boss joel");
-	            if(tick == Ticks_Min_Fase1) {
-	            	Fase = 1;
-	            	 cambiar_De_fase(1, true, null);
+	/**
+	 * Returns the sound this mob makes when it is hurt.
+	 */
+	protected String getHurtSound(){
 
-	            }
-	            
-	            if(tick==Ticks_Min_Fase2) {
-	            	Fase = 2;
-	   	    	 cambiar_De_fase(2, true, null);
+		return RubyCraft.modid + ":golpebossparca";
 
-	            }
-	            
-	            if(tick==Ticks_Min_Fase3) {
-	            	
-	            	Fase = 3;
-	            	cambiar_De_fase(3, true, null);
-	            	
-	            }
-	       }
-	     /**Fase 1 Spawnea bichos random 4 veces**/
-	     if(Fase == 1) { 
-	    	
-	       if(!(tick >= Ticks_Max_Fase1) && !(tick <=Ticks_Min_Fase1)) {
-	      double xrandomgenerado = 0;
-	      double yrandomgenerado = 0;
-	      double zrandomgenerado = 0;
-	    
-	     Random xrandom = new Random(); 
-	     xrandomgenerado = xrandom.nextInt(6);
-	     
-	     Random yrandom = new Random(); 
-	     yrandomgenerado = yrandom.nextInt(3);
-	     
-	     Random zrandom = new Random(); 
-	     zrandomgenerado = zrandom.nextInt(6);
-	
-	     //System.out.println(xrandomgenerado);
-	     //System.out.println(yrandomgenerado);
-	     //System.out.println(zrandomgenerado);
-	     
-	     Random generator = new Random(); 
-         int nSelection = generator.nextInt(Mobs.length); 
-         String Mobrandom = Mobs[nSelection]; 
-	     
-	        /** Entity mob = EntityList.createEntityByName(Mobrandom, this.worldObj);
-	         mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z);**/
-	         if(!world.isRemote) {
-			// worldObj.spawnEntityInWorld(mob);
-	        	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
-	                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-	           
-	                 player.setHealth(player.getMaxHealth()-2.0f);
-	                 if(rand.nextInt(10) ==1) {
-	                 this.setPosition(player.posX, player.posY+2, player.posZ);
-	                 }
-	        	 }
-	        	
-	        	
-	                
-	         
-	 }
-	        	
-	               
-	           }else if(!(tick >= Ticks_Max_Fase2) && !(tick <=Ticks_Min_Fase2)) {
-	        	   
-	           }else if(!(tick >= Ticks_Max_Fase3) && !(tick <=Ticks_Min_Fase3)) {
-	        	   
-	           }
-          }
-	    }
-	    
-	    
-	    public int cantidad_a_generar(int cantidad_maxima) {
-	    	int cantidadgenerado=0;
-	    	 
-       	 Random cantidad = new Random(); 
-       	 cantidadgenerado = cantidad.nextInt(cantidad_maxima);
-       	 
-       	 if(cantidadgenerado == 0) {
-       	  cantidadgenerado ++;
-       	 }
-		return cantidadgenerado;
-	    	
-	    }
-	    
-	    public static void cambiar_De_fase(int fase, boolean sonido, String nombresonido_default) {
-	    	if(nombresonido_default==null) {
-	    		nombresonido_default = ":totem";
-	    	}
-	    	 if(Minecraft.getMinecraft().thePlayer instanceof EntityPlayer){
-                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().thePlayer;
-                 player.addChatComponentMessage(new ChatComponentText("El Boss ha cambiado a la Fase:"+fase));
-	    	
-            
-            	 if(sonido) {
-             player.playSound(RubyCraft.modid + nombresonido_default, 1.0F, 1.0F);
-            	 
-             }
-	    	}
-	    }
-	  }
+	}
+
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	protected String getDeathSound(){
+
+		return RubyCraft.modid + ":muertebossparca";
+
+	}
+
+	/**Activa la AI personalalizada**/
+	public boolean isAIEnabled(){
+
+		return false;
+	}
+
+	/**Lista de mobs random para la Fase 1 del boss**/
+	public static String[] Mobs = {
+
+			"Skeleton",
+			"AlienR",
+			"Zombie",
+
+	};
+
+	public void Particulas(double x, double y, double z) {
+		tickparticulas++;
+		if(tickparticulas == 30) {
+			this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, 1.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, 1.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, -1.0F, 1.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, -2.0F, 1.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, 1.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, 1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, 1.0F, -2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 7.0F, 1.0F, -1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 8.0F, 1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 9.0F, 1.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 10.0F, 1.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, -1.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, -2.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 1.0F, -3.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, -4.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, -5.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, -6.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 1.0F, -1.0F, 1.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 2.0F, -2.0F, 2.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 3.0F, -3.0F, 3.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 4.0F, -4.0F, 4.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 5.0F, -5.0F, 5.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 6.0F, -6.0F, 6.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 7.0F, -1.0F, 7.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 8.0F, -2.0F, 8.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 9.0F, -3.0F, 9.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 10.0F, -4.0F, 10.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 11.0F, -5.0F, 11.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 11.0F, -1.0F, 13.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 15.0F, -3.0F, 14.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 17.0F, -4.0F, 15.0F);
+			this.worldObj.spawnParticle("smoke", x, y, z, 18.0F, -5.0F, 16.0F);
+
+		}else if(tickparticulas > 35) {
+			tickparticulas = 0;
+		}
+
+	}
+	@Override
+	protected int getExperiencePoints(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		return 20;
+	}
+
+	/**Aqui ocurre todas las Fases del boss y Pone la boss bar en el Cliente**/
+	public void onLivingUpdate(){
+		Eventos_especiales.chupa_almas = activarchupaalmas;
+		// System.out.println(xrandomtp + " " + zrandomtp + " " + Fase + " " + tick);
+		double x = this.posX;
+		double y = this.posY;
+		double z = this.posZ;
+		World world = worldObj;
+		super.onLivingUpdate();
+		if(RubyCraft.cliente) {
+			BossStatus.setBossStatus(this, true);
+			//  Particulas(x, y, z);
+		}
+		if(!(Fase == 0)) {
+			RubyCraft.logger.info(tick);
+
+			tick ++;
+
+
+			//  Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(tick + " "));
+		}
+		/**Fase 1 Spawnea bichos random 4 veces**/
+		if(Fase == 1) {
+			if(RubyCraft.cliente && !chat1){
+
+
+
+				chat1=true;
+
+			}
+
+			if(tick == 140 || tick == 280 || tick ==  420 || tick == 560 ) {
+				double xrandomgenerado = 0;
+				double yrandomgenerado = 0;
+				double zrandomgenerado = 0;
+
+				Random xrandom = new Random();
+				xrandomgenerado = xrandom.nextInt(6);
+
+				Random yrandom = new Random();
+				yrandomgenerado = yrandom.nextInt(3);
+
+				Random zrandom = new Random();
+				zrandomgenerado = zrandom.nextInt(6);
+
+				//System.out.println(xrandomgenerado);
+				//System.out.println(yrandomgenerado);
+				//System.out.println(zrandomgenerado);
+
+				Random generator = new Random();
+				int nSelection = generator.nextInt(Mobs.length);
+				String Mobrandom = Mobs[nSelection];
+
+				Entity mob = EntityList.createEntityByName(Mobrandom, this.worldObj);
+				mob.setPosition(xrandomgenerado + x, yrandomgenerado + y, zrandomgenerado + z);
+				if(!world.isRemote) {
+					worldObj.spawnEntityInWorld(mob);
+				}
+			}else if(tick > 600 && Fase == 1) {
+				Fase = 2;
+				tick = 0;
+
+			}
+
+			/**Fase 2 se tepea random 4 veces**/
+		}else if(Fase == 2) {
+
+			if(RubyCraft.cliente && !this.chat2){
+
+
+				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase2));
+				chat2=true;
+
+			}
+
+			if(tick > 400 && !(Tp_hechos == 4)) {
+
+				Tp_hechos ++;
+				tick = 0;
+			}
+
+
+			if(tick == 140 || tick == 300 && Tp_hechos < 5) {
+				Random xrandomt = new Random();
+				xrandomtp= xrandomt.nextInt(10);
+
+				Random zrandomt = new Random();
+				zrandomtp = zrandomt.nextInt(10);
+				if(!world.isRemote) {
+
+					this.setPosition(x - xrandomtp , y, z - zrandomtp);
+					world.updateEntity(this);
+
+
+				}
+			}else if( tick > 700 && Fase == 2) {
+				Fase = 3;
+				tick = 0;
+			}
+			/**Fase 3 Quita vida al jugador y se cura el**/
+		}else if(Fase == 3) {
+
+			if( RubyCraft.cliente && !this.chat3){
+
+
+				Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Eventos_especiales.ParcaFase3));
+				chat3=true;
+
+			}
+
+			if(tick == 200) {
+				this.heal(0.1F);
+				activarchupaalmas = true;
+				if(RubyCraft.cliente){
+					Minecraft.getMinecraft().thePlayer.attackEntityFrom(Eventos_especiales.Laparcasellevotualma, 1.0F);
+				}
+
+
+				/**DESACTIVA EL CONTADOR PORQUE YA NO HAY MAS FASES**/
+			}  else if(tick > 600) {
+
+				Fase = 0;
+				tick = 0;
+				activarchupaalmas = false;
+
+
+			}
+		}
+	}
+}

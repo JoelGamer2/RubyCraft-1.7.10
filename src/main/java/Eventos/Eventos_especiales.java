@@ -41,17 +41,6 @@ public class Eventos_especiales {
 	
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if(chupa_almas) {
-		if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.EASY)) {
-			event.player.attackEntityFrom(Laparcasellevotualma, 0.5f);
-			}
-			if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.NORMAL)) {
-				event.player.attackEntityFrom(Laparcasellevotualma, 0.8f);
-				}
-			if(event.player.worldObj.difficultySetting.equals(EnumDifficulty.HARD)) {
-				event.player.attackEntityFrom(Laparcasellevotualma, 1.0f);
-				}
-		}
 		//Detecta cuando el jugador muere y pone el mensaje en el chat diciendole las coordenadas
 		if(event.player.isDead && event.player.worldObj.isRemote) {
 			

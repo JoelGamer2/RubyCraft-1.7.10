@@ -1,12 +1,8 @@
 package RubyCraft.Actualizaciones;
 
 
-import java.util.UUID;
-
 import RubyCraft.Control_de_Version;
-import RubyCraft.Errores;
 import RubyCraft.RubyCraft;
-import RubyCraft.Bloques.Bloque_de_Actualizaciones;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraft.client.Minecraft;

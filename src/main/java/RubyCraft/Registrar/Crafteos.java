@@ -274,7 +274,21 @@ public class Crafteos {
     	Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 3), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 3), 'm', Items.coal});
     	Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 4), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 4), 'm', Items.coal});
     	Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 5), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 5), 'm', Items.coal});
-    	
+        //Lo mismo pero con el combustible(Carbón vegetal)
+		Registros.addRecipeTransformador(new ItemStack(Blocks.stone, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 0), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.sandstone, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 1), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.cobblestone, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 3), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.brick_block, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 4), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.stonebrick, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 5), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.nether_brick, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 6), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.quartz_block, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 7), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 0), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 0), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 1), new Object[]{"ll","mm",'l', new ItemStack(Blocks.stone_slab, 1, 1), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 2), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 2), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 3), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 3), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 4), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 4), 'm', new ItemStack(Items.coal, 1, 1)});
+		Registros.addRecipeTransformador(new ItemStack(Blocks.planks, 1, 5), new Object[]{"ll","mm",'l', new ItemStack(Blocks.wooden_slab, 1, 5), 'm', new ItemStack(Items.coal, 1, 1)});
+
     	
        }
     

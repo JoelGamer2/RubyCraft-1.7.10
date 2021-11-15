@@ -43,7 +43,5 @@ public class Generacion_BloquedeMagma implements IWorldGenerator{
     		
     		
     	}
-    }
-
-    
+     }
 	}

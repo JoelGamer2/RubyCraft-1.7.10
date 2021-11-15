@@ -15,8 +15,9 @@ public class DropeoMobsHandler{
     public void DropeoDragon(LivingDropsEvent event){
     
         if (event.entity instanceof EntityDragon) {
- 
-            ItemStack stack = new ItemStack(RubyCraft.zafiro, 24);
+            Random rand = new Random();
+
+            ItemStack stack = new ItemStack(RubyCraft.zafiro, 10 + rand.nextInt(14));
             EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
  
             event.drops.add(drop);
@@ -27,7 +28,6 @@ public class DropeoMobsHandler{
     public void DropeoCerdo(LivingDropsEvent event){
     	
     	if(event.entity instanceof EntityPig){
-    	 
     		int probabilidad =0;                           //ESTO LO QUE HACE ES QUE EL BLOQUE DE CACA SOLO SE DROPEE CON UN 25% DE PROBABILIDADES
     		Random rand = new Random();
              probabilidad = rand.nextInt(100);
@@ -36,13 +36,6 @@ public class DropeoMobsHandler{
     	EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
     	event.drops.add(drop);
     		}
-    	
-    	
       }	
    }
-    
-    
-    
-    
-    
 }

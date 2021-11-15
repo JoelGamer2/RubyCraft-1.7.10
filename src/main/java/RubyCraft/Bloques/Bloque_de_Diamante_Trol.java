@@ -60,7 +60,7 @@ public class Bloque_de_Diamante_Trol extends BlockCompressedPowered {
 				player.setPosition(x + Coordenadax, y + Coordenaday , z + Coordenadaz);
 				player.addExperienceLevel(Experiencia);	
 				if(world.isRemote) {
-				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Vas" + EnumChatFormatting.BLUE + " a Morir " +  EnumChatFormatting.GREEN + " xD "));
+				player.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + player.getDisplayName() + EnumChatFormatting.RED + " Vas" + EnumChatFormatting.BLUE + " a Morir " +  EnumChatFormatting.GREEN + " xD perro"));
 				}
 				player.addStat(Logros.Siendo_Troleado, 1);
 				

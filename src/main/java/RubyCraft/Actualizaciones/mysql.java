@@ -1,6 +1,5 @@
 package RubyCraft.Actualizaciones;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -11,10 +10,8 @@ import java.util.UUID;
 
 import Eventos.Verificar_Fecha;
 import RubyCraft.RubyCraft;
-import RubyCraft.Bases.Cosas_random_utiles;
 import RubyCraft.Bases.Descodificar;
 import RubyCraft.Bloques.Bloque_de_Actualizaciones;
-import net.minecraft.client.Minecraft;
 
 public class mysql {
 
